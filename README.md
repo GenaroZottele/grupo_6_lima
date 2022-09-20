@@ -7,3 +7,5 @@
 indicando brevemente por qué fueron elegidos.
 
 https://www.latinosandwich.com/
+https://www.mundosalad.com.ar/
+https://www.greengosalads.com.ar/
