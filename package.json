@@ -1,0 +1,23 @@
+{
+  "name": "grupo_6_lima",
+  "version": "1.0.0",
+  "description": "* Lima Ensaladas es un servicio de entrega de viandas para el almuerzo semanal en las oficinas judiciales del centro de la Ciudad de Buenos Aires. El servicio de momento, consta de un mensaje en cadena de Whatsapp que llega a alrededor de 5000 contactos que pidieron ser agregados a la cadena. Ese mensaje les llega todos los días de la semana a las 9:30am, y contiene el menú de ensaladas, con la promo de la ensalada del día y alguna posible novedad. La gente va ingresando pedidos, hasta las 12 en punto del mediodía, momento en el que los repartidores salen hacia los edificios.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GenaroZottele/grupo_6_lima.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GenaroZottele/grupo_6_lima/issues"
+  },
+  "homepage": "https://github.com/GenaroZottele/grupo_6_lima#readme",
+  "dependencies": {
+    "bootstrap": "^5.2.2",
+    "express": "^4.18.1"
+  }
+}

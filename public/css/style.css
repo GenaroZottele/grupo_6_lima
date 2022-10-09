@@ -1,0 +1,34 @@
+.navBar{
+    display: flex;
+    justify-content: space-between;
+    margin-left: 10px;
+    margin-right: 10px;
+    height: 5vh;
+    font-family: 'Roboto', sans-serif;
+}
+.dropdown{
+    margin-top: 5px;
+}
+.logo{
+    display: flex;
+    margin-top: 5px;
+}
+.cart{
+    margin-top: 5px;
+}
+.cart i{
+    font-size: 30px;
+    color: black;
+}
+.principal{
+    font-family: 'Roboto', sans-serif;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: url(../img/healthy-green-vegetarian-buddha-bowl-lunch-with-eggs-rice-tomato-avocado-and-blue-cheese-on-table.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 90vh;
+}
