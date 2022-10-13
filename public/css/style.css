@@ -32,3 +32,12 @@
     background-repeat: no-repeat;
     height: 90vh;
 }
+
+.footer{
+    display: flex;
+    justify-content: space-between;
+    margin-left: 10px;
+    margin-right: 10px;
+    height: 5vh;
+    font-family: 'Roboto', sans-serif;
+}
