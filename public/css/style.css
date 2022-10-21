@@ -1,9 +1,7 @@
 .navBar{
     display: flex;
     justify-content: space-between;
-    margin-left: 10px;
-    margin-right: 10px;
-    height: 5vh;
+    height: 8vh;
     font-family: 'Roboto', sans-serif;
     background-color: #86D66C
 }
@@ -41,4 +39,20 @@
     margin-right: 10px;
     height: 5vh;
     font-family: 'Roboto', sans-serif;
+}
+/* --------------------------------------------------productDetail--------------------------------------------------------------- */
+.detail{
+    display: flex;
+    justify-content: center;
+    
+}
+.boxDetail{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 5%;
+    width: 60%;
+    border-radius: 15px;
+    border: solid 1px gray;
+
 }
