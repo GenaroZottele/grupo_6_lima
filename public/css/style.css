@@ -50,6 +50,7 @@
     background-repeat: no-repeat;
     height: 90vh;
 }
+/*------------------------- Banner Ensalada del Día-------------------------------------------------------------------------------------------- */
 .ensaladaDelDia{
     display: flex;
     flex-direction: column;
@@ -59,10 +60,22 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    justify-content: center;
-    align-items: center;
+    justify-content:flex-start;
+    align-items:flex-start;
 }
-/* Pie de página */
+.ensaladaDelDia h2{
+    margin-left: 15px;
+    margin-top: 10px;
+    font-weight: 500;
+    color: #007200;
+    border: solid #007200 2px;
+}
+.ensaladaDelDia p{
+    margin-left: 15px;
+    color:#007200;
+}
+
+/*---------------------------- Pie de página---------------------------------------------------------------------------------------------- */
 .pieDePagina{
     width: 100%;
     background-color: #86D66C;
