@@ -1,103 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>Formulario de registro</title>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/929658e686.js" crossorigin="anonymous"></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-    <link rel="stylesheet" href="../css/style.css">
-  </head>
-  <body>
-    <header>
-      <nav class="navBar">
-        <div class="dropdown">
-            <button class="btn btn-secondary " type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                <i class="fa-sharp fa-solid fa-bars"></i>
-            </button>
-            <ul class="dropdown-menu">
-              <li><a href="#" class="dropdown-item">Mi Perfil</a></li>
-              <li><a href="/productCart" class="dropdown-item">Mi Carrito</a></li>
-              <li><a href="/product" class="dropdown-item">Ensaladas</a></li>
-              <li><a href="#" class="dropdown-item">Contacto</a></li>
-              <li><a href="#" class="dropdown-item">Quienes Somos?</a></li>
-            </ul>
-        </div>
-        <div class="logo">
-            <img src="../images/Lima.png">
-        </div>
-        <div class="cart">
-            <a href="./productCart.html">
-                <i class="fa-sharp fa-solid fa-cart-shopping"></i>
-            </a>
-        </div>
-        <div class="cart">
-            <i class="fa-regular fa-user"></i>
-        </div>
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulario de registro</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/929658e686.js" crossorigin="anonymous"></script>
+  <!-- CSS only -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+  <header>
+    <nav class="navBar">
+      <div class="dropdown">
+        <button class="btn btn-secondary " type="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <i class="fa-sharp fa-solid fa-bars"></i>
+        </button>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="#">Mi Perfil</a></li>
+          <li><a class="dropdown-item" href="/productCart.html">Mi Carrito</a></li>
+          <li><a class="dropdown-item" href="#">Contacto</a></li>
+          <li><a class="dropdown-item" href="#">Quienes Somos?</a></li>
+          <li><a class="dropdown-item" href="register.html">Register</a></li>
+          <li><a class="dropdown-item" href="login.html">Login</a></li>
+        </ul>
+      </div>
+      <div class="logo">
+        <img src="../images/Lima.png">
+      </div>
+      <div class="cart">
+        <a href="./productCart.html">
+          <i class="fa-sharp fa-solid fa-cart-shopping"></i>
+        </a>
+      </div>
+      <div class="cart">
+        <i class="fa-regular fa-user"></i>
+      </div>
     </nav>
-    </header>
-    <main>
-      <form action="register.html" method="POST">
-        <p>
-          <label>Apellido y nombre:</label>
-          <input type="text" name="nombre" required>
-        </p>
-        <p>
-          <label>Dirección:</label>
-          <input type="text" name="direccion" required>
-        </p>
-        <p>
-          <label>Celular:</label>
-          <input type="number" name="celular" required>
-        </p>
-        <p>
-          <label>Nombre de usuario:</label>
-          <input type="text" name="nombreDeUsuario" required>
-        </p>
-        <p>
-          <label>E-mail:</label>
-          <input type="email" name="email" required>
-        </p>
-        <p>
-          <label>Contraseña:</label>
-          <input type="password" name="password" required>
-        </p>
-        <p>
-          <button type="reset">Borrar</button>
-          <button type="submit">Enviar</button>
-        </p>
-      </form>
-    </main>
-    <footer class="pieDePagina">
-      <div class="grupo1">
-          <div class="box">
-              <figure>
-                  <a href="#">
-                      <img src="../images/LOGO.png" alt="logotipo">
-                  </a>
-              </figure>
-          </div>
-          <div class="box">
-              <h2>QUIÉNES SOMOS?</h2>
-              <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, similique.</p>
-              <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, similique.</p>
-          </div>
-          <div class="box">
-              <h2>NUESTRAS REDES:</h2>
-              <div class="redes-sociales">
-                  <a href="#" class="fa-brands fa-instagram fa-2xl"></a>
-                  <a href="#" class="fa-brands fa-facebook fa-2xl"></a>
-                  <a href="#" class="fa-brands fa-twitter fa-2xl"></a>
-              </div>
-          </div>
+  </header>
+  <main>
+    <form action="register.html" method="POST">
+      <p>
+        <label>Apellido y nombre:</label>
+        <input type="text" name="nombre" required>
+      </p>
+      <p>
+        <label>Dirección:</label>
+        <input type="text" name="direccion" required>
+      </p>
+      <p>
+        <label>Celular:</label>
+        <input type="number" name="celular" required>
+      </p>
+      <p>
+        <label>Nombre de usuario:</label>
+        <input type="text" name="nombreDeUsuario" required>
+      </p>
+      <p>
+        <label>E-mail:</label>
+        <input type="email" name="email" required>
+      </p>
+      <p>
+        <label>Contraseña:</label>
+        <input type="password" name="password" required>
+      </p>
+      <p>
+        <button type="reset">Borrar</button>
+        <button type="submit">Enviar</button>
+      </p>
+    </form>
+  </main>
+  <footer class="pieDePagina">
+    <div class="grupo1">
+      <div class="box">
+        <figure>
+          <a href="#">
+            <img src="/images/LOGO.png" alt="logotipo">
+          </a>
+        </figure>
       </div>
-      <div class="grupo2">
-          <small>&copy; 2022 <b>Lima</b> - Todos los derechos reservados.</small>
+      <div class="box">
+        <h2>QUIÉNES SOMOS?</h2>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, similique.</p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, similique.</p>
       </div>
+      <div class="box">
+        <h2>NUESTRAS REDES:</h2>
+        <div class="redes-sociales">
+          <a href="#" class="fa-brands fa-instagram fa-2xl"></a>
+          <a href="#" class="fa-brands fa-facebook fa-2xl"></a>
+          <a href="#" class="fa-brands fa-twitter fa-2xl"></a>
+        </div>
+      </div>
+    </div>
+    <div class="grupo2">
+      <small>&copy; 2022 <b>Lima</b> - Todos los derechos reservados.</small>
+    </div>
   </footer>
-  </body>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+    crossorigin="anonymous"></script>
+</body>
+
 </html>
