@@ -5,36 +5,36 @@
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
 }
+/* ----------------------------HEADERRRR-------------------------------------------------------------------------------------------------------------- */
 .navBar{
     display: flex;
-    justify-content: space-between;
-    height: 8vh;
+    height: 70px;
     font-family: 'Roboto', sans-serif;
     background-color: #86D66C;
     padding: 10px;
     border: solid 2px  #007200;
 }
-.ensaladaDelDia{
-    border: solid 1px #007200;
-    box-sizing: border-box;
-}
-.fotoLobby{
-    width: 100%;
-    height: 900px;
+#burger{
+    color:#86D66C;
+    background-color: #007200;
 }
 .dropdown{
     margin-top: 5px;
 }
 .logo{
     display: flex;
+    height: 48px;
+    margin-left: 15px;
 }
-.cart{
-    margin-top: 5px;
+.lima img{
+    height: 48px;
 }
-.cart i{
-    font-size: 30px;
-    color: black;
+#user{
+    color: #007200;
+    margin-top: 15px;
 }
+
+/* ---------------------------------------------------------------------------------------------------------------------------------------------- */
 .card{
     display: flex;
 }
@@ -51,6 +51,10 @@
     height: 90vh;
 }
 /*------------------------- Banner Ensalada del Día-------------------------------------------------------------------------------------------- */
+.fotoLobby{
+    width: 100%;
+    height: 900px;
+}
 .ensaladaDelDia{
     display: flex;
     flex-direction: column;
@@ -62,6 +66,8 @@
     background-size: cover;
     justify-content:flex-start;
     align-items:flex-start;
+    border: solid 1px #007200;
+    box-sizing: border-box;
 }
 .ensaladaDelDia h2{
     margin-left: 15px;
