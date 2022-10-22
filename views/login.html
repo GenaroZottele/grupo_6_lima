@@ -11,27 +11,50 @@
     <link rel="stylesheet" href="../css/style.css">
   </head>
   <body>
-
-    <form action="login.html" method="POST">
-      <p>
-        <label>Nombre de usuario:</label>
-        <input type="text" name="nombreDeUsuario" required>
-      </p>
-  
-      <p>
-        <label>Contraseña:</label>
-        <input type="password" name="password" required>
-      </p>
-      <p>
-        <a href>Reestablecer contraseña</a>
-      </p>
-      <p><label>
-        <input type="checkbox" name="recordar" value="recordar" >Recordarme
-        </label>
-    </p>
-      <p>
-        <button type="submit">Iniciar sesión</button>
-      </p>
+    <header>
+      <nav class="navBar">
+          <div class="dropdown">
+              <button class="btn btn-secondary " type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  <i class="fa-sharp fa-solid fa-bars"></i>
+              </button>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Quienes Somos</a></li>
+                <li><a class="dropdown-item" href="/register">Registro</a></li>
+                <li><a class="dropdown-item" href="/login">Cuenta</a></li>
+                <li><a class="dropdown-item" href="/productDetail">Productos</a></li>
+              </ul>
+          </div>
+          <div class="logo">
+              <img src="../images/Lima.png">
+          </div>
+          <div class="cart">
+              <a href="./productCart.html">
+                  <i class="fa-sharp fa-solid fa-cart-shopping"></i>
+              </a>
+          </div>
+      </nav>
+  </header>
+    <form action="login.html" method="POST" >
+      <div class="login">
+        <p>
+          <label>Nombre de usuario:</label>
+          <input type="text" name="nombreDeUsuario" required>
+        </p>
+    
+        <p>
+          <label>Contraseña:</label>
+          <input type="password" name="password" required>
+        </p>
+        <p>
+          <label>
+          <input type="checkbox" name="recordar" value="recordar" >Recordarme
+          </label>
+        </p>
+        <p>
+          <button type="submit">Iniciar sesión</button>
+          <button type="reset"> Cancelar</button>
+        </p>
+      </div>
     </form>
     <footer class="footer">
       <div class="whatsApp">
