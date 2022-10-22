@@ -7,6 +7,7 @@
 }
 /* ----------------------------HEADERRRR-------------------------------------------------------------------------------------------------------------- */
 .navBar{
+    position: relative;
     display: flex;
     height: 70px;
     font-family: 'Roboto', sans-serif;
@@ -30,8 +31,16 @@
     height: 48px;
 }
 #user{
+    display: flex;
+    position: absolute;
     color: #007200;
-    margin-top: 15px;
+    padding: 15px;
+    align-self: center;
+    left: 75%;  
+}
+.usuario{
+   align-self: center;
+   margin-left: 10px;
 }
 
 /* ---------------------------------------------------------------------------------------------------------------------------------------------- */
