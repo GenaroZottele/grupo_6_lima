@@ -3,6 +3,8 @@ const app = express();
 
 const path = require('path');
 const publicFolderPath = path.resolve('public');
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }))
 
 app.use(express.static(publicFolderPath));
 
