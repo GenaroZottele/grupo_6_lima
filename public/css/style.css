@@ -44,21 +44,7 @@
 }
 
 /* ---------------------------------------------------------------------------------------------------------------------------------------------- */
-.card{
-    display: flex;
-}
-.principal{
-    font-family: 'Roboto', sans-serif;
-    text-decoration: none;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    background: url(../img/healthy-green-vegetarian-buddha-bowl-lunch-with-eggs-rice-tomato-avocado-and-blue-cheese-on-table.jpg);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: 90vh;
-}
+
 /*------------------------- Banner Ensalada del Día-------------------------------------------------------------------------------------------- */
 .fotoLobby{
     width: 100%;
@@ -88,6 +74,38 @@
 .ensaladaDelDia p{
     margin-left: 15px;
     color:#007200;
+}
+/* -------------------------Main Index ----------------------------------------------------------------------------------- */
+main section h3{
+    justify-content: space-around;
+}
+.card{
+    display: flex;
+    flex-direction: row;
+    padding: 15px;
+}
+.card img{
+    width: 40%;
+    border-radius: 5%;
+}
+.description{
+    padding: 15px;
+}
+.card .description p .price{
+    color: #007200;
+    font-weight: bolder;
+}
+.principal{
+    font-family: 'Roboto', sans-serif;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: url(../img/healthy-green-vegetarian-buddha-bowl-lunch-with-eggs-rice-tomato-avocado-and-blue-cheese-on-table.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 90vh;
 }
 
 /*---------------------------- Pie de página---------------------------------------------------------------------------------------------- */
