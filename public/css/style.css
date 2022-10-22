@@ -14,6 +14,46 @@
     background-color: #86D66C;
     padding: 10px;
     border: solid 2px  #007200;
+    width: 100%;
+}
+.menu{
+    display: flex;
+    text-align: center;
+    justify-content: space-evenly;
+    width: 100%;
+    align-self: center;
+    
+}
+
+.menu a{
+    text-decoration: none;
+    color:#86D66C;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    background-color: #007200;
+    border-radius: 5px;
+    padding: 5px;
+    text-align: center;
+    
+}
+.menu :hover{
+    box-shadow: 0px 0px 15px white;
+}
+.menu a :hover{
+    box-shadow: none;
+}
+.logoCarrito{
+    display: flex;
+    justify-content:end;
+    align-items: center;
+    color: #007200;
+    position: absolute;
+    left: 90%;
+    top: 30%;
+}
+.logoCarrito i{
+    font-size: 30px;
+    margin-left: 15px;
 }
 #burger{
     color:#86D66C;
@@ -25,23 +65,22 @@
 .logo{
     display: flex;
     height: 48px;
-    margin-left: 15px;
+
+    position: absolute;
+    left: 15px;
+    flex-grow: 0.15;
 }
 .lima img{
     height: 48px;
 }
-#user{
+/* #user{
     display: flex;
     position: absolute;
     color: #007200;
     padding: 15px;
     align-self: center;
     left: 75%;  
-}
-.usuario{
-   align-self: center;
-   margin-left: 10px;
-}
+} */
 
 /* ---------------------------------------------------------------------------------------------------------------------------------------------- */
 
@@ -76,6 +115,11 @@
     color:#007200;
 }
 /* -------------------------Main Index ----------------------------------------------------------------------------------- */
+.cards h3{
+    display: flex;
+    justify-content: center;
+    margin: 25px;
+}
 main section h3{
     justify-content: space-around;
 }
@@ -84,17 +128,41 @@ main section h3{
     flex-direction: row;
     padding: 15px;
 }
+.card2{
+    display: flex;
+    flex-direction: row;
+    padding: 15px;
+}
+.card2 img{
+    width: 40%;
+    border-radius: 5%;
+}
 .card img{
     width: 40%;
     border-radius: 5%;
 }
 .description{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     padding: 15px;
+
 }
-.card .description p .price{
+.botones a{
+    text-decoration: none;
+    color:#86D66C;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    background-color: #007200;
+    border-radius: 5px;
+    padding: 5px;
+    margin-right: 10px;
+    text-align: center;
+}
+/* .card .description p .price{
     color: #007200;
     font-weight: bolder;
-}
+} */
 .principal{
     font-family: 'Roboto', sans-serif;
     text-decoration: none;
@@ -208,3 +276,19 @@ main section h3{
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
 }
+
+
+/* ------------------------------------------------------- media ----------------------------------------------------------------- */
+
+@media (max-width: 414px) {
+    .menu{
+        display: none;
+    }
+}
+
+@media (min-width: 414px) {
+    .dropdown{
+        display: none;
+    }
+}
+
