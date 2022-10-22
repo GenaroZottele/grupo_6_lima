@@ -8,6 +8,10 @@
     padding: 10px;
     border: solid 2px  #007200;
 }
+.ensaladaDelDia{
+    border: solid 1px #007200;
+    box-sizing: border-box;
+}
 .fotoLobby{
     width: 100%;
     height: 900px;
