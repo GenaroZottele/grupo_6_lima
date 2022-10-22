@@ -85,13 +85,24 @@ footer div.instagram{
     border: solid 1px gray;
 }
 /* --------------------------------------------------login--------------------------------------------------------------- */
-
+.formLogin{
+    
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .login{
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content:center;
+    align-items:center;
     border-radius: 15px;
     border: solid 1px #007200;
     width: 50%;
-
+    padding: 15px;
+}
+.login p label{
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
 }
