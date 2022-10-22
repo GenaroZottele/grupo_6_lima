@@ -1,16 +1,22 @@
+
 .navBar{
     display: flex;
     justify-content: space-between;
     height: 8vh;
     font-family: 'Roboto', sans-serif;
-    background-color: #86D66C
+    background-color: #86D66C;
+    padding: 10px;
+    border: solid 2px  #007200;
+}
+.fotoLobby{
+    width: 100%;
+    height: 900px;
 }
 .dropdown{
     margin-top: 5px;
 }
 .logo{
     display: flex;
-    margin-top: 5px;
 }
 .cart{
     margin-top: 5px;
@@ -18,6 +24,9 @@
 .cart i{
     font-size: 30px;
     color: black;
+}
+.card{
+    display: flex;
 }
 .principal{
     font-family: 'Roboto', sans-serif;
@@ -34,11 +43,19 @@
 
 .footer{
     display: flex;
-    justify-content: space-between;
-    margin-left: 10px;
-    margin-right: 10px;
-    height: 5vh;
+    justify-content: flex-end;
+    background-color: #86D66C;
+    height: 150px;
     font-family: 'Roboto', sans-serif;
+    padding: 20px;
+    border: solid 2px  #007200;
+}
+footer div.instagram{
+    display: flex;
+    color: #E1306C;
+    position: relative;
+
+
 }
 /* --------------------------------------------------productDetail--------------------------------------------------------------- */
 .detail{
@@ -54,8 +71,4 @@
     width: 60%;
     border-radius: 15px;
     border: solid 1px gray;
-
 }
-
-/* ---------------------------------------------------- Login ------------------------------------------------------------------- */
-
