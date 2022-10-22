@@ -50,12 +50,9 @@
     padding: 20px;
     border: solid 2px  #007200;
 }
-footer div.instagram{
+#insta{
     display: flex;
     color: #E1306C;
-    position: relative;
-
-
 }
 /* --------------------------------------------------productDetail--------------------------------------------------------------- */
 .detail{
