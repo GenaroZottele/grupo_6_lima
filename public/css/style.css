@@ -25,6 +25,9 @@
     font-size: 30px;
     color: black;
 }
+.card{
+    display: flex;
+}
 .principal{
     font-family: 'Roboto', sans-serif;
     text-decoration: none;
