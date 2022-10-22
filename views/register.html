@@ -3,37 +3,86 @@
     <title>Formulario de registro</title>
   </head>
   <body>
-    <form action="register.html" method="POST">
-      <p>
-        <label>Apellido y nombre:</label>
-        <input type="text" name="nombre" required>
-      </p>
-      <p>
-        <label>Dirección:</label>
-        <input type="text" name="direccion" required>
-      </p>
-      <p>
-        <label>Celular:</label>
-        <input type="number" name="celular" required>
-      </p>
-      <p>
-        <label>Nombre de usuario:</label>
-        <input type="text" name="nombreDeUsuario" required>
-      </p>
-      <p>
-        <label>E-mail:</label>
-        <input type="email" name="email" required>
-      </p>
+    <header>
+      <nav class="navBar">
+        <div class="dropdown">
+            <button class="btn btn-secondary " type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="fa-sharp fa-solid fa-bars"></i>
+            </button>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Quienes Somos</a></li>
+              <li><a class="dropdown-item" href="/register">Registro</a></li>
+              <li><a class="dropdown-item" href="/login">Cuenta</a></li>
+              <li><a class="dropdown-item" href="/productDetail">Productos</a></li>
 
-      <p>
-        <label>Contraseña:</label>
-        <input type="password" name="password" required>
-      </p>
-
-      <p>
-        <button type="reset">Borrar</button>
-        <button type="submit">Enviar</button>
-      </p>
-    </form>
+            </ul>
+        </div>
+        <div class="logo">
+            <img src="../images/Lima.png">
+        </div>
+        <div class="cart">
+            <a href="./productCart.html">
+                <i class="fa-sharp fa-solid fa-cart-shopping"></i>
+            </a>
+        </div>
+        <div class="cart">
+            <i class="fa-regular fa-user"></i>
+        </div>
+    </nav>
+    </header>
+    <main>
+      <form action="register.html" method="POST">
+        <p>
+          <label>Apellido y nombre:</label>
+          <input type="text" name="nombre" required>
+        </p>
+        <p>
+          <label>Dirección:</label>
+          <input type="text" name="direccion" required>
+        </p>
+        <p>
+          <label>Celular:</label>
+          <input type="number" name="celular" required>
+        </p>
+        <p>
+          <label>Nombre de usuario:</label>
+          <input type="text" name="nombreDeUsuario" required>
+        </p>
+        <p>
+          <label>E-mail:</label>
+          <input type="email" name="email" required>
+        </p>
+        <p>
+          <label>Contraseña:</label>
+          <input type="password" name="password" required>
+        </p>
+        <p>
+          <button type="reset">Borrar</button>
+          <button type="submit">Enviar</button>
+        </p>
+      </form>
+    </main>
+    <footer class="footer">
+      <div class="whatsApp">
+          <a href="#">                
+              <i class="fa-brands fa-whatsapp fa-2xl"></i>
+          </a>
+      </div>
+      <div class="instagram">      
+          <a href="#">                
+              <i class="fa-brands fa-instagram fa-2xl" id="insta"></i>
+          </a>
+      </div>
+      <div class="facebook">            
+          <a href="#">                
+              <i class="fa-brands fa-facebook fa-2xl"></i>
+          </a>
+      </div>
+      <div class="twitter">            
+          <a href="#">                
+              <i class="fa-brands fa-twitter fa-2xl"></i>
+          </a>
+      </div>
+    </footer>
   </body>
 </html>

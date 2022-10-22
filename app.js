@@ -22,7 +22,7 @@ app.get("/register", (req, res) => {
 app.get("/login", (req, res) => {
     res.sendFile(path.resolve("views/login.html"))
 })
-app.get("/productDetail", (req, res) => {
+app.get("/product", (req, res) => {
     res.sendFile(path.resolve("views/productDetail.html"))
 })
 app.post("/", (req, res) => {
