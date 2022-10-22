@@ -25,6 +25,9 @@ app.get("/login", (req, res) => {
 app.get("/product", (req, res) => {
     res.sendFile(path.resolve("views/productDetail.html"))
 })
+app.get("/productcart", (req, res) => {
+    res.sendFile(path.resolve("views/productCart.html"))
+})
 app.post("/", (req, res) => {
     return res.send(req.body)
 })
