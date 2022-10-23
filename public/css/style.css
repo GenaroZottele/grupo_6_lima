@@ -11,9 +11,9 @@
     display: flex;
     height: 70px;
     font-family: 'Roboto', sans-serif;
-    background-color: #86D66C;
+    background-color: white;
     padding: 10px;
-    border: solid 2px  #007200;
+    border: solid 2px #357e53;
     width: 100%;
 }
 .menu{
@@ -27,11 +27,11 @@
 
 .menu a{
     text-decoration: none;
-    color:#86D66C;
+    color: #357e53;
     font-family: 'Roboto', sans-serif;
     font-size: 20px;
-    background-color: #007200;
     border-radius: 5px;
+    border: black 2px dashed;
     padding: 5px;
     text-align: center;
     
@@ -46,7 +46,7 @@
     display: flex;
     justify-content:end;
     align-items: center;
-    color: #007200;
+    color: #357e53;
     position: absolute;
     left: 90%;
     top: 30%;
@@ -57,7 +57,7 @@
 }
 #burger{
     color:#86D66C;
-    background-color: #007200;
+    background-color: #357e53;
 }
 .dropdown{
     margin-top: 5px;
@@ -65,13 +65,19 @@
 .logo{
     display: flex;
     height: 48px;
-
+    padding-bottom: 5px;
     position: absolute;
     left: 15px;
     flex-grow: 0.15;
 }
 .lima img{
     height: 48px;
+
+}
+main {
+    padding: 20px black;
+
+
 }
 /* #user{
     display: flex;
@@ -100,27 +106,38 @@
     background-size: cover;
     justify-content:flex-start;
     align-items:flex-start;
-    border: solid 1px #007200;
+    border: solid 1px #357e53;
     box-sizing: border-box;
 }
 .ensaladaDelDia h2{
     margin-left: 15px;
     margin-top: 10px;
     font-weight: 500;
-    color: #007200;
-    border: solid #007200 2px;
+    color: #357e53;
+    border: solid #357e53 2px;
+    background-color: black;
+    padding: 5px;
 }
 .ensaladaDelDia p{
     margin-left: 15px;
-    color:#007200;
+    color: white;
+    background-color: black;
+    border: #357e53 1px dashed;
+    padding: 5px;
 }
 /* -------------------------Main Index ----------------------------------------------------------------------------------- */
-.cards h3{
+.cards h2{
     display: flex;
     justify-content: center;
-    margin: 25px;
+    margin-left: 15px;
+    margin-top: 10px;
+    font-weight: 500;
+    color: #357e53;
+    background-color: black;
+    border: #357e53 2px dotted;
+    padding: 5px;
 }
-main section h3{
+main section h2{
     justify-content: space-around;
 }
 .card{
@@ -134,11 +151,11 @@ main section h3{
     padding: 15px;
 }
 .card2 img{
-    width: 40%;
+    width: 25%;
     border-radius: 5%;
 }
 .card img{
-    width: 40%;
+    width: 25%;
     border-radius: 5%;
 }
 .description{
@@ -150,17 +167,22 @@ main section h3{
 }
 .botones a{
     text-decoration: none;
-    color:#86D66C;
+    height: 70px;
     font-family: 'Roboto', sans-serif;
-    font-size: 20px;
-    background-color: #007200;
-    border-radius: 5px;
-    padding: 5px;
-    margin-right: 10px;
+    color: black;
+    background-color: white;
+    padding: 10px;
+    border: dashed 2px #357e53;
+    width: 100%;
     text-align: center;
+    display: inline;
+    justify-items: center;
+    align-items: center;
+    align-content: center;
+    border-radius: 5px;
 }
 /* .card .description p .price{
-    color: #007200;
+    color: #007200; #357e53
     font-weight: bolder;
 } */
 .principal{
@@ -179,7 +201,7 @@ main section h3{
 /*---------------------------- Pie de página---------------------------------------------------------------------------------------------- */
 .pieDePagina{
     width: 100%;
-    background-color: #86D66C;
+    background-color: black;
 }
 .pieDePagina .grupo1{
     width: 100%;
@@ -188,7 +210,7 @@ main section h3{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 50px;
-    padding: 45px 0px;
+    padding: 25px 0px;
 }
 .pieDePagina .grupo1 .box figure{
     width: 100%;
@@ -216,9 +238,9 @@ main section h3{
     width: 45px;
     height: 45px;
     line-height: 45px;
-    color:#86D66C;
+    color: white;
     margin-right: 10px;
-    background-color: #007200;
+    background-color: #357e53;
     text-align: center;
     border-radius: 10%;
 }
@@ -231,7 +253,7 @@ main section h3{
 .pieDePagina .grupo2 small{
     font-size: 15px;
 }
-@media screen and (max-width:761px) {
+@media screen and (max-width:760px) {
     .pieDePagina .grupo1{
         width: 90%;
         grid-template-columns: repeat(1, 1fr);
@@ -244,6 +266,11 @@ main section h3{
     }
     .detail {
         padding: 0px;
+    }
+    .card .card2 img {
+        display: initial;
+        flex-wrap: wrap;
+        flex-direction: column;
     }
 }
 /* --------------------------------------------------productDetail--------------------------------------------------------------- */
