@@ -480,45 +480,52 @@ main form p label{
 
 /* --------------------------------------------------productCart--------------------------------------------------------------- */
 
-.Tarjetas-contenedor{
+.ingredientes1{
     display: flex;
-   
+    flex-direction: row;
+    padding: 15px;
+    justify-content: center;
+    display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    text-align: justify;
+    justify-content:center;
     align-items:center;
     border-radius: 15px;
     border: solid 1px #007200;
     width: 90%;
     padding: 15px;
-}
-.label{
-    display: flex;
-    flex-direction: column;
-}
-.label2{
+}   
+.ingredientes2{
     display: flex;
     flex-direction: row;
-    margin: 15px;
-}
-.Mipedido{
-    font-family: 'Roboto', sans-serif;
-    font-size: 12px;
-    display: flex;
     padding: 15px;
-    left: 75%;  
-}
-.boxDetail2{
-    display: flex;
-    font-size: 12px;
-    flex-direction: column;
     justify-content: center;
-    margin: 5%;
-    width: 30%;
-    border-radius: 15px;
-    border: solid 1px gray;
-}
-.Ubicación{
     display: flex;
-    padding: 5px;
+    flex-direction: column;
+    justify-content:center;
+    align-items:center;
+    border-radius: 15px;
+    border: solid 1px #007200;
+    width: 90%;
+    padding: 15px;
+}   
+.pago{
+    position: relative;
+    top: 20%;
+    border: #007200 solid 1px;
+    border-radius: 15px;
+    width: 90%;
+    text-align: center;
+    padding: 20px;
 }
+
+.formulariopago {
+display: flex;
+flex-direction: column;
+}
+
+.formulariopago2 {
+    display: flex;
+    flex-direction: column;
+    }
+
+

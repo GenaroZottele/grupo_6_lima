@@ -49,49 +49,60 @@
     </header>
     
     <main>   
-        <section class="Mipedido">
-            <h1>Mi Pedido</h1>
-            <div class="boxDetail2">
-                <img src="../images/Caesar.jpeg" alt="ensalada">
-                <p>Ensalada Caesar</p>
-                <p>$900</p>
+        <article class="card">
+            <img src="../images/Caesar.jpeg" alt="Ensalada Caesar">
+            <div class="description">
+                <h2>Ensalada Caesar</h2>
+                <p clas="price">Precio $ 720.00</p>
+                <p>Ingredientes: Pollo, queso, tomates cherry, mix de verdes y croutons.</p>
             </div>
-        </section>
+        </article>
 
-        <form class="label">      
-            <p>Agregar ingredientes</p>
+        <section>
+        <form class="ingredientes1">      
+            <p>Quitar ingredientes</p>
                 
-                <label>Palta<input type="checkbox" name="palta" id="palta" value="palta"></label> 
-                <label>Cebolla<input type="checkbox" name="cebolla" id="cebolla" value="cebolla"></label>
-                <label>Jamon<input type="checkbox" name="jamon" id="jamon" value="jamon"></label>
-                <label>Queso rallado<input type="checkbox" name="quesorallado" id="quesorallado" value="quesorallado"></label>
+                <label>Pollo<input type="checkbox" name="palta" id="palta" value="palta"></label> 
+                <label>Queso<input type="checkbox" name="cebolla" id="cebolla" value="cebolla"></label>
+                <label>Tomates cherry<input type="checkbox" name="jamon" id="jamon" value="jamon"></label>
+                <label>Croutons<input type="checkbox" name="quesorallado" id="quesorallado" value="quesorallado"></label>
         </form> 
-        
-        <section class="Ubicación">
-                <label>Confirmar dirección:</label>
-          <input type="text" name="direccion" required>
-        </section>
-        
-        <div class="Tarjetas-contenedor">
+
+        <form class="ingredientes2">    
+            <p>Agregar ingredientes</p>   
+                <label for="ingredientes">Elige ingredientes para agregar:</label> 
+                    <select name="ingrediente" id="ingrediente">
+                        <option value="Palta">Palta</option>
+                        <option value="Cebolla">Cebolla</option>
+                        <option value="Quesorallado">Queso rallado</option>
+                        <option value="Jamon">Jamon</option>
+                        <option value="Apio">Apio</option>
+                        <option value="Manzanaverde">Manzana Verde</option>
+                    </select>
+        </form> 
+        </section> 
+     
+        <section>
+            <div class="pago">
             <h2>Pagar</h2>
             <i class="fa-solid fa-cart-shopping"></i>               
             <form>      
-                <p>Elija medio de pago</p>
-                    
-                <div class="label">
+                <p>Elija medio de pago</p>                 
+                <div class="formulariopago">
                     <label><i class="fa-regular fa-dollar-sign"></i>Efectivo<input type="radio" name="" id="Cash" value="Cash"></label>   
                     <label><i class="fa-brands fa-cc-mastercard"></i>Mastercard<input type="radio" name="Mastercard" id="Mastercard" value="Mastercard"></label>
                     <label><i class="fa-brands fa-cc-visa"></i>Visa<input type="radio" name="Visa" id="Visa" value="Visa"></label>
                     <label><i class="fa-brands fa-cc-paypal"></i>PayPal<input type="radio" name="PayPal" id="PayPal" value="PayPal"></label>
                     <label><i class="fa-brands fa-cc-apple-pay"></i>Apple Pay<input type="radio" name="ApplePay" id="ApplePay" value="ApplePay"></label>   
                 </div> 
-                <div class="label2">  
+                
+                <div class="formulariopago2">
                     <button type="submit">Enviar</button> 
                     <button type="reset">Limpiar pedido</button>
                 </div>    
             </form>
-        
-        </div>
+       
+        </section> 
     </main>  
     <footer class="pieDePagina">
         <div class="grupo1">
