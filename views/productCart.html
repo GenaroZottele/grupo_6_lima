@@ -13,11 +13,10 @@
     <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
-    <header></header>
-        <nav class="navBar">
-            
+    <header>
+        <nav class="navBar"> 
             <div class="dropdown">
-                <button class="btn btn-secondary " type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <button class="btn btn-secondary " type="button" data-bs-toggle="dropdown" aria-expanded="false" id="burger">
                     <i class="fa-sharp fa-solid fa-bars"></i>
                 </button>
                 <ul class="dropdown-menu">
@@ -26,56 +25,59 @@
                     <li><a class="dropdown-item" href="/product">Productos</a></li>
                 </ul>
             </div>
-            
             <div class="logo">
-                <img src="../images/Lima.png">   
+                <img src="../images/LOGO.png" alt="logo">
             </div>
-            
-            <div class="back">
-                <a href="./register.html"><i class="fa-solid fa-right-to-bracket"></i></a>
+            <div class="lima">
+                <img src="../images/Lima.png" alt="Lima">
+            </div>
+            <div>
+                <i class="fa-solid fa-user" id="user"><p class="usuario">Nombre</p></i>
             </div>
         </nav>
-        <div class="volver">
-            <a href="./productDetail.html"><i class="fa-solid fa-circle-left"></i></a>
-        <h3> Volver atrás </h3>
-        </div>
     </header>
     
     <main>   
-        <section class="Pedido">
-            <h1 class="Mi pedido">Mi Pedido</h1>
-            <p>ACA DEBERIA TRAER EL PEDIDO SELECCIONADO</p>
+        <section class="Mipedido">
+            <h1>Mi Pedido</h1>
+            <div class="boxDetail2">
+                <img src="../images/Caesar.jpeg" alt="ensalada">
+                <p>Ensalada Caesar</p>
+                <p>$900</p>
+            </div>
         </section>
+
+        <form class="label">      
+            <p>Agregar ingredientes</p>
+                
+                <label>Palta<input type="checkbox" name="palta" id="palta" value="palta"></label> 
+                <label>Cebolla<input type="checkbox" name="cebolla" id="cebolla" value="cebolla"></label>
+                <label>Jamon<input type="checkbox" name="jamon" id="jamon" value="jamon"></label>
+                <label>Queso rallado<input type="checkbox" name="quesorallado" id="quesorallado" value="quesorallado"></label>
+        </form> 
         
         <section class="Ubicación">
-                <h1 class="Mi Ubicación">Confirmar dirección</h1>
-                <p>ACA DEBERIA TRAER LA DIRECCIÓN GUARDADA POR EL USUARIOgit</p> 
+                <label>Confirmar dirección:</label>
+          <input type="text" name="direccion" required>
         </section>
         
-        <div class="Tarjetas">
+        <div class="Tarjetas-contenedor">
             <h2>Pagar</h2>
             <i class="fa-solid fa-cart-shopping"></i>               
             <form>      
                 <p>Elija medio de pago</p>
-                    <i class="fa-regular fa-dollar-sign"></i>
-                    <label>Efectivo<input type="radio" name="userType" id="valorDonacion1" value="Cash"> 
                     
-                    <i class="fa-brands fa-cc-mastercard"></i>    
-                    <label>Mastercard<input type="radio" name="userType" id="valorDonacion1" value="Mastercard">
-                    
-                    <i class="fa-brands fa-cc-visa"></i>    
-                    <label>Visa<input type="radio" name="userType" id="valorDonacion1" value="Visa">
-
-                    <i class="fa-brands fa-cc-paypal"></i> 
-                    <label>PayPal<input type="radio" name="userType" id="valorDonacion1" value="PayPal">
-
-                    <i class="fa-brands fa-cc-apple-pay"></i>
-                    <label>Apple Pay<input type="radio" name="userType" id="valorDonacion1" value="ApplePay">
-                    
-                
-                     <button type="submit">Enviar</button>
-                     <button type="reset">Limpiar pedido</button>
-    
+                <div class="label">
+                    <label><i class="fa-regular fa-dollar-sign"></i>Efectivo<input type="radio" name="" id="Cash" value="Cash"></label>   
+                    <label><i class="fa-brands fa-cc-mastercard"></i>Mastercard<input type="radio" name="Mastercard" id="Mastercard" value="Mastercard"></label>
+                    <label><i class="fa-brands fa-cc-visa"></i>Visa<input type="radio" name="Visa" id="Visa" value="Visa"></label>
+                    <label><i class="fa-brands fa-cc-paypal"></i>PayPal<input type="radio" name="PayPal" id="PayPal" value="PayPal"></label>
+                    <label><i class="fa-brands fa-cc-apple-pay"></i>Apple Pay<input type="radio" name="ApplePay" id="ApplePay" value="ApplePay"></label>   
+                </div> 
+                <div class="label2">  
+                    <button type="submit">Enviar</button> 
+                    <button type="reset">Limpiar pedido</button>
+                </div>    
             </form>
         
         </div>
