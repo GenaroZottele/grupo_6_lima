@@ -135,15 +135,18 @@ main {
     color: #357e53;
     background-color: black;
     border: #357e53 2px dotted;
-    padding: 5px;
+    padding: 15px;
+    border-radius: 10px;
 }
 main section h2{
     justify-content: space-around;
+    padding: 25px;
 }
 .card{
     display: flex;
     flex-direction: row;
     padding: 15px;
+    justify-content: center;
 }
 .card2{
     display: flex;
@@ -181,6 +184,9 @@ main section h2{
     border-radius: 5px;
     height: 100vw;
     width: 100%;
+}
+p {
+    font-size: 22px;
 }
 /* .card .description p .price{
     color: #007200; #357e53
