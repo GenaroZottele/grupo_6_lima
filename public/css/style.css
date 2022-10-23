@@ -176,6 +176,7 @@ main section h2{
     width: 100%;
     text-align: center;
     display: inline;
+    flex-direction: row;
     justify-items: center;
     align-items: center;
     align-content: center;
@@ -322,8 +323,26 @@ main section h2{
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
 }
-
-
+/* --------------------------------------------------register--------------------------------------------------------------- */
+.formregister {
+    padding: 20px;
+    padding-left: 40px;
+}
+.botones {
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    color: black;
+    background-color: white;
+    padding: 10px;
+    border: dashed 2px #357e53;
+    width: 15%;
+    text-align: center;
+    display: inline;
+    justify-items: center;
+    align-items: center;
+    align-content: center;
+    border-radius: 5px;
+}
 /* ------------------------------------------------------- media ----------------------------------------------------------------- */
 
 @media (max-width: 414px) {
