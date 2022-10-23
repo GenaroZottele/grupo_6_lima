@@ -32,11 +32,10 @@
     border-radius: 5px;
     border: black 2px dashed;
     padding: 5px;
-    text-align: center;
-    
+    text-align: center; 
 }
 .menu :hover{
-    box-shadow: 0px 0px 15px white;
+    box-shadow: 0px 0px 15px #357e53;
 }
 .menu a :hover{
     box-shadow: none;
@@ -46,9 +45,7 @@
     justify-content:end;
     align-items: center;
     color: #357e53;
-    position: absolute;
-    left: 90%;
-    top: 30%;
+    margin-right: 15px;
 }
 .logoCarrito i{
     font-size: 30px;
@@ -65,9 +62,9 @@
     display: flex;
     height: 48px;
     padding-bottom: 5px;
-    position: absolute;
-    left: 15px;
-    flex-grow: 0.15;
+    justify-content: center;
+    flex-grow: 1;
+    
 }
 .lima img{
     height: 48px;
@@ -270,8 +267,9 @@ p {
 .detail {
     display: block;
     justify-content: center;
-    border: solid 3px gray;
     padding: 20px;
+    width: 100%;
+
 }
 .boxDetail{
     display: flex;
@@ -279,18 +277,47 @@ p {
     justify-content: left;
     border-radius: 26px;
     border: solid 1px gray;
+    width: 70%;
+    margin-bottom: 20px;
+
 }
 .boxLeft {
     display: contents;
     flex-direction: row;
-    justify-content: center;
+    justify-content:space-around;
+}
+.boxLeft img{
+    width: 25%;
+    padding: 10px;
 }
 .boxRight {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-around;
     align-items: flex-start;
     padding-left: 20px;
+    
+}
+.agregarCarrito{
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    color: black;
+    background-color: white;
+    padding: 10px;
+    border: dashed 2px #357e53;
+    text-align: center;
+    display: inline;
+    flex-direction: row;
+    justify-items: center;
+    align-items: center;
+    align-content: center;
+    border-radius: 5px;
+    height: 100vw;
+    width: 100%;
+    margin-top: 30px;
+}
+.agregarCarrito:hover{
+    color:#357e53;
 }
 
 /* --------------------------------------------------login--------------------------------------------------------------- */
@@ -389,15 +416,25 @@ main form p label{
 }
 /* ------------------------------------------------------- media ----------------------------------------------------------------- */
 
-@media (max-width: 414px) {
+@media (max-width: 1350px) {
     .menu{
         display: none;
     }
+
 }
 
 @media (min-width: 414px) {
+    
+}
+@media  (min-width:1350px ) {
     .dropdown{
         display: none;
+    }
+    .logoCarrito{
+        left: 90%;
+    }
+    .logo{
+        left: 15px;
     }
 }
 
