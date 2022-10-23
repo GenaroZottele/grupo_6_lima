@@ -237,23 +237,42 @@ main section h3{
         grid-template-columns: repeat(1, 1fr);
         grid-gap: 30px;
         padding: 35px 0px;
-}
+    }
+    .boxRight {
+        height: 180px;
+        font-size: x-small;
+    }
+    .detail {
+        padding: 0px;
+    }
 }
 /* --------------------------------------------------productDetail--------------------------------------------------------------- */
-.detail{
-    display: flex;
+.detail {
+    display: block;
     justify-content: center;
-    
+    border: solid 3px gray;
+    padding: 20px;
 }
 .boxDetail{
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin: 5%;
-    width: 60%;
-    border-radius: 15px;
+    flex-direction: row;
+    justify-content: left;
+    border-radius: 26px;
     border: solid 1px gray;
 }
+.boxLeft {
+    display: contents;
+    flex-direction: row;
+    justify-content: center;
+}
+.boxRight {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding-left: 20px;
+}
+
 /* --------------------------------------------------login--------------------------------------------------------------- */
 .formLogin{
     
