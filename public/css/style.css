@@ -11,13 +11,53 @@
     display: flex;
     height: 70px;
     font-family: 'Roboto', sans-serif;
-    background-color: #86D66C;
+    background-color: white;
     padding: 10px;
-    border: solid 2px  #007200;
+    border: solid 2px #357e53;
+    width: 100%;
+}
+.menu{
+    display: flex;
+    text-align: center;
+    justify-content: space-evenly;
+    width: 100%;
+    align-self: center;
+    
+}
+
+.menu a{
+    text-decoration: none;
+    color: #357e53;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    border-radius: 5px;
+    border: black 2px dashed;
+    padding: 5px;
+    text-align: center;
+    
+}
+.menu :hover{
+    box-shadow: 0px 0px 15px white;
+}
+.menu a :hover{
+    box-shadow: none;
+}
+.logoCarrito{
+    display: flex;
+    justify-content:end;
+    align-items: center;
+    color: #357e53;
+    position: absolute;
+    left: 90%;
+    top: 30%;
+}
+.logoCarrito i{
+    font-size: 30px;
+    margin-left: 15px;
 }
 #burger{
     color:#86D66C;
-    background-color: #007200;
+    background-color: #357e53;
 }
 .dropdown{
     margin-top: 5px;
@@ -25,23 +65,28 @@
 .logo{
     display: flex;
     height: 48px;
-    margin-left: 15px;
+    padding-bottom: 5px;
+    position: absolute;
+    left: 15px;
+    flex-grow: 0.15;
 }
 .lima img{
     height: 48px;
+
 }
-#user{
+main {
+    padding: 20px black;
+
+
+}
+/* #user{
     display: flex;
     position: absolute;
     color: #007200;
     padding: 15px;
     align-self: center;
     left: 75%;  
-}
-.usuario{
-   align-self: center;
-   margin-left: 10px;
-}
+} */
 
 /* ---------------------------------------------------------------------------------------------------------------------------------------------- */
 
@@ -61,40 +106,92 @@
     background-size: cover;
     justify-content:flex-start;
     align-items:flex-start;
-    border: solid 1px #007200;
+    border: solid 1px #357e53;
     box-sizing: border-box;
 }
 .ensaladaDelDia h2{
     margin-left: 15px;
     margin-top: 10px;
     font-weight: 500;
-    color: #007200;
-    border: solid #007200 2px;
+    color: #357e53;
+    border: solid #357e53 2px;
+    background-color: black;
+    padding: 5px;
 }
 .ensaladaDelDia p{
     margin-left: 15px;
-    color:#007200;
+    color: white;
+    background-color: black;
+    border: #357e53 1px dashed;
+    padding: 5px;
 }
 /* -------------------------Main Index ----------------------------------------------------------------------------------- */
-main section h3{
+.cards h2{
+    display: flex;
+    justify-content: center;
+    margin-left: 15px;
+    margin-top: 10px;
+    font-weight: 500;
+    color: #357e53;
+    background-color: black;
+    border: #357e53 2px dotted;
+    padding: 15px;
+    border-radius: 10px;
+}
+main section h2{
     justify-content: space-around;
+    padding: 25px;
 }
 .card{
     display: flex;
     flex-direction: row;
     padding: 15px;
+    justify-content: center;
+}
+.card2{
+    display: flex;
+    flex-direction: row;
+    padding: 15px;
+}
+.card2 img{
+    width: 25%;
+    border-radius: 5%;
 }
 .card img{
-    width: 40%;
+    width: 25%;
     border-radius: 5%;
 }
 .description{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     padding: 15px;
+
 }
-.card .description p .price{
-    color: #007200;
+.botones a{
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    color: black;
+    background-color: white;
+    padding: 10px;
+    border: dashed 2px #357e53;
+    text-align: center;
+    display: inline;
+    flex-direction: row;
+    justify-items: center;
+    align-items: center;
+    align-content: center;
+    border-radius: 5px;
+    height: 100vw;
+    width: 100%;
+}
+p {
+    font-size: 22px;
+}
+/* .card .description p .price{
+    color: #007200; #357e53
     font-weight: bolder;
-}
+} */
 .principal{
     font-family: 'Roboto', sans-serif;
     text-decoration: none;
@@ -111,7 +208,7 @@ main section h3{
 /*---------------------------- Pie de página---------------------------------------------------------------------------------------------- */
 .pieDePagina{
     width: 100%;
-    background-color: #86D66C;
+    background-color: black;
 }
 .pieDePagina .grupo1{
     width: 100%;
@@ -120,7 +217,7 @@ main section h3{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 50px;
-    padding: 45px 0px;
+    padding: 25px 0px;
 }
 .pieDePagina .grupo1 .box figure{
     width: 100%;
@@ -148,9 +245,9 @@ main section h3{
     width: 45px;
     height: 45px;
     line-height: 45px;
-    color:#86D66C;
+    color: white;
     margin-right: 10px;
-    background-color: #007200;
+    background-color: #357e53;
     text-align: center;
     border-radius: 10%;
 }
@@ -163,29 +260,53 @@ main section h3{
 .pieDePagina .grupo2 small{
     font-size: 15px;
 }
-@media screen and (max-width:761px) {
+@media screen and (max-width:760px) {
     .pieDePagina .grupo1{
         width: 90%;
         grid-template-columns: repeat(1, 1fr);
         grid-gap: 30px;
         padding: 35px 0px;
-}
+    }
+    .boxRight {
+        height: 180px;
+        font-size: x-small;
+    }
+    .detail {
+        padding: 0px;
+    }
+    .card .card2 img {
+        display: initial;
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
 }
 /* --------------------------------------------------productDetail--------------------------------------------------------------- */
-.detail{
-    display: flex;
+.detail {
+    display: block;
     justify-content: center;
-    
+    border: solid 3px gray;
+    padding: 20px;
 }
 .boxDetail{
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin: 5%;
-    width: 60%;
-    border-radius: 15px;
+    flex-direction: row;
+    justify-content: left;
+    border-radius: 26px;
     border: solid 1px gray;
 }
+.boxLeft {
+    display: contents;
+    flex-direction: row;
+    justify-content: center;
+}
+.boxRight {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding-left: 20px;
+}
+
 /* --------------------------------------------------login--------------------------------------------------------------- */
 .formLogin{
     
@@ -207,6 +328,39 @@ main section h3{
 .login p label{
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
+}
+/* --------------------------------------------------register--------------------------------------------------------------- */
+.formregister {
+    padding: 20px;
+    padding-left: 40px;
+}
+.botonRegister {
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    color: black;
+    background-color: white;
+    padding: 10px;
+    border: dashed 2px #357e53;
+    width: 15%;
+    text-align: center;
+    display: inline;
+    justify-items: center;
+    align-items: center;
+    align-content: center;
+    border-radius: 5px;
+}
+/* ------------------------------------------------------- media ----------------------------------------------------------------- */
+
+@media (max-width: 414px) {
+    .menu{
+        display: none;
+    }
+}
+
+@media (min-width: 414px) {
+    .dropdown{
+        display: none;
+    }
 }
 
 /* --------------------------------------------------productCart--------------------------------------------------------------- */

@@ -14,25 +14,36 @@
 </head>
 <body>
     <header>
-        <nav class="navBar"> 
+        <nav class="navBar">
             <div class="dropdown">
-                <button class="btn btn-secondary " type="button" data-bs-toggle="dropdown" aria-expanded="false" id="burger">
+                <button class="btn btn-secondary " type="button" data-bs-toggle="dropdown" aria-expanded="false"
+                    id="burger">
                     <i class="fa-sharp fa-solid fa-bars"></i>
                 </button>
                 <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="/register">Registro</a></li>
-                    <li><a class="dropdown-item" href="/login">Cuenta</a></li>
-                    <li><a class="dropdown-item" href="/product">Productos</a></li>
+                    <li><a class="dropdown-item" href="#">Perfil</a></li>
+                    <li><a class="dropdown-item" href="./productCart.html">Carrito</a></li>
+                    <li><a class="dropdown-item" href="#">Contacto</a></li>
+                    <li><a class="dropdown-item" href="#">Nosotros</a></li>
+                    <li><a class="dropdown-item" href="./register.html">Registrarse</a></li>
+                    <li><a class="dropdown-item" href="./login.html">Login</a></li>
                 </ul>
             </div>
             <div class="logo">
                 <img src="../images/LOGO.png" alt="logo">
-            </div>
-            <div class="lima">
                 <img src="../images/Lima.png" alt="Lima">
             </div>
-            <div>
-                <i class="fa-solid fa-user" id="user"><p class="usuario">Nombre</p></i>
+            <div class="menu">
+                <a href=""><b>Nosotros</b></a>
+                <a href="./productDetail.html"><b>Ensaladas</b></a>
+                <a href="./register.html"><b>Registrarse</b></a>
+                <a href=""><b>Contacto</b></a>
+    
+
+            </div>
+            <div class="logoCarrito">
+                <a href="./login.html"><i class="fa-solid fa-user" id="user"></i></a>
+                <a href="./productCart.html"><i class="fa-solid fa-cart-shopping"></i></a>
             </div>
         </nav>
     </header>

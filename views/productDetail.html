@@ -14,37 +14,82 @@
 </head>
 <body>
     <header>
-        <nav class="navBar"> 
+        <nav class="navBar">
             <div class="dropdown">
-                <button class="btn btn-secondary " type="button" data-bs-toggle="dropdown" aria-expanded="false" id="burger">
+                <button class="btn btn-secondary " type="button" data-bs-toggle="dropdown" aria-expanded="false"
+                    id="burger">
                     <i class="fa-sharp fa-solid fa-bars"></i>
                 </button>
                 <ul class="dropdown-menu">
-                  <li><a href="#" class="dropdown-item">Mi Perfil</a></li>
-                  <li><a href="/productCart" class="dropdown-item">Mi Carrito</a></li>
-                  <li><a href="/product" class="dropdown-item">Ensaladas</a></li>
-                  <li><a href="#" class="dropdown-item"></a>>Contacto</a></li>
-                  <li><a href="#" class="dropdown-item">Quienes Somos?</a></li>
+                    <li><a class="dropdown-item" href="#">Perfil</a></li>
+                    <li><a class="dropdown-item" href="./productCart.html">Carrito</a></li>
+                    <li><a class="dropdown-item" href="#">Contacto</a></li>
+                    <li><a class="dropdown-item" href="#">Nosotros</a></li>
+                    <li><a class="dropdown-item" href="./register.html">Registrarse</a></li>
+                    <li><a class="dropdown-item" href="./login.html">Login</a></li>
                 </ul>
             </div>
             <div class="logo">
                 <img src="../images/LOGO.png" alt="logo">
-            </div>
-            <div class="lima">
                 <img src="../images/Lima.png" alt="Lima">
             </div>
-            <div>
-                <i class="fa-solid fa-user" id="user"><p class="usuario">Nombre</p></i>
+            <div class="menu">
+                <a href=""><b>Nosotros</b></a>
+                <a href="./productDetail.html"><b>Ensaladas</b></a>
+                <a href="./register.html"><b>Registrarse</b></a>
+                <a href=""><b>Contacto</b></a>
+    
+
+            </div>
+            <div class="logoCarrito">
+                <a href="./login.html"><i class="fa-solid fa-user" id="user"></i></a>
+                <a href="./productCart.html"><i class="fa-solid fa-cart-shopping"></i></a>
             </div>
         </nav>
     </header>
     <main>
         <section class="detail">
             <div class="boxDetail">
-                <img src="../images/Caesar.jpeg" alt="ensalada">
-                <h2>Ensalada Caesar</h2>
-                <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, ad ipsum pariatur perferendis omnis voluptates vero beatae non itaque quis sed veniam aliquam, iste tempora? Culpa sunt enim a veniam? </p>
-                <h3>$900</h3>
+                <div class="boxLeft"><img src="../images/Brie.jpeg" width=25%></div>
+                <div class="boxRight"><h2>Ensalada Brie</h2>
+                    <p> Ingredientes: Queso brie, pollo, tomates cherry, mix de verdes, nueces y croutons.</p>
+                    <div><h3>$900</h3></div><p><a href="/productcart">Agregar al carrito <i class="fa-solid fa-cart-shopping"></a></i></p></div>
+                </div>
+            </div>
+            </div>
+            <br>
+            <div class="boxDetail">
+                <div class="boxLeft"><img src="../images/Caesar.jpeg" width=25%></div>
+                <div class="boxRight"><h2>Ensalada Caesar</h2>
+                    <p> Ingredientes: Pollo, queso, tomates cherry, mix de verdes y croutons.</p>
+                    <div><h3>$900</h3></div><p><a href="/productcart">Agregar al carrito <i class="fa-solid fa-cart-shopping"></a></i></p></div>
+                </div>
+            </div>
+            </div>
+            <br>
+            <div class="boxDetail">
+                <div class="boxLeft"><img src="../images/Cala1.jpg" width=25%></div>
+                <div class="boxRight"><h2>Ensalada Cala</h2>
+                    <p> Ingredientes: Pollo, roquefort, tomates secos, mix de verdes y nueces.</p>
+                    <div><h3>$900</h3></div><p><a href="/productcart">Agregar al carrito <i class="fa-solid fa-cart-shopping"></a></i></p></div>
+                </div>
+            </div>
+            </div>
+            <br>
+            <div class="boxDetail">
+                <div class="boxLeft"><img src="../images/Clásica.jpeg" width=25%></div>
+                <div class="boxRight"><h2>Ensalada Clásica</h2>
+                    <p> Ingredientes: Pollo, queso, lechuga, tomates cherry, zanahoria y huevo.</p>
+                    <div><h3>$900</h3></div><p><a href="/productcart">Agregar al carrito <i class="fa-solid fa-cart-shopping"></a></i></p></div>
+                </div>
+            </div>
+            <br>
+            <div class="boxDetail">
+                <div class="boxLeft"><img src="../images/Crispy.png" width=25%></div>
+                <div class="boxRight"><h2>Ensalada Crispy</h2>
+                    <p> Ingredientes: Pollo crispy, queso, tomates cherry, mix de verdes y croutons.</p>
+                    <div><h3>$900</h3></div><p><a href="/productcart">Agregar al carrito <i class="fa-solid fa-cart-shopping"></a></i></p></div>
+                </div>
             </div>
         </section>
     </main>

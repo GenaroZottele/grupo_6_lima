@@ -19,19 +19,19 @@ app.get('/', (req, res) => {
 });
 
 app.get('/register.html', (req, res) => {
-    res.sendFile(path.resolve('views/register.html'))
+    res.sendFile(path.resolve('./views/register.html'))
 });
 
 app.get("/login.html", (req, res) => {
-    res.sendFile(path.resolve("views/login.html"))
+    res.sendFile(path.resolve("./views/login.html"))
 });
 
-app.get("/product.html", (req, res) => {
-    res.sendFile(path.resolve("views/productDetail.html"))
+app.get("/productDetail.html", (req, res) => {
+    res.sendFile(path.resolve("./views/productDetail.html"))
 });
 
 app.get("/productcart.html", (req, res) => {
-    res.sendFile(path.resolve("views/productCart.html"))
+    res.sendFile(path.resolve("./views/productCart.html"))
 });
 
 app.post("/", (req, res) => {
