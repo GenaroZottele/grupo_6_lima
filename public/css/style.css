@@ -167,13 +167,11 @@ main section h2{
 }
 .botones a{
     text-decoration: none;
-    height: 70px;
     font-family: 'Roboto', sans-serif;
     color: black;
     background-color: white;
     padding: 10px;
     border: dashed 2px #357e53;
-    width: 100%;
     text-align: center;
     display: inline;
     flex-direction: row;
@@ -181,6 +179,8 @@ main section h2{
     align-items: center;
     align-content: center;
     border-radius: 5px;
+    height: 100vw;
+    width: 100%;
 }
 /* .card .description p .price{
     color: #007200; #357e53
@@ -328,7 +328,7 @@ main section h2{
     padding: 20px;
     padding-left: 40px;
 }
-.botones {
+.botonRegister {
     text-decoration: none;
     font-family: 'Roboto', sans-serif;
     color: black;
