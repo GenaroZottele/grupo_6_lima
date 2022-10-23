@@ -366,7 +366,6 @@ p {
 .botonLogin:hover{
     opacity: 1;
 }
-
 /* --------------------------------------------------register--------------------------------------------------------------- */
 .formregister{
     position: relative;
@@ -443,7 +442,7 @@ main form p label{
 }
 @media (max-width: 644px){
     .formregister{
-        
+
         top: 5%;
         margin-left: 10%;
         margin-right: 10%;
