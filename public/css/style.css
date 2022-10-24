@@ -66,6 +66,11 @@
     flex-grow: 1;
     
 }
+
+.logo img {
+    height: 48px;
+}
+
 .lima img{
     height: 48px;
 
