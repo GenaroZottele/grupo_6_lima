@@ -131,6 +131,7 @@ main {
     display: flex;
     justify-content: center;
     margin-left: 15px;
+    margin-right: 15px;
     margin-top: 10px;
     font-weight: 500;
     color: #357e53;
@@ -145,22 +146,29 @@ main section h2{
 }
 .card{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     padding: 15px;
     justify-content: center;
+    width: 100%;
 }
 .card2{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     padding: 15px;
+    width: 100%;
 }
 .card2 img{
-    width: 25%;
+    order: -1;
     border-radius: 5%;
+    display: flex;
+    justify-content: center;
 }
 .card img{
-    width: 25%;
+    
     border-radius: 5%;
+    border-radius: 5%;
+    display: flex;
+    justify-content: center;
 }
 .description{
     display: flex;
@@ -493,6 +501,26 @@ main form p label{
     }
     .logo{
         left: 15px;
+    }
+    .card{
+        flex-direction: row;
+    }
+    .card2{
+        flex-direction: row;
+    }
+    .card2 img{
+        order: 0;
+        width: 25%;
+        border-radius: 5%;
+        display: flex;
+        justify-content: center;
+    }
+    .card img{
+        width: 25%;
+        border-radius: 5%;
+        border-radius: 5%;
+        display: flex;
+        justify-content: center;
     }
 }
 
