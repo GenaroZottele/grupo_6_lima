@@ -286,11 +286,13 @@ p {
 }
 .boxDetail{
     display: flex;
-    flex-direction: row;
-    justify-content: left;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
     border-radius: 26px;
     border: solid 1px gray;
-    width: 70%;
+    width: 100%;
     margin-bottom: 20px;
 
 }
@@ -300,16 +302,20 @@ p {
     justify-content:space-around;
 }
 .boxLeft img{
-    width: 25%;
+    width: 70%;
     padding: 10px;
 }
 .boxRight {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: center;
     align-items: flex-start;
     padding-left: 20px;
-    
+    height: 30vh;
+}
+.boxRight h2{
+    padding: 0px;
+    padding-top: 5px;
 }
 .agregarCarrito{
     text-decoration: none;
@@ -523,19 +529,25 @@ main form p label{
         display: flex;
         justify-content: center;
     }
-    
+    .boxDetail{
+        display: flex;
+        flex-direction: row;
+        justify-content: left;
+        align-items: center;
+        align-content: center;
+        border-radius: 26px;
+        border: solid 1px gray;
+        width: 70%;
+        margin-bottom: 20px;
+    }
+    .boxLeft img{
+        width: 35%;
+    }
 }
 @media  (min-width:1350px ) {
-    /* .dropdown{
-        display: none;
+    .boxLeft img{
+        width: 25%;
     }
-    .logoCarrito{
-        left: 90%;
-    }
-    .logo{
-        left: 15px;
-    } */
-
 }
 
 /* --------------------------------------------------productCart--------------------------------------------------------------- */
