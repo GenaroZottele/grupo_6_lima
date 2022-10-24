@@ -22,19 +22,6 @@
 (http://www.elclubdelaensalada.com.ar/)
 (https://pedilo.shop/viveverde/5491173657650)
 
+## Link del Trello
+(https://trello.com/invite/b/Y367NoaX/ATTI597559a8904f101346cf707bc209adb79455E24A/proyecto-integrador-lima)
 
-/*------------------------------------------PrimerSprint-----------------------------------------------*/
-
-# Conclusiones respecto al primer sprint:
-* Se definió la temática en forma unánime y bastante rápido.
-* Trabajamos en equipo. 
-* Deberíamos organizar mejor los tiempos.
-* Si bien todos aportamos en reuniones por discord, no quedó reflejado en github, por lo que para el segundo sprint nos dividimos tareas de forma tal de que todos subamos material.
-
-/*-------------------------------------------SegundoSprint--------------------------------------------------------------*/
-
-# Conclusiones respecto al segundo sprint:
-* Nos organizamos con Trello.
-* Mantuvimos interacciones diarias mediante Slack.
-* Utilizamos discord como app de preferencia para reuniones y ediciones en conjunto.
-* Tuvimos problemas organizando y ejecutando tempranamente, y se nos juntaron muchas tareas hacia el final del sprint, pero de todas formas
