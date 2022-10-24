@@ -319,7 +319,20 @@ p {
 .agregarCarrito:hover{
     color:#357e53;
 }
-
+.ingredientes {
+    display: flex;
+    flex-direction: row;
+}
+.ingredientes1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.ingredientes2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 /* --------------------------------------------------login--------------------------------------------------------------- */
 .mainlogin{
     height: 100%;
@@ -493,6 +506,7 @@ main form p label{
     border: solid 1px #007200;
     width: 90%;
     padding: 15px;
+    font-size: 22px;
 }   
 .ingredientes2{
     display: flex;
@@ -503,29 +517,48 @@ main form p label{
     flex-direction: column;
     justify-content:center;
     align-items:center;
+    text-align: center;
     border-radius: 15px;
     border: solid 1px #007200;
     width: 90%;
     padding: 15px;
+    font-size: 22px;
 }   
 .pago{
     position: relative;
     top: 20%;
     border: #007200 solid 1px;
     border-radius: 15px;
-    width: 90%;
+    width: 100%;
     text-align: center;
     padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
 }
 
 .formulariopago {
 display: flex;
 flex-direction: column;
+width: 100%;
+line-height: 30px;
+font-size: 22px;
 }
 
 .formulariopago2 {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    font-family: 'Roboto', sans-serif;
+    color: black;
+    padding: 10px;
+    text-align: center;
+    align-content: center;
+    justify-content: space-around;
+    border-radius: 5px;
+    width: 125%;
+    font-size: 22px;
     }
 
 
