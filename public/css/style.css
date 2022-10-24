@@ -348,7 +348,7 @@ p {
 }
 /* --------------------------------------------------login--------------------------------------------------------------- */
 .mainlogin{
-    height: 100%;
+    height: 100vh;
     justify-content: space-around;
     background-position: center;
     background-size: cover;
@@ -367,7 +367,7 @@ p {
     align-items:center;
     border-radius: 15px;
     border: solid 1px #007200;
-    width: 50%;
+    width: 90%;
     padding: 15px;
 }
 .login p label{
@@ -392,6 +392,7 @@ p {
 .botonLogin:hover{
     opacity: 1;
 }
+
 /* --------------------------------------------------register--------------------------------------------------------------- */
 .formregister{
     position: relative;
@@ -486,10 +487,14 @@ main form p label{
     .menu{
         display: none;
     }
+    
 
 }
 
-@media (min-width: 414px) {
+@media (min-width: 768px) {
+    .login{
+        width:50%;
+    }
     
 }
 @media  (min-width:1350px ) {
