@@ -483,21 +483,14 @@ main form p label{
 }
 /* ------------------------------------------------------- media ----------------------------------------------------------------- */
 
-@media (max-width: 1350px) {
+@media (max-width: 768px) {
     .menu{
         display: none;
     }
-    
 
 }
 
 @media (min-width: 768px) {
-    .login{
-        width:50%;
-    }
-    
-}
-@media  (min-width:1350px ) {
     .dropdown{
         display: none;
     }
@@ -506,6 +499,9 @@ main form p label{
     }
     .logo{
         left: 15px;
+    }
+    .login{
+        width:50%;
     }
     .card{
         flex-direction: row;
@@ -527,6 +523,19 @@ main form p label{
         display: flex;
         justify-content: center;
     }
+    
+}
+@media  (min-width:1350px ) {
+    /* .dropdown{
+        display: none;
+    }
+    .logoCarrito{
+        left: 90%;
+    }
+    .logo{
+        left: 15px;
+    } */
+
 }
 
 /* --------------------------------------------------productCart--------------------------------------------------------------- */
