@@ -9,7 +9,7 @@ app.use(express.static(publicFolderPath));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }))
 
-const APP_PORT = 3000;
+const APP_PORT = process.env.PORT || 3000;
 app.listen(APP_PORT, () => {
     console.log('Servidor funcionando en puerto ' + APP_PORT)
 })
