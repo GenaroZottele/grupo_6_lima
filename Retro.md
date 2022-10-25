@@ -20,4 +20,4 @@
 * Hacer más: Ediciones en conjunto mediante Discord (Fue nuestra herramienta de aprendizaje, cooperación y ejecución más efectiva)
 * Continuar haciendo: Distribución de tareas. Daily meets.
 * Hacer menos: commits innecesarios.
-* Dejar de hacer: Desktop First
+* Dejar de hacer: Desktop First.
