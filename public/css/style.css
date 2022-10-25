@@ -441,7 +441,7 @@ main form p label{
 .botonRegister:hover{
     opacity: 1;
 }
-.mainregister{
+.mainregister {
     height: 800px;
     justify-content: space-around;
     background-position: center;
