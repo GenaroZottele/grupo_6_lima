@@ -14,7 +14,7 @@ app.set('view engine', 'ejs');
 
 app.use('/', mainRoutes);
 
-const APP_PORT = process.env.PORT || 3030;
+const APP_PORT = process.env.PORT || 3000;
 app.listen(APP_PORT, () => {
     console.log('Servidor funcionando en puerto ' + APP_PORT)
 })
