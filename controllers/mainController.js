@@ -13,6 +13,9 @@ const controller = {
     },
     productDetail : (req, res) => {
         return res.render('productDetail');
+    },
+    contacto : (req, res) => {
+        return res.render('contacto');
 }
 }
 module.exports = controller;
