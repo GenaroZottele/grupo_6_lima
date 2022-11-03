@@ -19,6 +19,6 @@ const controller = {
     },
     nosotros : (req, res) => {
         return res.render('nosotros');
-}
+    },
 }
 module.exports = controller;
