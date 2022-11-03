@@ -9,33 +9,44 @@
             <main class="mainregister">
                 <form action="register" method="POST" class="formregister">
                     <p>
-                        <label>Nombre y Apellido</label>
-                        <input type="text" name="nombre" required>
+                        <label>Buscar producto</label>
+                        <input type="text" name="producto">
                     </p>
-                    <p>
-                        <label>Dirección:</label>
-                        <input type="text" name="direccion" required>
-                    </p>
-                    <p>
-                        <label>Celular:</label>
-                        <input type="number" name="celular" required>
-                    </p>
-                    <p>
-                        <label>Nombre de usuario:</label>
-                        <input type="text" name="nombreDeUsuario" required>
-                    </p>
-                    <p>
-                        <label>E-mail:</label>
-                        <input type="email" name="email" required>
-                    </p>
-                    <p>
-                        <label>Contraseña:</label>
-                        <input type="password" name="password" required>
-                    </p>
-                    <p class="botonesregister">
-                        <button type="reset" class="botonRegister">Borrar</button>
-                        <button type="submit" class="botonRegister">Enviar</button>
-                    </p>
+                    <article class="card">
+                        <img src="../images/Caesar.jpeg" alt="Ensalada Caesar">
+                        <div class="description">
+                            <h2>Ensalada Caesar</h2>
+                            <p clas="price">Precio $ 720.00</p>
+                            <p>Ingredientes: Pollo, queso, tomates cherry, mix de verdes y croutons.</p>
+                            <div class="botones">
+                                <a href="#">Modificar</a>
+                            </div>
+                        </div>
+                    </article>
+                    <section class="newProduct">
+                        <h2>AGREGAR PRODUCTO</h2>
+                        <p>
+                            <label>Nombre producto:</label>
+                            <input type="text" name="name" required>
+                        </p>
+                        <p>
+                            <label>Precio:</label>
+                            <input type="text" name="category" required>
+                        </p>
+                        <p>
+                            <label>Ingredientes:</label>
+                            <input type="text" name="ingredients" required>
+                        </p>
+                        <p>
+                            <label>Imagen:</label>
+                            <input type="file" accept=".jpg, .png, .jpeg" name="image">
+                        </p>
+                        </div>
+                        <p class="botonesregister">
+                            <button type="reset" class="botonRegister">Borrar</button>
+                            <button type="submit" class="botonRegister">Enviar</button>
+                        </p>
+                    </section>
                 </form>
             </main>
             <%- include('partials/footer.ejs') %>
