@@ -16,4 +16,6 @@ router.get('/contacto', mainController.contacto);
 
 router.get('/nosotros', mainController.nosotros);
 
+router.get('/panel', mainController.panel);
+
 module.exports = router;

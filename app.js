@@ -7,6 +7,7 @@ const mainRoutes = require('./routes/mainRoutes');
 
 const publicFolderPath = path.resolve('public');
 app.use(express.static(publicFolderPath));
+
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }))
 

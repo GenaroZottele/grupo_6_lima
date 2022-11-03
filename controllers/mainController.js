@@ -20,5 +20,8 @@ const controller = {
     nosotros : (req, res) => {
         return res.render('nosotros');
     },
+    panel : (req, res) => {
+        return res.render('panel');
+    },
 }
 module.exports = controller;
