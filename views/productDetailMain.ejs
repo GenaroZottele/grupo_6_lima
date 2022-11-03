@@ -6,8 +6,8 @@
 <body>
     <%-include('./partials/header') %>
     <main>
-        <section>
-            <div>
+        <section class="sectionDetailMain">
+            <div class="divDetailMain">
                 <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
                     <div class="carousel-inner">
                       <div class="carousel-item active">
@@ -15,9 +15,6 @@
                       </div>
                       <div class="carousel-item">
                         <img src="../images/Cala1.jpg" class="d-block w-100" alt="...">
-                      </div>
-                      <div class="carousel-item">
-                        <img src="../public/images/Clásica.jpeg" class="d-block w-100" alt="...">
                       </div>
                     </div>
                     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
@@ -29,7 +26,15 @@
                       <span class="visually-hidden">Next</span>
                     </button>
                 </div>
-                
+                <div class="divInfoDetailMain">
+                  <h2>Ensalada Cala</h2>
+                  <p> Ingredientes: Pollo, roquefort, tomates secos, mix de verdes y nueces.</p>
+                  <div>
+                      <h3>$900</h3>
+                  </div>
+                  <p><a href="./productCart.ejs" class="agregarCarrito">Agregar al carrito <i
+                              class="fa-solid fa-cart-shopping"></a></i></p>
+              </div>
             </div>
         </section>
     </main>
