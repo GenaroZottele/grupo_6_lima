@@ -18,4 +18,6 @@ router.get('/nosotros', mainController.nosotros);
 
 router.get('/productDetailMain', mainController.productDetailMain)
 
+router.get('/panel', mainController.panel);
+
 module.exports = router;

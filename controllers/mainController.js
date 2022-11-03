@@ -24,5 +24,8 @@ const controller = {
         return res.render('productDetailMain');
     },
 
+    panel : (req, res) => {
+        return res.render('panel');
+    },
 }
 module.exports = controller;
