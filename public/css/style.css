@@ -651,3 +651,104 @@ main form p label {
    width: 125%;
    font-size: 22px;
 }
+/*-------------------------------------------------------------------Nosotros------------------------------------------------------------------------ */
+@media screen and (max-width: 385px) {
+   .h1nosotros{
+      text-align: center;
+      color: rgb(192, 19, 19);
+      display: flex;
+      justify-content: center;
+      margin-left: 15px;
+      margin-right: 15px;
+      margin-top: 10px;
+      font-weight: bolder;
+      background-color: #357e53;
+      border: rgb(192, 19, 19) 5px dotted;
+      padding: 15px;
+      border-radius: 10px;
+   }
+   .pnosotros{
+      text-align: center;
+      color: #007200;
+      margin: 40px;
+   }
+   .h2nosotros{
+      text-align: center;
+      color: rgb(192, 19, 19);
+      display: flex;
+      justify-content: center;
+      font-weight: bolder;
+      background-color: white;
+      border: #357e53 5px dotted;
+      border-radius: 10px;
+      margin-left: 15px;
+      margin-right: 15px;
+      margin-top: 10px;
+   }
+   .nosotros{
+      display: flex;
+      flex-direction: column;
+      margin: 15px;
+      
+   }
+   .imagennosotros{
+      display: flex;
+      padding: 20px;
+      margin: 15px;
+      box-sizing: border-box;
+      border-radius: 40px;
+      width: 85%;
+      align-content: center;
+      margin-right: 50px;
+   }
+}
+@media screen and (min-width: 386px) {
+   .h1nosotros{
+      text-align: center;
+      color: rgb(192, 19, 19);
+      display: flex;
+      justify-content: center;
+      margin-left: 15px;
+      margin-right: 15px;
+      margin-top: 10px;
+      font-weight: bolder;
+      background-color: #357e53;
+      border: rgb(192, 19, 19) 5px dotted;
+      padding: 15px;
+      border-radius: 10px;
+   }
+   .pnosotros{
+      text-align: center;
+      color: #007200;
+      margin: 40px;
+   }
+   .h2nosotros{
+      text-align: center;
+      color: rgb(192, 19, 19);
+      display: flex;
+      justify-content: center;
+      font-weight: bolder;
+      background-color: white;
+      border: #357e53 5px dotted;
+      border-radius: 10px;
+      margin-left: 15px;
+      margin-right: 15px;
+      margin-top: 10px;
+   }
+   .nosotros{
+      display: flex;
+      flex-direction: column;
+      margin: 15px;
+      
+   }
+   .imagennosotros{
+      display: flex;
+      padding: 20px;
+      margin: 15px;
+      box-sizing: border-box;
+      border-radius: 40px;
+      width: 85%;
+      align-content: center;
+      margin-right: 50px;
+   }
+}
