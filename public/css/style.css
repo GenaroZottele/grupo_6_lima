@@ -652,7 +652,7 @@ main form p label {
    font-size: 22px;
 }
 /*-------------------------------------------------------------------Nosotros------------------------------------------------------------------------ */
-@media screen and (max-width: 385px) {
+/* @media screen and (max-width: 385px) { */
    .h1nosotros{
       text-align: center;
       color: rgb(192, 19, 19);
@@ -701,8 +701,9 @@ main form p label {
       align-content: center;
       margin-right: 50px;
    }
-}
-@media screen and (min-width: 386px) {
+/* } */
+/* 
+@media screen and (min-width: 386px) { 
    .h1nosotros{
       text-align: center;
       color: rgb(192, 19, 19);
@@ -747,8 +748,17 @@ main form p label {
       margin: 15px;
       box-sizing: border-box;
       border-radius: 40px;
-      width: 85%;
+      width: 40%;
       align-content: center;
       margin-right: 50px;
+   }
+   .nossecciones{
+      display: flex;
+      flex-direction: row;
+   }
+   .descripcionos{
+      display: flex;
+      flex-direction: column;
+      width: 40%;
    }
 }
