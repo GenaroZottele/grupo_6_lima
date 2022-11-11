@@ -1,5 +1,7 @@
 const controller = {
     index : (req, res) => {
+        // const visitedProducts = products.filter(product => product.category == 'visited')
+        // const inSaleProducts = products.filter(product => product.category == 'in-sale')
         return res.render('index');
     },
     register : (req, res) => {
