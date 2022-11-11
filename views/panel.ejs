@@ -8,7 +8,7 @@
 
             <main class="mainregister">
                 <form action="/products/store" method="POST" class="formregister">
-                    <!-- <p>
+                    <p>
                         <label>Buscar producto</label>
                         <input type="text" name="producto">
                     </p>
@@ -23,31 +23,31 @@
                                 <a href="#">Eliminar</a>
                             </div>
                         </div>
-                    </article> -->
-                    <!-- <section class="newProduct"> -->
-                    <h2>AGREGAR PRODUCTO</h2>
-                    <p>
-                        <label>Nombre producto:</label>
-                        <input type="text" name="name" required>
-                    </p>
-                    <p>
-                        <label>Precio:</label>
-                        <input type="text" name="price" required>
-                    </p>
-                    <p>
-                        <label>Ingredientes:</label>
-                        <input type="text" name="ingredients" required>
-                    </p>
-                    <p>
-                        <label>Imagen:</label>
-                        <input type="file" accept=".jpg, .png, .jpeg" name="image">
-                    </p>
-                    </div>
-                    <p class="botonesregister">
-                        <button type="reset" class="botonRegister">Borrar</button>
-                        <button type="submit" class="botonRegister">Enviar</button>
-                    </p>
-                    <!-- </section> -->
+                    </article>
+                    <section class="newProduct">
+                        <h2>AGREGAR PRODUCTO</h2>
+                        <p>
+                            <label>Nombre producto:</label>
+                            <input type="text" name="name" required>
+                        </p>
+                        <p>
+                            <label>Precio:</label>
+                            <input type="text" name="price" required>
+                        </p>
+                        <p>
+                            <label>Ingredientes:</label>
+                            <input type="text" name="ingredients" required>
+                        </p>
+                        <p>
+                            <label>Imagen:</label>
+                            <input type="file" accept=".jpg, .png, .jpeg" name="image">
+                        </p>
+                        </div>
+                        <p class="botonesregister">
+                            <button type="reset" class="botonRegister">Borrar</button>
+                            <button type="submit" class="botonRegister">Enviar</button>
+                        </p>
+
                 </form>
             </main>
             <%- include('partials/footer.ejs') %>
