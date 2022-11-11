@@ -6,9 +6,25 @@ const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
 const controller = {
 
-    index: (req, res)=>{
-        const visitedProducts = products.filter(product => product.category == 'visited')
-        const inSaleProducts = products.filter(product => product.category == 'in-sale')
+    products: (req, res)=>{
+
+        return res.render('productsDetail', {products})
+
+    },
+
+    create: (req, res) =>{
+
+        return res.render('panel')
+    },
+
+    store: (req,res) =>{
+        // capturamos los datos del form
+        const camposDeNuevoProducto = req.body;
+        // pusheamos los datos al array de objetos de js
+        products.push(camposDeNuevoProducto);
+        // pasamos de un array de objetos de js a un objeto json y lo cargamos en el data
+        fs.writeFileSync(productsFilePath, JSON.stringify(products));
+        return res.send(camposDeNuevoProducto)
     },
 
 }

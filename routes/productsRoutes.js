@@ -4,13 +4,13 @@ const router = express.Router();
 const productsController = require('../controllers/productsController');
 
 // Listado de productos
-router.get('/', productsController.index);
+router.get('/products', productsController.products);
 
 // Creacion de producto (muestra form)
-router.get('/', productsController.create);
+router.get('/products/create', productsController.create);
 
 // Accion de creacion (a donde envia form)
-router.post('/', productsController.store);
+router.post('/products/store', productsController.store);
 
 // Detail de un producto
 router.get('/:id/', productsController.detail);

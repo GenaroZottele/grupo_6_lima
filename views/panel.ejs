@@ -7,7 +7,7 @@
         <%- include('partials/header.ejs') %>
 
             <main class="mainregister">
-                <form action="register" method="POST" class="formregister">
+                <form action="/products" method="POST" class="formregister">
                     <p>
                         <label>Buscar producto</label>
                         <input type="text" name="producto">
@@ -16,7 +16,7 @@
                         <img src="../images/Caesar.jpeg" alt="Ensalada Caesar">
                         <div class="description">
                             <h2>Ensalada Caesar</h2>
-                            <p clas="price">Precio $ 720.00</p>
+                            <p class="price">Precio $ 720.00</p>
                             <p>Ingredientes: Pollo, queso, tomates cherry, mix de verdes y croutons.</p>
                             <div class="botones">
                                 <a href="#">Modificar</a>
@@ -32,7 +32,7 @@
                         </p>
                         <p>
                             <label>Precio:</label>
-                            <input type="text" name="category" required>
+                            <input type="text" name="price" required>
                         </p>
                         <p>
                             <label>Ingredientes:</label>
