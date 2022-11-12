@@ -7,10 +7,10 @@ const productsController = require('../controllers/productsController');
 router.get('/products', productsController.products);
 
 // Creacion de producto (muestra form)
-router.get('/products/create', productsController.create);
+router.get('/create', productsController.create);
 
 // Accion de creacion (a donde envia form)
-router.post('/products/store', productsController.store);
+router.post('/store', productsController.store);
 
 /* // Detail de un producto
 router.get('/:id/', productsController.detail);
