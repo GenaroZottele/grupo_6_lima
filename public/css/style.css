@@ -655,7 +655,7 @@ main form p label {
 /* @media screen and (max-width: 385px) { */
    .h1nosotros{
       text-align: center;
-      color: rgb(192, 19, 19);
+      color: white;
       display: flex;
       justify-content: center;
       margin-left: 15px;
@@ -663,18 +663,18 @@ main form p label {
       margin-top: 10px;
       font-weight: bolder;
       background-color: #357e53;
-      border: rgb(192, 19, 19) 5px dotted;
+      border: white 5px dotted;
       padding: 15px;
       border-radius: 10px;
    }
    .pnosotros{
       text-align: center;
       color: #007200;
-      margin: 40px;
+      margin: 20px;
    }
    .h2nosotros{
       text-align: center;
-      color: rgb(192, 19, 19);
+      color: black;
       display: flex;
       justify-content: center;
       font-weight: bolder;
@@ -687,7 +687,8 @@ main form p label {
    }
    .nosotros{
       display: flex;
-      flex-direction: column;
+      flex-direction: row;
+      align-items: center;
       margin: 15px;
       
    }
@@ -697,10 +698,37 @@ main form p label {
       margin: 15px;
       box-sizing: border-box;
       border-radius: 40px;
-      width: 85%;
+      width: 50%;
       align-content: center;
       margin-right: 50px;
    }
+   .imagennosotros2 {
+      display: flex;
+      padding: 20px;
+      margin: 15px;
+      box-sizing: border-box;
+      border-radius: 40px;
+      width: 30%;
+      align-content: center;
+      margin-right: 50px;
+   }
+   .descripcionos {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      margin: 15px;
+   }
+   .descripcionos2 {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      margin: 15px;
+   }
+   .ulsucursales {
+      text-align: left;
+      padding-left: 100px;
+   }
+
 /* } */
 /* 
 @media screen and (min-width: 386px) { 
