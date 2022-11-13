@@ -41,8 +41,7 @@ const controller = {
 
         return res.render('productDetailMain', {productToFind});
 
-    }
-
+    },
 }
 
 module.exports = controller;
