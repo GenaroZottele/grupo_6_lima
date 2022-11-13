@@ -7,9 +7,9 @@
     <%- include('partials/header.ejs') %>
 
       <main class="mainregister">
-        <form action="register" method="POST" class="formregister">
+        <form action="../data/users.json" method="POST" class="formregister">
           <p>
-            <label>Nombre y Apellido</label>
+            <label>Nombre y apellido:</label>
             <input type="text" name="nombre" required>
           </p>
           <p>
@@ -21,11 +21,7 @@
             <input type="number" name="celular" required>
           </p>
           <p>
-            <label>Nombre de usuario:</label>
-            <input type="text" name="nombreDeUsuario" required>
-          </p>
-          <p>
-            <label for="user-image">Foto del usuario:</label>
+            <label for="user-image">Imagen:</label>
             <input type="file" name="user-image" id="user-image">
           </p>
 
