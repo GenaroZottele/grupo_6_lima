@@ -7,7 +7,7 @@
         <%- include('partials/header.ejs') %>
 
             <main class="mainregister">
-                <form action="/products" method="POST" class="formregister">
+                <form action="../data/products.json" method="POST" class="formregister">
                     <p>
                         <label>Buscar producto</label>
                         <input type="text" name="producto">
@@ -27,12 +27,16 @@
                     <section class="newProduct">
                         <h2>AGREGAR PRODUCTO</h2>
                         <p>
-                            <label>Nombre producto:</label>
+                            <label>Nombre:</label>
                             <input type="text" name="name" required>
                         </p>
                         <p>
-                            <label>Precio:</label>
-                            <input type="text" name="price" required>
+                            <label>Base:</label>
+                            <input type="text" name="base" required>
+                        </p>
+                        <p>
+                            <label>Aderezo:</label>
+                            <input type="text" name="aderezo" required>
                         </p>
                         <p>
                             <label>Ingredientes:</label>
@@ -41,6 +45,10 @@
                         <p>
                             <label>Imagen:</label>
                             <input type="file" accept=".jpg, .png, .jpeg" name="image">
+                        </p>
+                        <p>
+                            <label>Precio:</label>
+                            <input type="text" name="price" required>
                         </p>
                         </div>
                         <p class="botonesregister">
