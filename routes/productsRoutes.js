@@ -13,13 +13,13 @@ router.get('/create', productsController.create);
 router.post('/', productsController.store);
 
  // Detail de un producto
-//router.get('/productDetailMain/:productId/', productsController.detail);
+router.get('/productDetailMain/:productId/', productsController.detail);
 
-// // Edicion productos (muestra form)
-// router.get('/:id/', productsController.edit);
+// Edicion productos (muestra form)
+router.get('/edit', productsController.edit);
 
-// // Edicion productos (a donde envia form)
-// router.post('/:id/', productsController.update);
+// Edicion productos (a donde envia form)
+router.put('/update/:id/', productsController.update);
 
 // // Elimina producto
 // router.post('/:id', productsController.destroy); 

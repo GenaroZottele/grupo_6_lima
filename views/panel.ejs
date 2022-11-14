@@ -7,11 +7,13 @@
         <%- include('partials/header.ejs') %>
 
             <main class="mainregister">
-                <form action="/products" method="POST" class="formregister">
+                <form action="products/edit/:id/?_method=PUT" method="POST" class="formregister">
                     <p>
                         <label>Buscar producto</label>
                         <input type="text" name="producto">
                     </p>
+                </form>
+                <form action="/products" method="POST" class="formregister">
                     <article class="card">
                         <img src="../images/Caesar.jpeg" alt="Ensalada Caesar">
                         <div class="description">
@@ -40,7 +42,7 @@
                         </p>
                         <p>
                             <label>Ingredientes:</label>
-                            <input type="text" name="ingredients" required>
+                            <input type="text" name="ingredientes" required>
                         </p>
                         <p>
                             <label>Imagen:</label>
