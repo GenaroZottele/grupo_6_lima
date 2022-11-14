@@ -20,13 +20,15 @@
 
 * Comenzar a hacer: El sprint 3. Mobile First. Indentación de codigo. Aplicar search engine optimizations. Aplicar más etiquetas meta.
 * Hacer más: Ediciones en conjunto mediante Discord (Fue nuestra herramienta de aprendizaje, cooperación y ejecución más efectiva)
-* Continuar haciendo: Distribución de tareas. Daily meets.
+* Continuar haciendo: Distribución de tareas.
 * Hacer menos: commits innecesarios.
 * Dejar de hacer: Desktop First.
 
 *-------------------------------------------CuartoSprint--------------------------------------------------------------*/
 # Retrospectiva:
 
-* Coincidir como grupo en los tiempos
-* Realizar reuniones semanales o diarias para compartir progresos o dudas
-* Continuar con trello para dividir las actividades
+* Desafío: CRUD
+* Coincidir como grupo en los tiempos.
+* Realizar reuniones semanales o diarias para compartir progresos o dudas.
+* Continuar con trello para dividir las actividades.
+* Objetivo: Llegar a la entrega del sprint menos apretados de tiempo.
