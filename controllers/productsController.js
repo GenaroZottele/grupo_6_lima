@@ -10,7 +10,7 @@ const controller = {
 
     products: (req, res)=>{
 
-        return res.render('productsDetail', {products})
+        return res.render('productDetail', {products})
 
     },
 
