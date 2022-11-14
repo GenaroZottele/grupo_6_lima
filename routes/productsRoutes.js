@@ -13,7 +13,7 @@ router.get('/create', productsController.create);
 router.post('/', productsController.store);
 
  // Detail de un producto
-router.get('/productDetailMain/:productId/', productsController.detail);
+//router.get('/productDetailMain/:productId/', productsController.detail);
 
 // // Edicion productos (muestra form)
 // router.get('/:id/', productsController.edit);
