@@ -7,11 +7,13 @@ const mainController = require('../controllers/mainController');
 
 const storage = multer.diskStorage({
     destination: (req, file, cb)=>{
-        cb(null, path.join(__dirname, '../public/images/userimages'))
+        cb(null, path.resolve('../public/images/userimages'))
          },
     filename:  (req, file, cb)=>{
-        const newFileName = 'user-' + Date.now() +  path.extname(file.originalname);
-        cb(null, newFileName)
+        const uniqueSuffix =  Date.now();
+        const fileExtension = path.extname(file.originalname);
+        const newName = file.originalname.replace(fileExtension, '')
+        cb(null, newName + "-" + uniqueSuffix + fileExtension);
     }
     });
 
@@ -22,7 +24,7 @@ router.get('/', mainController.index);
 
 router.get('/register', mainController.register);
 
-router.post('/register', upload.single('user-image'), mainController.register);
+router.post('/register', upload.single("user-image"), mainController.register);
 
 router.get('/login', mainController.login);
 
