@@ -37,14 +37,15 @@ const controller = {
     store: (req,res) =>{
         // capturamos los datos del form
         const camposDeNuevoProducto = req.body;
+        // asignar id a nuevo producto
+        camposDeNuevoProducto.id = 'ensalada' + Date.now();
         // pusheamos los datos al array de objetos de js
         products.push(camposDeNuevoProducto);
         // pasamos de un array de objetos de js a un objeto json y lo cargamos en el data
-        fs.writeFileSync(productsFilePath, JSON.stringify(products));
-        return res.send(req.file)
-        // 1)asignar id unico --------------------------------------------
-        // 2)redirigir la pagina ----------------------------------------
-        // 3)actualizar campos form----------------------------------------
+        fs.writeFileSync(productsFilePath, JSON.stringify(products));        
+        // redirigir la pagina
+        res.redirect('/panel');
+        
     },
     
     //5
