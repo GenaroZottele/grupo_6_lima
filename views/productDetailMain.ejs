@@ -27,10 +27,10 @@
                     </button>
                 </div>
                 <div class="divInfoDetailMain">
-                  <h2><%= productToFind.name %> </h2>
-                  <p> Ingredientes: Pollo, roquefort, tomates secos, mix de verdes y nueces.</p>
+                  <h2><%= productToFind.nombre %> </h2>
+                  <p><%= productToFind.ingredientes%></p>
                   <div>
-                      <h3>$900</h3>
+                      <h3><%= productToFind.precio %></h3>
                   </div>
                   <p><a href="./productCart" class="agregarCarrito">Agregar al carrito <i
                               class="fa-solid fa-cart-shopping"></a></i></p>
