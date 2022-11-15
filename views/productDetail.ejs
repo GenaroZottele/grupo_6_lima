@@ -7,26 +7,29 @@
     <%-include('./partials/header') %>
     <main>
         <section class="detail">
-            <div class="boxDetail">
-                <div class="boxLeft">
-                    <img src="../images/Brie.jpeg">
-                </div>
-                <div class="boxRight">
-                    <h2>Ensalada Brie</h2>
-                    <p> Ingredientes: Queso brie, pollo, tomates cherry, mix de verdes, nueces y croutons.</p>
-                    <div>
-                        <h3>$900</h3>
+            <% products.forEach(product => { %>
+                <div class="boxDetail">
+                    <div class="boxLeft">
+                        <img src="../images/Brie.jpeg">
                     </div>
-                    <p>
-                        <a href="./productCart.ejs" class="agregarCarrito">Agregar al carrito <i
-                                class="fa-solid fa-cart-shopping"></i></a>
-                    </p>
+                    <div class="boxRight">
+                        <h2><%=product.nombre %> </h2>
+                        <p> Ingredientes: <%=product.ingredientes %> </p>
+                        <div>
+                            <h3>$<%=product.precio %> </h3>
+                        </div>
+                        <p>
+                            <a href="./productCart.ejs" class="agregarCarrito">Agregar al carrito <i
+                                    class="fa-solid fa-cart-shopping"></i></a>
+                        </p>
+                    </div>
                 </div>
-            </div>
-            </div>
-            </div>
+                </div>
+                </div>
+            <% }) %>
+
             <br>
-            <div class="boxDetail">
+            <!-- <div class="boxDetail">
                 <div class="boxLeft"><img src="../images/Caesar.jpeg"></div>
                 <div class="boxRight">
                     <h2>Ensalada Caesar</h2>
@@ -82,7 +85,7 @@
                                 class="fa-solid fa-cart-shopping"></a></i></p>
                 </div>
             </div>
-            </div>
+            </div> -->
         </section>
     </main>
     <%-include('./partials/footer') %>
