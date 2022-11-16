@@ -5,7 +5,7 @@ const app = express();
 
 const mainRoutes = require('./routes/mainRoutes');
 const productsRoutes = require('./routes/productsRoutes');
-const logMiddleware = require('./middlewares/logMiddlewares');
+const logMiddleware = require('./middleware/logMiddleware');
 const publicFolderPath = path.resolve('public');
 
 
