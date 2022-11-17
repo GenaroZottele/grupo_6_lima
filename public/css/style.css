@@ -68,12 +68,12 @@
 .lima img {
    height: 48px;
 }
-/*---------------------------- Pie de página---------------------------------------------------------------------------------------------- */
-.pieDePagina {
+/* ---------------------------- Footer---------------------------------------------------------------------------------------------- */
+.footer {
    width: 100%;
    background-color: black;
 }
-.pieDePagina .grupo1 {
+.footer .footerMain {
    width: 100%;
    max-width: 1200px;
    margin: auto;
@@ -82,27 +82,27 @@
    grid-gap: 50px;
    padding: 25px 0px;
 }
-.pieDePagina .grupo1 .box figure {
+.footer .footerMain .box figure {
    width: 100%;
    height: 100;
    display: flex;
    justify-content: center;
    align-items: center;
 }
-.pieDePagina .grupo1 .box figure img {
+.footer .footerMain .box figure img {
    width: 250px;
 }
-.pieDePagina .grupo1 .box h2 {
+.footer .footerMain .box h2 {
    color: white;
    margin-bottom: 25px;
    font-size: 20px;
    font-family: 'Roboto';
 }
-.pieDePagina .grupo1 .box p {
+.footer .footerMain .box p {
    color: #efefef;
    margin-bottom: 10px;
 }
-.pieDePagina .grupo1 .redes-sociales a {
+.footer .footerMain .redes-sociales a {
    display: inline-block;
    text-decoration: none;
    width: 45px;
@@ -114,17 +114,17 @@
    text-align: center;
    border-radius: 10%;
 }
-.pieDePagina .grupo2 {
+.footer .copyright {
    background-color: #87d66cd4;
    text-align: center;
    padding: 15px 10px;
    color: #007200;
 }
-.pieDePagina .grupo2 small {
+.footer .copyright small {
    font-size: 15px;
 }
 @media screen and (max-width: 760px) {
-   .pieDePagina .grupo1 {
+   .footer .footerMain {
       width: 90%;
       grid-template-columns: repeat(1, 1fr);
       grid-gap: 30px;
