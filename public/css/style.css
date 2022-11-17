@@ -1,3 +1,18 @@
+/* 
+Header:
+Footer:
+Banner Ensalada del Día:
+Main Index:
+ProductDetail:
+Login:
+Register:
+Panel:
+ProductDetailMain:
+Media Queries:
+ProductCart:
+Nosotros:
+*/
+
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
 * {
    font-family: 'Roboto', sans-serif;
@@ -247,10 +262,6 @@ main section h2 {
 p {
    font-size: 22px;
 }
-/* .card .description p .price{
-    color: #007200; #357e53
-    font-weight: bolder;
-} */
 /* --------------------------------------------------productDetail--------------------------------------------------------------- */
 .detail {
    display: block;
@@ -491,13 +502,6 @@ main form p label {
    margin-top: 10px;
 }
 
-
-
-
-
-
-
-
 /* ------------------------------------------------------- media ----------------------------------------------------------------- */
 
 @media (max-width: 768px) {
@@ -505,7 +509,6 @@ main form p label {
       display: none;
    }
 }
-
 @media (min-width: 768px) {
    .dropdown {
       display: none;
@@ -562,9 +565,7 @@ main form p label {
       width: 25%;
    }
 }
-
 /* --------------------------------------------------productCart--------------------------------------------------------------- */
-
 .ingredientes1 {
    display: flex;
    flex-direction: row;
@@ -610,7 +611,6 @@ main form p label {
    flex-direction: column;
    align-items: center;
 }
-
 .formulariopago {
    display: flex;
    flex-direction: column;
@@ -618,7 +618,6 @@ main form p label {
    line-height: 30px;
    font-size: 22px;
 }
-
 .formulariopago2 {
    display: flex;
    flex-direction: row;
