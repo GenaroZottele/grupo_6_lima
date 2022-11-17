@@ -4,4 +4,4 @@ function logDBMiddleware(req, res, next){
     next();
 }
 
-module.exports = logMDBiddleware;
+module.exports = logDBMiddleware;
