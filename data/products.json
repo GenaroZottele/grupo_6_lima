@@ -6,7 +6,7 @@
         "aderezo": "Ranch",
         "ingredientes": "Pollo, huevo, zanahoria, queso sardo rayado, tomates cherrys",
         "imagen": "../images/Clásica.jpeg",
-        "precio": 800
+        "precio": 750
     },
     {
         "id": 2,
@@ -15,7 +15,7 @@
         "aderezo": "Mostaza y miel",
         "ingredientes": "Pollo, tomates secos, nueces, queso azul",
         "imagen": "../images/Cala1.jpg",
-        "precio": 900
+        "precio": 750
     },
     {
         "id": 3,
@@ -24,7 +24,7 @@
         "aderezo": "Caesar",
         "ingredientes": "Pollo, croûtons, queso sardo rayado, tomates cherrys",
         "imagen": "../images/Caesar.jpeg",
-        "precio": 800
+        "precio": 750
     },
     {
         "id": 4,
@@ -33,7 +33,7 @@
         "aderezo": "Caesar",
         "ingredientes": "Pollo rebozado con pan rallado, croûtons, queso sardo rayado, tomates cherrys y copos de maiz",
         "imagen": "../images/Crispy.png",
-        "precio": 900
+        "precio": 750
     },
     {
         "id": 5,
@@ -42,7 +42,7 @@
         "aderezo": "Reducción de aceto balsámico",
         "ingredientes": "Pastrón feteado, queso tybo en cubos, morron rojo de conserva, nueces",
         "imagen": "../images/Pastrón.png",
-        "precio": 900
+        "precio": 780
     },
     {
         "id": 6,
@@ -51,7 +51,7 @@
         "aderezo": "Vinagreta (Oliva, Aceto, Vinagre y Pimienta)",
         "ingredientes": "Pollo, queso azul, nueces, peras en almíbar",
         "imagen": "...",
-        "precio": 800
+        "precio": 750
     },
     {
         "id": 7,
@@ -60,7 +60,7 @@
         "aderezo": "Vinagreta",
         "ingredientes": "Quinoa, choclo en grano, zanahoria, brócoli, tomates cherrys, maní tostado sin sal",
         "imagen": "id",
-        "precio": 800
+        "precio": 720
     },
     {
         "id": 8,
@@ -69,7 +69,7 @@
         "aderezo": "Reducción dulce de aceto balsámico y pesto genovés",
         "ingredientes": "Jamón crudo feteado, queso mozzarela en trozos, tomates secos",
         "imagen": "...",
-        "precio": 1000
+        "precio": 780
     },
     {
         "id": 9,
@@ -78,7 +78,7 @@
         "aderezo": "Mostaza y miel",
         "ingredientes": "Pollo, queso brie, tomates cherrys, croûtons, nueces",
         "imagen": "../images/Brie.jpeg",
-        "precio": 1000
+        "precio": 780
     },
     {
         "id": 10,
@@ -87,6 +87,6 @@
         "aderezo": "Vinagreta",
         "ingredientes": "Atún de lata (en lomitos), brócoli, arroz yamani, tomates cherrys, cebolla morada",
         "imagen": "../images/Atun.jpg",
-        "precio": 900
+        "precio": 750
     }
 ]
