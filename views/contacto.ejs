@@ -1,37 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-<%- include('./partials/head', {pageTitle: 'Contacto'}); %>
+<%- include('./partials/head', {pageTitle: 'Contacto' }); %>
 
-<body>
-  <%-include('./partials/header') %>
+  <body>
+    <%- include('./partials/header') %>
 
-  <main class="mainregister">
-    <form action="register" method="POST" class="formregister">
-      <p>
-        <label>Dejanos tu consulta</label>
-        <br>
-        <br>
-        <label>Nombre y Apellido:</label>
-        <input type="text" name="nombre" required>
-      </p>
-      <p>
-        <label>E-mail:</label>
-        <input type="email" name="email" required>
-      </p>
-      <p>
-        <label>Consulta:</label>
-        <input type="text" name="text" required>
-      </p>
-      <p class="botonesregister">
-        <button type="reset" class="botonRegister">Borrar</button>
-        <button type="submit" class="botonRegister">Enviar</button>
-      </p>
-    </form>
-  </main>
-  <%-include('./partials/footer') %>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
-    crossorigin="anonymous"></script>
-</body>
+      <main class="mainregister">
+        <form action="register" method="POST" class="formregister">
+          <p>
+            <label>Dejanos tu consulta</label>
+            <br>
+            <br>
+            <label>Nombre y Apellido:</label>
+            <input type="text" name="nombre" required>
+          </p>
+          <p>
+            <label>E-mail:</label>
+            <input type="email" name="email" required>
+          </p>
+          <p>
+            <label>Consulta:</label>
+            <input type="text" name="text" required>
+          </p>
+          <p class="botonesregister">
+            <button type="reset" class="botonRegister">Borrar</button>
+            <button type="submit" class="botonRegister">Enviar</button>
+          </p>
+        </form>
+      </main>
+      <%- include('./partials/footer') %>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+          crossorigin="anonymous"></script>
+  </body>
 
 </html>

@@ -48,21 +48,7 @@ const controller = {
         
     },
     
-    //5
-    /* edit: (req, res) => {
-        // Obtener ID del producto
-        const productId = req.params.productId;
-        // Buscar producto
-        const productToFind = products.find((product) => product.id == productId);
-        // productToFind == undefined
-        if (productToFind == undefined) {
-          return res.send("No existe el producto");
-        }
-        return res.render("panel", {
-            productToEdit: productToFind,
-        });
-      }, */
-
+    //5     
     edit: (req, res) =>{
         return res.render('panel')
     },
