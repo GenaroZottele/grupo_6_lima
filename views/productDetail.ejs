@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<%- include('./partials/head', {pageTitle: 'Detalle de producto'}); %>
+<%- include('./partials/head', {pageTitle: 'Detalle de productos'}); %>
 
 <body>
     <%-include('./partials/header') %>
@@ -21,6 +21,7 @@
                         <p>
                             <a href="./productCart.ejs" class="agregarCarrito">Agregar al carrito <i
                                     class="fa-solid fa-cart-shopping"></i></a>
+                            <a href="./productDetailMain/<%=product.id %> " class="agregarCarrito">Detalle </a>
                         </p>
                     </div>
                 </div>
