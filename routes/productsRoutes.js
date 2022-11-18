@@ -3,6 +3,8 @@ const router = express.Router();
 const logDBMiddleware = require('../middlewares/logDBMiddleware');
 const productsController = require('../controllers/productsController');
 
+
+
 // Listado de productos
 router.get('/', productsController.products);
 

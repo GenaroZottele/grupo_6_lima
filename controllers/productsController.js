@@ -7,7 +7,6 @@ const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
 
 const controller = {
-
     //1
     products: (req, res)=>{
 
