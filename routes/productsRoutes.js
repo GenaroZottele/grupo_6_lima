@@ -19,7 +19,7 @@ router.get('/productDetailMain/:productId/', productsController.detail);
 router.get('/edit', productsController.edit);
 
 // Edicion productos (a donde envia form)
-router.put('/update/:productId/', productsController.update);
+router.put('/update', productsController.update);
 
 // // Elimina producto
 // router.post('/:id', productsController.destroy); 

@@ -7,24 +7,28 @@
         <%- include('./partials/header.ejs') %>
 
             <main class="mainPanel">
-                <form action="/products" method="POST" class="formPanel">
+                <form action="/products/update?_method=PUT" method="POST" class="formPanel">
                     <section class="newProduct">
                         <h2>MODIFICAR PRODUCTO</h2>
                         <p>
+                            <label>ID:</label>
+                            <input type="text" name="id" required>
+                        </p>
+                        <p>
                             <label>Nombre:</label>
-                            <input type="text" name="name" required>
+                            <input type="text" name="name">
                         </p>
                         <p>
                             <label>Base:</label>
-                            <input type="text" name="base" required>
+                            <input type="text" name="base">
                         </p>
                         <p>
                             <label>Aderezo:</label>
-                            <input type="text" name="aderezo" required>
+                            <input type="text" name="aderezo">
                         </p>
                         <p>
                             <label>Ingredientes:</label>
-                            <input type="text" name="ingredientes" required>
+                            <input type="text" name="ingredientes">
                         </p>
                         <p>
                             <label>Imagen:</label>
@@ -32,7 +36,7 @@
                         </p>
                         <p>
                             <label>Precio:</label>
-                            <input type="text" name="price" required>
+                            <input type="text" name="price">
                         </p>
                         </div>
                         <p class="botonesPanel">

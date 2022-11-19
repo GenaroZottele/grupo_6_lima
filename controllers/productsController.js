@@ -57,25 +57,38 @@ const controller = {
     update: (req, res) => {     
              
         const dataToUpdate = req.body;
-        dataToUpdate.precio = Number(dataToUpdate.precio);         
+        dataToUpdate.precio = Number(dataToUpdate.precio);  
 
+        id = dataToUpdate.id;
+
+        console.log(id);        
+        
+        // para implentar cuando tengamos buscador de productos
         // obtener indice del producto en el array de productos
-        // products[0] = nuevo producto         
+        // products[0] = nuevo producto   
+
         const productIndex = products.findIndex(
           (product) => {
-            return product.id == req.params.id
+            return product.id == id;
           }
         )
         if (productIndex == -1) {
-          return res.send('No existe el producto')
-        }        
+          return res.send('No existe el producto');
+        }
+
+        console.log(products[productIndex]);
+        console.log(dataToUpdate);
+
         // Combinar producto existente con nuevos datos a actualizar
         products[productIndex] = {
           ...products[productIndex],
           ...dataToUpdate
         }
 
-        fs.writeFileSync(productsFilePath, JSON.stringify(products, null, 2));            
+        console.log(products[productIndex]);
+
+        fs.writeFileSync(productsFilePath, JSON.stringify(products));
+
         return res.send(products[productIndex])
       
       },   
