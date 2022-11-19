@@ -54,42 +54,32 @@ const controller = {
       
     //6
     update: (req, res) => {     
-             
-        const dataToUpdate = req.body;
-        dataToUpdate.precio = Number(dataToUpdate.precio);  
-
-        id = dataToUpdate.id;
-
-        console.log(id);        
         
-        // para implentar cuando tengamos buscador de productos
-        // obtener indice del producto en el array de productos
-        // products[0] = nuevo producto   
+        // => HACER barra de busqueda de productos para modificar
 
+        // capturamos los datos del form
+        const dataToUpdate = req.body;
+        // convertimos precio a number
+        dataToUpdate.precio = Number(dataToUpdate.precio);
+        // obtenemos el id del producto
+        id = dataToUpdate.id;                
+        // obtener indice del producto en el array de productos
+        // products[0] = nuevo producto
         const productIndex = products.findIndex(
           (product) => {
             return product.id == id;
-          }
-        )
+          })
         if (productIndex == -1) {
           return res.send('No existe el producto');
         }
-
-        console.log(products[productIndex]);
-        console.log(dataToUpdate);
-
-        // Combinar producto existente con nuevos datos a actualizar
+        // combinamos producto existente con valores actualizados  
         products[productIndex] = {
-          ...products[productIndex],
-          ...dataToUpdate
-        }
-
-        console.log(products[productIndex]);
-
+          ...products[productIndex], ...dataToUpdate
+        };   
+        // pasamos de un array de objetos de js a un objeto json y lo cargamos en el data
         fs.writeFileSync(productsFilePath, JSON.stringify(products));
-
-        return res.send(products[productIndex])
-      
+        // redirigir la pagina
+        res.redirect('/panel');      
       },   
 
 }

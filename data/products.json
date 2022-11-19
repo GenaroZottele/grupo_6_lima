@@ -84,12 +84,12 @@
         "precio": 780
     },
     {
-        "id": 10,
+        "id": "10",
         "nombre": "Atún",
         "base": "Rúcula",
         "aderezo": "Vinagreta",
         "ingredientes": "Atún de lata (en lomitos), brócoli, arroz yamani, tomates cherrys, cebolla morada",
-        "imagen": "/images/Atun.jpg",
+        "imagen": "/images/Pastrón.png",
         "precio": 750
     }
 ]
