@@ -16,7 +16,6 @@ app.use(express.json());
 app.use(logMiddleware);
 
 app.set('view engine', 'ejs');
-app.set('views', path.join(__dirname, '/views'));
 
 app.use('/', mainRoutes);
 app.use('/products', productsRoutes);

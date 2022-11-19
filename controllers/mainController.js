@@ -1,9 +1,16 @@
+const fs = require('fs');
+const path = require('path');
+
+const productsFilePath = path.resolve('./data/products.json');
+const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8')); 
+
+
 const controller = {
-    index : (req, res) => {
-        // const visitedProducts = products.filter(product => product.category == 'visited')
-        // const inSaleProducts = products.filter(product => product.category == 'in-sale')
-        return res.render('index');
-    },
+    index : (req, res)=>{
+        const masVendidos = products.filter(product => product.status == 'MasVendido')
+        return res.render('index', {masVendidos})
+  
+      },
     register : (req, res) => {
         return res.render('register');
     },

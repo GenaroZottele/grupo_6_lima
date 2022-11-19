@@ -8,48 +8,55 @@
                 <section class="ensaladaDelDia">
                     <h2>Ensalada del día - La Clásica - $750 </h2>
                     <p>Pidiendo tres ensaladas, tenés un 10% de descuento</p>
-                    <a href="./panel" style="margin-left: 15px; ">PANEL</a>
+                    <a href="/panel" style="margin-left: 15px; ">PANEL</a>
                 </section>
                 <section class="cards">
-                    <h2> <b> NUESTRAS ENSALADAS</h2>
+                    <h2> <b> MAS VENDIDAS </h2>
                     </p>
-                    <article class="card">
-                        <img src="../images/Caesar.jpeg" alt="Ensalada Caesar">
-                        <div class="description">
-                            <h2>Ensalada Caesar</h2>
-                            <p clas="price">Precio $ 750.00</p>
-                            <p>Ingredientes: Pollo, queso, tomates cherry, mix de verdes, croutons y aderezo caesar.</p>
-                            <div class="botones">
-                                <a href="./productCart">Comprar</a>
-                                <a href="./productDetailMain">Detalles</a>
-                            </div>
-                        </div>
-                    </article>
-                    <article class="card2">
+                    <% masVendidos.forEach(product => { %>
+                       
+                            <article class="card">
+                                <img src="<%=product.imagen %> " alt="Ensalada Caesar">
+                                <div class="description">
+                                    <h2><%=product.nombre %> </h2>
+                                    <p clas="price">Precio $ <%=product.precio %> </p>
+                                    <p>Ingredientes: <%=product.ingredientes %> </p>
+                                    <div class="botones">
+                                        <a href="/productCart">Comprar</a>
+                                        <a href="/products/productDetailMain/<%=product.id %> ">Detalles</a>
+                                    </div>
+                                </div>
+                            </article>
+
+                    <% }) %>
+                    
+                    <!-- <article class="card2">
                         <div class="description">
                             <h2>Ensalada Cala</h2>
                             <p clas="price">Precio: $ 750.00</p>
-                            <p>Ingredientes: Pollo, roquefort, tomates secos, rúcula, penne rigatti, nueces y aderezo de mostaza y miel.</p>
+                            <p>Ingredientes: Pollo, roquefort, tomates secos, rúcula, penne rigatti, nueces y aderezo de
+                                mostaza y miel.</p>
                             <div class="botones">
-                                <a href="./productCart">Comprar</a>
-                                <a href="./productDetailMain">Detalles</a>
+                                <a href="/productCart">Comprar</a>
+                                <a href="/productDetailMain">Detalles</a>
                             </div>
                         </div>
-                        <img src="../images/Cala1.jpg" alt="Ensalada Cala">
+                        <img src="/images/Cala1.jpg" alt="Ensalada Cala">
                     </article>
                     <article class="card">
-                        <img src="../images/Clásica.jpeg" alt="Ensalada Clásica">
+                        <img src="/images/Clásica.jpeg" alt="Ensalada Clásica">
                         <div class="description">
                             <h2>Ensalada Clásica</h2>
                             <p clas="price">Precio $ 750.00</p>
-                            <p>Ingredientes: Pollo, queso, lechuga, tomates cherry, zanahoria, huevo y aderezo ranch.</p>
+                            <p>Ingredientes: Pollo, queso, lechuga, tomates cherry, zanahoria, huevo y aderezo ranch.
+                            </p>
                             <div class="botones">
-                                <a href="./productCart">Comprar</a>
-                                <a href="./productDetailMain">Detalles</a>
+                                <a href="/productCart">Comprar</a>
+                                <a href="/productDetailMain">Detalles</a>
                             </div>
-                            <!-- <h3>Detalle del producto</h3> -->
+                             <h3>Detalle del producto</h3> 
                         </div>
-                    </article>
+                    </article> -->
                 </section>
             </main>
             <%- include('partials/footer.ejs') %>
