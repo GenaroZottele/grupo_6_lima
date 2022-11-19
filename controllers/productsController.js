@@ -54,16 +54,13 @@ const controller = {
     },
       
     //6
-    update: (req, res) => {
-        const dataToUpdate = req.body;        
-        dataToUpdate.nombre = Number(dataToUpdate.nombre);
-        dataToUpdate.base = Number(dataToUpdate.base);
-        dataToUpdate.aderezo = Number(dataToUpdate.aderezo);
-        dataToUpdate.ingredientes = Number(dataToUpdate.ingredientes);
-        dataToUpdate.precio = Number(dataToUpdate.precio);
-    
-        // Obtener el indice del producto en el array productos
-        // products[0] = nuevo producto 
+    update: (req, res) => {     
+             
+        const dataToUpdate = req.body;
+        dataToUpdate.precio = Number(dataToUpdate.precio);         
+
+        // obtener indice del producto en el array de productos
+        // products[0] = nuevo producto         
         const productIndex = products.findIndex(
           (product) => {
             return product.id == req.params.id
@@ -71,16 +68,16 @@ const controller = {
         )
         if (productIndex == -1) {
           return res.send('No existe el producto')
-        }
-        // Actualizo array en base al indice
+        }        
         // Combinar producto existente con nuevos datos a actualizar
         products[productIndex] = {
           ...products[productIndex],
           ...dataToUpdate
         }
-        fs.writeFileSync(productsFilePath, JSON.stringify(products, null, 2));
-    
+
+        fs.writeFileSync(productsFilePath, JSON.stringify(products, null, 2));            
         return res.send(products[productIndex])
+      
       },   
 
 }
