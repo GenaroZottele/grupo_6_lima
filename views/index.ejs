@@ -11,21 +11,26 @@
                     <a href="/panel" style="margin-left: 15px; ">PANEL</a>
                 </section>
                 <section class="cards">
-                    <h2> <b> NUESTRAS ENSALADAS</h2>
+                    <h2> <b> MAS VENDIDAS </h2>
                     </p>
-                    <article class="card">
-                        <img src="/images/Caesar.jpeg" alt="Ensalada Caesar">
-                        <div class="description">
-                            <h2>Ensalada Caesar</h2>
-                            <p clas="price">Precio $ 750.00</p>
-                            <p>Ingredientes: Pollo, queso, tomates cherry, mix de verdes, croutons y aderezo caesar.</p>
-                            <div class="botones">
-                                <a href="/productCart">Comprar</a>
-                                <a href="/products/productDetailMain/3">Detalles</a>
-                            </div>
-                        </div>
-                    </article>
-                    <article class="card2">
+                    <% masVendidos.forEach(product => { %>
+                       
+                            <article class="card">
+                                <img src="<%=product.imagen %> " alt="Ensalada Caesar">
+                                <div class="description">
+                                    <h2><%=product.nombre %> </h2>
+                                    <p clas="price">Precio $ <%=product.precio %> </p>
+                                    <p>Ingredientes: <%=product.ingredientes %> </p>
+                                    <div class="botones">
+                                        <a href="/productCart">Comprar</a>
+                                        <a href="/products/productDetailMain/<%=product.id %> ">Detalles</a>
+                                    </div>
+                                </div>
+                            </article>
+
+                    <% }) %>
+                    
+                    <!-- <article class="card2">
                         <div class="description">
                             <h2>Ensalada Cala</h2>
                             <p clas="price">Precio: $ 750.00</p>
@@ -49,9 +54,9 @@
                                 <a href="/productCart">Comprar</a>
                                 <a href="/productDetailMain">Detalles</a>
                             </div>
-                            <!-- <h3>Detalle del producto</h3> -->
+                             <h3>Detalle del producto</h3> 
                         </div>
-                    </article>
+                    </article> -->
                 </section>
             </main>
             <%- include('partials/footer.ejs') %>
