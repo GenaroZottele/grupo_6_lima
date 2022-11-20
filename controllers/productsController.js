@@ -62,7 +62,7 @@ const controller = {
         // convertimos precio a number
         dataToUpdate.precio = Number(dataToUpdate.precio);
         // obtenemos el id del producto
-        id = dataToUpdate.id;                
+        let id = dataToUpdate.id;                
         // obtener indice del producto en el array de productos
         // products[0] = nuevo producto
         const productIndex = products.findIndex(
@@ -80,8 +80,25 @@ const controller = {
         fs.writeFileSync(productsFilePath, JSON.stringify(products));
         // redirigir la pagina
         res.redirect('/panel');      
-      },   
-
+      },  
+      
+      //7
+      delete: (req, res) => {
+        // capturamos los datos del form
+        const dataToUpdate = req.body;
+        // obtenemos el id del producto
+        let id = dataToUpdate.id;
+        console.log(id);
+        // filtramos el producto en el array
+        products = products.filter(
+             (product) => product.id != id
+        );
+        console.log(products);
+        // pasamos de un array de objetos de js a un objeto json y lo cargamos en el data
+        fs.writeFileSync(productsFilePath, JSON.stringify(products));
+        // redirigir la pagina
+        res.redirect('/panel'); 
+      }
 }
 
 module.exports = controller;

@@ -7,6 +7,42 @@
         <%- include('./partials/header.ejs') %>
 
             <main class="mainPanel">
+
+                <form action="/products" method="POST" class="formPanel">
+                    <section class="newProduct">
+                        <h2>AGREGAR PRODUCTO</h2>
+                        <p>
+                            <label>Nombre:</label>
+                            <input type="text" name="nombre" required>
+                        </p>
+                        <p>
+                            <label>Base:</label>
+                            <input type="text" name="base" required>
+                        </p>
+                        <p>
+                            <label>Aderezo:</label>
+                            <input type="text" name="aderezo" required>
+                        </p>
+                        <p>
+                            <label>Ingredientes:</label>
+                            <input type="text" name="ingredientes" required>
+                        </p>
+                        <p>
+                            <label>Imagen:</label>
+                            <input type="file" accept=".jpg, .png, .jpeg" name="imagen">
+                        </p>
+                        <p>
+                            <label>Precio:</label>
+                            <input type="text" name="precio" required>
+                        </p>
+                        </div>
+                        <p class="botonesPanel">
+                            <button type="reset" class="botonPanel">Borrar</button>
+                            <button type="submit" class="botonPanel">Crear</button>
+                        </p>
+                    </section>
+                </form>
+
                 <form action="/products/update?_method=PUT" method="POST" class="formPanel">
                     <section class="newProduct">
                         <h2>MODIFICAR PRODUCTO</h2>
@@ -41,44 +77,26 @@
                         </div>
                         <p class="botonesPanel">
                             <button type="reset" class="botonPanel">Borrar</button>
-                            <button type="submit" class="botonPanel">Enviar</button>
+                            <button type="submit" class="botonPanel">Modificar</button>
                         </p>
                     </section>
                 </form>
-                <form action="/products" method="POST" class="formPanel">
+
+                <form action="/products/delete?_method=DELETE" method="POST" class="formPanel">
                     <section class="newProduct">
-                        <h2>AGREGAR PRODUCTO</h2>
+                        <h2>ELIMINAR PRODUCTO</h2>
                         <p>
-                            <label>Nombre:</label>
-                            <input type="text" name="nombre" required>
-                        </p>
-                        <p>
-                            <label>Base:</label>
-                            <input type="text" name="base" required>
-                        </p>
-                        <p>
-                            <label>Aderezo:</label>
-                            <input type="text" name="aderezo" required>
-                        </p>
-                        <p>
-                            <label>Ingredientes:</label>
-                            <input type="text" name="ingredientes" required>
-                        </p>
-                        <p>
-                            <label>Imagen:</label>
-                            <input type="file" accept=".jpg, .png, .jpeg" name="imagen">
-                        </p>
-                        <p>
-                            <label>Precio:</label>
-                            <input type="text" name="precio" required>
+                            <label>ID:</label>
+                            <input type="text" name="id" required>
                         </p>
                         </div>
                         <p class="botonesPanel">
                             <button type="reset" class="botonPanel">Borrar</button>
-                            <button type="submit" class="botonPanel">Enviar</button>
+                            <button type="submit" class="botonPanel">Eliminar</button>
                         </p>
+                    </section>
                 </form>
-                </section>
+
             </main>
             <%- include('./partials/footer.ejs') %>
 

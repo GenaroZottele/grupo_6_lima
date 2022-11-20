@@ -39,3 +39,4 @@ _-------------------------------------------CuartoSprint------------------------
 PREGUNTAS
 
 -  Update. Spread campos vacios pisan a los que tienen informacion.
+-  Delete. Con filter volvemos a escribir el JSON completo?
