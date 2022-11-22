@@ -2,7 +2,7 @@ const fs = require('fs');
 const path = require('path');
 
 const productsFilePath = path.resolve('./data/products.json');
-const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8')); 
+let products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8')); 
 
 
 
@@ -38,6 +38,8 @@ const controller = {
         const camposDeNuevoProducto = req.body;
         // asignar id a nuevo producto
         camposDeNuevoProducto.id = 'ensalada' + Date.now();
+        // convertimos precio a number
+        camposDeNuevoProducto.precio = Number(camposDeNuevoProducto.precio);
         // pusheamos los datos al array de objetos de js
         products.push(camposDeNuevoProducto);
         // pasamos de un array de objetos de js a un objeto json y lo cargamos en el data
