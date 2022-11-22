@@ -8,10 +8,12 @@ const logMiddleware = require('./middlewares/logMiddleware');
 const publicFolderPath = path.resolve('public');
 const methodOverrride = require('method-override');
 
+
 app.use(express.static(publicFolderPath));
 app.use(cookieParser());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+
 
 app.use(logMiddleware);
 

@@ -3,7 +3,7 @@ const multer = require('multer');
 
 const storage = multer.diskStorage({
 	destination: (req, file, cb) => {
-		cb(null, './public/images/avatars');
+		cb(null, path.resolve('/images'))         
 	},
 	filename: (req, file, cb) => {
 		const uniqueSuffix =  Date.now();
