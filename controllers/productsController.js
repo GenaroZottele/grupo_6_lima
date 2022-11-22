@@ -2,7 +2,7 @@ const fs = require('fs');
 const path = require('path');
 
 const productsFilePath = path.resolve('./data/products.json');
-const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8')); 
+let products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8')); 
 
 
 
@@ -38,6 +38,8 @@ const controller = {
         const camposDeNuevoProducto = req.body;
         // asignar id a nuevo producto
         camposDeNuevoProducto.id = 'ensalada' + Date.now();
+        // convertimos precio a number
+        camposDeNuevoProducto.precio = Number(camposDeNuevoProducto.precio);
         // pusheamos los datos al array de objetos de js
         products.push(camposDeNuevoProducto);
         // pasamos de un array de objetos de js a un objeto json y lo cargamos en el data
@@ -53,35 +55,52 @@ const controller = {
     },
       
     //6
-    update: (req, res) => {
-        const dataToUpdate = req.body;        
-        dataToUpdate.nombre = Number(dataToUpdate.nombre);
-        dataToUpdate.base = Number(dataToUpdate.base);
-        dataToUpdate.aderezo = Number(dataToUpdate.aderezo);
-        dataToUpdate.ingredientes = Number(dataToUpdate.ingredientes);
+    update: (req, res) => {     
+        
+        // => HACER barra de busqueda de productos para modificar
+
+        // capturamos los datos del form
+        const dataToUpdate = req.body;
+        // convertimos precio a number
         dataToUpdate.precio = Number(dataToUpdate.precio);
-    
-        // Obtener el indice del producto en el array productos
-        // products[0] = nuevo producto 
+        // obtenemos el id del producto
+        let id = dataToUpdate.id;                
+        // obtener indice del producto en el array de productos
+        // products[0] = nuevo producto
         const productIndex = products.findIndex(
           (product) => {
-            return product.id == req.params.id
-          }
-        )
+            return product.id == id;
+          })
         if (productIndex == -1) {
-          return res.send('No existe el producto')
+          return res.send('No existe el producto');
         }
-        // Actualizo array en base al indice
-        // Combinar producto existente con nuevos datos a actualizar
+        // combinamos producto existente con valores actualizados  
         products[productIndex] = {
-          ...products[productIndex],
-          ...dataToUpdate
-        }
-        fs.writeFileSync(productsFilePath, JSON.stringify(products, null, 2));
-    
-        return res.send(products[productIndex])
-      },   
-
+          ...products[productIndex], ...dataToUpdate
+        };   
+        // pasamos de un array de objetos de js a un objeto json y lo cargamos en el data
+        fs.writeFileSync(productsFilePath, JSON.stringify(products));
+        // redirigir la pagina
+        res.redirect('/panel');      
+      },  
+      
+      //7
+      delete: (req, res) => {
+        // capturamos los datos del form
+        const dataToUpdate = req.body;
+        // obtenemos el id del producto
+        let id = dataToUpdate.id;
+        console.log(id);
+        // filtramos el producto en el array
+        products = products.filter(
+             (product) => product.id != id
+        );
+        console.log(products);
+        // pasamos de un array de objetos de js a un objeto json y lo cargamos en el data
+        fs.writeFileSync(productsFilePath, JSON.stringify(products));
+        // redirigir la pagina
+        res.redirect('/panel'); 
+      }
 }
 
 module.exports = controller;

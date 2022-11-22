@@ -6,7 +6,7 @@ const mainRoutes = require('./routes/mainRoutes');
 const productsRoutes = require('./routes/productsRoutes');
 const logMiddleware = require('./middlewares/logMiddleware');
 const publicFolderPath = path.resolve('public');
-
+const methodOverrride = require('method-override');
 
 app.use(express.static(publicFolderPath));
 app.use(cookieParser());
@@ -14,6 +14,8 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 app.use(logMiddleware);
+
+app.use(methodOverrride('_method'));
 
 app.set('view engine', 'ejs');
 

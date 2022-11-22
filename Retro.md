@@ -38,4 +38,5 @@ _-------------------------------------------CuartoSprint------------------------
 
 PREGUNTAS
 
--  Desde productos problemas para volver al main, etc
+-  Update. Spread campos vacios pisan a los que tienen informacion.
+-  Delete. Con filter volvemos a escribir el JSON completo?
