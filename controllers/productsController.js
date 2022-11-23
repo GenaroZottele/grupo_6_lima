@@ -42,7 +42,7 @@ const controller = {
         camposDeNuevoProducto.id = 'ensalada' + Date.now();
         // convertimos precio a number
         camposDeNuevoProducto.precio = Number(camposDeNuevoProducto.precio);
-        // camposDeNuevoProducto.imagen = '/images/'+ upload.fileLoader
+        camposDeNuevoProducto.imagen = '/images/'+ req.file.filename
         // pusheamos los datos al array de objetos de js
         products.push(camposDeNuevoProducto);
         // pasamos de un array de objetos de js a un objeto json y lo cargamos en el data
