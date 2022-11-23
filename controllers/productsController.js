@@ -64,6 +64,7 @@ const controller = {
 
         // capturamos los datos del form
         const dataToUpdate = req.body;
+        return console.log(req.body);
         // convertimos precio a number
         dataToUpdate.precio = Number(dataToUpdate.precio);
         // obtenemos el id del producto
