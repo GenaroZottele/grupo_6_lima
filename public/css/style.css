@@ -483,7 +483,7 @@ main form p label {
 .mainPanel {
    display: flex;
    flex-direction: column;
-   height: 1200px;
+   height: 1600px;
    justify-content: space-around;
    align-items: center;
    background-position: center;
@@ -512,9 +512,9 @@ main form p label {
       width: 90px;
    }
 }
-@media (max-width: 761px) {
+@media (max-width: 827px) {
    .mainPanel {
-      height: 1000px;
+      height: 2300px;
    }
    .botonesPanel {
       display: flex;
@@ -539,7 +539,7 @@ main form p label {
       width: 320px;
    }
    .mainPanel {
-      height: 900px;
+      height: 2800px;
    }
 }
 /* -----------------------------------------------------productDetailMain ----------------------------------------------------------------- */
