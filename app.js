@@ -4,6 +4,7 @@ const cookieParser = require('cookie-parser');
 const app = express();
 const mainRoutes = require('./routes/mainRoutes');
 const productsRoutes = require('./routes/productsRoutes');
+
 const logMiddleware = require('./middlewares/logMiddleware');
 const publicFolderPath = path.resolve('public');
 const methodOverrride = require('method-override');
