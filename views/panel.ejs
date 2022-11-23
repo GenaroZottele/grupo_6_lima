@@ -9,7 +9,7 @@
 
             <main class="mainPanel">
 
-                <form action="/products" method="POST" class="formPanel">
+                <form action="/products" method="POST" class="formPanel" enctype="multipart/form-data">
                     <section class="newProduct">
                         <h2>AGREGAR PRODUCTO</h2>
                         <p>
@@ -64,7 +64,7 @@
                             <input type="text" name="ingredientes">
                         </p>
                         <p>
-                            <label>Imagen:</label>
+                            <label for="product-images">Imagen:</label>
                             <input type="file" accept=".jpg, .png, .jpeg" name="imagen">
                         </p>
                         <p>
