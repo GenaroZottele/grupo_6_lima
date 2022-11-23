@@ -4,11 +4,12 @@
 <%- include('./partials/head.ejs', {pageTitle: 'Panel' }); %>
 
     <body>
+
         <%- include('./partials/header.ejs') %>
 
             <main class="mainPanel">
 
-                <form action="/products" method="POST" class="formPanel">
+                <form action="/products" method="POST" class="formPanel" enctype="multipart/form-data">
                     <section class="newProduct">
                         <h2>AGREGAR PRODUCTO</h2>
                         <p>
@@ -47,10 +48,6 @@
                     <section class="newProduct">
                         <h2>MODIFICAR PRODUCTO</h2>
                         <p>
-                            <label>ID:</label>
-                            <input type="text" name="id" required>
-                        </p>
-                        <p>
                             <label>Nombre:</label>
                             <input type="text" name="nombre">
                         </p>
@@ -67,12 +64,16 @@
                             <input type="text" name="ingredientes">
                         </p>
                         <p>
-                            <label>Imagen:</label>
+                            <label for="product-images">Imagen:</label>
                             <input type="file" accept=".jpg, .png, .jpeg" name="imagen">
                         </p>
                         <p>
                             <label>Precio:</label>
                             <input type="text" name="precio">
+                        </p>
+                        <p>
+                            <label>ID:</label>
+                            <input type="text" name="id" required>
                         </p>
                         </div>
                         <p class="botonesPanel">
@@ -98,6 +99,7 @@
                 </form>
 
             </main>
+
             <%- include('./partials/footer.ejs') %>
 
 
