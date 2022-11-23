@@ -1,3 +1,4 @@
+const { fileLoader } = require('ejs');
 const fs = require('fs');
 const path = require('path');
 const upload = require('../middlewares/multerMiddleware')
@@ -41,7 +42,7 @@ const controller = {
         camposDeNuevoProducto.id = 'ensalada' + Date.now();
         // convertimos precio a number
         camposDeNuevoProducto.precio = Number(camposDeNuevoProducto.precio);
-        camposDeNuevoProducto.imagen = '/images/'+ camposDeNuevoProducto.imagen
+        // camposDeNuevoProducto.imagen = '/images/'+ upload.fileLoader
         // pusheamos los datos al array de objetos de js
         products.push(camposDeNuevoProducto);
         // pasamos de un array de objetos de js a un objeto json y lo cargamos en el data
