@@ -26,7 +26,8 @@
         "aderezo": "Caesar",
         "ingredientes": "Pollo, croûtons, queso sardo rayado, tomates cherrys",
         "imagen": "/images/Caesar.jpeg",
-        "precio": 750
+        "precio": 750,
+        "status": "MasVendido"
     },
     {
         "id": 4,
