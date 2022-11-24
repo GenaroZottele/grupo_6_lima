@@ -243,6 +243,7 @@ main section h2 {
    flex-direction: column;
    justify-content: center;
    padding: 15px;
+   width: 35%;
 }
 .botones a {
    text-decoration: none;
@@ -401,6 +402,7 @@ p {
 }
 main form p input {
    opacity: 0.5;
+   width: 20%;
 }
 main form p label {
    color: #efefef;
@@ -483,7 +485,7 @@ main form p label {
 .mainPanel {
    display: flex;
    flex-direction: column;
-   height: 1600px;
+   height: 1900px;
    justify-content: space-around;
    align-items: center;
    background-position: center;
@@ -495,12 +497,21 @@ main form p label {
    position: relative;
    border: #007200 solid 1px;
    border-radius: 15px;
-   width: 50%;
+   width: 40%;
    text-align: center;
    padding: 20px;
    padding-left: 40px;
    background-color: black;
    opacity: 85%;
+}
+.formlabel{
+   font-size: smaller;
+}
+.formPanel p{
+   margin: 0px;
+}
+.formPanel p input{
+   width: 250px;
 }
 @media (max-width: 1270px) {
    .formPanel {
@@ -615,6 +626,7 @@ main form p label {
       border-radius: 26px;
       border: solid 1px gray;
       width: 70%;
+      margin: auto;
       margin-bottom: 20px;
    }
    .boxLeft img {
