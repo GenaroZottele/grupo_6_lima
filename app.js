@@ -4,6 +4,7 @@ const cookieParser = require('cookie-parser');
 const app = express();
 const mainRoutes = require('./routes/mainRoutes');
 const productsRoutes = require('./routes/productsRoutes');
+const usersRoutes = require('./routes/usersRoutes');
 
 const logMiddleware = require('./middlewares/logMiddleware');
 const publicFolderPath = path.resolve('public');
@@ -22,6 +23,7 @@ app.set('view engine', 'ejs');
 
 app.use('/', mainRoutes);
 app.use('/products', productsRoutes);
+app.use('/users', usersRoutes);
 
 const APP_PORT = process.env.PORT || 3000;
 app.listen(APP_PORT, () => {
