@@ -5,7 +5,7 @@ const {
 
 
 
-const User = require('../models/users');
+const User = require('../models/User');
 
 const controller = {
 	register: (req, res) => {
@@ -40,14 +40,13 @@ const controller = {
 		let userToCreate = {
 			...req.body,
 			password: bcryptjs.hashSync(req.body.password, 10),
-			users: req.file.filename
+			imagen: req.file.filename
 		}
 
 		let userCreated = User.create(userToCreate);
 
-		return res.redirect('/users/login');
+		return res.redirect('/user/login');
 	},
-
 	login: (req, res) => {
 		return res.render('register');
 	},
