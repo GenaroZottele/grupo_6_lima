@@ -1,9 +1,5 @@
 const bcryptjs = require('bcryptjs');
-const {
-	validationResult
-} = require('express-validator');
-
-
+const { validationResult } = require('express-validator');
 
 const User = require('../models/User');
 
@@ -40,15 +36,14 @@ const controller = {
 		let userToCreate = {
 			...req.body,
 			password: bcryptjs.hashSync(req.body.password, 10),
-			imagen: req.file.filename
+			avatar: req.file.filename
 		}
 
 		let userCreated = User.create(userToCreate);
-
-		return res.redirect('/user/login');
+			return res.redirect('login');
 	},
 	login: (req, res) => {
-		return res.render('register');
+		return res.render('login');
 	},
 
 	loginProcess: (req, res) => {
