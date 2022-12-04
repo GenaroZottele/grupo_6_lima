@@ -18,6 +18,8 @@
   },
   "homepage": "https://github.com/GenaroZottele/grupo_6_lima#readme",
   "dependencies": {
+    "bcrypt": "^5.1.0",
+    "bcryptjs": "^2.4.3",
     "bootstrap": "^5.2.2",
     "cookie-parser": "^1.4.6",
     "ejs": "^3.1.8",

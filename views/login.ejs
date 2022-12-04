@@ -11,8 +11,13 @@
         <form action="login.html" method="POST" class="formLogin" enctype="multipart/form-data">
           <div class="login">
             <p>
-              <label class="loginLabel">Nombre de usuario:</label>
-              <input class="loginInput" type="text" name="nombreDeUsuario" required>
+              <label>Correo electrónico:</label>
+              <input type="text" name="email" required>
+              <% if (locals.errors && errors.email) { %>
+                <div class="text-danger">
+                  <%= errors.email.msg %>
+                </div>
+              <% } %>
             </p>
             <p>
               <label class="loginLabel">Contraseña:</label>
