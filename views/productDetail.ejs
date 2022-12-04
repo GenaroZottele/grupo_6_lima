@@ -16,6 +16,10 @@
                                 <h2>
                                     <%=product.nombre %>
                                 </h2>
+                                <p> Base: <%=product.base %>
+                                </p>
+                                <p> Aderezo: <%=product.aderezo %> 
+                                </p>
                                 <p> Ingredientes: <%=product.ingredientes %>
                                 </p>
                                 <div>
@@ -27,6 +31,7 @@
                                             class="fa-solid fa-cart-shopping"></i></a>
                                     <a href="./productDetailMain/<%=product.id %> " class="agregarCarrito">Detalle </a>
                                 </p>
+                                <p><a href="./edit/<%=product.id %>" class="agregarCarrito">Modificar producto</a></p>
                             </div>
                         </div>
                         </div>

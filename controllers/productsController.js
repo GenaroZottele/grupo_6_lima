@@ -18,7 +18,7 @@ const controller = {
     //2
     create: (req, res) =>{
 
-        return res.render('panel')
+        return res.render('create');
     },
 
     //3
@@ -48,13 +48,15 @@ const controller = {
         // pasamos de un array de objetos de js a un objeto json y lo cargamos en el data
         fs.writeFileSync(productsFilePath, JSON.stringify(products));        
         // redirigir la pagina
-        res.redirect('/panel');
+        res.redirect('/create');
         
     },
     
     //5     
     edit: (req, res) =>{
-        return res.render('panel')
+      const productId = req.params.productId;
+      const productToFind = products.find((product)=> product.id == productId);
+      return res.render('edit/', {productToFind});
     },
       
     //6
@@ -64,7 +66,7 @@ const controller = {
 
         // capturamos los datos del form
         const dataToUpdate = req.body;
-        return console.log(req.body);
+        console.log(req.body);
         // convertimos precio a number
         dataToUpdate.precio = Number(dataToUpdate.precio);
         // obtenemos el id del producto
@@ -88,7 +90,7 @@ const controller = {
         res.redirect('/panel');      
       },  
       
-      //7
+    //7
       delete: (req, res) => {
         // capturamos los datos del form
         const dataToUpdate = req.body;

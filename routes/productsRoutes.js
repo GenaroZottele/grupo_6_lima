@@ -34,10 +34,10 @@ router.post('/', upload.single("imagen") ,productsController.store);
 router.get('/productDetailMain/:productId/', productsController.detail);
 
 // Edicion productos (muestra form)
-router.get('/edit', productsController.edit);
+router.get('/edit/:productId/', productsController.edit);
 
 // Edicion productos (a donde envia form)
-router.put('/update', productsController.update);
+router.put('/update/:productId/', productsController.update);
 
 // Elimina producto
 router.delete('/delete', productsController.delete); 

@@ -32,9 +32,11 @@ const controller = {
     productDetailMain : (req, res) => {
         return res.render('productDetailMain');
     },
-
-    panel : (req, res) => {
-        return res.render('panel');
+    create : (req, res) => {
+        return res.render('create');
     },
+    edit : (req,res) => {
+        return res.render('edit');
+    }
 }
 module.exports = controller;
