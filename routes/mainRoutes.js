@@ -26,7 +26,11 @@ router.get('/nosotros', mainController.nosotros);
 
 router.get('/productDetailMain', mainController.productDetailMain)
 
-router.get('/panel', mainController.panel);
+router.get('/create', mainController.create);
+
+router.get('/edit', mainController.edit);
+
+router.put('/edit', mainController.edit);
 
 
 

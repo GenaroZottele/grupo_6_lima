@@ -272,6 +272,16 @@ p {
    padding: 20px;
    width: 100%;
 }
+@media screen and (max-width: 600px){
+   .boxDetail{
+      height: 800px;
+   }
+   .boxLeft img{
+      width: 70%;
+      padding: 10px;
+      margin-bottom: 100px;
+   }
+}
 .boxDetail {
    display: flex;
    flex-direction: column;
@@ -387,7 +397,13 @@ p {
 .botonLogin:hover {
    opacity: 1;
 }
-
+.login p{
+   display: flex;
+   flex-direction: column;
+}
+.loginInput{
+   width: 250px;
+}
 /* --------------------------------------------------register--------------------------------------------------------------- */
 .formregister {
    position: relative;
@@ -477,7 +493,7 @@ main form p label {
       height: 900px;
    }
 }
-/*-------------------------------------------------------- panel ----------------------------------------------------------------- */
+/*-------------------------------------------------------- create ----------------------------------------------------------------- */
 
 .newProduct h2 {
    color: white;
@@ -485,7 +501,7 @@ main form p label {
 .mainPanel {
    display: flex;
    flex-direction: column;
-   height: 1900px;
+   height: 1200px;
    justify-content: space-around;
    align-items: center;
    background-position: center;
@@ -511,7 +527,13 @@ main form p label {
    margin: 0px;
 }
 .formPanel p input{
-   width: 250px;
+   width: 207px;
+}
+.botonesPanel{
+   margin: 5px;
+}
+.botonPanel{
+   margin: 15px;
 }
 @media (max-width: 1270px) {
    .formPanel {
@@ -524,13 +546,11 @@ main form p label {
    }
 }
 @media (max-width: 827px) {
-   .mainPanel {
-      height: 2300px;
-   }
    .botonesPanel {
       display: flex;
       flex-direction: column;
       align-items: center;
+      margin-top: 10px;
    }
    .formPanel {
       display: flex;
@@ -549,8 +569,10 @@ main form p label {
       text-align: center;
       width: 320px;
    }
-   .mainPanel {
-      height: 2800px;
+}
+@media (max-width: 355px){
+   .logotipo{
+      display: none;
    }
 }
 /* -----------------------------------------------------productDetailMain ----------------------------------------------------------------- */
@@ -626,6 +648,7 @@ main form p label {
       border-radius: 26px;
       border: solid 1px gray;
       width: 70%;
+      height: 400px;
       margin: auto;
       margin-bottom: 20px;
    }
