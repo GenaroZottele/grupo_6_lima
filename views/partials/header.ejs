@@ -24,7 +24,7 @@
             <a href="/nosotros"><b>Nosotros</b></a>
             <a href="/products/"><b>Ensaladas</b></a>
             <a href="/contacto"><b>Contacto</b></a>
-        <% if (locals.isLogged) { %>  
+            <% if (locals.isLogged) { %>  
                 <img src="./public/images/avatars/<%= locals.userLogged.avatar %>" width="40" style="border-radius: 100%">
                         <div class="dropdown">
                             <button><%= locals.userLogged.fullName %></button>
@@ -33,10 +33,10 @@
                                 <a href="/user/logout">Cerrar sesión</a>
                             </div>
                 <a href="/productCart"><i class="fa-solid fa-cart-shopping"></i></a>
-        <% } else { %>
-            <div>
-            <a href="/login"><b>Iniciar sesión</b></a>
-            <a href="/register"><b>Registrarse</b></a>
+            <% } else { %>
+                <div class="right">
+                    <a href="/login"><b>Iniciar sesión</b></a>
+                    <a href="/register"><b>Registrarse</b></a>
             </div>
         <% } %>
         </div>

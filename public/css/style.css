@@ -43,7 +43,7 @@ Nosotros:
    font-family: 'Roboto', sans-serif;
    font-size: 20px;
    border-radius: 5px;
-   border: black 2px solid;
+   border: black 1px solid;
    padding: 5px;
    text-align: center;
 }
@@ -84,6 +84,12 @@ Nosotros:
 }
 .lima img {
    height: 48px;
+}
+.right {
+   display: flex;
+   justify-content: right;
+   
+
 }
 /* ---------------------------- Footer---------------------------------------------------------------------------------------------- */
 .footer {
@@ -170,7 +176,7 @@ Nosotros:
    flex-direction: column;
    width: 100%;
    height: 70vh;
-   background: url(../images/ensaladaDelDia.JPG);
+   background: url(../images/IMG_2939.JPG);
    background-position: center;
    background-repeat: no-repeat;
    background-size: cover;
@@ -237,6 +243,7 @@ main section h2 {
    border-radius: 5%;
    display: flex;
    justify-content: center;
+   width: 20%;
 }
 .description {
    display: flex;
@@ -263,7 +270,7 @@ main section h2 {
    width: 100%;
 }
 p {
-   font-size: 22px;
+   font-size: 18px;
 }
 /* --------------------------------------------------productDetail--------------------------------------------------------------- */
 .detail {
@@ -633,7 +640,7 @@ main form p label {
       justify-content: center;
    }
    .card img {
-      width: 25%;
+      width: 30%;
       border-radius: 5%;
       border-radius: 5%;
       display: flex;

@@ -8,7 +8,6 @@ const User = {
 	},
 
 //Generar ID
-
     generateId: function () {
 		let allUsers = this.findAll();
         //Obtengo al último usuario
