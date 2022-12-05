@@ -43,9 +43,36 @@
   "id": 6,
   "nombre": "Florencia Rivero",
   "direccion": "Estrada 791",
-  "celular": "242342343",
+  "celular": "12333434",
   "email": "flormrivero@gmail.com",
-  "password": "$2a$10$VU8AtmvXxgYW5APTeP6YteN7SJ3bjLUMYZy7oOvci82FhTS2RibLS",
-  "avatar": "1669582564215.jpg"
+  "password": "$2a$10$zPCBEKEODROzsLC29Emr5uTm6O8bz4rwU.rZZg0dO1wwbI1etLK6u",
+  "avatar": "1669587250862.jpg"
+ },
+ {
+  "id": 7,
+  "nombre": "Florencia Rivero",
+  "direccion": "Estrada 791",
+  "celular": "1123432",
+  "email": "florchi.87@gmail.com",
+  "password": "$2a$10$w9O5Zewdnr4gi7SIwbP03O7psjg7hs76glRNFdFnTX95P2kHlct..",
+  "avatar": "1669595191794.jpg"
+ },
+ {
+  "id": 8,
+  "nombre": "Florencia Rivero",
+  "direccion": "Estrada 791",
+  "celular": "11434343",
+  "email": "prueba@gmail.com",
+  "password": "$2a$10$mzM6uk0k.xUTXZ6QA7R/POiuSvxgA3IHlNaf3JSVYBpD30FN61.4a",
+  "avatar": "1670199114345.jpg"
+ },
+ {
+  "id": 9,
+  "nombre": "Florencia Rivero",
+  "direccion": "Estrada 791",
+  "celular": "113243243",
+  "email": "prueba2@gmail.com",
+  "password": "$2a$10$QiAvjBDpTNJboL7dWkyY1OlSz6krka4VJlRwVn/7WZQgBGxPBZfFW",
+  "avatar": "1670200697507.jpg"
  }
 ]

@@ -39,7 +39,7 @@ const controller = {
 			avatar: req.file.filename
 		}
 
-		let userCreated = User.create(userToCreate);
+		User.create(userToCreate);
 			return res.redirect('login');
 	},
 	login: (req, res) => {
@@ -55,16 +55,16 @@ const controller = {
 				delete userToLogin.password;
 				req.session.userLogged = userToLogin;
 
-				if(req.body.remember_user) {
+				if(req.body.recordar) {
 					res.cookie('userEmail', req.body.email, { maxAge: (1000 * 60) * 60 })
 				}
 
-				return res.redirect('/user/profile');
+				return res.redirect('/profile');
 			} 
 			return res.render('login', {
 				errors: {
 					email: {
-						msg: 'Las credenciales son inválidas'
+						msg: 'La contraseña es incorrecta'
 					}
 				}
 			});
@@ -73,7 +73,7 @@ const controller = {
 		return res.render('register', {
 			errors: {
 				email: {
-					msg: 'No se encuentra este email en nuestra base de datos'
+					msg: 'Este email no está registrado'
 				}
 			}
 		});

@@ -26,7 +26,7 @@ const User = {
 	},
 
 //Buscar un usuario por ID
-    findByPk: function (id) {
+    findById: function (id) {
         //Obtengo a todos los usuarios en un formato de array en una variable local
 		let allUsers = this.findAll();
         //Permite iterar el array de usuario para identificar el mismo ID
@@ -52,7 +52,7 @@ const User = {
         }
         allUsers.push(newUser);
         fs.writeFileSync(this.fileName, JSON.stringify(allUsers, null,  ' '));
-        return newUser;
+            return newUser;
     },
 
 //Eliminar un usuario

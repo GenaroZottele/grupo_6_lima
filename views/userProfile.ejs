@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include('./partials/head', {pageTitle: 'LIMA' }); %>
+<%- include('./partials/header', {pageTitle: 'LIMA' }); %>
+
+
+<body>
+    HOLA <%= user.fullName %>
+    <img src="/images/avatars/<%=user.avatar %>">
+    <br>
+    <br>
+    <%= user.email %>
+
+</body>
+<%- include('partials/footer') %>
+</html>

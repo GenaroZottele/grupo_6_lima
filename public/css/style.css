@@ -43,7 +43,7 @@ Nosotros:
    font-family: 'Roboto', sans-serif;
    font-size: 20px;
    border-radius: 5px;
-   border: black 2px dashed;
+   border: black 2px solid;
    padding: 5px;
    text-align: center;
 }

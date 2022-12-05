@@ -17,6 +17,9 @@ const controller = {
     login : (req, res) => {
         return res.render('login');
     },
+    profile : (req, res) => {
+        return res.render('userProfile');
+    },
     productCart : (req, res) => {
         return res.render('productCart');
     },
