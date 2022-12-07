@@ -14,7 +14,7 @@ router.get('/login', mainController.login);
 
 router.post('/login', mainController.login);
 
-router.get('/profile', mainController.profile);
+//router.get('/profile', mainController.profile);
 
 router.get('/productCart', mainController.productCart);
 
