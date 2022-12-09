@@ -6,12 +6,11 @@
 
 
 <body>
-    HOLA <%= user.fullName %>
-    <img src="/images/avatars/<%=user.avatar %>">
+    <div class="perfil">HOLA <%= user.nombre %></label>
+         <img src="/images/avatars/<%=user.avatar %>">
     <br>
-    <br>
-    <%= user.email %>
-
+        <label class="perfil"><%= user.email %></label>
+    </div>
 </body>
 <%- include('partials/footer') %>
 </html>

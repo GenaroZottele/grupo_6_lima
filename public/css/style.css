@@ -70,7 +70,13 @@ Nosotros:
    background-color: #357e53;
 }
 .dropdown {
-   margin-top: 5px;
+   position: relative;
+   display: inline-block;
+   
+}
+.dropdown-menu {
+   position: relative;
+   display: none
 }
 .logo {
    display: flex;
@@ -814,6 +820,17 @@ main form p label {
       text-align: left;
       padding-left: 100px;
    }
+
+/*-------------------------------------------------------------------userProfile------------------------------------------------------------------------ */
+.perfil {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   padding: 20px;
+   color: green;
+   border: 1px solid black;
+   align-items: center;
+}
 
 /* } */
 /* 
