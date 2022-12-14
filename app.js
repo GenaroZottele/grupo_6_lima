@@ -35,17 +35,6 @@ app.use(methodOverrride('_method'));
 const publicFolderPath = path.resolve('public');
 app.use(express.static(publicFolderPath));
 
-
-
-
-
-
-
-//Siempre va despuúes de session
-
-
-
-
 app.use('/', mainRoutes);
 app.use('/products', productsRoutes);
 app.use('/user', userRoutes);

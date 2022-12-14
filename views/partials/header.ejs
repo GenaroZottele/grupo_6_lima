@@ -25,15 +25,13 @@
             <a href="/products/"><b>Ensaladas</b></a>
             <a href="/contacto"><b>Contacto</b></a>
             <% if (locals.isLogged) { %> 
-                <div>
-                    <nav>
-                        <button type="button" data-toggle="dropdown"><img src="/images/avatars/<%= locals.userLogged.avatar %>" width="40" style="border-radius: 100%"></button>
-                            <ul class="dropdown-menu">
-                                <li><a href="/userProfile">Mi perfil</a></li>
-                                <li><a href="/user/logout">Cerrar sesión</a></li>
-                            </ul>
-                    </nav>    
-                </div>       
+                <div class="navegador">
+                    <ul><img src="/images/avatars/<%= locals.userLogged.avatar %>"  width="40" style="border-radius: 100%">
+                        <li class="seccion"><a href="/user/profile">Mi perfil</a></li>                                    
+                        <li class="seccion"><a href="/user/logout">Cerrar sesión</a></li>
+                    </ul>
+                </div>    
+                       
             <% } else { %>
                 <div class="right">
                     <a href="/login"><b>Iniciar sesión</b></a>

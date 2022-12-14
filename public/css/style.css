@@ -69,15 +69,19 @@ Nosotros:
    color: #86d66c;
    background-color: #357e53;
 }
-.dropdown {
-   position: relative;
-   display: inline-block;
-   
+.navegador li {
+   list-style: none;
 }
-.dropdown-menu {
+.navegador{
    position: relative;
-   display: none
+   float: left;
 }
+.seccion {
+   position: absolute;
+   display: contents;
+   top: 100%;
+
+ }
 .logo {
    display: flex;
    height: 48px;
@@ -431,7 +435,7 @@ p {
 }
 main form p input {
    opacity: 0.5;
-   width: 20%;
+   width: 100%;
 }
 main form p label {
    color: #efefef;
