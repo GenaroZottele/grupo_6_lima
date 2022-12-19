@@ -36,7 +36,9 @@ _-------------------------------------------CuartoSprint------------------------
 -  Continuar con trello para dividir las actividades.
 -  Objetivo: Llegar a la entrega del sprint menos apretados de tiempo.
 
-PREGUNTAS
+_-------------------------------------------QuintoSprint--------------------------------------------------------------_/
+# Retrospectiva:
 
--  Update. Spread campos vacios pisan a los que tienen informacion.
--  Delete. Con filter volvemos a escribir el JSON completo?
+- Cumplimos el objetivo de finalizar el sprint antes del tiempo requerido.
+- Desafío: Utilizar trello para ir actualizando el paso a paso.
+- Objetivo: dividir las actividades de manera equitativa para que todos participemos.
