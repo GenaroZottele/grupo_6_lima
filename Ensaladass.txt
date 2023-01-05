@@ -1,0 +1,46 @@
+## Clásica:
+Base: Mix de verdes.
+Aderezo: Ranch.
+Ingredientes: Pollo, huevo, zanahoria, queso sardo rayado, tomates cherrys.
+
+## Cala:
+Base: Rúcula y fideos(penne rigatti).
+Aderezo: Mostaza y miel.
+Ingredientes: Pollo, tomates secos, nueces, queso azul.
+
+## Caesar
+Base: Mix de verdes.
+Aderezo: Caesar.
+Ingredientes: Pollo, croûtons, queso sardo rayado, tomates cherrys.
+
+## Crispy, (igual a la caesar pero con pollo rebozado con pan rallado y copos de maiz).
+
+## Pastrón
+Base: Rúcula y fideos (penne).
+Aderezo: Reducción dulce de aceto balsámico.
+Ingredientes: Pastrón feteado, queso tybo en cubos, morron rojo de conserva, nueces.
+
+## Peras
+Base: Rúcula.
+Aderezo: Vinagreta (Oliva, Aceto, Vinagre y Pimienta).
+Ingredientes: Pollo, queso azul, nueces, peras en almíbar.
+
+## Veggie
+Base: Mix de verdes.
+Aderezo: Vinagreta.
+Ingredientes: Quinoa, choclo en grano, zanahoria, brócoli, tomates cherrys, maní tostado sin sal.
+
+## Crudo
+Base: Rúcula y fideos (penne).
+Aderezo: Reducción dulce de aceto balsámico y pesto genovés.
+Ingredientes: Jamón crudo feteado, queso mozzarela en trozos, tomates secos.
+
+## Brie
+Base: Mix de verdes.
+Aderezo: Mostaza y miel.
+Ingredientes: Pollo, queso brie, tomates cherrys, croûtons, nueces.
+
+## Atún
+Base: Rúcula.
+Aderezo: Vinagreta. 
+Ingredientes: Atún de lata (en lomitos), brócoli, arroz yamani, tomates cherrys, cebolla morada.

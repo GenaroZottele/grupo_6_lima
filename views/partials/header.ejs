@@ -7,29 +7,37 @@
             </button>
             <ul class="dropdown-menu">
                 <li><a class="dropdown-item" href="#">Perfil</a></li>
-                <li><a class="dropdown-item" href="./productCart">Carrito</a></li>
-                <li><a class="dropdown-item" href="./contacto">Contacto</a></li>
-                <li><a class="dropdown-item" href="./nosotros">Nosotros</a></li>
-                <li><a class="dropdown-item" href="./register">Registrarse</a></li>
-                <li><a class="dropdown-item" href="./login">Login</a></li>
-                <li><a class="dropdown-item" href="./productDetail">Ensaladas</a></li>
+                <li><a class="dropdown-item" href="/productCart">Carrito</a></li>
+                <li><a class="dropdown-item" href="/contacto">Contacto</a></li>
+                <li><a class="dropdown-item" href="/nosotros">Nosotros</a></li>
+                <li><a class="dropdown-item" href="/register">Registrarse</a></li>
+                <li><a class="dropdown-item" href="/login">Login</a></li>
+                <li><a class="dropdown-item" href="/products/">Ensaladas</a></li>
+                
             </ul>
         </div>
         <div class="logo">
-            <a href="./"><img src="../images/LOGO.png" alt="logo"></a>
-            <a href="./"><img src="../images/Lima.png" alt="Lima"></a>
+            <a href="/" class="logotipo"><img src="/images/LOGO.png" alt="logo"></a>
+            <a href="/"><img src="/images/Lima.png" alt="Lima"></a>
         </div>
-        <div class="menu">
-            <a href="./nosotros"><b>Nosotros</b></a>
-            <a href="./productDetail"><b>Ensaladas</b></a>
-            <a href="./register"><b>Registrarse</b></a>
-            <a href="./contacto"><b>Contacto</b></a>
-
-
-        </div>
-        <div class="logoCarrito">
-            <a href="./login"><i class="fa-solid fa-user" id="user"></i></a>
-            <a href="./productCart"><i class="fa-solid fa-cart-shopping"></i></a>
+        <div class="headerMenu">
+            <a href="/nosotros"><b>Nosotros</b></a>
+            <a href="/products/"><b>Ensaladas</b></a>
+            <a href="/contacto"><b>Contacto</b></a>
+            <% if (locals.isLogged) { %> 
+                <div class="navegador">
+                    <ul><img src="/images/avatars/<%= locals.userLogged.avatar %>"  width="40" style="border-radius: 100%">
+                        <li class="seccion"><a href="/user/profile">Mi perfil</a></li>                                    
+                        <li class="seccion"><a href="/user/logout">Cerrar sesión</a></li>
+                    </ul>
+                </div>    
+                       
+            <% } else { %>
+                <div class="right">
+                    <a href="/login"><b>Iniciar sesión</b></a>
+                    <a href="/register"><b>Registrarse</b></a>
+            </div>
+        <% } %>
         </div>
     </nav>
 </header>
