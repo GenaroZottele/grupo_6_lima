@@ -2,14 +2,14 @@
 
 module.exports = {
   async up (queryInterface, Sequelize) {
-    await queryInterface.createTable('product_order', 
+    await queryInterface.createTable('buildings', 
     { id: { type: Sequelize.INTEGER, autoIncrement: true, primaryKey: true },
-      product_id: Sequelize.INTEGER,
-      order_id: Sequelize.INTEGER
+      name: Sequelize.STRING,
+      adress: Sequelize.STRING     
     });
   },
 
   async down (queryInterface, Sequelize) {
-
+    
   }
 };
