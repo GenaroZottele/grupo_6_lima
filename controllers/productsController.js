@@ -4,8 +4,7 @@ const path = require('path');
 const upload = require('../middlewares/multerMiddleware')
 const productsFilePath = path.resolve('./data/products.json');
 let products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8')); 
-
-
+let db = require('../models/User')
 
 const controller = {
     //1

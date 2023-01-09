@@ -52,5 +52,23 @@
   "email": "florenciarivero@camyp.com.ar",
   "password": "$2a$10$iPIcw.fBaF.jj7AgzwNQDuTRG1HKBNj1dAGUjqh3QoShw44uSudfK",
   "avatar": "1670452609747.jpg"
+ },
+ {
+  "id": 8,
+  "nombre": "Florencia Rivero",
+  "direccion": "Estrada 791",
+  "celular": "1151186178",
+  "email": "flormrivero@gmail.com",
+  "password": "$2a$10$ODunD0MhtG4QOCSVGOj70.54ezZ3L9zVdi1F3C.GQXxFL4NrJeik.",
+  "avatar": "1673302040994.png"
+ },
+ {
+  "id": 9,
+  "nombre": "Karina Fernanda",
+  "direccion": "deded",
+  "celular": "1123213123",
+  "email": "florchi.87@gmail.com",
+  "password": "$2a$10$.Lf7KlL2DnnKDdZ.HARqWuuvp1AVL8bgKc72N2vhOSXAs2tyGj7/G",
+  "avatar": "1673302223822.jpg"
  }
 ]

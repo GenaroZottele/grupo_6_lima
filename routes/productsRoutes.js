@@ -2,24 +2,9 @@ const express = require('express');
 const router = express.Router();
 const fs = require('fs')
 const path  = require('path');
-// const multer = require('multer');
 const logDBMiddleware = require('../middlewares/logDBMiddleware');
 const productsController = require('../controllers/productsController');
 const upload = require('../middlewares/multerMiddleware')
-// const storage = multer.diskStorage({
-//     destination: (req, file, cb)=>{
-//         cb(null, 'public/images')
-//          },
-//     filename:  (req, file, cb)=>{
-//         const uniqueSuffix =  Date.now();
-//         const fileExtension = path.extname(file.originalname);
-//         const newName = file.originalname.replace(fileExtension, '')
-//         cb(null, newName + "-" + uniqueSuffix + fileExtension);
-//     }
-//     });
-
-
-// const upload= multer ({storage: storage});
 
 // Listado de productos
 router.get('/', productsController.products);
