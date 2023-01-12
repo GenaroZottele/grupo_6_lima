@@ -11,6 +11,9 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
+      Usuario.hasMany(models.Pedido, {as:'pedidos'})
+      Usuario.belongsTo(models.TipoUsuario, {as:'tiposusuarios'})
+      Usuario.belongsTo(models.Direccion, {as:'direcciones'})
     }
   }
   createUserTable.init({
@@ -22,7 +25,7 @@ module.exports = (sequelize, DataTypes) => {
     image: DataTypes.STRING
   }, {
     sequelize,
-    modelName: 'createUserTable',
+    modelName: 'Usuario',
   });
   return createUserTable;
 };

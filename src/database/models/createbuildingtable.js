@@ -10,7 +10,7 @@ module.exports = (sequelize, DataTypes) => {
      * The `models/index` file will call this method automatically.
      */
     static associate(models) {
-      // define association here
+      Edificio.belongsTo(models.Direccion, {as:'edificios'})
     }
   }
   createBuildingTable.init({
@@ -19,7 +19,7 @@ module.exports = (sequelize, DataTypes) => {
     adress: DataTypes.STRING
   }, {
     sequelize,
-    modelName: 'createBuildingTable',
+    modelName: 'Edificio',
   });
   return createBuildingTable;
 };

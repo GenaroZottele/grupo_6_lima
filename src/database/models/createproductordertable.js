@@ -11,6 +11,8 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
+      ProductoPedido.belongsTo(models.Pedido, {as:'pedidos'})
+      ProductoPedido.belongsTo(models.Producto, {as:'productos'})
     }
   }
   createProductOrderTable.init({
@@ -19,7 +21,7 @@ module.exports = (sequelize, DataTypes) => {
     order_id: DataTypes.INTEGER
   }, {
     sequelize,
-    modelName: 'createProductOrderTable',
+    modelName: 'ProductoPedido',
   });
   return createProductOrderTable;
 };

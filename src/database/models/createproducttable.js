@@ -11,6 +11,8 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
+      Producto.hasMany(models.ProductoPedido, {as:'productosPedidos'})
+      Producto.belongsTo(models.Estado, {as:'estados'})
     }
   }
   createProductTable.init({
@@ -22,7 +24,7 @@ module.exports = (sequelize, DataTypes) => {
     status_id: DataTypes.STRING
   }, {
     sequelize,
-    modelName: 'createProductTable',
+    modelName: 'Producto',
   });
   return createProductTable;
 };

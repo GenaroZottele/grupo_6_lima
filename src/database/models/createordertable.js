@@ -10,7 +10,8 @@ module.exports = (sequelize, DataTypes) => {
      * The `models/index` file will call this method automatically.
      */
     static associate(models) {
-      // define association here
+      Pedido.belongsTo(models.Usuario, {as:'usuarios'})
+      Pedido.hasMany(models.ProductoPedido, {as:'productosPedidos'})
     }
   }
   createOrderTable.init({
@@ -18,7 +19,7 @@ module.exports = (sequelize, DataTypes) => {
     user_id: DataTypes.INTEGER
   }, {
     sequelize,
-    modelName: 'createOrderTable',
+    modelName: 'Pedido',
   });
   return createOrderTable;
 };

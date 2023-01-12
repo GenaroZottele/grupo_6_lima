@@ -11,6 +11,7 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
+      Tipousuario.belongsTo(models.Usuario, {as:'usuarios'})
     }
   }
   createUserTypeTable.init({
@@ -18,7 +19,7 @@ module.exports = (sequelize, DataTypes) => {
     name: DataTypes.STRING
   }, {
     sequelize,
-    modelName: 'createUserTypeTable',
+    modelName: 'Tipousuario',
   });
   return createUserTypeTable;
 };

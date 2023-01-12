@@ -11,6 +11,7 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
+      Estado.hasMany(models.Producto, {as:'productos'})
     }
   }
   createStatusTable.init({
@@ -18,7 +19,7 @@ module.exports = (sequelize, DataTypes) => {
     name: DataTypes.STRING
   }, {
     sequelize,
-    modelName: 'createStatusTable',
+    modelName: 'Estado',
   });
   return createStatusTable;
 };
