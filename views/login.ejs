@@ -12,7 +12,7 @@
             <p>
               <label>Correo electrónico:</label>
               <input type="text" name="email" required>
-              <<% if(locals.errors && errors.email) { %>
+              <% if(locals.errors && errors.email) { %>
                 <%= errors.email.msg %>
               <% } %>
             </p>
