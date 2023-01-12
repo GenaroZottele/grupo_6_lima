@@ -3,7 +3,7 @@ const {
   Model
 } = require('sequelize');
 module.exports = (sequelize, DataTypes) => {
-  class createOrderTable extends Model {
+  class Pedido extends Model {
     /**
      * Helper method for defining associations.
      * This method is not a part of Sequelize lifecycle.
@@ -14,12 +14,12 @@ module.exports = (sequelize, DataTypes) => {
       Pedido.hasMany(models.ProductoPedido, {as:'productosPedidos'})
     }
   }
-  createOrderTable.init({
+  Pedido.init({
     id: DataTypes.INTEGER,
     user_id: DataTypes.INTEGER
   }, {
     sequelize,
     modelName: 'Pedido',
   });
-  return createOrderTable;
+  return Pedido;
 };
