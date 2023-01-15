@@ -17,8 +17,8 @@ module.exports = (sequelize, DataTypes) => {
     }
   }
   Estado.init({
-    id: DataTypes.INTEGER,
-    name: DataTypes.STRING
+    id: {type: DataTypes.INTEGER, primaryKey:true},
+    name: {type:DataTypes.STRING}
   }, {
     sequelize,
     modelName: 'Estado',

@@ -17,14 +17,14 @@ module.exports = (sequelize, DataTypes) => {
     }
   }
   Usuario.init({
-    id: DataTypes.INTEGER,
-    userType: DataTypes.STRING,
-    adress_id: DataTypes.INTEGER,
-    name: DataTypes.STRING,
-    email: DataTypes.STRING,
-    phone: DataTypes.INTEGER,
-    password: DataTypes.STRING,
-    image: DataTypes.STRING
+    id: {type:DataTypes.INTEGER, primaryKey:true},
+    userType: {type:DataTypes.STRING},
+    adress_id: {type:DataTypes.INTEGER, foreignKey:true},
+    name: {type:DataTypes.STRING},
+    email: {type:DataTypes.STRING},
+    phone: {type:DataTypes.INTEGER},
+    password: {type:DataTypes.STRING},
+    image: {type:DataTypes.STRING}
   }, {
     sequelize,
     modelName: 'Usuario',

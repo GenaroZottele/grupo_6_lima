@@ -16,9 +16,9 @@ module.exports = (sequelize, DataTypes) => {
     }
   }
   product_order.init({
-    id: DataTypes.INTEGER,
-    product_id: DataTypes.INTEGER,
-    order_id: DataTypes.INTEGER
+    id: {type:DataTypes.INTEGER, primaryKey:true},
+    product_id: {type:DataTypes.INTEGER, foreignKey:true},
+    order_id: {type:DataTypes.INTEGER, foreignKey:true}
   }, {
     sequelize,
     modelName: 'product_order',

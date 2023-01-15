@@ -24,8 +24,8 @@ module.exports = (sequelize, DataTypes) => {
     }
   }
   Pedido.init({
-    id: DataTypes.INTEGER,
-    user_id: DataTypes.INTEGER
+    id: {type:DataTypes.INTEGER, primaryKey:true},
+    user_id: {type:DataTypes.INTEGER, foreignKey:true}
   }, {
     sequelize,
     modelName: 'Pedido',

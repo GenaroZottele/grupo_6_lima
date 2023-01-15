@@ -15,11 +15,11 @@ module.exports = (sequelize, DataTypes) => {
     }
   }
   Direccion.init({
-    id: DataTypes.INTEGER,
-    name: DataTypes.STRING,
-    building_id: DataTypes.INTEGER,
-    floor: DataTypes.INTEGER,
-    office: DataTypes.INTEGER
+    id: {type: DataTypes.INTEGER, primaryKey:true},
+    name: {type: DataTypes.STRING},
+    building_id: {type: DataTypes.INTEGER, foreignKey:true},
+    floor: {type: DataTypes.INTEGER},
+    office: {type: DataTypes.INTEGER}
   }, {
     sequelize,
     modelName: 'Direccion',

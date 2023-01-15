@@ -16,9 +16,9 @@ module.exports = (sequelize, DataTypes) => {
     }
   }
   Edificio.init({
-    id: DataTypes.INTEGER,
-    name: DataTypes.STRING,
-    adress: DataTypes.STRING
+    id: {type:DataTypes.INTEGER, primaryKey:true},
+    name: {type:DataTypes.STRING},
+    adress: {type:DataTypes.STRING}
   }, {
     sequelize,
     modelName: 'Edificio',

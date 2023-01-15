@@ -24,12 +24,12 @@ module.exports = (sequelize, DataTypes) => {
     }
   }
   Producto.init({
-    id: DataTypes.INTEGER,
-    name: DataTypes.STRING,
-    description: DataTypes.STRING,
-    price: DataTypes.FLOAT,
-    image: DataTypes.STRING,
-    status_id: DataTypes.STRING
+    id: {type:DataTypes.INTEGER, primaryKey:true},
+    name: {type:DataTypes.STRING},
+    description: {type:DataTypes.STRING},
+    price: {type:DataTypes.FLOAT},
+    image: {type:DataTypes.STRING},
+    status_id: {type:DataTypes.STRING, foreignKey:true}
   }, {
     sequelize,
     modelName: 'Producto',
