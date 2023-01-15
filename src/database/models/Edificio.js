@@ -12,7 +12,7 @@ module.exports = (sequelize, DataTypes) => {
     static associate(models) {
       Edificio.belongsTo(models.Direccion, {
         as:'direccion',
-        foreignKey:'buildingId'});
+        foreignKey:'building_id'});
     }
   }
   Edificio.init({

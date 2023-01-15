@@ -1,15 +1,25 @@
 'use strict';
+
+const { INTEGER } = require('sequelize');
+
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
   async up(queryInterface, Sequelize) {
-    await queryInterface.createTable('createUserTables', {
+    await queryInterface.createTable('UserTable', {
       id: {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
         type: Sequelize.INTEGER
       },
+      adress_id: {
+        type: Sequelize.INTEGER,
+        foreignKey: true
+      },
       name: {
+        type: Sequelize.STRING
+      },
+      user_type: {
         type: Sequelize.STRING
       },
       email: {
@@ -35,6 +45,6 @@ module.exports = {
     });
   },
   async down(queryInterface, Sequelize) {
-    await queryInterface.dropTable('createUserTables');
+    await queryInterface.dropTable('UserTable');
   }
 };
