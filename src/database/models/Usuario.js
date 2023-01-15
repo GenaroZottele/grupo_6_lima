@@ -11,13 +11,15 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
-      Usuario.hasMany(models.Pedido, {as:'pedidos'})
-      Usuario.belongsTo(models.TipoUsuario, {as:'tiposusuarios'})
-      Usuario.belongsTo(models.Direccion, {as:'direcciones'})
+      Usuario.hasMany(models.Pedido, {as:'pedidos', foreignKey:'user_id'})
+      // Usuario.belongsTo(models.TipoUsuario, {as:'tiposusuarios'})
+      Usuario.hasOne(models.Direccion, {as:'direccion', foreignKey:'adress_id'})
     }
   }
   Usuario.init({
     id: DataTypes.INTEGER,
+    userType: DataTypes.STRING,
+    adress_id: DataTypes.INTEGER,
     name: DataTypes.STRING,
     email: DataTypes.STRING,
     phone: DataTypes.INTEGER,

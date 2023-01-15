@@ -10,14 +10,14 @@ module.exports = (sequelize, DataTypes) => {
      * The `models/index` file will call this method automatically.
      */
     static associate(models) {
-       Direccion.belongsTo(models.Usuario, {as: 'usuarios'});
-       Direccion.hasOne(models.Edificio, {as: 'edificios'});
+       Direccion.hasMany(models.Usuario, {as: 'usuarios', foreignKey:'usuario_id'});
+       Direccion.hasOne(models.Edificio, {as: 'edificio', foreignKey:'building_id'});
     }
   }
   Direccion.init({
     id: DataTypes.INTEGER,
     name: DataTypes.STRING,
-    buildingId: DataTypes.INTEGER,
+    building_id: DataTypes.INTEGER,
     floor: DataTypes.INTEGER,
     office: DataTypes.INTEGER
   }, {
