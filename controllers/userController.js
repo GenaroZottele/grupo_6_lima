@@ -87,7 +87,7 @@ const controller = {
 		let usuario = db.Usuario.email.findAll();
 		Promise.all([usuario])
 		  .then(function([Usuario]) {
-			return res.render('edit/', {Usuario:Usuario});
+			return res.render('edit', {Usuario:Usuario});
 		})
 	  },
 	detail: (req, res) =>{

@@ -4,12 +4,12 @@
 <%- include('./partials/head', {pageTitle: 'LIMA' }); %>
 <%- include('./partials/header', {pageTitle: 'LIMA' }); %>
 
-
 <body>
     <div class="perfil">HOLA <%= user.nombre %></label>
          <img src="/images/avatars/<%=user.avatar %>" width="400">
     <br>
         <label class="perfil"><%= user.email %></label>
+        <label class="perfil"><a href='/userDetail'>Ver información de usuario</a></label>
     </div>
 </body>
 <%- include('partials/footer') %>
