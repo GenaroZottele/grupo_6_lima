@@ -17,7 +17,7 @@ module.exports = (sequelize, DataTypes) => {
         otherKey:'product_id',
         timestamps: false      
       });
-      Producto.hasOne(models.Estado, {
+      Producto.belongsTo(models.Estado, {
         as:'estados',
         foreignKey:'status_id'}
       );
