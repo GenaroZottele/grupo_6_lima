@@ -20,7 +20,7 @@ app.set('view engine', 'ejs');
 
 //Session
 app.use(session({
-    secret: 'IFTS 30',
+    secret: 'Lima',
     resave: false,
     saveUninitialized: false,
 }));
