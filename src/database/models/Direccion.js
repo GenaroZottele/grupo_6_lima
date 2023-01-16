@@ -11,7 +11,7 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
        Direccion.hasMany(models.Usuario, {as: 'usuarios', foreignKey:'usuario_id'});
-       Direccion.hasOne(models.Edificio, {as: 'edificio', foreignKey:'building_id'});
+       Direccion.belongsTo(models.Edificio, {as: 'edificio', foreignKey:'building_id'});
     }
   }
   Direccion.init({

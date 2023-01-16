@@ -30,7 +30,7 @@ const controller = {
     products: function (req, res) {
       db.Producto.findAll()
           .then(function(productos){
-            return res.render('/products', {productos: productos});
+            return res.render('/productDetail', {productos: productos});
           })
     },
     detail: (req, res) =>{

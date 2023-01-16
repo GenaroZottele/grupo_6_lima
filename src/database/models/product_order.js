@@ -11,8 +11,8 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
-      ProductoPedido.belongsTo(models.Pedido, {as:'pedido'})
-      ProductoPedido.belongsTo(models.Producto, {as:'productos'})
+      product_order.belongsTo(models.Pedido, {as:'pedido'})
+      product_order.belongsTo(models.Producto, {as:'productos'})
     }
   }
   product_order.init({
