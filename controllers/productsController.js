@@ -12,7 +12,7 @@ const controller = {
     create: function (req, res) {
         db.Producto.findAll()
           .then(function(productos){
-            return res.render('/products', {productos: productos});
+            return res.render('/products/create', {productos: productos});
           })
     },
     save: function (req, res){
@@ -36,7 +36,7 @@ const controller = {
     detail: (req, res) =>{
       db.Producto.findByPk(req.params.id, {include: [{association: 'Pedidos'}, {association: 'estados'}]})
         .then(function(producto) {
-          return res.render('edit/', {producto:producto});
+          return res.render('productDetailMain', {producto:producto});
         })
       },
     
