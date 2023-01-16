@@ -4,12 +4,10 @@ const path = require('path');
 const productsFilePath = path.resolve('./data/products.json');
 const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8')); 
 
-
 const controller = {
     index : (req, res)=>{
         const masVendidos = products.filter(product => product.status == 'MasVendido')
         return res.render('index', {masVendidos})
-  
       },
     register : (req, res) => {
         return res.render('register');
@@ -40,6 +38,8 @@ const controller = {
     },
     edit : (req,res) => {
         return res.render('edit');
-    }
-}
+    },
+    userDetail: (req,res) => {
+        return res.render('userDetail');
+}}
 module.exports = controller;

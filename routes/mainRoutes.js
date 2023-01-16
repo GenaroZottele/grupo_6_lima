@@ -22,6 +22,8 @@ router.get('/productCart', mainController.productCart);
 
 router.get('/productDetail', mainController.productDetail);
 
+router.get('/userDetail', mainController.userDetail);
+
 router.get('/contacto', mainController.contacto);
 
 router.get('/nosotros', mainController.nosotros);
