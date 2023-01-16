@@ -8,15 +8,15 @@ router.get('/', mainController.index);
 
 router.get('/register', mainController.register);
 
-router.post('/register', mainController.register);
+router.post('/register', mainController.register);//
 
 router.get('/login', mainController.login);
 
 router.post('/login', mainController.login);
 
-//router.get('/profile', mainController.profile);
+router.get('/profile', mainController.profile);
 
-//router.post('/profile', mainController.profile);
+router.post('/profile', mainController.profile);
 
 router.get('/productCart', mainController.productCart);
 

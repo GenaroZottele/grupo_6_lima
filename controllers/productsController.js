@@ -1,9 +1,9 @@
 const { fileLoader } = require('ejs');
 const fs = require('fs');
 const path = require('path');
-const upload = require('../middlewares/multerMiddleware')
-const productsFilePath = path.resolve('./data/products.json');
-let products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8')); 
+//const upload = require('../middlewares/multerMiddleware')
+//const productsFilePath = path.resolve('./data/products.json');
+//let products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8')); 
 const db = require('../src/database/models')
 
 const controller = {
@@ -12,9 +12,8 @@ const controller = {
     create: function (req, res) {
         db.Producto.findAll()
           .then(function(productos){
-            return res.render('create', {productos: productos});
+            return res.render('/products', {productos: productos});
           })
-
     },
     save: function (req, res){
       db.Producto.create({
@@ -25,7 +24,7 @@ const controller = {
         imagen: '/images/'+ req.file.filename,
         precio: req.body.precio,
       });
-      res.redirect('/')
+        res.redirect('/products')
     },
 
     products: function (req, res) {
@@ -64,7 +63,7 @@ const controller = {
         id: req.params.id
       }
     });
-        res.redirect('/' + req.params.id)
+        res.redirect('/products' + req.params.id)
     },
     delete: (req, res) => {
       db.Producto.destroy({
