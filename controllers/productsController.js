@@ -24,19 +24,11 @@ const controller = {
       });
         res.redirect('/products')
     },
-
-<<<<<<< HEAD
-    //2
-    create: (req, res) =>{
-      db.
-        return res.render('create');
-=======
     products: function (req, res) {
       db.products.findAll()
           .then(function(products){
             return res.render('/productDetail', {products: products});
           })
->>>>>>> c79ec0702fd22d9a035436c0ca2a85d6c87aa607
     },
     detail: (req, res) =>{
       db.products.findByPk(req.params.id)
@@ -53,8 +45,7 @@ const controller = {
           return res.render('edit/', {product:product, orders:orders});
       })
     },
-    
-
+  
     update: (req, res) => {  
       db.products.update({
         name: req.body.name,
