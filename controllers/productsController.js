@@ -16,7 +16,7 @@ const controller = {
 
     //2
     create: (req, res) =>{
-
+      db.
         return res.render('create');
     },
 

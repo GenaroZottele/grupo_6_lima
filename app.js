@@ -20,7 +20,7 @@ app.set('view engine', 'ejs');
 
 //Session
 app.use(session({
-    secret: 'IFTS 30',
+    secret: 'Lima',
     resave: false,
     saveUninitialized: false,
 }));
@@ -38,6 +38,7 @@ app.use(express.static(publicFolderPath));
 app.use('/', mainRoutes);
 app.use('/products', productsRoutes);
 app.use('/user', userRoutes);
+
 
 const APP_PORT = process.env.PORT || 3000;
 app.listen(APP_PORT, () => {
