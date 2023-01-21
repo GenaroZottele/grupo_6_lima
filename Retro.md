@@ -42,3 +42,10 @@ _-------------------------------------------QuintoSprint------------------------
 - Cumplimos el objetivo de finalizar el sprint antes del tiempo requerido.
 - Desafío: Utilizar trello para ir actualizando el paso a paso.
 - Objetivo: dividir las actividades de manera equitativa para que todos participemos.
+
+_-------------------------------------------SextoSprint-------------------------------------------------------------_/
+# Retrospectiva:
+- Desafīo: crear nuestra base de datos y modificar el Crud en función a ello.
+- Debemos reforzar los conceptos y puesta en práctica del Crud a medida que este se va complejizando.
+- Seguir trabajando en: una división de tareas que favorezca al proyecto.
+- Valoramos tener siempre algún compañero/a que se pone el proyecto a cuestas cuando los tiempos laborales o vacaciones del grupo coinciden con las fechas de entregas.

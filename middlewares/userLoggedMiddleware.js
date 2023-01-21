@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 const User = require('../src/database/models');
+=======
+const User = require('../src/database/models/User');
+>>>>>>> c79ec0702fd22d9a035436c0ca2a85d6c87aa607
 
 function userLoggedMiddleware (req, res, next) {
     

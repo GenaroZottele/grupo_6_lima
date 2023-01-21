@@ -27,6 +27,10 @@ router.get('/profile', authMiddleware, usersController.profile);
 
 router.post('/profile', authMiddleware, usersController.profile);
 
+router.get('/edit', usersController.edit)
+
+router.get('/userDdetail', usersController.detail)
+
 // Logout
 router.get('/logout', usersController.logout);
 

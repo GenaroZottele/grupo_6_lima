@@ -25,7 +25,6 @@ app.use(session({
     saveUninitialized: false,
 }));
 
-
 app.use(cookieParser());
 app.use(userLoggedMiddleware);
 app.use(logMiddleware);

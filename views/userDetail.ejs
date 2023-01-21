@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include('./partials/head', {pageTitle: 'LIMA' }); %>
+<%- include('./partials/header', {pageTitle: 'LIMA' }); %>
+
+
+<body>
+    <div class="perfil">INFORMACIÓN DE USUARIO 
+        
+        <label><%= user.nombre %></label>
+        <br>
+        <label><%= user.direccion %></label>
+        <br>
+        <label><%= user.celular %></label>
+        <br>
+        <label><%= user.email %></label>
+        <br>
+        <a href="/profile"> Mi perfil </a>
+
+    </div>
+</body>
+<%- include('partials/footer') %>
+</html>

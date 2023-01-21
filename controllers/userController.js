@@ -1,7 +1,7 @@
 const bcryptjs = require('bcryptjs');
 const { validationResult } = require('express-validator');
 
-const User = require('../models/User');
+const User = require('../src/database/models/User');
 
 const controller = {
 	register: (req, res) => {
@@ -83,7 +83,19 @@ const controller = {
 			user: req.session.userLogged
 		});
 	},
-
+	edit: (req, res) => {
+		let usuario = db.Usuario.email.findAll();
+		Promise.all([usuario])
+		  .then(function([Usuario]) {
+			return res.render('edit', {Usuario:Usuario});
+		})
+	  },
+	detail: (req, res) =>{
+		db.Usuario.findAll(req.body.email)
+		  .then(function(usuario) {
+			return res.render('profile', {usuario:usuario});
+		  })
+		},
 	logout: (req, res) => {
 		res.clearCookie('userEmail');
 		req.session.destroy();
