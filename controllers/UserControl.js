@@ -1,10 +1,10 @@
 const fs = require('fs');
 
 const User = {
-    fileName: './data/users.json',
+    db: require ('../src/database/models/index'),
 
     getData: function () {
-		return JSON.parse(fs.readFileSync(this.fileName, 'utf-8'));
+		return JSON.parse(fs.readFileSync(this.db, 'utf-8'));
 	},
 
 //Generar ID
@@ -50,7 +50,7 @@ const User = {
         ...userData
         }
         allUsers.push(newUser);
-        fs.writeFileSync(this.fileName, JSON.stringify(allUsers, null,  ' '));
+        fs.writeFileSync(this.db, JSON.stringify(allUsers, null,  ' '));
             return newUser;
     },
 
@@ -59,7 +59,7 @@ const User = {
     delete: function (id) {
         let allUsers = this.findAll();
         let finalUsers = allUsers.filter(oneUser => oneUser.id !== id);
-        fs.writeFileSync(this.fileName, JSON.stringify(finalUsers, null, ' '));
+        fs.writeFileSync(this.db, JSON.stringify(finalUsers, null, ' '));
         return true;
 }
     
