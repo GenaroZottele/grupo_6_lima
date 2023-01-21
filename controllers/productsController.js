@@ -10,54 +10,50 @@ const controller = {
     
   
     create: function (req, res) {
-        db.Producto.findAll()
-          .then(function(productos){
-            return res.render('/products/create', {productos: productos});
+        db.products.findAll()
+          .then(function(products){
+            return res.render('/products/create', {products: products});
           })
     },
     save: function (req, res){
-      db.Producto.create({
-        nombre: req.body.nombre,
-        base: req.body.base,
-        aderezo: req.body.aderezo,
-        ingredientes: req.body.ingredientes,
-        imagen: '/images/'+ req.file.filename,
-        precio: req.body.precio,
+      db.products.create({
+        name: req.body.name,
+        description: req.body.description,
+        image: req.body.image,
+        price: req.body.price,
       });
         res.redirect('/products')
     },
 
     products: function (req, res) {
-      db.Producto.findAll()
-          .then(function(productos){
-            return res.render('/productDetail', {productos: productos});
+      db.products.findAll()
+          .then(function(products){
+            return res.render('/productDetail', {products: products});
           })
     },
     detail: (req, res) =>{
-      db.Producto.findByPk(req.params.id, {include: [{association: 'Pedidos'}, {association: 'estados'}]})
-        .then(function(producto) {
-          return res.render('productDetailMain', {producto:producto});
+      db.products.findByPk(req.params.id)
+        .then(function(product) {
+          return res.render('productDetailMain', {product:product});
         })
       },
     
     edit: (req, res) => {    
-      let pedidoProducto = db.Producto.findByPk(req.params.id)
-      let pedidoPedido = db.Pedido.findAll();
-      Promise.all([pedidoProducto, pedidoPedido])
-        .then(function([producto, pedidos]) {
-          return res.render('edit/', {producto:producto, pedidos:pedidos});
+      let pedidoProduct = db.products.findByPk(req.params.id)
+      let pedidoOrder= db.pedidoOrder.findAll();
+      Promise.all([pedidoProduct, pedidoOrder])
+        .then(function([product, orders]) {
+          return res.render('edit/', {product:product, orders:orders});
       })
     },
     
 
     update: (req, res) => {  
-      db.Producto.update({
-        nombre: req.body.nombre,
-        base: req.body.base,
-        aderezo: req.body.aderezo,
-        ingredientes: req.body.ingredientes,
-        imagen: '/images/'+ req.file.filename,
-        precio: req.body.precio,
+      db.products.update({
+        name: req.body.name,
+        description: req.body.description,
+        image: req.body.image,
+        price: req.body.price,
       },{
         where: {
         id: req.params.id
@@ -66,7 +62,7 @@ const controller = {
         res.redirect('/products' + req.params.id)
     },
     delete: (req, res) => {
-      db.Producto.destroy({
+      db.products.destroy({
         where: {
           id: req.params.id
         }
