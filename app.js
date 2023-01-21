@@ -14,6 +14,24 @@ const mainRoutes = require('./routes/mainRoutes');
 const productsRoutes = require('./routes/productsRoutes');
 const userRoutes = require('./routes/userRoutes');
 
+//MySql
+const mysql = require('mysql')
+
+var conexion = mysql.createConnection({
+    host: "127.0.0.1:3306",
+    database: "limadb",
+    user: "root",
+    password: 1234,
+});
+
+conexion.connect(function(error){
+    if(error){
+        throw error;
+    } else {
+        console.log('CONEXION EXITOSA')
+    }
+});
+conexion.end();
 
 //Template engine
 app.set('view engine', 'ejs');
