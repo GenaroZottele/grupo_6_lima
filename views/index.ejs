@@ -13,32 +13,22 @@
                 <section class="cards">
                     <h2> <b> MAS VENDIDAS </h2>
                     </p>
-                    <article class="card2">
-                        <div class="description">
-                            <h2>Ensalada Cala</h2>
-                            <p clas="price">Precio: $ 750.00</p>
-                            <p>Ingredientes: Pollo, roquefort, tomates secos, rúcula, penne rigatti, nueces y aderezo de
-                                mostaza y miel.</p>
-                            <div class="botones">
-                                <a href="/productCart">Comprar</a>
-                                <a href="/productDetailMain">Detalles</a>
-                            </div>
-                        </div>
-                        <img src="/images/Cala1.jpg" alt="Ensalada Cala">
-                    </article>
-                    <article class="card">
-                        <img src="/images/Clásica.jpeg" alt="Ensalada Clásica">
-                        <div class="description">
-                            <h2>Ensalada Clásica</h2>
-                            <p clas="price">Precio $ 750.00</p>
-                            <p>Ingredientes: Pollo, queso, lechuga, tomates cherry, zanahoria, huevo y aderezo ranch.
-                            </p>
-                            <div class="botones">
-                                <a href="/productCart">Comprar</a>
-                                <a href="/productDetailMain">Detalles</a>
-                            </div>
+                    <% results.forEach(product => { %>
                        
-                            <article class="card">
+                        <article class="card">
+                            <img class="card img" src="<%=product.image %> " alt="Ensalada Caesar">
+                            <div class="description">
+                                <h2><%=product.name %> </h2>
+                                <p clas="price">Precio $ <%=product.price %> </p>
+                                <p>Ingredientes: <%=product.description %> </p>
+                                <div class="botones">
+                                    <a href="/productCart">Comprar</a>
+                                    <a href="/products/productDetailMain/<%=product.id %> ">Detalles</a>
+                                </div>
+                            </div>
+                        </article>
+                <% }) %>
+   
                                
                 </section>
             </main>
@@ -49,3 +39,29 @@
         crossorigin="anonymous"></script>
 
 </html>
+<!--<article class="card2">
+    <div class="description">
+        <h2>Ensalada Cala</h2>
+        <p clas="price">Precio: $ 750.00</p>
+        <p>Ingredientes: Pollo, roquefort, tomates secos, rúcula, penne rigatti, nueces y aderezo de
+            mostaza y miel.</p>
+        <div class="botones">
+            <a href="/productCart">Comprar</a>
+            <a href="/productDetailMain">Detalles</a>
+        </div>
+    </div>
+    <img src="/images/Cala1.jpg" alt="Ensalada Cala">
+</article>
+<article class="card">
+    <img src="/images/Clásica.jpeg" alt="Ensalada Clásica">
+    <div class="description">
+        <h2>Ensalada Clásica</h2>
+        <p clas="price">Precio $ 750.00</p>
+        <p>Ingredientes: Pollo, queso, lechuga, tomates cherry, zanahoria, huevo y aderezo ranch.
+        </p>
+        <div class="botones">
+            <a href="/productCart">Comprar</a>
+            <a href="/productDetailMain">Detalles</a>
+        </div>
+   
+        <article class="card">

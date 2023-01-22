@@ -53,7 +53,7 @@ const controller = {
 			avatar: req.file.filename
 		}
 
-		User.create(userToCreate);
+		db.create(userToCreate);
 			return res.redirect('login');
 	},
 	login: (req, res) => {
@@ -61,7 +61,7 @@ const controller = {
 	},
 
 	loginProcess: (req, res) => {
-		let userToLogin = User.findByField('email', req.body.email);
+		let userToLogin = db.email;
 		
 		if(userToLogin) {
 			let isOkThePassword = bcryptjs.compareSync(req.body.password, userToLogin.password);
