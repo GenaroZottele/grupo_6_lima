@@ -7,7 +7,7 @@ const User = {
 		return JSON.parse(fs.readFileSync(this.db, 'utf-8'));
 	},
 
-//Generar ID
+    //Generar ID
     generateId: function () {
 		let allUsers = this.findAll();
         //Obtengo al último usuario

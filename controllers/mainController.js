@@ -6,8 +6,9 @@ const path = require('path');
 
 const controller = {
     index : (req, res)=>{
-        const masVendidos = products.filter(product => product.status == 'MasVendido')
-        return res.render('index', {masVendidos})
+        return res.render('index')
+        //const masVendidos = product.filter(product => product.status == 'MasVendido')
+        //return res.render('index', {masVendidos})
       },
     register : (req, res) => {
         return res.render('register');

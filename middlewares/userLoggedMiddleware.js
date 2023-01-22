@@ -1,4 +1,4 @@
-const User = require('../controllers/UserControl');
+//const userController = require('../controllers/userController');
 
 function userLoggedMiddleware (req, res, next) {
     

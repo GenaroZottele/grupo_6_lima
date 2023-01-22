@@ -1,9 +1,23 @@
 const bcryptjs = require('bcryptjs');
 const { validationResult } = require('express-validator');
 
-const User = require('../src/database/models/User');
+const db = require ('../src/database/models/index');
 
 const controller = {
+
+	generateId: function () {
+		let allUsers = db.findAll();
+        //Obtengo al último usuario
+		let lastUser = allUsers.pop();
+		if (lastUser) {
+			return lastUser.id + 1;
+		}
+		return 1;
+	},
+	findAll: function () {
+		return db.getData();
+	},
+
 	register: (req, res) => {
 		return res.render('register');
 	},

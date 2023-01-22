@@ -7,7 +7,7 @@ const methodOverrride = require('method-override');
 
 //middlewares
 const logMiddleware = require('./middlewares/logMiddleware');
-const userLoggedMiddleware = require('./middlewares/userLoggedMiddleware');
+//const userLoggedMiddleware = require('./middlewares/userLoggedMiddleware');
 
 //routes
 const mainRoutes = require('./routes/mainRoutes');
@@ -15,22 +15,20 @@ const productsRoutes = require('./routes/productsRoutes');
 const userRoutes = require('./routes/userRoutes');
 
 //MySql
-const mysql = require('mysql')
-
+const mysql = require('mysql2')
 var conexion = mysql.createConnection({
-    host: "127.0.0.1:3306",
+    host: "127.0.0.1",
     database: "limadb",
     user: "root",
-    password: 1234,
+    password: "",
+    insecureAuth : true,    
 });
 
-conexion.connect(function(error){
-    if(error){
-        throw error;
-    } else {
+conexion.connect(function(){
+    
         console.log('CONEXION EXITOSA')
-    }
-});
+    });
+
 conexion.end();
 
 //Template engine
@@ -44,7 +42,7 @@ app.use(session({
 }));
 
 app.use(cookieParser());
-app.use(userLoggedMiddleware);
+//app.use(userLoggedMiddleware);
 app.use(logMiddleware);
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
@@ -61,6 +59,5 @@ const APP_PORT = process.env.PORT || 3000;
 app.listen(APP_PORT, () => {
     console.log('Servidor funcionando en puerto ' + APP_PORT)
 })
-
 
 module.exports = app;
