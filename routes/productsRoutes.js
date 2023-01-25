@@ -13,7 +13,7 @@ router.get('/', productsController.products);
 router.get('/create', productsController.create);
 
 // Accion de creacion (a donde envia form)
-router.post('/create', upload.single("imagen"), productsController.save);
+router.post('/create', upload.single("image"), productsController.save);
 
  // Detail de un producto
 router.get('/productDetailMain/:productId/', productsController.detail);

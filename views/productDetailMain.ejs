@@ -11,7 +11,7 @@
             <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
               <div class="carousel-inner">
                 <div class="carousel-item active">
-                  <img src="<%=productToFind.imagen %> " class="d-block w-100" alt="...">
+                  <img src="<%=products.imagen %> " class="d-block w-100" alt="...">
                 </div>
               </div>
               <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade"
@@ -27,17 +27,18 @@
             </div>
             <div class="divInfoDetailMain">
               <h2>
-                <%=productToFind.nombre %>
+                <%=products.nombre %>
               </h2>
               <p>
-                <%=productToFind.ingredientes%>
+                <%=products.ingredientes%>
               </p>
               <div>
                 <h3>
-                  <%=productToFind.precio %>$
+                  <%=products.precio %>$
                 </h3>
               </div>
-              <p><a href="/productCart" class="agregarCarrito">Agregar al carrito <i class="fa-solid fa-cart-shopping"></a></i></p>
+              <p><a href="/productCart" class="agregarCarrito">Agregar al carrito <i
+                    class="fa-solid fa-cart-shopping"></a></i></p>
             </div>
           </div>
         </section>

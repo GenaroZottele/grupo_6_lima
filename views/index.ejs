@@ -13,23 +13,25 @@
                 <section class="cards">
                     <h2> <b> MAS VENDIDAS </h2>
                     </p>
-                    <% results.forEach(product => { %>
-                       
+                    <% products.forEach(product=> { %>
+
                         <article class="card">
                             <img class="card img" src="<%=product.image %> " alt="Ensalada Caesar">
                             <div class="description">
-                                <h2><%=product.name %> </h2>
-                                <p clas="price">Precio $ <%=product.price %> </p>
-                                <p>Ingredientes: <%=product.description %> </p>
+                                <h2>
+                                    <%=product.name %>
+                                </h2>
+                                <p clas="price">Precio $ <%=product.price %>
+                                </p>
+                                <p>Ingredientes: <%=product.description %>
+                                </p>
                                 <div class="botones">
                                     <a href="/productCart">Comprar</a>
                                     <a href="/products/productDetailMain/<%=product.id %> ">Detalles</a>
                                 </div>
                             </div>
                         </article>
-                <% }) %>
-   
-                               
+                        <% }) %>
                 </section>
             </main>
             <%- include('partials/footer.ejs') %>

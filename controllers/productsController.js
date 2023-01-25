@@ -1,44 +1,44 @@
 const { fileLoader } = require('ejs');
 const fs = require('fs');
 const path = require('path');
-//const upload = require('../middlewares/multerMiddleware')
-const productsFilePath = path.resolve('./data/products.json');
-let products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8')); 
-const db = require('../src/database/models/index')
+const upload = require('../middlewares/multerMiddleware'); 
+const db = require('../src/database/models/index');
 
-const controller = {
-    
-  
-    create: function (req, res) {
-        db.products.findAll()
+const controller = {  
+
+    products: function (req, res) {
+      db.Product.findAll()
+          .then(function(products){
+            return res.render('productDetail', {products: products});
+          })
+    },
+    create: function (req, res) {        
+        db.Product.findAll()
           .then(function(products){
             return res.render('/products/create', {products: products});
           })
     },
-    save: function (req, res){
-      db.products.create({
+    save: function (req, res){      
+      db.Product.create({
         name: req.body.name,
         description: req.body.description,
         image: req.body.image,
+        status: req.body.status,
         price: req.body.price,
+        discount: req.body.discount
       });
-        res.redirect('/products')
+        res.redirect('../productDetail')
     },
-    products: function (req, res) {
-      db.products.findAll()
-          .then(function(products){
-            return res.render('/productDetail', {products: products});
-          })
-    },
+    
     detail: (req, res) =>{
-      db.products.findByPk(req.params.id)
+      db.Product.findByPk(req.params.id)
         .then(function(product) {
           return res.render('productDetailMain', {product:product});
         })
       },
     
     edit: (req, res) => {    
-      let pedidoProduct = db.products.findByPk(req.params.id)
+      let pedidoProduct = db.Product.findByPk(req.params.id)
       let pedidoOrder= db.pedidoOrder.findAll();
       Promise.all([pedidoProduct, pedidoOrder])
         .then(function([product, orders]) {
@@ -47,7 +47,7 @@ const controller = {
     },
   
     update: (req, res) => {  
-      db.products.update({
+      db.Product.update({
         name: req.body.name,
         description: req.body.description,
         image: req.body.image,
@@ -60,7 +60,7 @@ const controller = {
         res.redirect('/products' + req.params.id)
     },
     delete: (req, res) => {
-      db.products.destroy({
+      db.Product.destroy({
         where: {
           id: req.params.id
         }

@@ -1,15 +1,14 @@
 const fs = require('fs');
 const path = require('path');
-
-//const productsFilePath = path.resolve('./data/products.json');
-//const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8')); 
+const db = require('../src/database/models/index'); 
 
 const controller = {
-    index : (req, res)=>{
-        return res.render('index')
-        //const masVendidos = product.filter(product => product.status == 'MasVendido')
-        //return res.render('index', {masVendidos})
-      },
+    index : (req, res)=>{        
+        db.Product.findAll()
+          .then(function(products){
+            return res.render('index', {products: products});
+          });      
+    },
     register : (req, res) => {
         return res.render('register');
     },
@@ -22,8 +21,11 @@ const controller = {
     productCart : (req, res) => {
         return res.render('productCart');
     },
-    productDetail : (req, res) => {
-        return res.render('productDetail');
+    productDetail : (req, res)=>{        
+        db.Product.findAll()
+          .then(function(products){
+            return res.render('productDetail', {products: products});
+          });
     },
     contacto : (req, res) => {
         return res.render('contacto');
@@ -32,7 +34,10 @@ const controller = {
         return res.render('nosotros');
     },
     productDetailMain : (req, res) => {
-        return res.render('productDetailMain');
+        db.Product.findAll()
+          .then(function(products){
+            return res.render('productDetailMain', {products: products});
+          });
     },
     create : (req, res) => {
         return res.render('create');

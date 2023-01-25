@@ -7,29 +7,29 @@
         <%- include('./partials/header') %>
             <main>
                 <section class="detail">
-                    <% for (let i= 0; i < results.length; i++) { %>
-                        <a href="/products/<%=results[i].id%>"></a>
+                    <% for (let i=0; i < products.length; i++) { %>
+                        <a href="/products/<%=products[i].id%>"></a>
                         <h2>
-                            <%=results[i].name %>
+                            <%=products[i].name %>
                         </h2>
                         <div class="boxDetail">
                             <div class="boxLeft">
-                                <img src="<%=results.image %> ">
+                                <img src="<%=products.image %> ">
                             </div>
                             <div class="boxRight">
-                                
-                                <p> Descripción: <%=results.description %>
+
+                                <p> Descripción: <%=products.description %>
                                 </p>
                                 <div>
-                                    <h3>$<%=results.price %>
+                                    <h3>$<%=products.price %>
                                     </h3>
                                 </div>
                                 <p>
                                     <a href="./productCart.ejs" class="agregarCarrito">Agregar al carrito <i
                                             class="fa-solid fa-cart-shopping"></i></a>
-                                    <a href="./productDetailMain/<%=results.id %> " class="agregarCarrito">Detalle </a>
+                                    <a href="./productDetailMain/<%=products.id %> " class="agregarCarrito">Detalle </a>
                                 </p>
-                                <p><a href="./edit/<%=results.id %>" class="agregarCarrito">Modificar producto</a></p>
+                                <p><a href="./edit/<%=products.id %>" class="agregarCarrito">Modificar producto</a></p>
                             </div>
                         </div>
                         </div>

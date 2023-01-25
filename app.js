@@ -14,57 +14,6 @@ const mainRoutes = require('./routes/mainRoutes');
 const productsRoutes = require('./routes/productsRoutes');
 const userRoutes = require('./routes/userRoutes');
 
-//MySql
-const mysql = require('mysql2')
-const conexion = mysql.createConnection({
-    host: "127.0.0.1",
-    database: "limadb",
-    user: "root",
-    password: '',
-    insecureAuth : true,    
-});
-    conexion.connect(function(error){
-        if(error) throw error
-        console.log('CONEXION EXITOSA')
-    });
-app.get('/', function(req, res){
-    conexion.query('SELECT * FROM products', function(error, results, fields){
-    if(error) {
-        throw error;
-    }else{
-        res.render('index', {results: results})
-        }
-    });
-})
-app.get('/productDetail', function(req, res){
-    conexion.query('SELECT * FROM products', function(error, results, fields){
-    if(error) {
-        throw error;
-    }else{
-        res.render('productDetail', {results: results})
-        }
-    });
-})
-app.get('/user', function(req, res){
-    conexion.query('SELECT * FROM users', function(error, results, fields){
-    if(error) {
-        throw error;
-    }else{
-        res.render('userDetail', {results: results})
-        }
-    });
-})
-app.get('/profile', function(req, res){
-    conexion.query('SELECT * FROM users', function(error, results, fields){
-    if(error) {
-        throw error;
-    }else{
-        res.render('userProfile', {results: results})
-        }
-    });
-})
-//conexion.end();
-
 //Template engine
 app.set('view engine', 'ejs');
 
@@ -76,6 +25,7 @@ app.use(session({
 }));
 
 app.use(cookieParser());
+
 //app.use(userLoggedMiddleware);
 app.use(logMiddleware);
 app.use(express.urlencoded({ extended: true }));
