@@ -63,7 +63,7 @@
           </p>
           <p>
             <label>Contraseña:</label>
-            <input type="password" name="password" value="<%= locals.oldData ? oldData.password : null %>">
+            <input type="password" name="password" value="<%= locals.oldData ? oldData.password : null %>" pattern="^(?=.[a-z])(?=.[A-Z])(?=.\d)(?=.[@$!%?&])[A-Za-z\d@$!%?&]{8,}$" required>
             <% if(locals.errors && errors.password) { %>
               <%= errors.password.msg %>
             <% } %>>
