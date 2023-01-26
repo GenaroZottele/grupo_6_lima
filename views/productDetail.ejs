@@ -14,22 +14,26 @@
                         </h2>
                         <div class="boxDetail">
                             <div class="boxLeft">
-                                <img src="<%=products.image %> ">
+                                <img src="<%=products[i].image %> ">
                             </div>
                             <div class="boxRight">
 
-                                <p> Descripción: <%=products.description %>
+                                <p> Descripción: <%=products[i].description %>
                                 </p>
                                 <div>
-                                    <h3>$<%=products.price %>
+                                    <h3>$<%=products[i].price %>
                                     </h3>
                                 </div>
                                 <p>
-                                    <a href="./productCart.ejs" class="agregarCarrito">Agregar al carrito <i
-                                            class="fa-solid fa-cart-shopping"></i></a>
-                                    <a href="./productDetailMain/<%=products.id %> " class="agregarCarrito">Detalle </a>
+                                    <a href="./productCart" class="agregarCarrito">Agregar al carrito
+                                        <i class="fa-solid fa-cart-shopping"></i></a>
+                                    <a href="./products/productDetailMain/<%=products[i].id %> "
+                                        class="agregarCarrito">Detalle</a>
                                 </p>
-                                <p><a href="./edit/<%=products.id %>" class="agregarCarrito">Modificar producto</a></p>
+                                <p>
+                                    <a href="./products/edit/<%=products[i].id %>" class="agregarCarrito">Modificar
+                                        producto</a>
+                                </p>
                             </div>
                         </div>
                         </div>

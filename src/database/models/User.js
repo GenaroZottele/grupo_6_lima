@@ -17,15 +17,9 @@ module.exports = function(sequelize, DataTypes) {
         timestamps: false
     };
 
-    let users = sequelize.define(alias, cols, config);
+    let User = sequelize.define(alias, cols, config);
     
-    /* 
-    Product.associate = function(models) {
-        Product.belongsTo(models.Order_detail, {
-            as:'products', 
-            foreignKey:'product_id'
-        });
-    } */
+    //Asociaciones (hacerlas en base a script)
 
-    return users;
+    return User;
 }

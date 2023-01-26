@@ -1,3 +1,4 @@
 node_modules/
-*.log
 src/database/config
+log.txt
+logDB.txt

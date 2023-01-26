@@ -13,7 +13,7 @@
                 <li><a class="dropdown-item" href="/register">Registrarse</a></li>
                 <li><a class="dropdown-item" href="/login">Login</a></li>
                 <li><a class="dropdown-item" href="/productDetail">Ensaladas</a></li>
-                
+
             </ul>
         </div>
         <div class="logo">
@@ -22,22 +22,23 @@
         </div>
         <div class="headerMenu">
             <a href="/nosotros"><b>Nosotros</b></a>
-            <a href="/productDetail"><b>Ensaladas</b></a>
+            <a href="/products"><b>Ensaladas</b></a>
             <a href="/contacto"><b>Contacto</b></a>
-            <% if (locals.isLogged) { %> 
+            <% if (locals.isLogged) { %>
                 <div class="navegador">
-                    <ul><img src="/images/avatars/<%= locals.userLogged.avatar %>"  width="40" style="border-radius: 100%">
-                        <li class="seccion"><a href="/user/profile">Mi perfil</a></li>                                    
+                    <ul><img src="/images/avatars/<%= locals.userLogged.avatar %>" width="40"
+                            style="border-radius: 100%">
+                        <li class="seccion"><a href="/user/profile">Mi perfil</a></li>
                         <li class="seccion"><a href="/user/logout">Cerrar sesión</a></li>
                     </ul>
-                </div>    
-                       
-            <% } else { %>
-                <div class="right">
-                    <a href="/login"><b>Iniciar sesión</b></a>
-                    <a href="/register"><b>Registrarse</b></a>
-            </div>
-        <% } %>
+                </div>
+
+                <% } else { %>
+                    <div class="right">
+                        <a href="/login"><b>Iniciar sesión</b></a>
+                        <a href="/register"><b>Registrarse</b></a>
+                    </div>
+                    <% } %>
         </div>
     </nav>
 </header>

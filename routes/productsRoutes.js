@@ -16,16 +16,16 @@ router.get('/create', productsController.create);
 router.post('/create', upload.single("image"), productsController.save);
 
  // Detail de un producto
-router.get('/productDetailMain/:productId/', productsController.detail);
+router.get('/productDetailMain/:id', productsController.detail);
 
 // Edicion productos (muestra form)
-router.get('/edit/:productId/', productsController.edit);
+router.get('/edit/:id', productsController.edit);
 
 // Edicion productos (a donde envia form)
-router.put('/update/:productId/', productsController.update);
+router.put('/update/:id', productsController.update);
 
 // Elimina producto
-router.delete('/delete', productsController.delete); 
+router.delete('/delete/:id', productsController.delete); 
 
 module.exports = router;
 

@@ -1,3 +1,149 @@
+## Clásica:
+Base: Mix de verdes.
+Aderezo: Ranch.
+Ingredientes: Pollo, huevo, zanahoria, queso sardo rayado, tomates cherrys.
+
+## Cala:
+Base: Rúcula y fideos(penne rigatti).
+Aderezo: Mostaza y miel.
+Ingredientes: Pollo, tomates secos, nueces, queso azul.
+
+## Caesar
+Base: Mix de verdes.
+Aderezo: Caesar.
+Ingredientes: Pollo, croûtons, queso sardo rayado, tomates cherrys.
+
+## Crispy, (igual a la caesar pero con pollo rebozado con pan rallado y copos de maiz).
+
+## Pastrón
+Base: Rúcula y fideos (penne).
+Aderezo: Reducción dulce de aceto balsámico.
+Ingredientes: Pastrón feteado, queso tybo en cubos, morron rojo de conserva, nueces.
+
+## Peras
+Base: Rúcula.
+Aderezo: Vinagreta (Oliva, Aceto, Vinagre y Pimienta).
+Ingredientes: Pollo, queso azul, nueces, peras en almíbar.
+
+## Veggie
+Base: Mix de verdes.
+Aderezo: Vinagreta.
+Ingredientes: Quinoa, choclo en grano, zanahoria, brócoli, tomates cherrys, maní tostado sin sal.
+
+## Crudo
+Base: Rúcula y fideos (penne).
+Aderezo: Reducción dulce de aceto balsámico y pesto genovés.
+Ingredientes: Jamón crudo feteado, queso mozzarela en trozos, tomates secos.
+
+## Brie
+Base: Mix de verdes.
+Aderezo: Mostaza y miel.
+Ingredientes: Pollo, queso brie, tomates cherrys, croûtons, nueces.
+
+## Atún
+Base: Rúcula.
+Aderezo: Vinagreta. 
+Ingredientes: Atún de lata (en lomitos), brócoli, arroz yamani, tomates cherrys, cebolla morada.
+
+[
+    {
+        "id": 1,
+        "nombre": "Clásica",
+        "base": "Mix de verdes",
+        "aderezo": "Ranch",
+        "ingredientes": "Mix de verdes, pollo, huevo, zanahoria, queso sardo rayado, tomates cherrys y aderezo ranch.",
+        "imagen": "/images/Clásica.jpeg",
+        "precio": 850,
+        "status": "MasVendido"
+    },
+    {
+        "id": 2,
+        "nombre": "Cala",
+        "base": "Rúcula y fideos(penne rigatti)",
+        "aderezo": "Mostaza y miel",
+        "ingredientes": "Rúcula, penne rigatti, pollo, tomates secos, nueces, queso azul y aderezo de mostaza y miel.",
+        "imagen": "/images/Cala1.jpg",
+        "precio": 850,
+        "status": "MasVendido"
+    },
+    {
+        "id": 3,
+        "nombre": "Caesar",
+        "base": "Mix de verdes",
+        "aderezo": "Caesar",
+        "ingredientes": "Mix de verdes, pollo, croûtons, queso sardo rayado, tomates cherrys y aderezo caesar.",
+        "imagen": "/images/Caesar.jpeg",
+        "precio": 850,
+        "status": "MasVendido"
+    },
+    {
+        "id": 4,
+        "nombre": "Crispy",
+        "base": "Mix de verdes",
+        "aderezo": "Caesar",
+        "ingredientes": "Mix de verdes, pollo rebozado con pan rallado y copos de maiz, croûtons, queso sardo rayado, tomates cherrys y aderezo caesar.",
+        "imagen": "/images/Crispy.png",
+        "precio": 850,
+        "status": "MasVendido"
+    },
+    {
+        "id": 5,
+        "nombre": "Pastrón",
+        "base": "Rúcula y fideos(penne rigatti)",
+        "aderezo": "Reducción de aceto balsámico",
+        "ingredientes": "Rúcula, penne rigatti, pastrón feteado, queso tybo en cubos, morron rojo de conserva, nueces y reducción dulce de aceto balsámico.",
+        "imagen": "/images/Pastrón.png",
+        "precio": 870
+    },
+    {
+        "id": 6,
+        "nombre": "Peras",
+        "base": "Rúcula",
+        "aderezo": "Vinagreta (Oliva, Aceto, Vinagre y Pimienta)",
+        "ingredientes": "Rúcula, pollo, queso azul, nueces, peras en almíbar y vinagreta.",
+        "imagen": "/images/Peras.jpg",
+        "precio": 850
+    },
+    {
+        "id": 8,
+        "nombre": "Crudo",
+        "base": "Rúcula y fideos(penne rigatti)",
+        "aderezo": "Reducción dulce de aceto balsámico y pesto genovés",
+        "ingredientes": "Rúcula, penne rigatti, jamón crudo feteado, queso mozzarela en trozos, tomates secos, reducción dulce de aceto balsámico y pesto genovés.",
+        "imagen": "/images/Crudo.jpg",
+        "precio": 870
+    },
+    {
+        "id": 9,
+        "nombre": "Brie",
+        "base": "Mix de verdes",
+        "aderezo": "Mostaza y miel",
+        "ingredientes": "Mix de verdes, pollo, queso brie, tomates cherrys, croûtons, nueces, y aderezo de mostaza y miel.",
+        "imagen": "/images/Brie.jpeg",
+        "precio": 870
+    },
+    {
+        "id": "10",
+        "nombre": "Atún",
+        "base": "Rúcula",
+        "aderezo": "Vinagreta",
+        "ingredientes": "Mix de verdes, atún de lata (en lomitos), brócoli, arroz yamani, tomates cherrys, cebolla morada y vinagreta.",
+        "imagen": "/images/AtúnEnsalada.jpg",
+        "precio": 750
+    },
+    {
+        "nombre": "Frutilla",
+        "base": "Rúcula",
+        "aderezo": "Reducción de Aceto Balsámico",
+        "ingredientes": "Rúcula, frutilla, panceta, queso brie, nueces y reducción dulce de aceto balsámico.",
+        "precio": 870,
+        "id": "ensalada1669933701639",
+        "imagen": "/images/Ensalada de Frutillas-1669933701630.png"
+    }
+]
+
+USERS
+
 [
  {
   "id": 1,

@@ -6,17 +6,14 @@ const db = require('../src/database/models/index');
 
 const controller = {  
 
-    products: function (req, res) {
-      db.Product.findAll()
-          .then(function(products){
-            return res.render('productDetail', {products: products});
-          })
+    products: (req, res)=>{        
+    db.Product.findAll()
+      .then(function(products){
+        return res.render('productDetail', {products: products});
+      });
     },
     create: function (req, res) {        
-        db.Product.findAll()
-          .then(function(products){
-            return res.render('/products/create', {products: products});
-          })
+        return res.render('create');
     },
     save: function (req, res){      
       db.Product.create({
@@ -32,17 +29,20 @@ const controller = {
     
     detail: (req, res) =>{
       db.Product.findByPk(req.params.id)
-        .then(function(product) {
-          return res.render('productDetailMain', {product:product});
+        .then(function(products) {
+          return res.render('productDetailMain', {products: products});
         })
       },
     
-    edit: (req, res) => {    
-      let pedidoProduct = db.Product.findByPk(req.params.id)
-      let pedidoOrder= db.pedidoOrder.findAll();
-      Promise.all([pedidoProduct, pedidoOrder])
-        .then(function([product, orders]) {
-          return res.render('edit/', {product:product, orders:orders});
+    edit: (req,res) => {
+        return res.render('edit');
+    },
+
+    edit2: (req, res) => {  
+      console.log(req.params.id);  
+      db.Product.findByPk(req.params.id)      
+        .then(function(product) {
+        return res.render('/edit', {product:product});
       })
     },
   
@@ -51,14 +51,17 @@ const controller = {
         name: req.body.name,
         description: req.body.description,
         image: req.body.image,
+        status: req.body.status,
         price: req.body.price,
-      },{
+        discount: req.body.discount
+      }, {
         where: {
-        id: req.params.id
-      }
-    });
+          id: req.body.id
+        } 
+      });
         res.redirect('/products' + req.params.id)
     },
+
     delete: (req, res) => {
       db.Product.destroy({
         where: {
