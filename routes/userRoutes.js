@@ -5,7 +5,7 @@ const router = express.Router();
 const usersController = require('../controllers/userController');
 
 // Middlewares
-const uploadFile = require('../middlewares/multerMiddlewareProducts');
+const uploadFile = require('../middlewares/multerMiddlewareUsers');
 const validations = require('../middlewares/validateRegisterMiddleware');
 const guestMiddleware = require('../middlewares/guestMiddleware');
 const authMiddleware = require('../middlewares/authMiddleware');

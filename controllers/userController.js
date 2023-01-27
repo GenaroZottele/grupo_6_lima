@@ -9,7 +9,7 @@ const controller = {
 	},	
     
 	processRegister: (req, res) => {
-		const resultValidation = validationResult(req);
+		/* const resultValidation = validationResult(req);
 
 		if (resultValidation.errors.length > 0) {
 			return res.render('register', {
@@ -31,16 +31,20 @@ const controller = {
 				},
 				oldData: req.body
 			});
-		}
-
+		} */
+ 
 		let userToCreate = {
-			...req.body,
-			password: bcryptjs.hashSync(req.body.password, 10),
-			avatar: req.file.filename
+			full_name: req.body.full_name,
+			email: req.body.email,
+			password: bcryptjs.hashSync(req.body.password, 10),			
+			phone: req.body.phone,
+			adress_id: req.body.adress_id,
+			user_type_id: req.body.user_type_id,
+			avatar: req.file.filename,						
 		}
 
-		db.create(userToCreate);
-			return res.redirect('login');
+		db.User.create(userToCreate);
+			return res.redirect('/users/login');
 	},
 
 	login: (req, res) => {

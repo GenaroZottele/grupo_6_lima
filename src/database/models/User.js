@@ -4,12 +4,13 @@ module.exports = function(sequelize, DataTypes) {
 
     let cols = {        
         id: {type:DataTypes.INTEGER, primaryKey:true, autoIncrement:true},
-        name: {type:DataTypes.STRING},
-        description: {type:DataTypes.STRING},
-        price: {type:DataTypes.FLOAT},
-        discount: {type:DataTypes.INTEGER},
-        image: {type:DataTypes.STRING},
-        status: {type:DataTypes.INTEGER},              
+        full_name: {type:DataTypes.STRING},
+        email: {type:DataTypes.STRING},
+        password: {type:DataTypes.STRING},               
+        phone: {type:DataTypes.INTEGER},        
+        adress_id: {type:DataTypes.INTEGER},
+        user_type_id: {type:DataTypes.INTEGER},
+        avatar: {type:DataTypes.STRING}                     
     };
 
     let config = {
