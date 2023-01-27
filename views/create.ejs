@@ -8,7 +8,7 @@
         <%- include('./partials/header.ejs') %>
 
             <main class="mainPanel">
-                <form action="/products/create" method="POST" class="formPanel">
+                <form action="/products/create" method="POST" class="formPanel" enctype="multipart/form-data">
                     <section class="newProduct">
                         <h2>CREAR PRODUCTO</h2>
                         <p>
@@ -27,7 +27,7 @@
                             <label class="formlabel" for="image">Imagen:</label>
                         </p>
                         <p>
-                            <input type="file" accept=".jpg, .png, .jpeg" name="imagen">
+                            <input type="file" accept=".jpg, .png, .jpeg" name="image">
                         </p>
                         <p>
                             <label class="formlabel">Estado:</label>

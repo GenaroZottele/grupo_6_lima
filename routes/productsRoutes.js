@@ -4,7 +4,7 @@ const fs = require('fs')
 const path  = require('path');
 const logDBMiddleware = require('../middlewares/logDBMiddleware');
 const productsController = require('../controllers/productsController');
-const upload = require('../middlewares/multerMiddleware')
+const upload = require('../middlewares/multerMiddleware');
 
 // Listado de productos
 router.get('/', productsController.products);
@@ -22,7 +22,7 @@ router.get('/productDetailMain/:id', productsController.detail);
 router.get('/edit/:id', productsController.edit);
 
 // Edicion productos (a donde envia form)
-router.put('/update/:id', productsController.update);
+router.put('/edit/:id', productsController.update);
 
 // Elimina producto
 router.delete('/delete/:id', productsController.delete); 
