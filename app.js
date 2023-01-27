@@ -36,7 +36,7 @@ app.use(express.static(publicFolderPath));
 
 app.use('/', mainRoutes);
 app.use('/products', productsRoutes);
-app.use('/user', userRoutes);
+app.use('/users', userRoutes);
 
 
 const APP_PORT = process.env.PORT || 3000;

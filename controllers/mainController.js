@@ -18,21 +18,8 @@ const controller = {
     },
     productCart : (req, res) => {
         return res.render('productCart');
-    }, 
+    } 
     
-    // LOS METODOS QUE SIGUEN TIENEN QUE PASAR AL userController    
-
-    register : (req, res) => {
-        return res.render('register');
-    },
-    login : (req, res) => {
-        return res.render('login');
-    },
-    profile : (req, res) => {
-        return res.render('userProfile');
-    },          
-    userDetail: (req,res) => {
-        return res.render('userDetail');
-}}
+}
 
 module.exports = controller;

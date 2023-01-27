@@ -19,35 +19,35 @@
                             <label class="formlabel">Nombre:</label>
                         </p>
                         <p>
-                            <input type="text" name="name" required>
+                            <input type="text" name="name" value="<%=product.name%>" required>
                         </p>
                         <p>
                             <label class="formlabel">Descripcion:</label>
                         </p>
                         <p>
-                            <input type="text" name="description" required>
+                            <input type="text" name="description" value="<%=product.description%>" required>
                         </p>
                         <p>
                             <label class="formlabel" for="image">Imagen:</label>
                         </p>
                         <p>
-                            <input type="file" accept=".jpg, .png, .jpeg" name="image">
+                            <input type="file" accept=".jpg, .png, .jpeg" name="image" value="<%=product.image%>">
                         </p>
                         <p>
                             <label class="formlabel">Estado:</label>
                         </p>
                         <p>
-                            <input type="text" name="status" required>
+                            <input type="text" name="status" value="<%=product.status%>" required>
                         </p>
                         <p>
                             <label class="formlabel">Precio:</label>
                         <p>
-                            <input type="text" name="price" required>
+                            <input type="text" name="price" value="<%=product.price%>" required>
                         </p>
                         <p>
                             <label class="formlabel">Descuento:</label>
                         <p>
-                            <input type="text" name="discount" required>
+                            <input type="text" name="discount" value="<%=product.discount%>" required>
                         </p>
                         <p class="botonesPanel">
                             <button type="reset" class="botonPanel">BORRAR</button>

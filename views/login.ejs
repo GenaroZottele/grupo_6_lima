@@ -7,14 +7,14 @@
     <%- include('./partials/header') %>
 
       <main class="mainlogin">
-        <form action='/user/login' method="POST" class="formLogin">
+        <form action='/users/login' method="POST" class="formLogin">
           <div class="login">
             <p>
               <label>Correo electrónico:</label>
               <input type="text" name="email" required>
               <% if(locals.errors && errors.email) { %>
                 <%= errors.email.msg %>
-              <% } %>
+                  <% } %>
             </p>
             <p>
               <label class="loginLabel">Contraseña:</label>
@@ -23,7 +23,7 @@
             <p>
               <label">
                 <input type="checkbox" name="recordar" value="recordar">Recordarme
-              </label>
+                </label>
             </p>
             <p class="botoneslogin">
               <button type="submit" class="botonLogin">Iniciar sesión</button>

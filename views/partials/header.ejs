@@ -10,9 +10,9 @@
                 <li><a class="dropdown-item" href="/productCart">Carrito</a></li>
                 <li><a class="dropdown-item" href="/contacto">Contacto</a></li>
                 <li><a class="dropdown-item" href="/nosotros">Nosotros</a></li>
-                <li><a class="dropdown-item" href="/register">Registrarse</a></li>
-                <li><a class="dropdown-item" href="/login">Login</a></li>
-                <li><a class="dropdown-item" href="/productDetail">Ensaladas</a></li>
+                <li><a class="dropdown-item" href="/users/register">Registrarse</a></li>
+                <li><a class="dropdown-item" href="/users/login">Login</a></li>
+                <li><a class="dropdown-item" href="/products">Ensaladas</a></li>
 
             </ul>
         </div>
@@ -28,17 +28,17 @@
                 <div class="navegador">
                     <ul><img src="/images/avatars/<%= locals.userLogged.avatar %>" width="40"
                             style="border-radius: 100%">
-                        <li class="seccion"><a href="/user/profile">Mi perfil</a></li>
-                        <li class="seccion"><a href="/user/logout">Cerrar sesión</a></li>
+                        <li class="seccion"><a href="/users/profile">Mi perfil</a></li>
+                        <li class="seccion"><a href="/users/logout">Cerrar sesión</a></li>
                     </ul>
                 </div>
 
                 <% } else { %>
                     <div class="right">
-                        <a href="/login"><b>Iniciar sesión</b></a>
+                        <a href="/users/login"><b>Iniciar sesión</b></a>
                     </div>
                     <div class="right">
-                        <a href="/register"><b>Registrarse</b></a>
+                        <a href="/users/register"><b>Registrarse</b></a>
                     </div>
                     <% } %>
         </div>

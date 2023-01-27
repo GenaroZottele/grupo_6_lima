@@ -7,66 +7,55 @@
     <%- include('./partials/header.ejs') %>
 
       <main class="mainregister">
-        <form action="/user" method="POST" class="formregister" enctype="multipart/form-data">
+        <form action="/users/register" method="POST" class="formregister" enctype="multipart/form-data">
           <p>
             <label>Nombre y apellido:</label>
-            <input 
-            type="text" 
-            name="nombre" 
-            class=" <%= locals.errors && errors.nombre ? 'is-invalid' : null %>"
-            value="<%= locals.oldData ? oldData.nombre : null %>">
+            <input type="text" name="nombre" class=" <%= locals.errors && errors.nombre ? 'is-invalid' : null %>"
+              value="<%= locals.oldData ? oldData.nombre : null %>">
             <% if(locals.errors && errors.nombre) { %>
               <%= errors.nombre.msg %>
-            <% } %>
+                <% } %>
 
           </p>
           <p>
             <label>Dirección:</label>
-            <input 
-            type="text" 
-            name="direccion" 
-            class=" <%= locals.errors && errors.direccion ? 'is-invalid' : null %>"
+            <input type="text" name="direccion" class=" <%= locals.errors && errors.direccion ? 'is-invalid' : null %>"
               value="<%= locals.oldData ? oldData.direccion : null %>">
             <% if(locals.errors && errors.direccion) { %>
               <%= errors.direccion.msg %>
-            <% } %>
+                <% } %>
           </p>
           <p>
             <label>Celular:</label>
-            <input 
-            type="number" 
-            name="celular" 
-            class=" <%= locals.errors && errors.celular ? 'is-invalid' : null %>"
-            value="<%= locals.oldData ? oldData.celular : null %>">
+            <input type="number" name="celular" class=" <%= locals.errors && errors.celular ? 'is-invalid' : null %>"
+              value="<%= locals.oldData ? oldData.celular : null %>">
             <% if(locals.errors && errors.celular) { %>
               <%= errors.celular.msg %>
-            <% } %>
+                <% } %>
           </p>
           <p>
             <label for="user-image">Imagen:</label>
             <input type="file" name="avatar">
             <% if(locals.errors && errors.avatar) { %>
               <%= errors.avatar.msg %>
-            <% } %>>
+                <% } %>
           </p>
 
           <p>
             <label>E-mail:</label>
-            <input 
-            type="email" 
-            name="email"
-            class=" <%= locals.errors && errors.email ? 'is-invalid' : null %>"
-            value="<%= locals.oldData ? oldData.email : null %>">
+            <input type="email" name="email" class=" <%= locals.errors && errors.email ? 'is-invalid' : null %>"
+              value="<%= locals.oldData ? oldData.email : null %>">
             <% if(locals.errors && errors.email) { %>
               <%= errors.email.msg %>
-            <% } %>
+                <% } %>
           </p>
+          <!------- pattern="^(?=.[a-z])(?=.[A-Z])(?=.\d)(?=.[@$!%?&])[A-Za-z\d@$!%?&]{8,}$" ---------->
           <p>
             <label>Contraseña:</label>
-            <input type="password" name="password" value="<%= locals.oldData ? oldData.password : null %>" pattern="^(?=.[a-z])(?=.[A-Z])(?=.\d)(?=.[@$!%?&])[A-Za-z\d@$!%?&]{8,}$" required>
+            <input type="password" name="password" value="<%= locals.oldData ? oldData.password : null %>" required>
             <% if(locals.errors && errors.password) { %>
               <%= errors.password.msg %>
-            <% } %>>
+                <% } %>>
           </p>
           <p class="botonesregister">
             <button type="reset" class="botonRegister">Borrar</button>

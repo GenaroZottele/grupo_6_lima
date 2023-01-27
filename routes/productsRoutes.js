@@ -1,10 +1,7 @@
 const express = require('express');
 const router = express.Router();
-const fs = require('fs')
-const path  = require('path');
-const logDBMiddleware = require('../middlewares/logDBMiddleware');
 const productsController = require('../controllers/productsController');
-const upload = require('../middlewares/multerMiddleware');
+const upload = require('../middlewares/multerMiddlewareProducts');
 
 // Listado de productos
 router.get('/', productsController.products);

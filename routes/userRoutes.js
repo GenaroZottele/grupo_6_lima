@@ -5,7 +5,7 @@ const router = express.Router();
 const usersController = require('../controllers/userController');
 
 // Middlewares
-const uploadFile = require('../middlewares/multerMiddleware');
+const uploadFile = require('../middlewares/multerMiddlewareProducts');
 const validations = require('../middlewares/validateRegisterMiddleware');
 const guestMiddleware = require('../middlewares/guestMiddleware');
 const authMiddleware = require('../middlewares/authMiddleware');
@@ -14,7 +14,7 @@ const authMiddleware = require('../middlewares/authMiddleware');
 router.get('/register', guestMiddleware, usersController.register);
 
 // Procesar el registro
-router.post('/', uploadFile.single("avatar"), validations, usersController.processRegister);
+router.post('/register', uploadFile.single("avatar"), validations, usersController.processRegister);
 
 // Formulario de login
 router.get('/login', guestMiddleware, usersController.login);
