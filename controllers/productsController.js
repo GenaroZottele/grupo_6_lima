@@ -9,7 +9,7 @@ const controller = {
     products: (req, res)=>{        
     db.Product.findAll()
       .then(function(products){
-        return res.render('productDetail', {products: products});
+        return res.render('productCard', {products: products});
       });
     },
 
@@ -33,7 +33,7 @@ const controller = {
     detail: (req, res) =>{
       db.Product.findByPk(req.params.id)
         .then(function(product) {
-          return res.render('productDetailMain', {product: product});
+          return res.render('productDetail', {product: product});
         })
       },    
     
@@ -57,7 +57,7 @@ const controller = {
           id: req.params.id
         } 
       });
-        res.redirect('/products/productDetailMain/' + req.params.id)
+        res.redirect('/products/productDetail/' + req.params.id)
     },
 
     delete: (req, res) => {

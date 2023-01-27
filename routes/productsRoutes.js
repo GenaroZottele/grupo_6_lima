@@ -16,7 +16,7 @@ router.get('/create', productsController.create);
 router.post('/create', upload.single("image"), productsController.save);
 
  // Detail de un producto
-router.get('/productDetailMain/:id', productsController.detail);
+router.get('/productDetail/:id', productsController.detail);
 
 // Edicion productos (muestra form)
 router.get('/edit/:id', productsController.edit);
