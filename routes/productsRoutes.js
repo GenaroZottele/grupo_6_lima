@@ -19,7 +19,7 @@ router.get('/productDetail/:id', productsController.detail);
 router.get('/edit/:id', productsController.edit);
 
 // Edicion productos (a donde envia form)
-router.put('/edit/:id', productsController.update);
+router.put('/edit/:id', upload.single("image"), productsController.update);
 
 // Elimina producto
 router.delete('/delete/:id', productsController.delete); 

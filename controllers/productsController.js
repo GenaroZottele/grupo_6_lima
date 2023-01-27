@@ -25,8 +25,7 @@ const controller = {
         status: req.body.status,
         price: req.body.price,
         discount: req.body.discount
-      });
-      console.log(req.file.filename)
+      });      
         res.redirect('/products')
     },
     
@@ -48,7 +47,7 @@ const controller = {
       db.Product.update({
         name: req.body.name,
         description: req.body.description,
-        image: req.body.image,
+        image: req.file.filename,
         status: req.body.status,
         price: req.body.price,
         discount: req.body.discount
