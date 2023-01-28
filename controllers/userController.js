@@ -51,30 +51,30 @@ const controller = {
 		return res.render('login');
 	},
 
-	loginProcess: (req, res) => {
-
-		console.log(req.body.password);					
-		
+	loginProcess: (req, res) => {		
 		db.User.findAll()		  
-		   .then(function(users){			
-			let enteredMail = req.body.email;			
-			for (let i=0; i < users.length; i++) {			  
-			  if (enteredMail == users[i].dataValues.email) {				
-				let selectedUser = users[i];
-				return res.render('userProfile', {user: selectedUser});
-			  } else {
-				return res.render('register', {
-					errors:{
-						email: {							
-							msg: 'El email ' + enteredMail + ' no está registrado'
-						}
-					}
-				})			
-			  };
-			};			
+		   .then(function(users){
+			let enteredMail = req.body.email;
+			for (let i=0; i < users.length; i++) {
+			    if (enteredMail == users[i].dataValues.email) {				
+				    let selectedUser = users[i];
+					let enteredPassword = bcryptjs.compareSync(req.body.password, users[i].password);
+					if (enteredPassword){
+						return res.render('userProfile', {user: selectedUser});
+					} else {
+						return res.render('login', {
+							errors:{password: {msg: 'La contraseña es incorrecta'}}							
+						});						
+					}				        				    
+			    }
+			};
+			return res.render('register', {
+				errors:{email: {msg: 'El email ' + enteredMail + ' no está registrado'}}			
+		    });			
 		});		
-		
-		/* if(userToLogin) {
+	},
+
+	/* if(userToLogin) {
 			let isOkThePassword = bcryptjs.compareSync(req.body.password, userToLogin.password);
 			if (isOkThePassword) {
 				delete userToLogin.password;
@@ -95,15 +95,6 @@ const controller = {
 			});
 		}
        */
-		/* return res.render('register', {
-			errors: {
-				email: {
-					msg: 'Este email no está registrado'
-				}
-			})
-
-		}); */
-	},
 
 	profile: (req, res) => {
 		return res.render('userProfile', {
