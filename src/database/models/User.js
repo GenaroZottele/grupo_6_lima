@@ -20,7 +20,7 @@ module.exports = function(sequelize, DataTypes) {
 
     let User = sequelize.define(alias, cols, config);
     
-    //Asociaciones (hacerlas en base a script)
+    //Asociaciones (realizadas en script base de datos)
 
     return User;
 }

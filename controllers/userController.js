@@ -52,9 +52,20 @@ const controller = {
 	},
 
 	loginProcess: (req, res) => {
-		let userToLogin = db.email;
+
+		console.log(req.body.password);					
 		
-		if(userToLogin) {
+		db.User.findAll({attributes: ['email']})		  
+		   .then(function(users){
+			for (let i=0; i < users.length; i++) {
+			  console.log(users[i].dataValues.email);
+			  
+			
+			};
+			return res.render('register');
+		   });		
+		
+		/* if(userToLogin) {
 			let isOkThePassword = bcryptjs.compareSync(req.body.password, userToLogin.password);
 			if (isOkThePassword) {
 				delete userToLogin.password;
@@ -74,14 +85,14 @@ const controller = {
 				}
 			});
 		}
-
-		return res.render('register', {
+       */
+		/* return res.render('register', {
 			errors: {
 				email: {
 					msg: 'Este email no está registrado'
 				}
 			}
-		});
+		}); */
 	},
 
 	profile: (req, res) => {
