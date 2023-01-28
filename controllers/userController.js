@@ -55,15 +55,24 @@ const controller = {
 
 		console.log(req.body.password);					
 		
-		db.User.findAll({attributes: ['email']})		  
-		   .then(function(users){
-			for (let i=0; i < users.length; i++) {
-			  console.log(users[i].dataValues.email);
-			  
-			
-			};
-			return res.render('register');
-		   });		
+		db.User.findAll()		  
+		   .then(function(users){			
+			let enteredMail = req.body.email;			
+			for (let i=0; i < users.length; i++) {			  
+			  if (enteredMail == users[i].dataValues.email) {				
+				let selectedUser = users[i];
+				return res.render('userProfile', {user: selectedUser});
+			  } else {
+				return res.render('register', {
+					errors:{
+						email: {							
+							msg: 'El email ' + enteredMail + ' no está registrado'
+						}
+					}
+				})			
+			  };
+			};			
+		});		
 		
 		/* if(userToLogin) {
 			let isOkThePassword = bcryptjs.compareSync(req.body.password, userToLogin.password);
@@ -91,7 +100,8 @@ const controller = {
 				email: {
 					msg: 'Este email no está registrado'
 				}
-			}
+			})
+
 		}); */
 	},
 
