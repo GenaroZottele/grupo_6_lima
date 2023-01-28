@@ -2,11 +2,17 @@ const path = require('path');
 const { body } = require('express-validator');
 
 module.exports = [
-	body('name').notEmpty().withMessage('Tienes que escribir un nombre')
+	body('full_name').notEmpty().withMessage('Tienes que escribir un nombre')
 		.isLength({ min: 2 }),
 	body('email')
 		.notEmpty().withMessage('Tienes que escribir un correo electrónico').bail()
-		.isEmail().withMessage('Debes escribir un formato de correo válido'),
+		.isEmail().withMessage('Debes escribir un formato de correo válido')
+		.custom(async email => {
+            const value = await isEmailInUse(email);
+            if (value) {
+                throw new Error('El mail ya existe');
+            }
+            }),
 	body('password')
 		.notEmpty().withMessage('Tienes que escribir una contraseña')
 		.isLength({ min: 8 }),
