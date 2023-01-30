@@ -23,15 +23,15 @@ router.get('/login', guestMiddleware, usersController.login);
 router.post('/login', usersController.loginProcess);
 
 // Perfil de Usuario
-router.get('/profile', /* authMiddleware, */ usersController.profile);
+router.get('/profile', authMiddleware, usersController.profile);
 
-router.post('/profile', /* authMiddleware, */ usersController.profile);
+router.post('/profile', authMiddleware, usersController.profile);
 
-router.get('/edit', usersController.edit)
+router.get('/userDetail', authMiddleware, usersController.userDetail)
 
-router.get('/userDdetail', usersController.detail)
+router.get('/edit', authMiddleware, usersController.edit)
 
 // Logout
-router.get('/logout', usersController.logout);
+router.get('/logout', authMiddleware, usersController.logout);
 
 module.exports = router;

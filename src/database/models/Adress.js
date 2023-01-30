@@ -16,7 +16,7 @@ module.exports = function(sequelize, DataTypes) {
 
     let Adress = sequelize.define(alias, cols, config);
     
-    //Asociaciones (hacerlas en base a script)
+    //Asociaciones (realizadas en script de creacion de las tablas)
 
     return Adress;
 }

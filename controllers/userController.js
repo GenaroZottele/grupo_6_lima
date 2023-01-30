@@ -60,6 +60,12 @@ const controller = {
 				    let selectedUser = users[i];
 					let enteredPassword = bcryptjs.compareSync(req.body.password, users[i].password);
 					if (enteredPassword){
+						req.session.userLogged = users[i];
+
+						/* if(req.body.recordar) {
+							res.cookie('userEmail', req.body.email, { maxAge: (1000 * 60) * 60 })
+						} */
+
 						return res.render('userProfile', {user: selectedUser});
 					} else {
 						return res.render('login', {
@@ -72,34 +78,18 @@ const controller = {
 				errors:{email: {msg: 'El email ' + enteredMail + ' no está registrado'}}			
 		    });			
 		});		
-	},
-
-	/* if(userToLogin) {
-			let isOkThePassword = bcryptjs.compareSync(req.body.password, userToLogin.password);
-			if (isOkThePassword) {
-				delete userToLogin.password;
-				req.session.userLogged = userToLogin;
-
-				if(req.body.recordar) {
-					res.cookie('userEmail', req.body.email, { maxAge: (1000 * 60) * 60 })
-				}
-
-				return res.redirect('profile');
-			} 
-			return res.render('login', {
-				errors: {
-					email: {
-						msg: 'La contraseña es incorrecta'
-					}
-				}
-			});
-		}
-       */
-
+	},		
+    
 	profile: (req, res) => {
 		return res.render('userProfile', {
 			user: req.session.userLogged
 		});
+	},	
+
+	userDetail: (req, res) =>{		
+			return res.render('userDetail', {
+				user: req.session.userLogged
+			});		  
 	},
 
 	edit: (req, res) => {
@@ -108,35 +98,21 @@ const controller = {
 		  .then(function([Usuario]) {
 			return res.render('edit', {Usuario:Usuario});
 		})
-	},
+	},	
 
-	detail: (req, res) =>{
-		db.Usuario.findAll(req.body.email)
-		  .then(function(usuario) {
-			return res.render('profile', {usuario:usuario});
-		  })
-	},
-
-	userDetail: (req,res) => {
-        return res.render('userDetail');
-    },
-
-	generateId: function () {
-		let allUsers = db.findAll();
-        //Obtengo al último usuario
-		let lastUser = allUsers.pop();
-		if (lastUser) {
-			return lastUser.id + 1;
-		}
-		return 1;
-	},
-
-	findAll: function () {
-		return db.getData();
+	delete: (req, res) => {
+		db.User.destroy({
+		  where: {
+			id: req.session.userLogged
+		  }
+		})
+		res.redirect('/');
 	},	
 	
 	logout: (req, res) => {
-		res.clearCookie('userEmail');
+
+		/* res.clearCookie('userEmail'); */
+		
 		req.session.destroy();
 		return res.redirect('/');
 	}

@@ -16,7 +16,7 @@ module.exports = function(sequelize, DataTypes) {
 
     let Order_detail = sequelize.define(alias, cols, config);
 
-    //Asociaciones (hacerlas en base a script)
+    //Asociaciones (realizadas en script de creacion de las tablas)
 
     Order_detail.associate = function(models) {
 

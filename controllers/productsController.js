@@ -1,7 +1,3 @@
-const { fileLoader } = require('ejs');
-const fs = require('fs');
-const path = require('path');
-const upload = require('../middlewares/multerMiddlewareProducts'); 
 const db = require('../src/database/models/index');
 
 const controller = {  

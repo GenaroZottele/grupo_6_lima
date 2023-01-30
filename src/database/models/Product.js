@@ -19,21 +19,7 @@ module.exports = function(sequelize, DataTypes) {
 
     let Product = sequelize.define(alias, cols, config);    
      
-    //Asociaciones (hacerlas en base a script)
-
-    Product.associate = function(models) {
-        
-        Product.belongsToMany(models.Order_detail, {
-            as:'order_detail', 
-            through: 'orderDetail_product',
-            foreignKey:'product_id',
-            otherKey: 'oderDetail_id',
-            timestamps: false
-        });
-
-
-
-    }
+    //Asociaciones (realizadas en script de creacion de las tablas)    
 
     return Product;
 }
