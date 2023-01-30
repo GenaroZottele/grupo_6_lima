@@ -9,13 +9,15 @@
       <main class="mainregister">
 
         <div id="errors">
-            
+
         </div>
 
-        <form id="formularioRegister" action="/users/register" method="POST" class="formregister" enctype="multipart/form-data">
+        <form id="formularioRegister" action="/users/register" method="POST" class="formregister"
+          enctype="multipart/form-data">
           <p>
             <label>Nombre y apellido:</label>
-            <input type="text" id ="full_name" name="full_name" class=" <%= locals.errors && errors.nombre ? 'is-invalid' : null %>"
+            <input type="text" id="full_name" name="full_name"
+              class=" <%= locals.errors && errors.nombre ? 'is-invalid' : null %>"
               value="<%= locals.oldData ? oldData.nombre : null %>">
             <% if(locals.errors && errors.nombre) { %>
               <%= errors.nombre.msg %>
@@ -23,7 +25,8 @@
           </p>
           <p>
             <label>E-mail:</label>
-            <input type="email" id="email" name="email" class=" <%= locals.errors && errors.email ? 'is-invalid' : null %>"
+            <input type="email" id="email" name="email"
+              class=" <%= locals.errors && errors.email ? 'is-invalid' : null %>"
               value="<%= locals.oldData ? oldData.email : null %>">
             <% if(locals.errors && errors.email) { %>
               <%= errors.email.msg %>
@@ -32,10 +35,11 @@
           <!------- pattern="^(?=.[a-z])(?=.[A-Z])(?=.\d)(?=.[@$!%?&])[A-Za-z\d@$!%?&]{8,}$" ---------->
           <p>
             <label>Contraseña:</label>
-            <input type="password" id="password" name="password" value="<%= locals.oldData ? oldData.password : null %>" required>
+            <input type="password" id="password" name="password" value="<%= locals.oldData ? oldData.password : null %>"
+              required>
             <% if(locals.errors && errors.password) { %>
               <%= errors.password.msg %>
-                <% } %>>
+                <% } %>
           </p>
           <p>
             <label>Celular:</label>
@@ -64,7 +68,7 @@
           </p>
           <p>
             <label for="user-image">Imagen:</label>
-            <input type="file" id ="avatar" name="avatar">
+            <input type="file" id="avatar" name="avatar">
             <% if(locals.errors && errors.avatar) { %>
               <%= errors.avatar.msg %>
                 <% } %>
