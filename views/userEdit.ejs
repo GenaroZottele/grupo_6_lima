@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include('./partials/head', {pageTitle: 'LIMA' }); %>
+    <%- include('./partials/header', {pageTitle: 'LIMA' }); %>
+
+
+        <body>
+            <div class="perfil">INFORMACIÓN DE USUARIO
+
+
+                <form action="/users/edit?_method=PUT" method="POST" class="formPanel" enctype="multipart/form-data">
+                    <section class="newProduct">
+                        <h2>MODIFICAR DATOS</h2>
+                        <h2>
+                            <%=user.full_name%>
+                        </h2>
+                        <p>
+                            <label class="formlabel">Nombre:</label>
+                        </p>
+                        <p>
+                            <input type="text" name="full_name" value="<%=user.full_name%>" required>
+                        </p>
+                        <p>
+                            <label class="formlabel">Direccion:</label>
+                        </p>
+                        <p>
+                            <input type="text" name="adress_id" value="<%=user.adress_id%>" required>
+                        </p>
+                        <p>
+                            <label class="formlabel" for="image">Imagen:</label>
+                        </p>
+                        <p>
+                            <input type="file" accept=".jpg, .png, .jpeg" name="image" required>
+                        </p>
+                        <p>
+                            <label class="formlabel">Phone:</label>
+                        <p>
+                            <input type="text" name="phone" value="<%=user.phone%>" required>
+                        </p>
+                        <p>
+                            <label class="formlabel">email:</label>
+                        <p>
+                            <input type="email" name="email" value="<%=user.email%>" required>
+                        </p>
+                        <p class="botonesPanel">
+                            <button type="reset" class="botonPanel">BORRAR</button>
+                            <button type="submit" class="botonPanel">MODIFICAR</button>
+                        </p>
+                    </section>
+                </form>
+            </div>
+        </body>
+
+
+        <%- include('partials/footer') %>
+
+</html>

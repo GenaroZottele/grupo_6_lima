@@ -93,26 +93,46 @@ const controller = {
 	},
 
 	edit: (req, res) => {
-		let usuario = db.Usuario.email.findAll();
-		Promise.all([usuario])
-		  .then(function([Usuario]) {
-			return res.render('edit', {Usuario:Usuario});
+		db.User.findByPk(req.session.userLogged.id)		  
+		  .then(function(user){			
+			return res.render('userEdit', {user: user});
+		  })		
+	},     
+
+	update: (req, res) => {
+		db.User.update({
+			full_name: req.body.full_name,
+            adress_id: req.body.adress_id,
+            avatar: req.file.filename,
+            phone: req.body.phone,
+            email: req.body.email,            
+		}, {
+			where: {
+				id: req.session.userLogged.id
+			}
 		})
+		// arreglar datos del usuario que trae el update o hacer un findByPk y despues el update y passar los cambios al session
+		.then(function(user){	
+			console.log(user);		
+			return res.render('userDetail', {user: req.session.userLogged});
+		});				
 	},	
 
-	delete: (req, res) => {
+	delete: (req, res) => {		
 		db.User.destroy({
 		  where: {
-			id: req.session.userLogged
+			id: req.session.userLogged.id
 		  }
 		})
 		res.redirect('/');
 	},	
 	
+    // Hacer funcionar logout
+
 	logout: (req, res) => {
 
 		/* res.clearCookie('userEmail'); */
-		
+
 		req.session.destroy();
 		return res.redirect('/');
 	}

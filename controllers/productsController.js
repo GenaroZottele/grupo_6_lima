@@ -35,6 +35,7 @@ const controller = {
     edit: (req, res) => {       
       db.Product.findByPk(req.params.id)      
         .then(function(product) {
+        console.log(product);
         return res.render('edit', {product: product});
       })
     },
@@ -62,6 +63,8 @@ const controller = {
         }
       })
       res.redirect('/products');
-    }}
+    }
+    
+}
 
-    module.exports = controller;
+module.exports = controller;

@@ -9,23 +9,24 @@
             <div class="perfil">INFORMACIÓN DE USUARIO
 
                 <label>
-                    <%= user.name %>
+                    <%= user.full_name %>
                 </label>
-                <br>
                 <label>
-                    <%= user.direction %>
+                    <%= user.adress_id %>
                 </label>
-                <br>
                 <label>
                     <%= user.phone %>
                 </label>
-                <br>
                 <label>
                     <%= user.email %>
                 </label>
-                <br>
-                <a href="/users/profile"> Mi perfil </a>
-
+                <a href="/users/profile"> MI PERFIL </a>
+                <a href="/users/edit"> EDITAR DATOS </a>
+                <form action="/users/delete?_method=DELETE" method="POST">
+                    <p>
+                        <button type="submit" class="botonPanel">DESUSCRIBIRME</button>
+                    </p>
+                </form>
             </div>
         </body>
         <%- include('partials/footer') %>
