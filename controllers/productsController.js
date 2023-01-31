@@ -1,4 +1,5 @@
 const db = require('../src/database/models/index');
+const { validationResult } = require('express-validator');
 
 const controller = {  
 
@@ -13,7 +14,15 @@ const controller = {
         return res.render('create');
     },
 
-    save: function (req, res){      
+    save: function (req, res){
+      const resultValidation = validationResult(req);
+      
+      if (resultValidation.errors.length > 0) {
+        return res.render('create', {
+          errors: resultValidation.mapped(),
+        })
+      }
+      
       db.Product.create({
         name: req.body.name,
         description: req.body.description,
