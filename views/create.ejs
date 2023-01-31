@@ -8,14 +8,14 @@
         <%- include('./partials/header.ejs') %>
 
             <main class="mainPanel">
-                <form action="/products/create" method="POST" class="formPanel" enctype="multipart/form-data">
+                <form action="/products/create" method="POST" class="formPanel" enctype="multipart/form-data" id="formularioCreate">
                     <section class="newProduct">
                         <h2>CREAR PRODUCTO</h2>
                         <p>
                             <label class="formlabel">Nombre:</label>
                         </p>
                         <p>
-                            <input type="text" name="name">
+                            <input type="text" name="name" id="name">
                         <div class="errors">
                             <% if(locals.errors && errors.name) { %>
                                 <%= errors.name.msg %>
@@ -26,7 +26,7 @@
                             <label class="formlabel">Descripcion:</label>
                         </p>
                         <p>
-                            <input type="text" name="description">
+                            <input type="text" name="description" id="description">
                         <div class="errors">
                             <% if(locals.errors && errors.description) { %>
                                 <%= errors.description.msg %>
@@ -37,7 +37,7 @@
                             <label class="formlabel" for="image">Imagen:</label>
                         </p>
                         <p>
-                            <input type="file" accept=".jpg, .png, .jpeg" name="image">
+                            <input type="file" accept=".jpg, .png, .jpeg" name="image" id="image">
                         <div class="errors">
                             <% if(locals.errors && errors.image) { %>
                                 <%= errors.image.msg %>
@@ -48,7 +48,7 @@
                             <label class="formlabel">Estado:</label>
                         </p>
                         <p>
-                            <input type="text" name="status">
+                            <input type="text" name="status" id="status">
                         <div class="errors">
                             <% if(locals.errors && errors.status) { %>
                                 <%= errors.status.msg %>
@@ -58,7 +58,7 @@
                         <p>
                             <label class="formlabel">Precio:</label>
                         <p>
-                            <input type="text" name="price">
+                            <input type="text" name="price" id="price">
                         <div class="errors">
                             <% if(locals.errors && errors.price) { %>
                                 <%= errors.price.msg %>
@@ -68,7 +68,7 @@
                         <p>
                             <label class="formlabel">Descuento:</label>
                         <p>
-                            <input type="text" name="discount">
+                            <input type="text" name="discount" id="discount">
                         <div class="errors">
                             <% if(locals.errors && errors.discount) { %>
                                 <%= errors.discount.msg %>
