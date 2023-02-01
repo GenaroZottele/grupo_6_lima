@@ -16,7 +16,7 @@
           enctype="multipart/form-data">
           <p>
             <label>Nombre y apellido:</label>
-            <input type="text" id="full_name" name="full_name" value="<%=user.full_name%>">
+            <input type="text" id="full_name" name="full_name" value="<%=oldData.full_name%>">
           <div class="errors">
             <% if(locals.errors && errors.full_name) { %>
               <%= errors.full_name.msg %>
@@ -28,7 +28,7 @@
           </p>
           <p>
             <label>E-mail:</label>
-            <input type="email" id="email" name="email" value="<%=user.email%>">
+            <input type="email" id="email" name="email" value="<%=oldData.email%>">
           <div class="errors">
             <% if(locals.errors && errors.email) { %>
               <%= errors.email.msg %>
@@ -40,7 +40,7 @@
           </p>
           <p>
             <label>Contraseña:</label>
-            <input type="password" id="password" name="password" value="<%=user.password%>">
+            <input type="password" id="password" name="password" value="<%=oldData.password%>">
           <div class="errors">
             <% if(locals.errors && errors.password) { %>
               <%= errors.password.msg %>
@@ -52,7 +52,7 @@
           </p>
           <p>
             <label>Celular:</label>
-            <input type="number" name="phone" value="<%=user.phone%>">
+            <input type="number" name="phone" value="<%=oldData.phone%>">
           <div class="errors">
             <% if(locals.errors && errors.phone) { %>
               <%= errors.phone.msg %>
@@ -61,7 +61,7 @@
           </p>
           <p>
             <label>adress_id:</label>
-            <input type="number" name="adress_id" id="adress_id" value="<%=user.adress_id%>">
+            <input type="number" name="adress_id" id="adress_id" value="<%=oldData.adress_id%>">
           <div class="errors">
             <% if(locals.errors && errors.adress_id) { %>
               <%= errors.adress_id.msg %>
@@ -73,7 +73,7 @@
           </p>
           <p>
             <label>user_type_id:</label>
-            <input type="number" name="user_type_id" id="user_type_id" value="<%=user.user_type_id%>">
+            <input type="number" name="user_type_id" id="user_type_id" value="<%=oldData.user_type_id%>">
           <div class="errors">
             <% if(locals.errors && errors.user_type_id) { %>
               <%= errors.user_type_id.msg %>

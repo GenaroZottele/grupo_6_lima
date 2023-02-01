@@ -3,6 +3,8 @@
 
 <%- include('./partials/head.ejs', {pageTitle: 'Create' }); %>
 
+    <!-- Cambiar las <p> por <div> para mejor formateo y corregirlo en CSS    --------------------------------------------------------------------->
+
     <body>
 
         <%- include('./partials/header.ejs') %>
@@ -16,7 +18,7 @@
                             <label class="formlabel">Nombre:</label>
                         </p>
                         <p>
-                            <input type="text" name="name" id="name" value="<%=product.name%>">
+                            <input type="text" name="name" id="name" value="<%=oldData.name%>">
                         <div class="errors">
                             <% if(locals.errors && errors.name) { %>
                                 <%= errors.name.msg %>
@@ -27,7 +29,7 @@
                             <label class="formlabel">Descripcion:</label>
                         </p>
                         <p>
-                            <input type="text" name="description" id="description" value="<%=product.description%>">
+                            <input type="text" name="description" id="description" value="<%=oldData.description%>">
                         <div class="errors">
                             <% if(locals.errors && errors.description) { %>
                                 <%= errors.description.msg %>
@@ -49,7 +51,7 @@
                             <label class="formlabel">Estado:</label>
                         </p>
                         <p>
-                            <input type="text" name="status" id="status" value="<%=product.status%>">
+                            <input type="text" name="status" id="status" value="<%=oldData.status%>">
                         <div class="errors">
                             <% if(locals.errors && errors.status) { %>
                                 <%= errors.status.msg %>
@@ -59,7 +61,7 @@
                         <p>
                             <label class="formlabel">Precio:</label>
                         <p>
-                            <input type="text" name="price" id="price" value="<%=product.price%>">
+                            <input type="text" name="price" id="price" value="<%=oldData.price%>">
                         <div class="errors">
                             <% if(locals.errors && errors.price) { %>
                                 <%= errors.price.msg %>
@@ -69,7 +71,7 @@
                         <p>
                             <label class="formlabel">Descuento:</label>
                         <p>
-                            <input type="text" name="discount" id="discount" value="<%=product.discount%>">
+                            <input type="text" name="discount" id="discount" value="<%=oldData.discount%>">
                         <div class="errors">
                             <% if(locals.errors && errors.discount) { %>
                                 <%= errors.discount.msg %>

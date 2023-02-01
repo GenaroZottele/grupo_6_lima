@@ -5,20 +5,14 @@ const db = require ('../src/database/models/index');
 const controller = {
 
 	register: (req, res) => {
-		let user = req.body;
-		return res.render('register', {user: user});
+		// sacar oldData y llevarlo al form
+		let oldData = req.body;
+		return res.render('register', {oldData: oldData});
 	},	
     
 	processRegister: (req, res) => {
-		/* const resultValidation = validationResult(req);
 
-		if (resultValidation.errors.length > 0) {
-			return res.render('register', {
-				errors: resultValidation.mapped(),
-				oldData: req.body
-			});
-		}
-
+		/* 
     //Verifico si el usuario existe buscando por su email   
 
 		let userInDB = db.User.findByField('email', req.body.email);
@@ -33,11 +27,12 @@ const controller = {
 				oldData: req.body
 			});
 		} */
-		let user = req.body;    
-        const resultValidation = validationResult(req);      
+
+
+		const resultValidation = validationResult(req);      
             if (resultValidation.errors.length > 0) {
                 return res.render('register', {
-                    user: user,
+                    oldData: req.body,
                     errors: resultValidation.mapped(),
                 })
         };
@@ -56,10 +51,19 @@ const controller = {
 	},
 
 	login: (req, res) => {
-		return res.render('login');
+		let user = req.body;
+		return res.render('login', {user: user});
 	},
 
-	loginProcess: (req, res) => {		
+	loginProcess: (req, res) => {
+		let user = req.body;    
+        const resultValidation = validationResult(req);      
+            if (resultValidation.errors.length > 0) {
+                return res.render('login', {
+                    user: user,
+                    errors: resultValidation.mapped(),
+                })
+        };		
 		db.User.findAll()		  
 		   .then(function(users){
 			let enteredMail = req.body.email;
@@ -120,8 +124,7 @@ const controller = {
 			}
 		})
 		// arreglar datos del usuario que trae el update o hacer un findByPk y despues el update y passar los cambios al session
-		.then(function(user){	
-			console.log(user);		
+		.then(function(user){					
 			return res.render('userDetail', {user: req.session.userLogged});
 		});				
 	},	

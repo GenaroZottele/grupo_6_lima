@@ -1,4 +1,3 @@
- const path = require('path');
 const { body } = require('express-validator');
 
 module.exports = [
@@ -8,4 +7,4 @@ module.exports = [
 	body('password')
 		.notEmpty().withMessage('Tienes que escribir una contraseña')
 		.isLength({ min: 8 }),	
- ]
+]

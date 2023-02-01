@@ -7,6 +7,8 @@
 
         <%- include('./partials/header.ejs') %>
 
+            <!-- Cambiar las <p> por <div> para mejor formateo y corregirlo en CSS    --------------------------------------------------------------------->
+
             <main class="mainPanel">
                 <form action="/products/edit/<%=product.id%>?_method=PUT" method="POST" class="formPanel"
                     enctype="multipart/form-data" id="formularioEdit">
