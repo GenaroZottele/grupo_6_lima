@@ -50,15 +50,6 @@ window.addEventListener('load',function(){
                 errores ++
             }
         })
-        console.log(errores);
-        const formulario = document.querySelector('#formularioRegister');
-        function validarForm(errores,e) {
-            e.preventDefault()
-            if (errores<= 0) {
-                this.submit()
-            }
-        }
-        formulario.addEventListener('submit',validarForm)
-        return errores
+
 })
 
