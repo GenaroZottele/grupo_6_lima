@@ -5,7 +5,8 @@ const db = require ('../src/database/models/index');
 const controller = {
 
 	register: (req, res) => {
-		return res.render('register');
+		let user = req.body;
+		return res.render('register', {user: user});
 	},	
     
 	processRegister: (req, res) => {
@@ -32,7 +33,14 @@ const controller = {
 				oldData: req.body
 			});
 		} */
- 
+		let user = req.body;    
+        const resultValidation = validationResult(req);      
+            if (resultValidation.errors.length > 0) {
+                return res.render('register', {
+                    user: user,
+                    errors: resultValidation.mapped(),
+                })
+        };
 		let userToCreate = {
 			full_name: req.body.full_name,
 			email: req.body.email,
