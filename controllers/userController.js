@@ -11,31 +11,30 @@ const controller = {
 	},	
     
 	processRegister: (req, res) => {
-
-		/* 
-    //Verifico si el usuario existe buscando por su email   
-
-		let userInDB = db.User.findByField('email', req.body.email);
-
-		if (userInDB) {
-			return res.render('register', {
-				errors: {
-					email: {
-						msg: 'Este email ya está registrado'
-					}
-				},
-				oldData: req.body
-			});
-		} */
-
-
 		const resultValidation = validationResult(req);      
             if (resultValidation.errors.length > 0) {
                 return res.render('register', {
                     oldData: req.body,
                     errors: resultValidation.mapped(),
                 })
-        };
+        }; 
+
+		// Verificacion mail en base de datos, hacerlo async (ver si es factible en middleware)
+        		
+		/* db.User.findAll()		  
+		   .then(function(users){
+			let enteredMail = req.body.email;
+			console.log(enteredMail);
+			for (let i=0; i < users.length; i++) {
+			    if (enteredMail == users[i].dataValues.email) {
+					console.log(users[i].dataValues.email);					
+					return res.render('login', {
+						errors: {email: {msg: 'Este email ya está registrado',
+						oldData: req.body}},												
+					})									        				    
+			    }}
+			})   */      
+
 		let userToCreate = {
 			full_name: req.body.full_name,
 			email: req.body.email,
@@ -45,7 +44,6 @@ const controller = {
 			user_type_id: req.body.user_type_id,
 			avatar: req.file.filename,						
 		}
-
 		db.User.create(userToCreate);
 			return res.redirect('/users/login');
 	},
@@ -63,7 +61,25 @@ const controller = {
                     user: user,
                     errors: resultValidation.mapped(),
                 })
-        };		
+        };
+		
+		// Verificacion mail en base de datos, hacerlo async (ver si es factible en middleware)
+
+		/* db.User.findAll()		  
+		   .then(function(users){
+			let enteredMail = req.body.email;
+			console.log(enteredMail);
+			for (let i=0; i < users.length; i++) {
+			    if (enteredMail == users[i].dataValues.email) {
+					console.log(users[i].dataValues.email);					
+					return res.render('register', {
+				    errors:{email: {
+						errors: 'El email ' + enteredMail + ' no está registrado', 
+				        oldData: req.body}}											
+					})									        				    
+			    }}
+			}) */        
+
 		db.User.findAll()		  
 		   .then(function(users){
 			let enteredMail = req.body.email;
