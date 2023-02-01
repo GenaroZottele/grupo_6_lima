@@ -9,7 +9,7 @@
 
             <main class="mainPanel">
                 <form action="/products/edit/<%=product.id%>?_method=PUT" method="POST" class="formPanel"
-                    enctype="multipart/form-data">
+                    enctype="multipart/form-data" id="formularioEdit">
                     <section class="newProduct">
                         <h2>MODIFICAR PRODUCTO</h2>
                         <h2>
@@ -19,35 +19,65 @@
                             <label class="formlabel">Nombre:</label>
                         </p>
                         <p>
-                            <input type="text" name="name" value="<%=product.name%>" required>
+                            <input type="text" name="name" id="name" value="<%=product.name%>">
+                        <div class="errors">
+                            <% if(locals.errors && errors.name) { %>
+                                <%= errors.name.msg %>
+                                    <% } %>
+                        </div>
                         </p>
                         <p>
                             <label class="formlabel">Descripcion:</label>
                         </p>
                         <p>
-                            <input type="text" name="description" value="<%=product.description%>" required>
+                            <input type="text" name="description" id="description" value="<%=product.description%>">
+                        <div class="errors">
+                            <% if(locals.errors && errors.description) { %>
+                                <%= errors.description.msg %>
+                                    <% } %>
+                        </div>
                         </p>
                         <p>
                             <label class="formlabel" for="image">Imagen:</label>
                         </p>
                         <p>
-                            <input type="file" accept=".jpg, .png, .jpeg" name="image" required>
+                            <input type="file" accept=".jpg, .png, .jpeg" name="image" id="image">
+                        <div class="errors">
+                            <% if(locals.errors && errors.image) { %>
+                                <%= errors.image.msg %>
+                                    <% } %>
+                        </div>
                         </p>
                         <p>
                             <label class="formlabel">Estado:</label>
                         </p>
                         <p>
-                            <input type="text" name="status" value="<%=product.status%>" required>
+                            <input type="text" name="status" id="status" value="<%=product.status%>">
+                        <div class="errors">
+                            <% if(locals.errors && errors.status) { %>
+                                <%= errors.status.msg %>
+                                    <% } %>
+                        </div>
                         </p>
                         <p>
                             <label class="formlabel">Precio:</label>
                         <p>
-                            <input type="text" name="price" value="<%=product.price%>" required>
+                            <input type="text" name="price" id="price" value="<%=product.price%>">
+                        <div class="errors">
+                            <% if(locals.errors && errors.price) { %>
+                                <%= errors.price.msg %>
+                                    <% } %>
+                        </div>
                         </p>
                         <p>
                             <label class="formlabel">Descuento:</label>
                         <p>
-                            <input type="text" name="discount" value="<%=product.discount%>" required>
+                            <input type="text" name="discount" id="discount" value="<%=product.discount%>">
+                        <div class="errors">
+                            <% if(locals.errors && errors.discount) { %>
+                                <%= errors.discount.msg %>
+                                    <% } %>
+                        </div>
                         </p>
                         <p class="botonesPanel">
                             <button type="reset" class="botonPanel">BORRAR</button>

@@ -1,4 +1,5 @@
 const db = require('../src/database/models/index');
+const { validationResult } = require('express-validator');
 
 const controller = {  
 
@@ -9,11 +10,20 @@ const controller = {
       });
     },
 
-    create: function (req, res) {        
-        return res.render('create');
+    create: function (req, res) {
+        let product = req.body;        
+        return res.render('create', {product: product});
     },
 
-    save: function (req, res){      
+    save: function (req, res){
+      let product = req.body;      
+      const resultValidation = validationResult(req);      
+      if (resultValidation.errors.length > 0) {
+        return res.render('create', {
+          product: product,
+          errors: resultValidation.mapped(),
+        })
+      };      
       db.Product.create({
         name: req.body.name,
         description: req.body.description,
@@ -34,26 +44,36 @@ const controller = {
     
     edit: (req, res) => {       
       db.Product.findByPk(req.params.id)      
-        .then(function(product) {
-        console.log(product);
+        .then(function(product) {        
         return res.render('edit', {product: product});
       })
     },
   
-    update: (req, res) => {      
-      db.Product.update({
-        name: req.body.name,
-        description: req.body.description,
-        image: req.file.filename,
-        status: req.body.status,
-        price: req.body.price,
-        discount: req.body.discount
-      }, {
-        where: {
-          id: req.params.id
-        } 
-      });
-        res.redirect('/products/productDetail/' + req.params.id)
+    update: (req, res) => {   
+      const resultValidation = validationResult(req);      
+      if (resultValidation.errors.length > 0) {
+        db.Product.findByPk(req.params.id)      
+        .then(function(product) {  
+          return res.render('edit', {
+            product: product,
+            errors: resultValidation.mapped()          
+          })       
+        })        
+      } else {
+        db.Product.update({
+          name: req.body.name,
+          description: req.body.description,
+          image: req.file.filename,
+          status: req.body.status,
+          price: req.body.price,
+          discount: req.body.discount
+        }, {
+          where: {
+            id: req.params.id
+          } 
+        });
+          res.redirect('/products/productDetail/' + req.params.id)
+      }    
     },
 
     delete: (req, res) => {
