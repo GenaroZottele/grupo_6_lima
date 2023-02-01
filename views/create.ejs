@@ -22,6 +22,9 @@
                                 <%= errors.name.msg %>
                                     <% } %>
                         </div>
+                        <div id="nameError">
+
+                        </div>
                         </p>
                         <p>
                             <label class="formlabel">Descripcion:</label>
@@ -32,6 +35,9 @@
                             <% if(locals.errors && errors.description) { %>
                                 <%= errors.description.msg %>
                                     <% } %>
+                        </div>
+                        <div id="descriptionError">
+
                         </div>
                         </p>
                         <p>
@@ -91,6 +97,7 @@
                     integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
                     crossorigin="anonymous">
                     </script>
+                <script src="/js/ValidateCreateFrontend.js"></script>
     </body>
 
 </html>
