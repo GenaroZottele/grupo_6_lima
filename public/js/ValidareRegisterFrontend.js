@@ -1,66 +1,64 @@
-const formulario = document.querySelector('#formularioRegister');
-const divErrors = document.querySelector ('#errors');
 
-const procesarFormulario = (event) => {
-    event.preventDefault();
-    divErrors.innerHTML = '';
+window.addEventListener('load',function(){
 
-    const campoFull_name= formulario.full_name
-    const campoEmail= formulario.email
-    const campoPassword= formulario.password;
+        let errores = {}
+        
+        const nameFull = document.querySelector('#full_name');
+        const nameError = document.querySelector('#nameError');
+        const email = document.querySelector('#email');
+        const emailError = document.querySelector('#emailError');
+        const password = document.querySelector('#password');
+        const passwordError = document.querySelector('#passwordError');
+        const adressId = document.querySelector('#adress_id');
+        const adressIdError = document.querySelector('#adressIdError');
+        const userType = document.querySelector('#user_type_id');
+        const userTypeError = document.querySelector('#userTypeError');
+        
+        nameFull.addEventListener('focus',function(){
+            let i = nameFull.value.length
+                if (i <= 4) {
+                    errores ++
+                    nameError.innerHTML = '<small>Minimo 4 caracteres</small>'
+                }
+        })
+        nameFull.addEventListener('blur',function(){
+            let i = nameFull.value.length
+            if (i > 4) {
+                nameError.style.display = "none"
+                errores --
+            }
+        })
 
-    console.log(campoFull_name.value)
-    console.log(campoEmail.value)
-    console.log(campoPassword.value)
+        email.addEventListener('blur',function(){
+                let valor = email.value
 
-    if (campoFull_name.value == '') {
-        divErrors.innerHTML += '<p> El campo Nombre y Apellido está vacío </p>'
-    }
-
-    if (campoEmail.value == '') {
-        divErrors.innerHTML += '<p> El campo email está vacío </p>'
-    }
-
-    if (campoPassword.value == '') {
-        divErrors.innerHTML += '<p> El campo password está vacío </p>'
+                if (/^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/.test(valor)){
+                    emailError.innerHTML = '<small>email aceptado</small>'
+                    errores --
+                } else {
+                    errores ++
+                    emailError.innerHTML = '<small>Debe tener formato email</small>'
+                }
+        })
+        password.addEventListener('blur',function(){
+            let contra = password.value
+            if (/^(?=.*[\d])(?=.*[A-Z])(?=.*[a-z])(?=.*[!@#$%^&*])[\w!@#$%^&*]{8,}$/.test(contra)) {
+                passwordError.innerHTML = '<small>Password aceptada</small>'
+                errores --
+            }else{
+                passwordError.innerHTML = '<small>Debe tener letras mayúsculas, minúsculas,un número y un carácter especial</small>'
+                errores ++
+            }
+        })
+        console.log(errores);
+        const formulario = document.querySelector('#formularioRegister');
+        function validarForm(errores,e) {
+            e.preventDefault()
+            if (errores<= 0) {
+                this.submit()
+            }
         }
+        formulario.addEventListener('submit',validarForm)
+        return errores
+})
 
-    
-
-    formulario.submit()
-	}
-
-formulario.addEventListener ('submit', procesarFormulario)
-
-
-formulario.full_name.addEventListener ('keyup', (event) => {
-    divErrors.innerHTML = '';
-
-   const valorDeInput = event.target.value;
-   if (valorDeInput < 2) {
-    divErrors.innerHTML += '<p> El campo debe tener al menos 2 caracteres </p>'
-        }
-
-}
-)
-
-
-formulario.password.addEventListener ('keyup', (event) => {
-    divErrors.innerHTML = '';
-
-   const valorDeInput = event.target.value;
-   if (valorDeInput < 8) {
-    divErrors.innerHTML += '<p> La contraseña debe tener al menos 8 caracteres </p>'
-        }
-}
-)
-
-formulario.avatar.addEventListener ('onLoad', (event) => {
-    divErrors.innerHTML = '';
-
-   const valorDeInput = event.target.value;
-   if (valorDeInput != jpg, jpeg, png, gif) {
-    divErrors.innerHTML += '<p> La imagen debe subirse en un formato válido </p>'
-        }
-}
-)
