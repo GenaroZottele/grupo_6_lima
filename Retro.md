@@ -53,6 +53,18 @@ _-------------------------------------------SextoSprint-------------------------
 -  Seguir trabajando en: una división de tareas que favorezca al proyecto.
 -  Valoramos tener siempre algún compañero/a que se pone el proyecto a cuestas cuando los tiempos laborales o vacaciones del grupo coinciden con las fechas de entregas.
 
+
+_-------------------------------------------SéptimoSprint-------------------------------------------------------------_/
+
+# Retrospectiva:
+
+-  Desafīo: resolver la conexión de la base de datos.
+-  Trabajar en equipo para solucionar los errores del proyecto.
+-  Ajustar los detalles faltantes que venimos arrastrando de sprint anteriores.
+-  Ponernos al día con playground para sacarle el mejor provecho posible.
+-  Objetivo: finalizar el último sprint y cumplir con todas las entregas pautadas.
+
+
 NOTAS
 
 -  Base de datos remota, VER.
