@@ -11,16 +11,15 @@ const controller = {
     },
 
     create: function (req, res) {
-        let product = req.body;        
-        return res.render('create', {product: product});
+        let oldData = req.body;        
+        return res.render('create', {oldData: oldData});
     },
 
-    save: function (req, res){
-      let product = req.body;      
+    save: function (req, res){            
       const resultValidation = validationResult(req);      
       if (resultValidation.errors.length > 0) {
         return res.render('create', {
-          product: product,
+          oldData: req.body,
           errors: resultValidation.mapped(),
         })
       };      
@@ -49,7 +48,8 @@ const controller = {
       })
     },
   
-    update: (req, res) => {   
+    update: (req, res) => { 
+      // incorporar olData y que los cambios en el edit no se pisen por el producto original, en caso de que las validaciones den error  
       const resultValidation = validationResult(req);      
       if (resultValidation.errors.length > 0) {
         db.Product.findByPk(req.params.id)      
