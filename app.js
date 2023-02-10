@@ -7,7 +7,7 @@ const methodOverrride = require('method-override');
 
 //middlewares
 const logMiddleware = require('./middlewares/logMiddleware');
-//const userLoggedMiddleware = require('./middlewares/userLoggedMiddleware');
+const userLoggedMiddleware = require('./middlewares/userLoggedMiddleware');
 
 //routes
 const mainRoutes = require('./routes/mainRoutes');
@@ -18,15 +18,16 @@ const userRoutes = require('./routes/userRoutes');
 app.set('view engine', 'ejs');
 
 //Session
-app.use(session({
-    secret: 'Lima',
-    resave: false,
-    saveUninitialized: false,
-}));
+app.use(
+   session({
+      secret: 'Lima',
+      resave: false,
+      saveUninitialized: false,
+   })
+);
 
 app.use(cookieParser());
-
-//app.use(userLoggedMiddleware);
+app.use(userLoggedMiddleware);
 app.use(logMiddleware);
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
@@ -38,10 +39,9 @@ app.use('/', mainRoutes);
 app.use('/products', productsRoutes);
 app.use('/users', userRoutes);
 
-
 const APP_PORT = process.env.PORT || 3000;
 app.listen(APP_PORT, () => {
-    console.log('Servidor funcionando en puerto ' + APP_PORT)
-})
+   console.log('Servidor funcionando en puerto ' + APP_PORT);
+});
 
 module.exports = app;
