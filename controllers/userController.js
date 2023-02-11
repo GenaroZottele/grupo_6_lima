@@ -139,12 +139,14 @@ const controller = {
                id: req.session.userLogged.id,
             },
          }
-      )
-         // arreglar datos del usuario que trae el update o hacer un findByPk y despues el update y passar los cambios al session
-
-         .then(function () {
-            return res.redirect('/users/userDetail');
-         });
+      ).then(function () {
+         req.session.userLogged.full_name = req.body.full_name;
+         req.session.userLogged.adress_id = req.body.adress_id;
+         req.session.userLogged.avatar = req.file.filename;
+         req.session.userLogged.phone = req.body.phone;
+         req.session.userLogged.email = req.body.email;
+         return res.redirect('/users/userDetail');
+      });
    },
 
    delete: (req, res) => {
@@ -155,8 +157,6 @@ const controller = {
       });
       res.redirect('/');
    },
-
-   // Hacer funcionar logout
 
    logout: (req, res) => {
       /* res.clearCookie('userEmail'); */

@@ -26,11 +26,14 @@
             <a href="/contacto"><b>Contacto</b></a>
             <% if (locals.isLogged) { %>
 
+                <!-- dejar una sola imagen -->
+
                 <img src="/images/avatars/<%=locals.userLogged.avatar %>" width="40" style="border-radius: 100%">
 
-                <div class="right">
-                    <li class="seccion"><a href="/users/profile">Mi perfil</a></li>
-                </div>
+
+                <a href="/users/profile"><img src="/images/avatars/<%=locals.userLogged.avatar %>" width="40"
+                        style="border-radius: 100%"></a>
+
                 <div class="right">
                     <li class="seccion"><a href="/users/logout">Cerrar sesión</a></li>
                 </div>
