@@ -4,6 +4,7 @@
 <%- include('./partials/head.ejs', {pageTitle: 'Registro' }); %>
 
   <body>
+
     <%- include('./partials/header.ejs') %>
 
       <main class="mainregister">
@@ -14,6 +15,7 @@
 
         <form id="formularioRegister" action="/users/register" method="POST" class="formregister"
           enctype="multipart/form-data">
+
           <p>
             <label>Nombre y apellido:</label>
             <input type="text" id="full_name" name="full_name" value="<%=oldData.full_name%>">
@@ -26,6 +28,7 @@
 
           </div>
           </p>
+
           <p>
             <label>E-mail:</label>
             <input type="email" id="email" name="email" value="<%=oldData.email%>">
@@ -59,30 +62,30 @@
                 <% } %>
           </div>
           </p>
+
           <p>
             <label>adress_id:</label>
-            <input type="number" name="adress_id" id="adress_id" value="<%=oldData.adress_id%>">
-          <div class="errors">
+            <select name="adress_id" id="adress_id">
+              <option value="<%=oldData.adress_id%>">adressId0</option>
+            </select>
             <% if(locals.errors && errors.adress_id) { %>
               <%= errors.adress_id.msg %>
                 <% } %>
-          </div>
-          <div id="adressIdError" class="errors-front">
-
-          </div>
+                  </div>
           </p>
+
           <p>
             <label>user_type_id:</label>
-            <input type="number" name="user_type_id" id="user_type_id" value="<%=oldData.user_type_id%>">
+            <select name="user_type_id" id="user_type_id">
+              <option value="<%=oldData.user_type_id%>">userType0</option>
+            </select>
           <div class="errors">
             <% if(locals.errors && errors.user_type_id) { %>
               <%= errors.user_type_id.msg %>
                 <% } %>
           </div>
-          <div id="userTypeError" class="errors-front">
-
-          </div>
           </p>
+
           <p>
             <label for="user-image">Imagen:</label>
             <input type="file" id="avatar" name="avatar">
@@ -92,12 +95,14 @@
                 <% } %>
           </div>
           </p>
+
           <p class="botonesregister">
             <button type="reset" class="botonRegister">Borrar</button>
             <button type="submit" class="botonRegister">Enviar</button>
           </p>
         </form>
       </main>
+
       <%- include('./partials/footer.ejs') %>
 
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"

@@ -126,13 +126,28 @@ const controller = {
    },
 
    update: (req, res) => {
+      const resultValidation = validationResult(req);
+      if (resultValidation.errors.length > 0) {
+         return res.render('userEdit', {
+            user: req.session.userLogged,
+            errors: resultValidation.mapped(),
+         });
+      }
+
+      // hacer verificacion con contraseña anterior, como requisito,  para poder modificarla
+
       db.User.update(
          {
             full_name: req.body.full_name,
-            adress_id: req.body.adress_id,
-            avatar: req.file.filename,
-            phone: req.body.phone,
             email: req.body.email,
+            password: bcryptjs.hashSync(req.body.password, 10),
+            phone: req.body.phone,
+            adress_id: req.body.adress_id,
+
+            // eliminar cuando este creado superusuario
+            user_type_id: req.body.user_type_id,
+
+            avatar: req.file.filename,
          },
          {
             where: {
@@ -141,10 +156,14 @@ const controller = {
          }
       ).then(function () {
          req.session.userLogged.full_name = req.body.full_name;
-         req.session.userLogged.adress_id = req.body.adress_id;
-         req.session.userLogged.avatar = req.file.filename;
-         req.session.userLogged.phone = req.body.phone;
          req.session.userLogged.email = req.body.email;
+         req.session.userLogged.phone = req.body.phone;
+         req.session.userLogged.adress_id = req.body.adress_id;
+
+         // eliminar cuando este creado superusuario
+         req.session.userLogged.user_type_id = req.body.user_type_id;
+
+         req.session.userLogged.avatar = req.file.filename;
          return res.redirect('/users/userDetail');
       });
    },

@@ -6,9 +6,8 @@ const usersController = require('../controllers/userController');
 
 // Middlewares
 const upload = require('../middlewares/multerMiddlewareUsers');
-const validationsUserRegister = require('../middlewares/validateRegisterMiddleware');
+const validationsUserRegister = require('../middlewares/validateRegisterEditMiddleware');
 const validationsUserLogin = require('../middlewares/validateLoginMiddleware');
-// agregar validaciones de userEdit
 const guestMiddleware = require('../middlewares/guestMiddleware');
 const authMiddleware = require('../middlewares/authMiddleware');
 
@@ -16,7 +15,7 @@ const authMiddleware = require('../middlewares/authMiddleware');
 router.get('/register', guestMiddleware, usersController.register);
 
 // Procesar el registro
-router.post('/register', upload.single("avatar"), validationsUserRegister, usersController.processRegister);
+router.post('/register', upload.single('avatar'), validationsUserRegister, usersController.processRegister);
 
 // Formulario de login
 router.get('/login', guestMiddleware, usersController.login);
@@ -33,7 +32,7 @@ router.get('/userDetail', authMiddleware, usersController.userDetail);
 
 router.get('/edit', authMiddleware, usersController.edit);
 
-router.put('/edit', upload.single("image"), authMiddleware, usersController.update);
+router.put('/edit', upload.single('image'), validationsUserRegister, authMiddleware, usersController.update);
 
 router.delete('/delete', authMiddleware, usersController.delete);
 
