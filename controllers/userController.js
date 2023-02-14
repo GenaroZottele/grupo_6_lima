@@ -67,7 +67,6 @@ const controller = {
          let enteredMail = req.body.email;
          for (let i = 0; i < users.length; i++) {
             if (enteredMail == users[i].dataValues.email) {
-               let selectedUser = users[i];
                let enteredPassword = bcryptjs.compareSync(req.body.password, users[i].password);
                if (enteredPassword) {
                   delete users[i].password;
