@@ -15,34 +15,38 @@ const controller = {
             errors: resultValidation.mapped(),
          });
       }
-
-      // Verificacion mail en base de datos, hacerlo async (ver si es factible en middleware)
-
-      /* db.User.findAll()		  
-		   .then(function(users){
-			let enteredMail = req.body.email;
-			console.log(enteredMail);
-			for (let i=0; i < users.length; i++) {
-			    if (enteredMail == users[i].dataValues.email) {
-					console.log(users[i].dataValues.email);					
-					return res.render('login', {
-						errors: {email: {msg: 'Este email ya está registrado',
-						oldData: req.body}},												
-					})									        				    
-			    }}
-			})   */
-
-      let userToCreate = {
-         full_name: req.body.full_name,
-         email: req.body.email,
-         password: bcryptjs.hashSync(req.body.password, 10),
-         phone: req.body.phone,
-         adress_id: req.body.adress_id,
-         user_type_id: req.body.user_type_id,
-         avatar: req.file.filename,
+      let enteredMail = req.body.email;
+      const register = async () => {
+         try {
+            const user = await db.User.findAll({
+               where: {
+                  email: enteredMail,
+               },
+            });
+            let foundUser = user[0].dataValues.email;
+            if (enteredMail == foundUser) {
+               return res.render('register', {
+                  errors: { email: { msg: 'El email ingresado ya existe' } },
+                  oldData: req.body,
+               });
+            } else {
+               let userToCreate = {
+                  full_name: req.body.full_name,
+                  email: req.body.email,
+                  password: bcryptjs.hashSync(req.body.password, 10),
+                  phone: req.body.phone,
+                  adress_id: req.body.adress_id,
+                  user_type_id: req.body.user_type_id,
+                  avatar: req.file.filename,
+               };
+               db.User.create(userToCreate);
+               return res.redirect('/users/login');
+            }
+         } catch (error) {
+            console.log('error');
+         }
       };
-      db.User.create(userToCreate);
-      return res.redirect('/users/login');
+      register();
    },
 
    login: (req, res) => {
@@ -59,24 +63,6 @@ const controller = {
             errors: resultValidation.mapped(),
          });
       }
-
-      // Verificacion mail en base de datos, hacerlo async (ver si es factible en middleware)
-
-      /* db.User.findAll()		  
-		   .then(function(users){
-			let enteredMail = req.body.email;
-			console.log(enteredMail);
-			for (let i=0; i < users.length; i++) {
-			    if (enteredMail == users[i].dataValues.email) {
-					console.log(users[i].dataValues.email);					
-					return res.render('register', {
-				    errors:{email: {
-						errors: 'El email ' + enteredMail + ' no está registrado', 
-				        oldData: req.body}}											
-					})									        				    
-			    }}
-			}) */
-
       db.User.findAll().then(function (users) {
          let enteredMail = req.body.email;
          for (let i = 0; i < users.length; i++) {
@@ -86,11 +72,9 @@ const controller = {
                if (enteredPassword) {
                   delete users[i].password;
                   req.session.userLogged = users[i];
-
                   if (req.body.rememberUser) {
                      res.cookie('userEmail', req.body.email, { maxAge: 1000 * 60 * 60 });
                   }
-
                   return res.redirect('/users/profile');
                } else {
                   return res.render('login', {
@@ -127,9 +111,7 @@ const controller = {
       const resultValidation = validationResult(req);
       if (resultValidation.errors.length > 0) {
          return res.render('userEdit', {
-            // no manda el oldDate al form o el form no lo capta de manera correcta
             oldData: req.body,
-
             user: req.session.userLogged,
             errors: resultValidation.mapped(),
          });

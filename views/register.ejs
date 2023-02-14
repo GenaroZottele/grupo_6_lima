@@ -18,7 +18,7 @@
 
           <p>
             <label>Nombre y apellido:</label>
-            <input type="text" id="full_name" name="full_name" value="<%= locals.oldDate ? oldData.full_name : null %>">
+            <input type="text" id="full_name" name="full_name" value="<%= locals.oldData ? oldData.full_name : null %>">
           <div class="errors">
             <% if(locals.errors && errors.full_name) { %>
               <%= errors.full_name.msg %>
@@ -31,7 +31,7 @@
 
           <p>
             <label>E-mail:</label>
-            <input type="email" id="email" name="email" value="<%= locals.oldDate ? oldData.email : null %>">
+            <input type="email" id="email" name="email" value="<%= locals.oldData ? oldData.email : null %>">
           <div class="errors">
             <% if(locals.errors && errors.email) { %>
               <%= errors.email.msg %>
@@ -44,7 +44,7 @@
           <p>
             <label>Contraseña:</label>
             <input type="password" id="password" name="password"
-              value="<%= locals.oldDate ? oldData.password : null %>">
+              value="<%= locals.oldData ? oldData.password : null %>">
           <div class="errors">
             <% if(locals.errors && errors.password) { %>
               <%= errors.password.msg %>
@@ -56,7 +56,7 @@
           </p>
           <p>
             <label>Celular:</label>
-            <input type="number" name="phone" value="<%= locals.oldDate ? oldData.phone : null %>">
+            <input type="number" name="phone" value="<%= locals.oldData ? oldData.phone : null %>">
           <div class="errors">
             <% if(locals.errors && errors.phone) { %>
               <%= errors.phone.msg %>

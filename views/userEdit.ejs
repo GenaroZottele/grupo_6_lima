@@ -19,12 +19,10 @@
                             <%=user.full_name%>
                         </h2>
 
-                        <!-- revisar todos los oldData ya que el form no los toma o no los envia el controller -->
-
                         <p>
                             <label class="formlabel">Nombre y apellido:</label>
                             <input type="text" name="full_name"
-                                value="<%= locals.oldDate ? oldData.full_name : user.full_name %>">
+                                value="<%= locals.oldData ? oldData.full_name : user.full_name %>">
                         <div class="errors">
                             <% if(locals.errors && errors.full_name) { %>
                                 <%= errors.full_name.msg %>
@@ -33,7 +31,7 @@
 
                         <p>
                             <label class="formlabel">email:</label>
-                            <input type="email" name="email" value="<%= locals.oldDate ? oldData.email : user.email %>">
+                            <input type="email" name="email" value="<%= locals.oldData ? oldData.email : user.email %>">
                         <div class="errors">
                             <% if(locals.errors && errors.email) { %>
                                 <%= errors.email.msg %>
@@ -53,7 +51,7 @@
 
                         <p>
                             <label class="formlabel">Celular:</label>
-                            <input type="text" name="phone" value="<%= locals.oldDate ? oldData.phone : user.phone %>">
+                            <input type="text" name="phone" value="<%= locals.oldData ? oldData.phone : user.phone %>">
                         <div class="errors">
                             <% if(locals.errors && errors.full_name) { %>
                                 <%= errors.full_name.msg %>
