@@ -2,57 +2,113 @@
 <html lang="en">
 
 <%- include('./partials/head', {pageTitle: 'LIMA' }); %>
-    <%- include('./partials/header', {pageTitle: 'LIMA' }); %>
 
+    <body>
 
-        <body>
-            <div class="perfil">INFORMACIÓN DE USUARIO
+        <%- include('./partials/header', {pageTitle: 'LIMA' }); %>
 
+            <main class="mainregister">
 
-                <form action="/users/edit?_method=PUT" method="POST" class="formPanel" enctype="multipart/form-data">
-                    <section class="newProduct">
+                <div class="perfil">INFORMACIÓN DE USUARIO
+
+                    <form action="/users/edit?_method=PUT" method="POST" class="formPanel"
+                        enctype="multipart/form-data">
+
                         <h2>MODIFICAR DATOS</h2>
                         <h2>
                             <%=user.full_name%>
                         </h2>
+
+                        <!-- revisar todos los oldData ya que el form no los toma o no los envia el controller -->
+
                         <p>
-                            <label class="formlabel">Nombre:</label>
-                        </p>
-                        <p>
-                            <input type="text" name="full_name" value="<%=user.full_name%>">
-                        </p>
-                        <p>
-                            <label class="formlabel">Direccion:</label>
-                        </p>
-                        <p>
-                            <input type="text" name="adress_id" value="<%=user.adress_id%>">
-                        </p>
-                        <p>
-                            <label class="formlabel" for="image">Imagen:</label>
-                        </p>
-                        <p>
-                            <input type="file" accept=".jpg, .png, .jpeg" name="image">
-                        </p>
-                        <p>
-                            <label class="formlabel">Phone:</label>
-                        <p>
-                            <input type="text" name="phone" value="<%=user.phone%>">
-                        </p>
+                            <label class="formlabel">Nombre y apellido:</label>
+                            <input type="text" name="full_name"
+                                value="<%= locals.oldDate ? oldData.full_name : user.full_name %>">
+                        <div class="errors">
+                            <% if(locals.errors && errors.full_name) { %>
+                                <%= errors.full_name.msg %>
+                                    <% } %>
+                        </div>
+
                         <p>
                             <label class="formlabel">email:</label>
-                        <p>
-                            <input type="email" name="email" value="<%=user.email%>">
+                            <input type="email" name="email" value="<%= locals.oldDate ? oldData.email : user.email %>">
+                        <div class="errors">
+                            <% if(locals.errors && errors.email) { %>
+                                <%= errors.email.msg %>
+                                    <% } %>
+                        </div>
                         </p>
+
+                        <p>
+                            <label>Contraseña:</label>
+                            <input type="password" name="password">
+                        <div class="errors">
+                            <% if(locals.errors && errors.password) { %>
+                                <%= errors.password.msg %>
+                                    <% } %>
+                        </div>
+                        </p>
+
+                        <p>
+                            <label class="formlabel">Celular:</label>
+                            <input type="text" name="phone" value="<%= locals.oldDate ? oldData.phone : user.phone %>">
+                        <div class="errors">
+                            <% if(locals.errors && errors.full_name) { %>
+                                <%= errors.full_name.msg %>
+                                    <% } %>
+                        </div>
+                        <p>
+
+                        <p>
+                            <label>adress_id:</label>
+                            <select name="adress_id" id="adress_id">
+                                <option value="1">adressId1</option>
+                                <option value="2">adressId2</option>
+                            </select>
+                        <div class="errors">
+                            <% if(locals.errors && errors.adress_id) { %>
+                                <%= errors.adress_id.msg %>
+                                    <% } %>
+                        </div>
+                        </p>
+
+                        <p>
+                            <label>user_type_id:</label>
+                            <select name="user_type_id" id="user_type_id">
+                                <option value="1">userTypeRegular</option>
+                                <option value="2">userTypeSuper</option>
+                            </select>
+                        <div class="errors">
+                            <% if(locals.errors && errors.user_type_id) { %>
+                                <%= errors.user_type_id.msg %>
+                                    <% } %>
+                        </div>
+                        </p>
+
+                        <p>
+                            <label class="formlabel" for="image">Imagen:</label>
+                            <input type="file" accept=".jpg, .png, .jpeg" name="image">
+                        <div class="errors">
+                            <% if(locals.errors && errors.image) { %>
+                                <%= errors.image.msg %>
+                                    <% } %>
+                        </div>
+                        </p>
+
                         <p class="botonesPanel">
                             <button type="reset" class="botonPanel">BORRAR</button>
                             <button type="submit" class="botonPanel">MODIFICAR</button>
                         </p>
-                    </section>
-                </form>
-            </div>
-        </body>
 
+                    </form>
+                </div>
 
-        <%- include('partials/footer') %>
+            </main>
+
+            <%- include('partials/footer') %>
+
+    </body>
 
 </html>
