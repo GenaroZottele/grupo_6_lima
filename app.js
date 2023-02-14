@@ -6,8 +6,9 @@ const session = require('express-session');
 const methodOverrride = require('method-override');
 
 //middlewares
-const logMiddleware = require('./middlewares/logMiddleware');
 const userLoggedMiddleware = require('./middlewares/userLoggedMiddleware');
+/* const logMiddleware = require('./middlewares/logMiddleware'); */
+/* const logDBMiddleware = require('./middlewares/logDBMiddleware'); */
 
 //routes
 const mainRoutes = require('./routes/mainRoutes');
@@ -28,7 +29,8 @@ app.use(
 
 app.use(cookieParser());
 app.use(userLoggedMiddleware);
-app.use(logMiddleware);
+/* app.use(logMiddleware); */
+/* app.use(logDBMiddleware); */
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(methodOverrride('_method'));
