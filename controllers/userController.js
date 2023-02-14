@@ -4,9 +4,7 @@ const db = require('../src/database/models/index');
 
 const controller = {
    register: (req, res) => {
-      // sacar oldData y llevarlo al form
-      let oldData = req.body;
-      return res.render('register', { oldData: oldData });
+      return res.render('register');
    },
 
    processRegister: (req, res) => {
@@ -129,6 +127,9 @@ const controller = {
       const resultValidation = validationResult(req);
       if (resultValidation.errors.length > 0) {
          return res.render('userEdit', {
+            // no manda el oldDate al form o el form no lo capta de manera correcta
+            oldData: req.body,
+
             user: req.session.userLogged,
             errors: resultValidation.mapped(),
          });

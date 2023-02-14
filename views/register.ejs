@@ -18,7 +18,7 @@
 
           <p>
             <label>Nombre y apellido:</label>
-            <input type="text" id="full_name" name="full_name" value="<%=oldData.full_name%>">
+            <input type="text" id="full_name" name="full_name" value="<%= locals.oldDate ? oldData.full_name : null %>">
           <div class="errors">
             <% if(locals.errors && errors.full_name) { %>
               <%= errors.full_name.msg %>
@@ -31,7 +31,7 @@
 
           <p>
             <label>E-mail:</label>
-            <input type="email" id="email" name="email" value="<%=oldData.email%>">
+            <input type="email" id="email" name="email" value="<%= locals.oldDate ? oldData.email : null %>">
           <div class="errors">
             <% if(locals.errors && errors.email) { %>
               <%= errors.email.msg %>
@@ -43,7 +43,8 @@
           </p>
           <p>
             <label>Contraseña:</label>
-            <input type="password" id="password" name="password" value="<%=oldData.password%>">
+            <input type="password" id="password" name="password"
+              value="<%= locals.oldDate ? oldData.password : null %>">
           <div class="errors">
             <% if(locals.errors && errors.password) { %>
               <%= errors.password.msg %>
@@ -55,7 +56,7 @@
           </p>
           <p>
             <label>Celular:</label>
-            <input type="number" name="phone" value="<%=oldData.phone%>">
+            <input type="number" name="phone" value="<%= locals.oldDate ? oldData.phone : null %>">
           <div class="errors">
             <% if(locals.errors && errors.phone) { %>
               <%= errors.phone.msg %>
@@ -66,7 +67,8 @@
           <p>
             <label>adress_id:</label>
             <select name="adress_id" id="adress_id">
-              <option value="<%=oldData.adress_id%>">adressId0</option>
+              <option value="1">adressId1</option>
+              <option value="2">adressId2</option>
             </select>
             <% if(locals.errors && errors.adress_id) { %>
               <%= errors.adress_id.msg %>
@@ -77,7 +79,8 @@
           <p>
             <label>user_type_id:</label>
             <select name="user_type_id" id="user_type_id">
-              <option value="<%=oldData.user_type_id%>">userType0</option>
+              <option value="1">userTypeRegular</option>
+              <option value="2">userTypeSuper</option>
             </select>
           <div class="errors">
             <% if(locals.errors && errors.user_type_id) { %>
