@@ -9,6 +9,14 @@ module.exports = [
       .bail()
       .isEmail()
       .withMessage('Debes escribir un formato de correo válido'),
+
+   /* .custom(async email => {
+            const value = await isEmailInUse(email);
+            if (value) {
+                throw new Error('El mail ya existe');
+            }
+            }) */
+
    body('password').notEmpty().withMessage('Tienes que escribir una contraseña').isLength({ min: 8 }),
    body('phone').notEmpty().withMessage('Tienes que escribir un telefono'),
    body('adress_id').notEmpty().withMessage('Tienes que escribir una dirección'),

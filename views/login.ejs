@@ -16,10 +16,10 @@
           <div class="login">
             <div class="containerLogin">
               <label class="pure-material-textfield-outlined">
-                <input type="email" id="email" placeholder=" "
-                value="<%= locals.oldDate ? oldData.email : null %>">
+                <input type="email" id="email" name="email" placeholder=" "
+                  value="<%= locals.oldDate ? oldData.email : null %>">
                 <span>Correo electrónico</span>
-              </label>        
+              </label>
               <div class="errorsLogin">
                 <% if(locals.errors && errors.email) { %>
                   <%= errors.email.msg %>
@@ -28,13 +28,13 @@
               <div id="emailError" class="errors-front">
               </div>
             </div>
-            
+
             <div class="containerLogin">
               <label class="pure-material-textfield-outlined">
                 <input type='password' id="password" name="password" placeholder=" "
-                value="<%= locals.oldDate ? oldData.password : null %>">
+                  value="<%= locals.oldDate ? oldData.password : null %>">
                 <span>Contraseña</span>
-              </label>  
+              </label>
               <div class="errorsLogin">
                 <% if(locals.errors && errors.password) { %>
                   <%= errors.password.msg %>
@@ -49,7 +49,7 @@
                 <span>Recordarme</span>
               </label>
             </div>
-            
+
             <div class="loginbutton">
               <button class="pure-material-button-contained">Iniciar Sesión</button>
               <button class="pure-material-button-contained">Cancelar</button>
