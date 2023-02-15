@@ -15,7 +15,10 @@ const controller = {
             errors: resultValidation.mapped(),
          });
       }
-      let enteredMail = req.body.email;
+
+      // ------------------------------------------------------------------------------------------- //
+
+      /* let enteredMail = req.body.email;
       const register = async () => {
          try {
             const user = await db.User.findAll({
@@ -24,29 +27,39 @@ const controller = {
                },
             });
             let foundUser = user[0].dataValues.email;
+
+            console.log(foundUser);
+
             if (enteredMail == foundUser) {
                return res.render('register', {
                   errors: { email: { msg: 'El email ingresado ya existe' } },
                   oldData: req.body,
                });
-            } else {
-               let userToCreate = {
-                  full_name: req.body.full_name,
-                  email: req.body.email,
-                  password: bcryptjs.hashSync(req.body.password, 10),
-                  phone: req.body.phone,
-                  adress_id: req.body.adress_id,
-                  user_type_id: req.body.user_type_id,
-                  avatar: req.file.filename,
-               };
-               db.User.create(userToCreate);
-               return res.redirect('/users/login');
+            }
+
+            if (enteredMail != foundUser) {
+               
             }
          } catch (error) {
             console.log('error');
          }
       };
       register();
+      */
+
+      // ------------------------------------------------------------------------------------------- //
+
+      let userToCreate = {
+         full_name: req.body.full_name,
+         email: req.body.email,
+         password: bcryptjs.hashSync(req.body.password, 10),
+         phone: req.body.phone,
+         adress_id: req.body.adress_id,
+         user_type_id: req.body.user_type_id,
+         avatar: req.file.filename,
+      };
+      db.User.create(userToCreate);
+      return res.redirect('/users/login');
    },
 
    login: (req, res) => {
