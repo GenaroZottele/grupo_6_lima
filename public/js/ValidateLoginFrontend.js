@@ -1,5 +1,5 @@
 window.addEventListener('load',function(){
-    const formulario = document.querySelector('#formularioRegister');
+    const formulario = document.querySelector('#formularioLogin');
     // function submitForm(e) {
 
         let errores = {}

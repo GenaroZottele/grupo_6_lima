@@ -11,46 +11,55 @@
       <main class="mainlogin">
 
         <div id="errors">
-
         </div>
 
         <form id="formularioLogin" action='/users/login' method="POST" class="formLogin">
 
           <div class="login">
-            <p>
-              <label>Correo electrónico:</label>
-              <input type="text" id="email" name="email">
-            <div class="errors">
-              <% if(locals.errors && errors.email) { %>
-                <%= errors.email.msg %>
-                  <% } %>
+            <div class="containerLogin">
+              <!-- <label class="labelLogin">Correo electrónico:</label> -->
+              <!-- <input class="inputLogin" type="text" id="email" name="email"> -->
+              <label class="pure-material-textfield-outlined">
+                <input type="email" id="email" placeholder=" "
+                value="<%= locals.oldDate ? oldData.email : null %>">
+                <span>Correo electrónico</span>
+              </label>        
+              <div class="errorsLogin">
+                <% if(locals.errors && errors.email) { %>
+                  <%= errors.email.msg %>
+                    <% } %>
+              </div>
+              <div id="emailError" class="errors-front">
+              </div>
             </div>
-            <div id="emailError" class="errors-front">
-
+            
+            <div class="containerLogin">
+              <!-- <label class="labelLogin">Contraseña:</label> -->
+              <!-- <input class="inputLogin" type="password" id="password" name="password"> -->
+              <label class="pure-material-textfield-outlined">
+                <input type='password' id="password" name="password" placeholder=" "
+                value="<%= locals.oldDate ? oldData.password : null %>">
+                <span>Contraseña</span>
+              </label>  
+              <div class="errorsLogin">
+                <% if(locals.errors && errors.password) { %>
+                  <%= errors.password.msg %>
+                    <% } %>
+              </div>
+              <div id="passwordError" class="errors-front-login">
+              </div>
             </div>
-            </p>
-            <p>
-              <label class="loginLabel">Contraseña:</label>
-              <input class="loginInput" type="password" id="password" name="password">
-            <div class="errors">
-              <% if(locals.errors && errors.password) { %>
-                <%= errors.password.msg %>
-                  <% } %>
+            <div>
+              <label class="pure-material-checkbox">
+                <input type="checkbox">
+                <span>Recordarme</span>
+              </label>
             </div>
-            <div id="passwordError" class="errors-front">
-
+            
+            <div class="loginbutton">
+              <button class="pure-material-button-contained">Iniciar Sesión</button>
+              <button class="pure-material-button-contained">Cancelar</button>
             </div>
-            </p>
-
-            <p>
-              <label class="loginLabel">Recordarme</label>
-              <input type="checkbox" name="rememberUser">
-            </p>
-
-            <p class="botoneslogin">
-              <button type="submit" class="botonLogin">Iniciar sesión</button>
-              <button type="reset" class="botonLogin"> Cancelar</button>
-            </p>
           </div>
         </form>
       </main>
