@@ -1,7 +1,7 @@
 module.exports = {
   "development": {
     "username": "root",
-    "password": "Simple3005",
+    "password": root,
     "database": "limadb",
     "host": "127.0.0.1",
     "dialect": "mysql"
