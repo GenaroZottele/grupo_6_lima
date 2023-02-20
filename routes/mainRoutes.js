@@ -10,6 +10,4 @@ router.get('/nosotros', mainController.nosotros);
 
 router.get('/contacto', mainController.contacto);
 
-router.get('/productCart', mainController.productCart);
-
 module.exports = router;

@@ -83,7 +83,14 @@ const controller = {
         }
       })
       res.redirect('/products');
-    }
+    },
+
+    productCart : (req, res) => {
+      db.Product.findByPk(req.params.id)
+         .then(function(product) {
+      return res.render('productCart', {product: product});
+      })
+  } 
     
 }
 
