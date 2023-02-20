@@ -238,6 +238,7 @@ main section h2 {
    justify-content: space-around;
    padding: 25px;
 }
+
 .card {
    display: flex;
    flex-direction: column;
@@ -264,12 +265,16 @@ main section h2 {
    justify-content: center;
    width: 20%;
 }
+
 .description {
    display: flex;
    flex-direction: column;
    justify-content: center;
    padding: 15px;
    width: 35%;
+}
+p.priceIndex{
+   color: black;
 }
 .botones a {
    text-decoration: none;
@@ -1201,10 +1206,12 @@ main.detalle{
    text-align:justify;
    padding: 20px;
 }
+.pago form h2, i, p{
+   color: #efefef;
+}
 .formulariopago {
    display: flex;
    flex-direction: column;
-   width: 100%;
    line-height: 30px;
    font-size: 22px;
    color: #efefef;
