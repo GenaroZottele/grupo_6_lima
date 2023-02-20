@@ -7,12 +7,13 @@
         <%- include('./partials/header') %>
 
             <main>
+                
                 <article class="card">
-                    <img src="/images/Caesar.jpeg" alt="Ensalada Caesar">
+                    <img id='imageDetail' src="/images/products/<%=product.image%> " alt="...">
                     <div class="description">
-                        <h2>Ensalada Caesar</h2>
-                        <p clas="price">Precio $ 750.00</p>
-                        <p>Ingredientes: Pollo, queso, tomates cherry, mix de verdes, croutons y aderezo caesar.</p>
+                        <h2><%=product.name%></h2>
+                        <p clas="price"><%=product.price%>$</p>
+                        <p><%=product.description%></p>
                     </div>
                 </article>
 
