@@ -5,7 +5,7 @@ module.exports = [
 	
 	body('name')
 	    .notEmpty().withMessage('Tienes que escribir un nombre')
-		.isLength({ min: 5 }).withMessage('El nombre debe tener al menos 5 caracteres'),
+		.isLength({ min: 4 }).withMessage('El nombre debe tener al menos 4 caracteres'),
 	body('description')
 		.notEmpty().withMessage('Tienes que escribir una descripción')
 		.isLength({ min: 20 }).withMessage('El nombre debe tener al menos 20 caracteres'),	

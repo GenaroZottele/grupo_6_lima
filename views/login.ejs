@@ -14,6 +14,7 @@
         <form id="formularioLogin" action='/users/login' method="POST" class="formLogin">
 
           <div class="login">
+            
             <div class="containerLogin">
               <label class="pure-material-textfield-outlined">
                 <input type="email" id="email" name="email" placeholder=" "
@@ -43,6 +44,7 @@
               <div id="passwordError" class="errors-front-login">
               </div>
             </div>
+            
             <div>
               <label class="pure-material-checkbox">
                 <input type="checkbox">
@@ -50,12 +52,15 @@
               </label>
             </div>
 
-            <div class="loginbutton">
-              <button class="pure-material-button-contained">Iniciar Sesión</button>
-              <button class="pure-material-button-contained">Cancelar</button>
+            <div class="loginButton">
+              <button type='submit' class="pure-material-button-contained">Iniciar Sesión</button>
+              <button type='reset' class="pure-material-button-contained">Cancelar</button>
             </div>
+
           </div>
+
         </form>
+
       </main>
       <%- include('./partials/footer') %>
   </body>

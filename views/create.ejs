@@ -2,104 +2,112 @@
 <html lang="en">
 
 <%- include('./partials/head.ejs', {pageTitle: 'Create' }); %>
-
-    <!-- Cambiar las <p> por <div> para mejor formateo y corregirlo en CSS    --------------------------------------------------------------------->
-
     <body>
-
+        
         <%- include('./partials/header.ejs') %>
 
             <main class="mainPanel">
-                <form action="/products/create" method="POST" class="formPanel" enctype="multipart/form-data"
-                    id="formularioCreate">
+                
+                <form action="/products/create" method="POST" class="formPanel" enctype="multipart/form-data" id="formularioCreate">
+                    
                     <section class="newProduct">
                         <h2>CREAR PRODUCTO</h2>
-                        <p>
-                            <label class="formlabel">Nombre:</label>
-                        </p>
-                        <p>
-                            <input type="text" name="name" id="name" value="<%=oldData.name%>">
-                        <div class="errors">
-                            <% if(locals.errors && errors.name) { %>
-                                <%= errors.name.msg %>
-                                    <% } %>
+                        
+                        <div class="containerCreate">
+                            <label class="pure-material-textfield-outlined">
+                                <input type="text" name="name" id="name" value="<%=oldData.name%>" placeholder=" ">
+                                <span>Nombre</span>
+                            </label>
+                            <div class="errors">
+                                <% if(locals.errors && errors.name) { %>
+                                    <%= errors.name.msg %>
+                                        <% } %>
+                            </div>
+                            <div id="nameError" class="errors-front">
+                            </div>
                         </div>
-                        <div id="nameError" class="errors-front">
 
+                        <div class="containerCreate">
+                            <label class="pure-material-textfield-outlined">
+                                <input type="text" name="description" id="description" value="<%=oldData.description%>" placeholder=" ">
+                                <span>Descripción</span>
+                              </label>
+                            <div class="errors">
+                                <% if(locals.errors && errors.description) { %>
+                                    <%= errors.description.msg %>
+                                        <% } %>
+                            </div>
+                            <div id="descriptionError" class="errors-front">
+                            </div>
                         </div>
-                        </p>
-                        <p>
-                            <label class="formlabel">Descripcion:</label>
-                        </p>
-                        <p>
-                            <input type="text" name="description" id="description" value="<%=oldData.description%>">
-                        <div class="errors">
-                            <% if(locals.errors && errors.description) { %>
-                                <%= errors.description.msg %>
-                                    <% } %>
+                        
+                        <div class="containerCreate">
+                            <label class="pure-material-textfield-outlined">
+                                <input type="file" accept=".jpg, .png, .jpeg" name="image" id="image" placeholder=" ">
+                                <span>Imagen</span>
+                            </label>
+                            <div class="errors">
+                                <% if(locals.errors && errors.image) { %>
+                                    <%= errors.image.msg %>
+                                        <% } %>
+                            </div>
                         </div>
-                        <div id="descriptionError" class="errors-front">
 
+                        <div class="containerCreate">
+                            <label class="pure-material-textfield-outlined">
+                                <input type="text" name="status" id="status" value="<%=oldData.status%>" placeholder=" ">
+                                <span>Estado</span>
+                            </label>
+                            <div class="errors">
+                                <% if(locals.errors && errors.status) { %>
+                                    <%= errors.status.msg %>
+                                        <% } %>
+                            </div>
                         </div>
-                        </p>
-                        <p>
-                            <label class="formlabel" for="image">Imagen:</label>
-                        </p>
-                        <p>
-                            <input type="file" accept=".jpg, .png, .jpeg" name="image" id="image">
-                        <div class="errors">
-                            <% if(locals.errors && errors.image) { %>
-                                <%= errors.image.msg %>
-                                    <% } %>
+
+                        <div class="containerCreate">
+                            <label class="pure-material-textfield-outlined">
+                                <input type="text" name="price" id="price" value="<%=oldData.price%>" placeholder=" ">
+                                <span>Precio</span>
+                            </label>
+                            <div class="errors">
+                                <% if(locals.errors && errors.price) { %>
+                                    <%= errors.price.msg %>
+                                        <% } %>
+                            </div>
                         </div>
-                        </p>
-                        <p>
-                            <label class="formlabel">Estado:</label>
-                        </p>
-                        <p>
-                            <input type="text" name="status" id="status" value="<%=oldData.status%>">
-                        <div class="errors">
-                            <% if(locals.errors && errors.status) { %>
-                                <%= errors.status.msg %>
-                                    <% } %>
+                        
+                        <div>
+                            <label class="pure-material-textfield-outlined">
+                                <input type="text" name="discount" id="discount" value="<%=oldData.discount%>" placeholder=" ">
+                                <span>Descuento</span>
+                            </label>
+                            <div class="errors">
+                                <% if(locals.errors && errors.discount) { %>
+                                    <%= errors.discount.msg %>
+                                        <% } %>
+                            </div>
                         </div>
-                        </p>
-                        <p>
-                            <label class="formlabel">Precio:</label>
-                        <p>
-                            <input type="text" name="price" id="price" value="<%=oldData.price%>">
-                        <div class="errors">
-                            <% if(locals.errors && errors.price) { %>
-                                <%= errors.price.msg %>
-                                    <% } %>
+
+                        <div class="botonesPanel">
+                            <button type='submit' class="pure-material-button-contained">Enviar</button>
+                            <button type='reset' class="pure-material-button-contained">Borrar</button>
                         </div>
-                        </p>
-                        <p>
-                            <label class="formlabel">Descuento:</label>
-                        <p>
-                            <input type="text" name="discount" id="discount" value="<%=oldData.discount%>">
-                        <div class="errors">
-                            <% if(locals.errors && errors.discount) { %>
-                                <%= errors.discount.msg %>
-                                    <% } %>
-                        </div>
-                        </p>
-                        <p class="botonesPanel">
-                            <button type="reset" class="botonPanel">Borrar</button>
-                            <button type="submit" class="botonPanel">Crear</button>
-                        </p>
+
                     </section>
+
                 </form>
+
             </main>
 
             <%- include('./partials/footer.ejs') %>
 
 
-                <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
                     integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
                     crossorigin="anonymous">
-                    </script>
-                <script src="/js/ValidateCreateFrontend.js"></script>
+            </script>
+            <script src="/js/ValidateCreateFrontend.js"></script>
     </body>
 
 </html>

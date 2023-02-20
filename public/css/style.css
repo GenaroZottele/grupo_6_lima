@@ -195,7 +195,7 @@ Nosotros:
    flex-direction: column;
    width: 100%;
    height: 70vh;
-   background: url(../images/IMG_2939.JPG);
+   background: url(../images/ensaladaDelDia.JPG);
    background-position: center;
    background-repeat: no-repeat;
    background-size: cover;
@@ -419,9 +419,14 @@ p {
 .errors-front-login {
    color: yellow;
 }
+#DejanosConsulta{
+   color:#efefef;
+}
 
-
-/* COMIENZA CHOCLO CSS LABEL LOGIN */
+.formPanel#Eliminar{
+   bottom: 80px;
+}
+/* COMIENZA CHOCLO CSS LABEL E INPUTS FORMULARIOS */
 .pure-material-textfield-outlined {
    --pure-material-safari-helper1: rgb(var(--pure-material-primary-rgb, 53, 126, 83));
    position: relative;
@@ -635,6 +640,9 @@ p {
    margin: 20px;
 }
 
+.pure-material-button-contained#Eliminar{
+   background-color: red;
+}
 .pure-material-button-contained::-moz-focus-inner {
    border: none;
 }
@@ -712,7 +720,7 @@ p {
 .pure-material-button-contained:disabled::after {
    opacity: 0;
 }
-/* FINALIZA CHOCLO DE CSS PARA BOTONES LOGGIN */
+/* FINALIZA CHOCLO DE CSS PARA BOTONES FORMULARIOS */
 
 /* COMIENZA CHOCLO DE CSS PARA CHECKBOX */
 .pure-material-checkbox {
@@ -858,6 +866,37 @@ p {
 /* FINALIZA CHOCLO DE CSS PARA CHECKBOX */
 
 
+/* Carousel */
+* {
+   -webkit-box-sizing: border-box;
+   box-sizing: border-box;
+ }
+ 
+ body { font-family: sans-serif; }
+ 
+ .gallery {
+   background: #EEE;
+ }
+ 
+ .gallery-cell {
+   width: 66%;
+   height: 200px;
+   margin-right: 10px;
+   background: #8C8;
+   counter-increment: gallery-cell;
+ }
+ 
+ /* cell number */
+ .gallery-cell:before {
+   display: block;
+   text-align: center;
+   content: counter(gallery-cell);
+   line-height: 200px;
+   font-size: 80px;
+   color: white;
+ }
+/* Fin carousel */
+
 
 
 
@@ -885,7 +924,8 @@ p {
 /* } */
 /* --------------------------------------------------register--------------------------------------------------------------- */
 .formregister {
-   position: relative;
+   /* position: relative; */
+   justify-content: center;
    border: #007200 solid 1px;
    border-radius: 15px;
    width: 50%;
@@ -925,7 +965,7 @@ main form p label {
 .mainregister {
    display: flex;
    height: 800px;
-   justify-content: space-around;
+   justify-content: center;
    align-items: center;
    background-position: center;
    background-repeat: no-repeat;
@@ -994,8 +1034,8 @@ main form p label {
    border-radius: 15px;
    width: 40%;
    text-align: center;
-   padding: 20px;
-   padding-left: 40px;
+   padding: 40px;
+   padding-left: 20px;
    background-color: black;
    opacity: 85%;
 }
@@ -1055,27 +1095,39 @@ main form p label {
    }
 }
 /* -----------------------------------------------------productDetailMain ----------------------------------------------------------------- */
-.sectionDetailMain{
-   width: 100%;
-   display: flex;
-   justify-content: center;
-}
-.divDetailMain{
-   width: 90%;
+main.detalle{
    display: flex;
    flex-direction: column;
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-image: url(../images/AtunesVert.JPG);
    justify-content: center;
-   border: solid 1px #86d66c;
-   border-radius: 10px;
-   padding: 15px;
-   margin-top: 15px;
-   margin-bottom: 15px;
-
+   height: 1000px;
 }
-.divInfoDetailMain{
-   width: 100%;
-   border-top: solid 1px #86d66c;
-   margin-top: 10px;
+.singleItem{
+   display: flex;
+   flex-direction: row;
+   border-radius: 26px;
+   border: solid 2px #357e53;
+   width: 60%;
+   align-items: center;
+   justify-content: space-around;
+   margin: auto;
+   background:rgba(0, 0, 0, 0.5)
+}
+.left-set{
+   display: flex;
+   margin-left: -10px;
+   margin-right: -200px;   
+}
+.right-set{
+   justify-content: flex-start;
+}
+
+.left-set img{
+   width: 70%;
+   padding: 15px;
 }
 
 /* ------------------------------------------------------- media ----------------------------------------------------------------- */
