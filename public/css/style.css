@@ -938,6 +938,9 @@ p {
 .pure-material-textfield-outlined {
    display: flex;
 }
+.containerLogin {
+   display: grid; 
+}
 main form p input {
    opacity: 0.5;
    width: 100%;
