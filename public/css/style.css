@@ -935,6 +935,9 @@ p {
    background-color: black;
    opacity: 85%;
 }
+.pure-material-textfield-outlined {
+   display: flex;
+}
 main form p input {
    opacity: 0.5;
    width: 100%;
