@@ -6,59 +6,49 @@
     <body>
         <%- include('./partials/header') %>
 
-            <main>
+            <main class="mainCart">
                 
-                <article class="card">
-                    <img id='imageDetail' src="/images/products/<%=product.image%> " alt="...">
-                    <div class="description">
-                        <h2><%=product.name%></h2>
-                        <p clas="price"><%=product.price%>$</p>
-                        <p><%=product.description%></p>
+                <div class="singleItem">
+                    <div class="left-set">
+                       <img id='imageDetail' src="/images/products/<%=product.image%> " alt="...">
                     </div>
-                </article>
+                    <div class="right-set">
+                      <div class="name"><h2><%=product.name%></h2></div>
+                      <div class="price"><h1><%=product.price%>$</h1></div>
+                      <div class="descriptionCart"><p><%=product.description%></p></div>
+                      <label class="pure-material-textfield-outlined">
+                        <input type="text" name="text" placeholder=" ">
+                        <span>Observación</span>
+                      </label>
+                    </div>
+                </div>
 
-                <section class="box ingredientes">
-                    <form class="ingredientes1">
-                        <p>Personalizar ingredientes</p>
-
-                        <label>Pollo<input type="checkbox" name="palta" id="palta" value="palta"></label>
-                        <label>Queso<input type="checkbox" name="cebolla" id="cebolla" value="cebolla"></label>
-                        <label>Tomates cherry<input type="checkbox" name="jamon" id="jamon" value="jamon"></label>
-                        <label>Croutons<input type="checkbox" name="quesorallado" id="quesorallado"
-                                value="quesorallado"></label>
-                    </form>
-
-                    <form class="ingredientes2">
-                        <p>Agregar ingredientes</p>
-                        <label for="ingredientes">Elige ingredientes para agregar:</label>
-                        <select name="ingrediente" id="ingrediente">
-                            <option value="Palta">Palta</option>
-                            <option value="Cebolla">Cebolla</option>
-                            <option value="Quesorallado">Queso rallado</option>
-                            <option value="Jamon">Jamon</option>
-                            <option value="Apio">Apio</option>
-                            <option value="Manzanaverde">Manzana Verde</option>
-                        </select>
-                    </form>
-                </section>
-
-                <section>
-                    <div class="pago">
-                        <h2>Pagar</h2>
-                        <i class="fa-solid fa-cart-shopping"></i>
+                 <div class="pago">
                         <form>
-                            <p>Elija medio de pago</p>
+                            <i class="fa-solid fa-cart-shopping"> Elija medio de pago </i>
+                            <br>
+                            <br>
                             <div class="formulariopago">
-                                <label><i class="fa-regular fa-dollar-sign"></i> Efectivo<input type="radio" name=""
-                                        id="Cash" value="Cash"></label>
-                                <label><i class="fa-brands fa-cc-mastercard"></i> Mastercard<input type="radio"
-                                        name="Mastercard" id="Mastercard" value="Mastercard"></label>
-                                <label><i class="fa-brands fa-cc-visa"></i> Visa<input type="radio" name="Visa"
-                                        id="Visa" value="Visa"></label>
-                                <label><i class="fa-brands fa-cc-paypal"></i> PayPal<input type="radio" name="PayPal"
-                                        id="PayPal" value="PayPal"></label>
-                                <label><i class="fa-brands fa-cc-apple-pay"></i> Apple Pay<input type="radio"
-                                        name="ApplePay" id="ApplePay" value="ApplePay"></label>
+                                <label>
+                                    <i class="fa-regular fa-dollar-sign"> Efectivo</i>
+                                    <input class="pure-material-checkbox" id="Cash" value="Cash" type="checkbox">
+                                </label>
+                                <label>
+                                    <i class="fa-brands fa-cc-mastercard"> Mastercard</i>
+                                    <input class="pure-material-checkbox" type="checkbox" name="Mastercard" id="Mastercard" value="Mastercard">
+                                </label>
+                                <label>
+                                    <i class="fa-brands fa-cc-visa"> Visa</i>
+                                    <input class="pure-material-checkbox" type="checkbox" name="Visa" id="Visa" value="Visa">
+                                </label>
+                                <label>
+                                    <i class="fa-brands fa-cc-paypal"> Pay-Pal</i>
+                                    <input class="pure-material-checkbox" type="checkbox" name="PayPal" id="PayPal" value="PayPal">
+                                </label>
+                                <label>
+                                    <i class="fa-brands fa-cc-apple-pay"> ApplePay</i>
+                                    <input class="pure-material-checkbox" type="checkbox" name="ApplePay" id="ApplePay" value="ApplePay">
+                                </label>
                             </div>
 
                             <div class="formulariopago2">

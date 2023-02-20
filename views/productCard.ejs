@@ -18,14 +18,12 @@
                             </div>
                             <div class="boxRight">
 
-                                <p> Descripción: <%=products[i].description %>
-                                </p>
+                                <p> Descripción: <%=products[i].description %></p>
                                 <div>
-                                    <h3>$<%=products[i].price %>
-                                    </h3>
+                                    <h3>$<%=products[i].price %></h3>
                                 </div>
                                 <p>
-                                    <a href="./productCart/<%=products[i].id %>" class="agregarCarrito">Agregar al carrito
+                                    <a href="./products/productCart/<%=products[i].id %>" class="agregarCarrito">Agregar al carrito
                                         <i class="fa-solid fa-cart-shopping"></i></a>
                                     <a href="./products/productDetail/<%=products[i].id %> "
                                         class="agregarCarrito">Detalle</a>

@@ -5,13 +5,12 @@
     <%- include('./partials/header', {pageTitle: 'LIMA' }); %>
 
         <body>
-            <div class="perfil">HOLA <%= user.full_name %></label>
-                    <img src="/images/avatars/<%=user.avatar %>" width="400">
-                    <br>
-                    <label class="perfil">
-                        <%= user.email %>
-                    </label>
-                    <label class="perfil"><a href='/users/userDetail'>Ver información de usuario</a></label>
+            <div class="perfil">
+                <label>Hola! <%= user.full_name %>!</label>
+                <img src="/images/avatars/<%=user.avatar %>" width="400">
+                <br>
+                <label class="perfil"><%= user.email %></label>
+                <label class="perfil"><a href='/users/userDetail'>Ver información de usuario</a></label>
             </div>
         </body>
         <%- include('partials/footer') %>

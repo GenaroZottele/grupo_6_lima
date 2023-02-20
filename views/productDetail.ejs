@@ -11,68 +11,12 @@
              <img id='imageDetail' src="/images/products/<%=product.image%> " alt="...">
           </div>
           <div class="right-set">
-            <div class="name"><h2><%=product.name%></div></h2>
-            <div class="price"><%=product.price%>$</div>
-            <div><p><%=product.description%></p></div>
-            <a href="/productCart" class="agregarCarrito">Agregar al carrito <i class="fa-solid fa-cart-shopping"></i></a>
+            <div class="name"><h2><%=product.name%></h2></div>
+            <div class="price"><h1><%=product.price%>$</h1></div>
+            <div class="descriptionCart"><p><%=product.description%></p></div>
+            <a href="../productCart/<%=product.id%>" class="agregarCarrito">Agregar al carrito <i class="fa-solid fa-cart-shopping"></i></a>
           </div>
         </div>
-
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        <!-- <section class="sectionDetailMain"> -->
-          <!-- <div class="divDetailMain"> -->
-            
-            <!-- <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel"> -->
-              <!-- <div class="carousel-inner"> -->
-                <!-- <div class="carousel-item active"> -->
-                  <!-- <img src="/images/products/<%=product.image%> " class="d-block w-100" alt="..."> -->
-                <!-- </div> -->
-              <!-- </div> -->
-<!--  -->
-              <!-- <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" -->
-                <!-- data-bs-slide="prev"> -->
-                <!-- <span class="carousel-control-prev-icon" aria-hidden="true"></span> -->
-                <!-- <span class="visually-hidden">Previous</span> -->
-              <!-- </button> -->
-              <!--  -->
-              <!-- <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" -->
-                <!-- data-bs-slide="next"> -->
-                <!-- <span class="carousel-control-next-icon" aria-hidden="true"></span> -->
-                <!-- <span class="visually-hidden">Next</span> -->
-              <!-- </button> -->
-            <!-- </div> -->
-            <!--  -->
-            <!-- <div class="divInfoDetailMain"> -->
-              <!-- <h2> -->
-                <!-- <%=product.name%> -->
-              <!-- </h2> -->
-              <!-- <div> -->
-                <!-- <%=product.description%> -->
-              <!-- </div> -->
-              <!-- <div> -->
-                <!-- <h3> -->
-                  <!-- <%=product.price%>$ -->
-                <!-- </h3> -->
-              <!-- </div> -->
-              <!-- <p><a href="/productCart" class="agregarCarrito">Agregar al carrito <i class="fa-solid fa-cart-shopping"></a></i></p> -->
-            <!-- </div> -->
-          
-          <!-- </div> -->
-        <!-- </section> -->
       </main>
       <%- include('./partials/footer') %>
   </body>
