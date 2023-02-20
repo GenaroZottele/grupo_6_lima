@@ -111,7 +111,8 @@ No se como manejar ésta situación -->
 
           <div class="containerRegister">
             <label class="pure-material-textfield-outlined">
-              <input type="file" id="avatar" name="avatar" placeholder=" ">
+              <input type="file" id="avatar" placeholder=" " name="avatar"
+              value="<%= locals.oldData ? oldData.image : null %>">
               <span>Imagen</span>
             </label>
             <br>

@@ -6,47 +6,27 @@
     <body>
         <%- include('./partials/header') %>
 
-            <main>
+            <main class="mainCart">
                 
-                <article class="card">
-                    <img id='imageDetail' src="/images/products/<%=product.image%> " alt="...">
-                    <div class="description">
-                        <h2><%=product.name%></h2>
-                        <p clas="price"><%=product.price%>$</p>
-                        <p><%=product.description%></p>
+                <div class="singleItem">
+                    <div class="left-set">
+                       <img id='imageDetail' src="/images/products/<%=product.image%> " alt="...">
                     </div>
-                </article>
-
-                <section class="box ingredientes">
-                    <form class="ingredientes1">
-                        <p>Personalizar ingredientes</p>
-
-                        <label>Pollo<input type="checkbox" name="palta" id="palta" value="palta"></label>
-                        <label>Queso<input type="checkbox" name="cebolla" id="cebolla" value="cebolla"></label>
-                        <label>Tomates cherry<input type="checkbox" name="jamon" id="jamon" value="jamon"></label>
-                        <label>Croutons<input type="checkbox" name="quesorallado" id="quesorallado"
-                                value="quesorallado"></label>
-                    </form>
-
-                    <form class="ingredientes2">
-                        <p>Agregar ingredientes</p>
-                        <label for="ingredientes">Elige ingredientes para agregar:</label>
-                        <select name="ingrediente" id="ingrediente">
-                            <option value="Palta">Palta</option>
-                            <option value="Cebolla">Cebolla</option>
-                            <option value="Quesorallado">Queso rallado</option>
-                            <option value="Jamon">Jamon</option>
-                            <option value="Apio">Apio</option>
-                            <option value="Manzanaverde">Manzana Verde</option>
-                        </select>
-                    </form>
-                </section>
-
-                <section>
-                    <div class="pago">
-                        <h2>Pagar</h2>
-                        <i class="fa-solid fa-cart-shopping"></i>
+                    <div class="right-set">
+                      <div class="name"><h2><%=product.name%></h2></div>
+                      <div class="price"><h1><%=product.price%>$</h1></div>
+                      <div class="descriptionCart"><p><%=product.description%></p></div>
+                      <label class="pure-material-textfield-outlined">
+                        <input type="text" name="text" placeholder=" ">
+                        <span>Observación</span>
+                      </label>
+                    </div>
+                </div>
+                
+                 <div class="pago">
                         <form>
+                            <h2>Pagar</h2>
+                            <i class="fa-solid fa-cart-shopping"></i>
                             <p>Elija medio de pago</p>
                             <div class="formulariopago">
                                 <label><i class="fa-regular fa-dollar-sign"></i> Efectivo<input type="radio" name=""

@@ -344,7 +344,7 @@ p {
    text-decoration: none;
    font-family: 'Roboto', sans-serif;
    color: black;
-   background-color: white;
+   background-color: transparent;
    padding: 10px;
    border: dashed 2px #357e53;
    text-align: center;
@@ -359,7 +359,8 @@ p {
    margin-top: 30px;
 }
 .agregarCarrito:hover {
-   color: #357e53;
+   background-color: rgb(53, 126, 83, 0.4);
+   color: white;
 }
 .ingredientes {
    display: flex;
@@ -865,63 +866,6 @@ p {
 }
 /* FINALIZA CHOCLO DE CSS PARA CHECKBOX */
 
-
-/* Carousel */
-* {
-   -webkit-box-sizing: border-box;
-   box-sizing: border-box;
- }
- 
- body { font-family: sans-serif; }
- 
- .gallery {
-   background: #EEE;
- }
- 
- .gallery-cell {
-   width: 66%;
-   height: 200px;
-   margin-right: 10px;
-   background: #8C8;
-   counter-increment: gallery-cell;
- }
- 
- /* cell number */
- .gallery-cell:before {
-   display: block;
-   text-align: center;
-   content: counter(gallery-cell);
-   line-height: 200px;
-   font-size: 80px;
-   color: white;
- }
-/* Fin carousel */
-
-
-
-
-
-
-
-
-/* .botonLogin { */
-   /* text-decoration: none; */
-   /* font-family: 'Roboto', sans-serif; */
-   /* color: black; */
-   /* opacity: 0.5; */
-   /* background-color: #86d66c; */
-   /* padding: 10px; */
-   /* border: dashed 2px #357e53; */
-   /* text-align: center; */
-   /* display: inline; */
-   /* justify-items: center; */
-   /* align-items: center; */
-   /* align-content: center; */
-   /* border-radius: 5px; */
-/* } */
-/* .botonLogin:hover { */
-   /* opacity: 1; */
-/* } */
 /* --------------------------------------------------register--------------------------------------------------------------- */
 .formregister {
    /* position: relative; */
@@ -1120,6 +1064,7 @@ main.detalle{
    align-items: center;
    justify-content: space-around;
    margin: auto;
+   margin-top: 200px;
    background:rgba(0, 0, 0, 0.5)
 }
 .left-set{
@@ -1128,12 +1073,26 @@ main.detalle{
    margin-right: -200px;   
 }
 .right-set{
+   position: relative;
+   right: 60px;
    justify-content: flex-start;
 }
 
-.left-set img{
-   width: 70%;
-   padding: 15px;
+#imageDetail{
+   width: 50%;
+   padding: 40px;
+}
+.name{
+   color: #efefef;
+   position: relative;
+}
+.price{
+   color: #efefef;
+   position: relative;
+}
+.descriptionCart{
+   color: #efefef;
+   position: relative;
 }
 
 /* ------------------------------------------------------- media ----------------------------------------------------------------- */
@@ -1202,50 +1161,45 @@ main.detalle{
    }
 }
 /* --------------------------------------------------productCart--------------------------------------------------------------- */
-.ingredientes1 {
-   display: flex;
-   flex-direction: row;
-   padding: 15px;
-   justify-content: center;
+.mainCart{
    display: flex;
    flex-direction: column;
-   justify-content: center;
-   align-items: center;
-   border-radius: 15px;
-   border: solid 1px #007200;
-   width: 90%;
-   padding: 15px;
-   font-size: 22px;
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-image: url(../images/Cart1.JPG);
+   height: 100%;
+   
 }
-.ingredientes2 {
-   display: flex;
-   flex-direction: row;
-   padding: 15px;
-   justify-content: center;
+.cardCart {
    display: flex;
    flex-direction: column;
-   justify-content: center;
-   align-items: center;
-   text-align: center;
-   border-radius: 15px;
-   border: solid 1px #007200;
-   width: 90%;
    padding: 15px;
-   font-size: 22px;
+   background: transparent;
+   justify-content: center;
+   width: 100%;
+}
+.cardCart img {
+   border-radius: 5%;
+   border-radius: 5%;
+   display: flex;
+   justify-content: center;
+   width: 20%;
 }
 .pago {
-   position: relative;
-   top: 20%;
-   border: #007200 solid 1px;
-   border-radius: 15px;
-   width: 100%;
-   text-align: center;
-   padding: 20px;
    display: flex;
    flex-direction: column;
-   justify-content: space-between;
-   flex-direction: column;
+   border-radius: 26px;
+   border: solid 2px #357e53;
+   width: 30%;
    align-items: center;
+   margin: auto;
+   margin-bottom: 100px;
+   margin-top: 150px;
+   background:rgba(0, 0, 0, 0.5);
+   position: relative;
+   text-align:justify;
+   padding: 20px;
 }
 .formulariopago {
    display: flex;
@@ -1253,12 +1207,13 @@ main.detalle{
    width: 100%;
    line-height: 30px;
    font-size: 22px;
+   color: #efefef;
 }
 .formulariopago2 {
    display: flex;
    flex-direction: row;
    font-family: 'Roboto', sans-serif;
-   color: black;
+   color: #efefef;
    padding: 10px;
    text-align: center;
    align-content: center;
