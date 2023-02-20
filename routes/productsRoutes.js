@@ -16,6 +16,9 @@ router.post('/create', upload.single("image"), validateCreateEditProduct, produc
  // Detail de un producto
 router.get('/productDetail/:id', productsController.detail);
 
+//Carrito de un producto
+router.get('/productCart/:id', productsController.productCart);
+
 // Edicion productos (muestra form)
 router.get('/edit/:id', productsController.edit);
 
