@@ -1275,6 +1275,10 @@ color: black;
       padding: 20px;
       padding-right: 180px;
       margin-left: 15px;
+      background: #4d8b5f;  /* fallback for old browsers */
+      background: -webkit-linear-gradient(to right, #56B4D3, #4d8b5f);  /* Chrome 10-25, Safari 5.1-6 */
+      background: linear-gradient(to right, #a4b5ba, #4d8b5f); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+   
    
       
    }
@@ -1283,15 +1287,27 @@ color: black;
       color: black;
       text-decoration: overline;
       font-weight: revert;
-      background: #7F7FD5;  /* fallback for old browsers */
-      background: -webkit-linear-gradient(to right, #91EAE4, #86A8E7, #7F7FD5);  /* Chrome 10-25, Safari 5.1-6 */
-      background: linear-gradient(to right, #91EAE4, #86A8E7, #7F7FD5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+      background: #4d8b5f;  /* fallback for old browsers */
+      background: -webkit-linear-gradient(to right, #56B4D3, #4d8b5f);  /* Chrome 10-25, Safari 5.1-6 */
+      background: linear-gradient(to right, #a4b5ba, #4d8b5f); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
       display: flex;
       flex-direction: column;
    
       
    }
    
+
+   .nosotros2 {
+      display: block;
+      font-family: Georgia, 'Times New Roman', Times, serif;
+      border-right: 4px solid;
+      width: 90%;
+
+      animation: typing 2s steps(12), blink .5s infinite step-end alternate;
+      overflow: hidden;
+      
+   }
+
    .h3 .nosotros {
 
    margin-top: 10px;
@@ -1308,13 +1324,22 @@ color: black;
       padding-left: 100px;
       
    }
+
+
+   
 .carrousel {
    display: flex;
    width: 100%;
    overflow-x: scroll;
    scroll-snap-type: x mandatory;
+}
+   .carrousel:hover {
+      -webkit-transform: rotateY(180deg);
+      -webkit-transform-style: preserve-3d;
+      transform: rotateY(180deg);
+      transform-style: preserve-3d;}
    
- }
+
    
 .carrousel img {
    width: 50%;
@@ -1348,6 +1373,14 @@ color: black;
    0% {background: #348F50}
    50% {background: #2ab052}
    100%{background: #1c9b42}
+}
+
+@keyframes typing {
+   from {width: 0}
+}
+
+@keyframes blink {
+   50% {border-color: transparent;}
 }
 
 /* } */
