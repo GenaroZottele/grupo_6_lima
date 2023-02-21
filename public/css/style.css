@@ -56,8 +56,9 @@ Nosotros:
    border-radius: 5px;
    padding: 5px;
    text-align: center;
-   background: #b8d8be;  /* fallback for old browsers */
-   background: -webkit-linear-gradient(to right, #91EAE4, #86A8E7, #7F7FD5);  /* Chrome 10-25, Safari 5.1-6 */
+   background: #4d8b5f;  /* fallback for old browsers */
+   background: -webkit-linear-gradient(to right, #56B4D3, #4d8b5f);  /* Chrome 10-25, Safari 5.1-6 */
+   background: linear-gradient(to right, #a4b5ba, #4d8b5f); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
    
 }
 .headerMenu :hover {
@@ -220,18 +221,20 @@ Nosotros:
    margin-top: 10px;
    font-weight: 500;
    padding: 5px;
-   background: #7F7FD5;  /* fallback for old browsers */
-   background: -webkit-linear-gradient(to right, #91EAE4, #86A8E7, #7F7FD5);  /* Chrome 10-25, Safari 5.1-6 */
-   background: linear-gradient(to right, #91EAE4, #86A8E7, #7F7FD5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+   background: #348F50;  /* fallback for old browsers */
+   background: -webkit-linear-gradient(to right, #56B4D3, #348F50);  /* Chrome 10-25, Safari 5.1-6 */
+   background: linear-gradient(to right, #56B4D3, #348F50); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+   
 
 }
 .ensaladaDelDia p {
    margin-left: 15px;
    color: white;
    padding: 5px;
-   background: #7F7FD5;  /* fallback for old browsers */
-   background: -webkit-linear-gradient(to right, #91EAE4, #86A8E7, #7F7FD5);  /* Chrome 10-25, Safari 5.1-6 */
-   background: linear-gradient(to right, #91EAE4, #86A8E7, #7F7FD5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+   background: #348F50;  /* fallback for old browsers */
+   background: -webkit-linear-gradient(to right, #56B4D3, #348F50);  /* Chrome 10-25, Safari 5.1-6 */
+   background: linear-gradient(to right, #56B4D3, #348F50); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
    animation-name: mianimacion;
    animation-duration: 4s;
 }
@@ -245,9 +248,9 @@ Nosotros:
    font-weight: 500;
    padding: 15px;
    border-radius: 10px;
-   background: #7F7FD5;  /* fallback for old browsers */
-   background: -webkit-linear-gradient(to right, #91EAE4, #86A8E7, #7F7FD5);  /* Chrome 10-25, Safari 5.1-6 */
-   background: linear-gradient(to right, #91EAE4, #86A8E7, #7F7FD5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+   background: #348F50;  /* fallback for old browsers */
+   background: -webkit-linear-gradient(to right, #56B4D3, #348F50);  /* Chrome 10-25, Safari 5.1-6 */
+   background: linear-gradient(to right, #56B4D3, #348F50); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
    animation-name: animacioncards;
    animation-duration: 8s;
    animation-delay: 2s;
@@ -1265,12 +1268,14 @@ color: black;
 /* @media screen and (max-width: 385px) { */
   
    .nosotres {
-      background-image: url(../images/arroz.jpg);
+     
       justify-content: center;
       background-position: inherit;
       background-size: cover;
       padding: 20px;
       padding-right: 180px;
+      margin-left: 15px;
+   
       
    }
    .nosotros {
@@ -1278,17 +1283,37 @@ color: black;
       color: black;
       text-decoration: overline;
       font-weight: revert;
+      background: #7F7FD5;  /* fallback for old browsers */
+      background: -webkit-linear-gradient(to right, #91EAE4, #86A8E7, #7F7FD5);  /* Chrome 10-25, Safari 5.1-6 */
+      background: linear-gradient(to right, #91EAE4, #86A8E7, #7F7FD5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+      display: flex;
+      flex-direction: column;
+   
+      
+   }
+   
+   .h3 .nosotros {
+
+   margin-top: 10px;
+   font-weight: 500;
+   padding: 5px;
+   background: #7F7FD5;  /* fallback for old browsers */
+   background: -webkit-linear-gradient(to right, #91EAE4, #86A8E7, #7F7FD5);  /* Chrome 10-25, Safari 5.1-6 */
+   background: linear-gradient(to right, #91EAE4, #86A8E7, #7F7FD5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
    }
    .ulsucursales {
       color: black;
       text-align: left;
       padding-left: 100px;
+      
    }
 .carrousel {
    display: flex;
    width: 100%;
    overflow-x: scroll;
    scroll-snap-type: x mandatory;
+   
  }
    
 .carrousel img {
@@ -1313,16 +1338,16 @@ color: black;
 /*------------------------------------------------------------------@keyframes------------------------------------------------------------------------ */
 
 @keyframes mianimacion {
-   0% {background: #7F7FD5}
-   50% {background: #5677c0}
-   100%{background: #7F7FD5}
+   0% {background: #348F50}
+   50% {background: #2ab052}
+   100%{background: #1c9b42}
 }
 
 
 @keyframes animacioncards {
-   0% {background: #7F7FD5}
-   50% {background: #5677c0}
-   100%{background: #7F7FD5}
+   0% {background: #348F50}
+   50% {background: #2ab052}
+   100%{background: #1c9b42}
 }
 
 /* } */
