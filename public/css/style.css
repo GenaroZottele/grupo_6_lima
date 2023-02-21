@@ -195,7 +195,7 @@ Nosotros:
    flex-direction: column;
    width: 100%;
    height: 70vh;
-   background: url(../images/ensaladaDelDia.JPG);
+   background: url(../images/Pokes.JPG);
    background-position: center;
    background-repeat: no-repeat;
    background-size: cover;
@@ -1088,7 +1088,6 @@ main.detalle{
    padding: 40px;
 }
 .name{
-   color: #efefef;
    position: relative;
 }
 .price{
@@ -1105,6 +1104,7 @@ main.detalle{
 .fa-cart-shopping {
 color: black;
 }
+
 .detail {
    height: 100vh;
    justify-content: space-around;
