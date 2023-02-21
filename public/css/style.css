@@ -320,7 +320,7 @@ p {
    align-items: center;
    align-content: center;
    border-radius: 26px;
-   border: solid 1px gray;
+   border: solid 3px gray;
    width: 100%;
    margin-bottom: 20px;
 }
@@ -1096,8 +1096,14 @@ main.detalle{
    position: relative;
 }
 .descriptionCart{
-   color: #efefef;
+   color: black;
    position: relative;
+}
+.detail p {
+   color: black;
+}
+.fa-cart-shopping {
+color: black;
 }
 .detail {
    height: 100vh;
@@ -1154,7 +1160,7 @@ main.detalle{
       align-items: center;
       align-content: center;
       border-radius: 26px;
-      border: solid 1px gray;
+      border: solid 3px gray;
       width: 70%;
       height: 400px;
       margin: auto;
@@ -1241,8 +1247,7 @@ main.detalle{
   
    .nosotres {
       background-image: url(../images/nosotres2.png);
-      height: 100vh;
-      justify-content: space-around;
+      justify-content: center;
       background-position: center;
       background-size: cover;
       padding: 20px;
@@ -1250,6 +1255,7 @@ main.detalle{
       
    }
    .nosotros {
+      justify-content: center;
       color: black;
       text-decoration: overline;
       font-weight: revert;
@@ -1259,6 +1265,20 @@ main.detalle{
       text-align: left;
       padding-left: 100px;
    }
+.carrousel {
+   display: flex;
+   width: 100%;
+   overflow-x: scroll;
+   scroll-snap-type: x mandatory;
+ }
+   
+.carrousel img {
+   width: 50%;
+   object-fit: cover;
+   scroll-snap-align: center;
+   align-content: center;
+   
+ } 
 
 /*-------------------------------------------------------------------userProfile------------------------------------------------------------------------ */
 .perfil {
