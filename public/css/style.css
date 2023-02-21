@@ -17,7 +17,7 @@ Nosotros:
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
 * {
-   font-family: 'Roboto', sans-serif;
+   font-family: Georgia, 'Times New Roman', Times, serif,
 }
 
 .errors {
@@ -33,11 +33,12 @@ Nosotros:
    position: relative;
    display: flex;
    height: 70px;
-   font-family: 'Roboto', sans-serif;
+   font-family: 'Georgia', sans-serif;
    background-color: white;
    padding: 10px;
    border: solid 2px #357e53;
    width: 100%;
+   
 }
 .headerMenu {
    display: flex;
@@ -45,16 +46,19 @@ Nosotros:
    justify-content: space-evenly;
    width: 100%;
    align-self: center;
+   
 }
 .headerMenu a {
    text-decoration: none;
-   color: #357e53;
-   font-family: 'Roboto', sans-serif;
-   font-size: 20px;
+   color: #151716;
+   font-family: 'Georgia', sans-serif;
+   font-size: 18px;
    border-radius: 5px;
-   border: black 1px solid;
    padding: 5px;
    text-align: center;
+   background: #b8d8be;  /* fallback for old browsers */
+   background: -webkit-linear-gradient(to right, #91EAE4, #86A8E7, #7F7FD5);  /* Chrome 10-25, Safari 5.1-6 */
+   
 }
 .headerMenu :hover {
    box-shadow: 0px 0px 15px #357e53;
@@ -113,7 +117,10 @@ Nosotros:
 /* ---------------------------- Footer---------------------------------------------------------------------------------------------- */
 .footer {
    width: 100%;
-   background-color: black;
+   background: #076585;  /* fallback for old browsers */
+   background: -webkit-linear-gradient(to right, #fff, #076585);  /* Chrome 10-25, Safari 5.1-6 */
+   background: linear-gradient(to right, #fff, #076585); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
 }
 .footer .footerMain {
    width: 100%;
@@ -138,7 +145,7 @@ Nosotros:
    color: white;
    margin-bottom: 25px;
    font-size: 20px;
-   font-family: 'Roboto';
+   font-family: 'Georgia';
 }
 .footer .footerMain .box p {
    color: #efefef;
@@ -203,22 +210,30 @@ Nosotros:
    align-items: flex-start;
    border: solid 1px #357e53;
    box-sizing: border-box;
+   
+   
+   
+   
 }
 .ensaladaDelDia h2 {
    margin-left: 15px;
    margin-top: 10px;
    font-weight: 500;
-   color: #357e53;
-   border: solid #357e53 2px;
-   background-color: black;
    padding: 5px;
+   background: #7F7FD5;  /* fallback for old browsers */
+   background: -webkit-linear-gradient(to right, #91EAE4, #86A8E7, #7F7FD5);  /* Chrome 10-25, Safari 5.1-6 */
+   background: linear-gradient(to right, #91EAE4, #86A8E7, #7F7FD5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
 }
 .ensaladaDelDia p {
    margin-left: 15px;
    color: white;
-   background-color: black;
-   border: #357e53 1px dashed;
    padding: 5px;
+   background: #7F7FD5;  /* fallback for old browsers */
+   background: -webkit-linear-gradient(to right, #91EAE4, #86A8E7, #7F7FD5);  /* Chrome 10-25, Safari 5.1-6 */
+   background: linear-gradient(to right, #91EAE4, #86A8E7, #7F7FD5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+   animation-name: mianimacion;
+   animation-duration: 4s;
 }
 /* -------------------------Main Index ----------------------------------------------------------------------------------- */
 .cards h2 {
@@ -228,11 +243,14 @@ Nosotros:
    margin-right: 15px;
    margin-top: 10px;
    font-weight: 500;
-   color: #357e53;
-   background-color: black;
-   border: #357e53 2px dotted;
    padding: 15px;
    border-radius: 10px;
+   background: #7F7FD5;  /* fallback for old browsers */
+   background: -webkit-linear-gradient(to right, #91EAE4, #86A8E7, #7F7FD5);  /* Chrome 10-25, Safari 5.1-6 */
+   background: linear-gradient(to right, #91EAE4, #86A8E7, #7F7FD5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+   animation-name: animacioncards;
+   animation-duration: 8s;
+   animation-delay: 2s;
 }
 main section h2 {
    justify-content: space-around;
@@ -282,7 +300,7 @@ p.priceIndex{
    color: black;
    background-color: white;
    padding: 10px;
-   border: dashed 2px #357e53;
+   border:  #357e53;
    text-align: center;
    display: inline;
    flex-direction: row;
@@ -1290,6 +1308,21 @@ color: black;
    color: green;
    border: 1px solid black;
    align-items: center;
+}
+
+/*------------------------------------------------------------------@keyframes------------------------------------------------------------------------ */
+
+@keyframes mianimacion {
+   0% {background: #7F7FD5}
+   50% {background: #5677c0}
+   100%{background: #7F7FD5}
+}
+
+
+@keyframes animacioncards {
+   0% {background: #7F7FD5}
+   50% {background: #5677c0}
+   100%{background: #7F7FD5}
 }
 
 /* } */
