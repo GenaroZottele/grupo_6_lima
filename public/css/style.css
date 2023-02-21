@@ -1329,7 +1329,7 @@ color: black;
    
 .carrousel {
    display: flex;
-   width: 100%;
+   width: 90%;
    overflow-x: scroll;
    scroll-snap-type: x mandatory;
 }
