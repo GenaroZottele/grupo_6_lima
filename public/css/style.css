@@ -1111,7 +1111,7 @@ color: black;
    display: inline-table;
    background-position: center;
    background-size: cover;
-   background-image: url(../images/lechuga2.png);
+   background-image: url(../images/nosotres2.png);
 }
 /* ------------------------------------------------------- media ----------------------------------------------------------------- */
 
@@ -1165,6 +1165,7 @@ color: black;
       height: 400px;
       margin: auto;
       margin-bottom: 20px;
+      backdrop-filter: blur(5px);
    }
    .boxLeft img {
       width: 35%;
@@ -1246,9 +1247,9 @@ color: black;
 /* @media screen and (max-width: 385px) { */
   
    .nosotres {
-      background-image: url(../images/nosotres2.png);
+      background-image: url(../images/arroz.jpg);
       justify-content: center;
-      background-position: center;
+      background-position: inherit;
       background-size: cover;
       padding: 20px;
       padding-right: 180px;
