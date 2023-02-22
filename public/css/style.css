@@ -258,6 +258,12 @@ Nosotros:
 main section h2 {
    justify-content: space-around;
    padding: 25px;
+   display: inline-block;
+   color: white;
+   margin: 0 0.5rem;
+   animation: bounce; /* referring directly to the animation's @keyframe declaration */
+   animation-duration: 2s; /* don't forget to set a duration! */
+
 }
 
 .card {
@@ -1109,7 +1115,10 @@ main.detalle{
    padding: 40px;
 }
 .name{
-   position: relative;
+   display: inline-block;
+   margin: 0 0.5rem;
+   animation: bounce;
+   animation-duration: 2s;
 }
 .price{
    color: #efefef;
