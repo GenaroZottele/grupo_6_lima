@@ -17,7 +17,7 @@ Nosotros:
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
 * {
-   font-family: 'Roboto', sans-serif;
+   font-family: Georgia, 'Times New Roman', Times, serif,
 }
 
 .errors {
@@ -31,34 +31,31 @@ Nosotros:
 /* ----------------------------HEADER-------------------------------------------------------------------------------------------------------------- */
 .navBar {
    display: flex;
-   width: 100%;
    height: 70px;
-   padding: 10px;
-   padding-left: 250px;
-   padding-right: 250px;
-   border: solid 2px #357e53;
+   font-family: 'Georgia', sans-serif;
    background-color: white;
-   font-family: 'Roboto', sans-serif;
-   justify-items: center;
-   text-align: center;
+   padding: 10px;
+   border: solid 2px #357e53;
+   width: 100%;
 }
 .headerMenu {
    display: flex;
    justify-content: space-evenly;
-   text-align: center;
-   align-content: center;
-   width: 60%;
-
+   width: 100%;
+   align-self: center;
 }
 .headerMenu a {
    text-decoration: none;
-   color: #357e53;
-   font-family: 'Roboto', sans-serif;
-   font-size: 20px;
+   color: #151716;
+   font-family: 'Georgia', sans-serif;
+   font-size: 18px;
    border-radius: 5px;
-   border: black 1px solid;
    padding: 5px;
    text-align: center;
+   background: #4d8b5f;  /* fallback for old browsers */
+   background: -webkit-linear-gradient(to right, #56B4D3, #4d8b5f);  /* Chrome 10-25, Safari 5.1-6 */
+   background: linear-gradient(to right, #a4b5ba, #4d8b5f); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+   
 }
 .headerMenu :hover {
    box-shadow: 0px 0px 15px #357e53;
@@ -117,7 +114,10 @@ Nosotros:
 /* ---------------------------- Footer---------------------------------------------------------------------------------------------- */
 .footer {
    width: 100%;
-   background-color: black;
+   background: #076585;  /* fallback for old browsers */
+   background: -webkit-linear-gradient(to right, #fff, #076585);  /* Chrome 10-25, Safari 5.1-6 */
+   background: linear-gradient(to right, #fff, #076585); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
 }
 .footer .footerMain {
    width: 100%;
@@ -142,7 +142,7 @@ Nosotros:
    color: white;
    margin-bottom: 25px;
    font-size: 20px;
-   font-family: 'Roboto';
+   font-family: 'Georgia';
 }
 .footer .footerMain .box p {
    color: #efefef;
@@ -199,7 +199,7 @@ Nosotros:
    flex-direction: column;
    width: 100%;
    height: 70vh;
-   background: url(../images/ensaladaDelDia.JPG);
+   background: url(../images/Pokes.JPG);
    background-position: center;
    background-repeat: no-repeat;
    background-size: cover;
@@ -207,22 +207,32 @@ Nosotros:
    align-items: flex-start;
    border: solid 1px #357e53;
    box-sizing: border-box;
+   
+   
+   
+   
 }
 .ensaladaDelDia h2 {
    margin-left: 15px;
    margin-top: 10px;
    font-weight: 500;
-   color: #357e53;
-   border: solid #357e53 2px;
-   background-color: black;
    padding: 5px;
+   background: #348F50;  /* fallback for old browsers */
+   background: -webkit-linear-gradient(to right, #56B4D3, #348F50);  /* Chrome 10-25, Safari 5.1-6 */
+   background: linear-gradient(to right, #56B4D3, #348F50); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+   
+
 }
 .ensaladaDelDia p {
    margin-left: 15px;
    color: white;
-   background-color: black;
-   border: #357e53 1px dashed;
    padding: 5px;
+   background: #348F50;  /* fallback for old browsers */
+   background: -webkit-linear-gradient(to right, #56B4D3, #348F50);  /* Chrome 10-25, Safari 5.1-6 */
+   background: linear-gradient(to right, #56B4D3, #348F50); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+   animation-name: mianimacion;
+   animation-duration: 4s;
 }
 /* -------------------------Main Index ----------------------------------------------------------------------------------- */
 .cards h2 {
@@ -232,15 +242,24 @@ Nosotros:
    margin-right: 15px;
    margin-top: 10px;
    font-weight: 500;
-   color: #357e53;
-   background-color: black;
-   border: #357e53 2px dotted;
    padding: 15px;
    border-radius: 10px;
+   background: #348F50;  /* fallback for old browsers */
+   background: -webkit-linear-gradient(to right, #56B4D3, #348F50);  /* Chrome 10-25, Safari 5.1-6 */
+   background: linear-gradient(to right, #56B4D3, #348F50); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+   animation-name: animacioncards;
+   animation-duration: 8s;
+   animation-delay: 2s;
 }
 main section h2 {
    justify-content: space-around;
    padding: 25px;
+   display: inline-block;
+   color: white;
+   margin: 0 0.5rem;
+   animation: bounce; /* referring directly to the animation's @keyframe declaration */
+   animation-duration: 2s; /* don't forget to set a duration! */
+
 }
 
 .card {
@@ -286,7 +305,7 @@ p.priceIndex{
    color: black;
    background-color: white;
    padding: 10px;
-   border: dashed 2px #357e53;
+   border:  #357e53;
    text-align: center;
    display: inline;
    flex-direction: row;
@@ -324,7 +343,7 @@ p {
    align-items: center;
    align-content: center;
    border-radius: 26px;
-   border: solid 1px gray;
+   border: solid 3px gray;
    width: 100%;
    margin-bottom: 20px;
 }
@@ -1092,18 +1111,34 @@ main.detalle{
    padding: 40px;
 }
 .name{
-   color: #efefef;
-   position: relative;
+   display: inline-block;
+   margin: 0 0.5rem;
+   animation: bounce;
+   animation-duration: 2s;
 }
 .price{
    color: #efefef;
    position: relative;
 }
 .descriptionCart{
-   color: #efefef;
+   color: black;
    position: relative;
 }
+.detail p {
+   color: black;
+}
+.fa-cart-shopping {
+color: black;
+}
 
+.detail {
+   height: 100vh;
+   justify-content: space-around;
+   display: inline-table;
+   background-position: center;
+   background-size: cover;
+   background-image: url(../images/nosotres2.png);
+}
 /* ------------------------------------------------------- media ----------------------------------------------------------------- */
 
 @media (max-width: 768px) {
@@ -1151,11 +1186,12 @@ main.detalle{
       align-items: center;
       align-content: center;
       border-radius: 26px;
-      border: solid 1px gray;
+      border: solid 3px gray;
       width: 70%;
       height: 400px;
       margin: auto;
       margin-bottom: 20px;
+      backdrop-filter: blur(5px);
    }
    .boxLeft img {
       width: 35%;
@@ -1235,81 +1271,88 @@ main.detalle{
 }
 /*-------------------------------------------------------------------Nosotros------------------------------------------------------------------------ */
 /* @media screen and (max-width: 385px) { */
-   .h1nosotros{
-      text-align: center;
-      color: white;
-      display: flex;
+  
+   .nosotres {
+     
       justify-content: center;
+      background-position: inherit;
+      background-size: cover;
+      padding: 20px;
+      padding-right: 180px;
       margin-left: 15px;
-      margin-right: 15px;
-      margin-top: 10px;
-      font-weight: bolder;
-      background-color: #357e53;
-      border: white 5px dotted;
-      padding: 15px;
-      border-radius: 10px;
-   }
-   .pnosotros{
-      text-align: center;
-      color: #007200;
-      margin: 20px;
-   }
-   .h2nosotros{
-      text-align: center;
-      color: black;
-      display: flex;
-      justify-content: center;
-      font-weight: bolder;
-      background-color: white;
-      border: #357e53 5px dotted;
-      border-radius: 10px;
-      margin-left: 15px;
-      margin-right: 15px;
-      margin-top: 10px;
-   }
-   .nosotros{
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      margin: 15px;
+      background: #4d8b5f;  /* fallback for old browsers */
+      background: -webkit-linear-gradient(to right, #56B4D3, #4d8b5f);  /* Chrome 10-25, Safari 5.1-6 */
+      background: linear-gradient(to right, #a4b5ba, #4d8b5f); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+   
+   
       
    }
-   .imagennosotros{
+   .nosotros {
+      justify-content: center;
+      color: black;
+      text-decoration: overline;
+      font-weight: revert;
+      background: #4d8b5f;  /* fallback for old browsers */
+      background: -webkit-linear-gradient(to right, #56B4D3, #4d8b5f);  /* Chrome 10-25, Safari 5.1-6 */
+      background: linear-gradient(to right, #a4b5ba, #4d8b5f); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
       display: flex;
-      padding: 20px;
-      margin: 15px;
-      box-sizing: border-box;
-      border-radius: 40px;
-      width: 50%;
-      align-content: center;
-      margin-right: 50px;
+      flex-direction: column;
+   
+      
    }
-   .imagennosotros2 {
-      display: flex;
-      padding: 20px;
-      margin: 15px;
-      box-sizing: border-box;
-      border-radius: 40px;
-      width: 30%;
-      align-content: center;
-      margin-right: 50px;
+   
+
+   .nosotros2 {
+      display: block;
+      font-family: Georgia, 'Times New Roman', Times, serif;
+      border-right: 4px solid;
+      width: 90%;
+
+      animation: typing 2s steps(12), blink .5s infinite step-end alternate;
+      overflow: hidden;
+      
    }
-   .descripcionos {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      margin: 15px;
-   }
-   .descripcionos2 {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      margin: 15px;
+
+   .h3 .nosotros {
+
+   margin-top: 10px;
+   font-weight: 500;
+   padding: 5px;
+   background: #7F7FD5;  /* fallback for old browsers */
+   background: -webkit-linear-gradient(to right, #91EAE4, #86A8E7, #7F7FD5);  /* Chrome 10-25, Safari 5.1-6 */
+   background: linear-gradient(to right, #91EAE4, #86A8E7, #7F7FD5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
    }
    .ulsucursales {
+      color: black;
       text-align: left;
       padding-left: 100px;
+      
    }
+
+
+   
+.carrousel {
+   display: flex;
+   width: 90%;
+   overflow-x: scroll;
+   scroll-snap-type: x mandatory;
+}
+   .carrousel:hover {
+      -webkit-transform: rotateY(180deg);
+      -webkit-transform-style: preserve-3d;
+      transform: rotateY(180deg);
+      transform-style: preserve-3d;}
+   
+
+   
+.carrousel img {
+   width: 50%;
+   object-fit: cover;
+   scroll-snap-align: center;
+   align-content: center;
+   
+ } 
 
 /*-------------------------------------------------------------------userProfile------------------------------------------------------------------------ */
 .perfil {
@@ -1320,6 +1363,29 @@ main.detalle{
    color: green;
    border: 1px solid black;
    align-items: center;
+}
+
+/*------------------------------------------------------------------@keyframes------------------------------------------------------------------------ */
+
+@keyframes mianimacion {
+   0% {background: #348F50}
+   50% {background: #2ab052}
+   100%{background: #1c9b42}
+}
+
+
+@keyframes animacioncards {
+   0% {background: #348F50}
+   50% {background: #2ab052}
+   100%{background: #1c9b42}
+}
+
+@keyframes typing {
+   from {width: 0}
+}
+
+@keyframes blink {
+   50% {border-color: transparent;}
 }
 
 /* } */

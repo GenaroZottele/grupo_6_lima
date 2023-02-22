@@ -19,6 +19,7 @@
   "homepage": "https://github.com/GenaroZottele/grupo_6_lima#readme",
   "dependencies": {
     "@material/button": "^14.0.0",
+    "animate.css": "^4.1.1",
     "bcrypt": "^5.1.0",
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.20.1",

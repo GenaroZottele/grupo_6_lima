@@ -64,5 +64,12 @@ _-------------------------------------------SéptimoSprint----------------------
 -  Ponernos al día con playground para sacarle el mejor provecho posible.
 -  Objetivo: finalizar el último sprint y cumplir con todas las entregas pautadas.
 
+_-------------------------------------------OctavoSprint-------------------------------------------------------------_/
 
+# Retrospectiva:
+
+-  Desafīo: encarar un proyecto de React.
+-  Trabajar en equipo para avanzar en la resolución de los desafíos pendientes.
+-  Ajustar los detalles faltantes que venimos arrastrando de sprint anteriores.
+-  Objetivo: finalizar la cursada con todos los trabajos aprobados.
 
