@@ -32,11 +32,13 @@ Nosotros:
 .navBar {
    display: flex;
    height: 70px;
-   font-family: 'Georgia', sans-serif;
-   background-color: white;
+   font-family: 'Roboto', sans-serif;
    padding: 10px;
-   border: solid 2px #357e53;
    width: 100%;
+   background: #FFEEEE;  /* fallback for old browsers */
+   background: -webkit-linear-gradient(to right, #DDEFBB, #FFEEEE);  /* Chrome 10-25, Safari 5.1-6 */
+   background: linear-gradient(to right, #DDEFBB, #FFEEEE); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
 }
 .headerMenu {
    display: flex;
@@ -47,7 +49,7 @@ Nosotros:
 .headerMenu a {
    text-decoration: none;
    color: #151716;
-   font-family: 'Georgia', sans-serif;
+   font-family: 'Roboto', sans-serif;
    font-size: 18px;
    border-radius: 5px;
    padding: 5px;
@@ -114,10 +116,11 @@ Nosotros:
 /* ---------------------------- Footer---------------------------------------------------------------------------------------------- */
 .footer {
    width: 100%;
-   background: #076585;  /* fallback for old browsers */
-   background: -webkit-linear-gradient(to right, #fff, #076585);  /* Chrome 10-25, Safari 5.1-6 */
-   background: linear-gradient(to right, #fff, #076585); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+   background: #232526;  /* fallback for old browsers */
+   background: -webkit-linear-gradient(to right, #414345, #232526);  /* Chrome 10-25, Safari 5.1-6 */
+   background: linear-gradient(to right, #414345, #232526); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
+   
 }
 .footer .footerMain {
    width: 100%;
@@ -238,6 +241,7 @@ Nosotros:
 .cards h2 {
    display: flex;
    justify-content: center;
+   font-family: 'Roboto', sans-serif;
    margin-left: 15px;
    margin-right: 15px;
    margin-top: 10px;
