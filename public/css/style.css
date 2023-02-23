@@ -164,10 +164,12 @@ Nosotros:
    border-radius: 10%;
 }
 .footer .copyright {
-   background-color: #87d66cd4;
    text-align: center;
    padding: 15px 10px;
    color: #007200;
+   background: #FFEEEE;  /* fallback for old browsers */
+   background: -webkit-linear-gradient(to right, #DDEFBB, #FFEEEE);  /* Chrome 10-25, Safari 5.1-6 */
+   background: linear-gradient(to right, #DDEFBB, #FFEEEE); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 .footer .copyright small {
    font-size: 15px;
@@ -186,11 +188,9 @@ Nosotros:
    .detail {
       padding: 0px;
    }
-   .card .card2 img {
-      display: initial;
-      flex-wrap: wrap;
-      flex-direction: column;
-   }
+
+   
+   
 }
 /*------------------------- Banner Ensalada del Día-------------------------------------------------------------------------------------------- */
 .fotoLobby {
@@ -993,6 +993,20 @@ main form p label {
    .mainregister {
       height: 900px;
    }
+   
+
+   .cards {
+      width: 96%;
+   }
+
+   .card img {
+      width: 96%;
+
+   }
+
+   .description{
+      width: 96%;
+   }
 }
 /*-------------------------------------------------------- create ----------------------------------------------------------------- */
 
@@ -1163,11 +1177,15 @@ color: black;
    .login {
       width: 50%;
    }
+   .cards {
+      flex-direction: row;
+   }
    .card {
       flex-direction: row;
    }
    .card2 {
       flex-direction: row;
+
    }
    .card2 img {
       order: 0;
