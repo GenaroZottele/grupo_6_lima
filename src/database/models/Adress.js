@@ -1,22 +1,26 @@
-module.exports = function(sequelize, DataTypes) {
+module.exports = function (sequelize, DataTypes) {
+   let alias = 'Adress';
 
-    let alias = "Adress";
+   let cols = {
+      id: { type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true },
+      street: { type: DataTypes.STRING },
+      floor: { type: DataTypes.INTEGER },
+      office: { type: DataTypes.INTEGER },
+   };
 
-    let cols = {        
-        id: {type:DataTypes.INTEGER, primaryKey:true, autoIncrement:true},
-        street: {type:DataTypes.STRING},        
-        floor: {type:DataTypes.INTEGER},
-        office: {type:DataTypes.INTEGER},                     
-    };
+   let config = {
+      tableName: 'adress',
+      timestamps: false,
+   };
 
-    let config = {
-        tableName: "adress",
-        timestamps: false
-    };
+   let Adress = sequelize.define(alias, cols, config);
 
-    let Adress = sequelize.define(alias, cols, config);
-    
-    //Asociaciones (realizadas en script de creacion de las tablas)
+   Adress.associate = function (models) {
+      Adress.hasMany(models.User, {
+         as: 'users',
+         foreignKey: 'adress_id',
+      });
+   };
 
-    return Adress;
-}
+   return Adress;
+};
