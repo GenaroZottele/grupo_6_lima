@@ -3,9 +3,16 @@ const { validationResult } = require('express-validator');
 
 const controller = {  
 
+    data: (req,res) =>{
+      db.Product.findAll().then((products)=>{
+        return res.json(products);
+      });
+    },
+
     products: (req, res)=>{        
     db.Product.findAll()
       .then(function(products){
+        
         return res.render('productCard', {products: products});
       });
     },

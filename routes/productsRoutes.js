@@ -7,6 +7,9 @@ const validateCreateEditProduct = require('../middlewares/validateCreateEditProd
 // Listado de productos
 router.get('/', productsController.products);
 
+//Listado de productos json
+router.get('/productsJson',productsController.data)
+
 // Creacion de producto (muestra form)
 router.get('/create', productsController.create);
 
