@@ -19,7 +19,14 @@ module.exports = function (sequelize, DataTypes) {
 
    let Product = sequelize.define(alias, cols, config);
 
-   //Asociaciones (realizadas en script de creacion de las tablas)
+   Product.associate = function (models) {
+      Product.belongsToMany(models.Order_detail, {
+         as: 'products',
+         through: 'orderDetail_product',
+         foreignKey: 'product_id',
+         timestamps: false,
+      });
+   };
 
    return Product;
 };
