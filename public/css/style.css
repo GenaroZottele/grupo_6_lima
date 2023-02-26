@@ -500,7 +500,7 @@ p {
    left: 0;
    display: flex;
    border-color: rgba(var(--pure-material-onsurface-rgb, 53, 126, 83), 0.6);
-   width: 100%;
+   width: 81%;
    max-height: 100%;
    color: rgba(var(--pure-material-onsurface-rgb, 255, 255, 255), 0.6);
    font-size: 75%;
