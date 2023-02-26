@@ -16,7 +16,7 @@ botonVaciar.addEventListener('click', () => {
         gravity: 'top',
         position: 'right',
         style: {
-            background: 'linear-gradient(to right, violet, lightblue)'
+            background: 'linear-gradient(to right, rgba(119, 194, 101, 0.9), rgba(6, 115, 107, 0.8))'
         }
     }).showToast();
 })
@@ -42,7 +42,7 @@ const pintarCarrito = (carrito) => {
     }) 
     
     console.log(carrito)
-    precioTotal.innerText = carrito.reduce((acc, prod) => acc + prod.amount * prod.precio, 0)
+    precioTotal.innerText = carrito.reduce((acc, prod) => acc + prod.amount * prod.price, 0)
 }
 fetch('http://localhost:3000/products/productsJson')
     .then( (res) => res.json())
@@ -66,7 +66,7 @@ fetch('http://localhost:3000/products/productsJson')
                             <p style="color: black;">Ingredientes: ${producto.description}
                             </p>
                             <div class="botones">
-                            <button id="comprar${producto.id}" class="boton-comprar">Comprar <i class="fas fa-shopping-cart"></i></button>
+                            <button id="comprar${producto.id}" class="boton-comprar botonComprar"><b> Comprar</b> <i class="fas fa-shopping-cart"></i></button>
                                 <a href="/products/productDetail/${producto.id} ">Detalles</a>
                             </div>
                         </div>
@@ -86,7 +86,7 @@ fetch('http://localhost:3000/products/productsJson')
                                 gravity: 'top',
                                 position: 'right',
                                 style: {
-                                    background: 'linear-gradient(to right, violet, lightblue)'
+                                    background: 'linear-gradient(to right, rgba(119, 194, 101, 0.9), rgba(6, 115, 107, 0.8))'
                                 }
                             }).showToast();
                         
@@ -139,7 +139,7 @@ const eliminarDelCarrito = (prodId) => {
         gravity: 'top',
         position: 'right',
         style: {
-            background: 'linear-gradient(to right, violet, lightblue)'
+            background: 'linear-gradient(to right, rgba(119, 194, 101, 0.9), rgba(6, 115, 107, 0.8))'
         }
     }).showToast();
         

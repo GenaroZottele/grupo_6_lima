@@ -16,7 +16,7 @@ botonVaciar.addEventListener('click', () => {
         gravity: 'top',
         position: 'right',
         style: {
-            background: 'linear-gradient(to right, violet, lightblue)'
+            background: 'linear-gradient(to right, rgba(119, 194, 101, 0.9), rgba(6, 115, 107, 0.8))'
         }
     }).showToast();
 })
@@ -93,7 +93,7 @@ fetch('http://localhost:3000/products/productsJson')
                                 gravity: 'top',
                                 position: 'right',
                                 style: {
-                                    background: 'linear-gradient(to right, violet, lightblue)'
+                                    background: 'linear-gradient(to right, rgba(119, 194, 101, 0.9), rgba(6, 115, 107, 0.8))'
                                 }
                             }).showToast();
                         
@@ -146,7 +146,7 @@ const eliminarDelCarrito = (prodId) => {
         gravity: 'top',
         position: 'right',
         style: {
-            background: 'linear-gradient(to right, violet, lightblue)'
+            background: 'linear-gradient(to right, rgba(119, 194, 101, 0.9), rgba(6, 115, 107, 0.8))'
         }
     }).showToast();
         
