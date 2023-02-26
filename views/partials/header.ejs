@@ -1,6 +1,6 @@
 <header>
     <nav class="navBar">
-        
+
         <div class="dropdown">
             <button class="btn btn-secondary " type="button" data-bs-toggle="dropdown" aria-expanded="false"
                 id="burger">
@@ -16,19 +16,22 @@
                 <li><a class="dropdown-item" href="/products">Ensaladas</a></li>
             </ul>
         </div>
-        
+
         <div class="logo">
             <a href="/" class="logotipo"><img src="/images/LOGO.png" alt="logo"></a>
             <a href="/"><img src="/images/Lima.png" alt="Lima"></a>
         </div>
-        
+
         <div class="headerMenu">
             <a href="/nosotros"><b>Nosotros</b></a>
             <a href="/products"><b>Ensaladas</b></a>
             <a href="/contacto"><b>Contacto</b></a>
             <% if (locals.isLogged) { %>
-                <a href="/users/profile"><img src="/images/avatars/<%=locals.userLogged.avatar %>" width="40" height="35"
-                        style="border-radius: 100%"></a>
+                <% if (locals.userLogged.email=='admin@admin.com' ) { %>
+                    <a href="/products/create" style="margin-left: 15px; ">Agregar Ensalada</a>
+                    <% } %>
+                        <a href="/users/profile"><img src="/images/avatars/<%=locals.userLogged.avatar %>" width="40"
+                                height="35" style="border-radius: 100%"></a>
 
                 <div class="right">
                     <li class="seccion"><a href="/users/logout">Cerrar sesión</a></li>
