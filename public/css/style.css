@@ -372,6 +372,11 @@ p {
    padding: 0px;
    padding-top: 5px;
 }
+.boton-comprar{
+   text-decoration: none;
+   background-color: transparent;
+   border: none;
+}
 .agregarCarrito {
    text-decoration: none;
    font-family: 'Roboto', sans-serif;

@@ -42,7 +42,7 @@ const pintarCarrito = (carrito) => {
     }) 
     
     console.log(carrito)
-    precioTotal.innerText = carrito.reduce((acc, prod) => acc + prod.amount * prod.precio, 0)
+    precioTotal.innerText = carrito.reduce((acc, prod) => acc + prod.amount * prod.price, 0)
 }
 fetch('http://localhost:3000/products/productsJson')
     .then( (res) => res.json())
@@ -51,27 +51,34 @@ fetch('http://localhost:3000/products/productsJson')
         
             
                 data.forEach((producto) => {
-                    if (producto.id <= 20 && producto.status == 'A') {
+                    if (producto.id <= 20 ) {
                         const div = document.createElement('div')
                         div.classList.add('producto')
                         div.innerHTML = `
-                        <article class="card">
-                        <img class="card img" src="/images/products/${producto.image} " alt="...">
-                        <div class="description">
-                            <h2>
-                                ${producto.name}
-                            </h2>
-                            <p class="priceIndex" style="color: black;">Precio $ ${producto.price}
-                            </p>
-                            <p style="color: black;">Ingredientes: ${producto.description}
-                            </p>
-                            <div class="botones">
-                            <button id="comprar${producto.id}" class="boton-comprar">Comprar <i class="fas fa-shopping-cart"></i></button>
-                                <a href="/products/productDetail/${producto.id} ">Detalles</a>
+                    <a href="/products/${producto.id}"></a>
+                        <h2>
+                            ${producto.name}
+                        </h2>
+                        <div class="boxDetail">
+                            <div class="boxLeft">
+                                <img src="/images/products/${producto.image} ">
+                            </div>
+                            <div class="boxRight">
+
+                                <p> Descripción: ${producto.description}</p>
+                                <div>
+                                    <h3>$ ${producto.price}</h3>
+                                </div>
+                                <p>
+                                        <button id="comprar${producto.id}" class="boton-comprar"><a class="agregarCarrito">Agregar al carrito
+                                        <i class="fa-solid fa-cart-shopping"></i></a></button>
+                                        <a href="/products/productDetail/${producto.id} " class="agregarCarrito">Detalles</a>
+                                </p>
+                                
                             </div>
                         </div>
-                    </article>
-                        
+                        </div>
+                        </div>
                         `
                         contenedorProductos.appendChild(div)
                     

@@ -8,30 +8,13 @@
             <main>
                 <section class="detail">
                     <% for (let i=0; i < products.length; i++) { %>
-                        <a href="/products/<%=products[i].id%>"></a>
-                        <h2>
-                            <%=products[i].name %>
-                        </h2>
-                        <div class="boxDetail">
-                            <div class="boxLeft">
-                                <img src="/images/products/<%=products[i].image %> ">
-                            </div>
-                            <div class="boxRight">
-
-                                <p> Descripción: <%=products[i].description %></p>
-                                <div>
-                                    <h3>$<%=products[i].price %></h3>
-                                </div>
-                                <p>
-                                    <a href="./products/productCart/<%=products[i].id %>" class="agregarCarrito">Agregar al carrito
-                                        <i class="fa-solid fa-cart-shopping"></i></a>
-                                    <a href="./products/productDetail/<%=products[i].id %> "
-                                        class="agregarCarrito">Detalle</a>
-                                </p>
-                                <p>
-                                    <a href="./products/edit/<%=products[i].id %>" class="agregarCarrito">Modificar
-                                        producto</a>
-                                </p>
+                      <div id="contenedor-productos" >
+                        <p>
+                            <a href="./products/edit/<%=products[i].id %>" class="agregarCarrito">Modificar
+                                producto</a>
+                        </p>
+                      </div>
+                                
                             </div>
                         </div>
                         </div>
@@ -39,10 +22,10 @@
                         <% } %>
                         
                 </section>
-                <div id="contenedor-productos"></div>
+                
             </main>
             <%- include('./partials/footer') %>
-            <script src="/js/carro.js"></script>
+            <script src="/js/carroEnsaladas.js"></script>
     </body>
     <!-- JavaScript Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
