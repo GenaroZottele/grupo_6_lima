@@ -4,7 +4,9 @@ const db = require('../src/database/models/index');
 
 const controller = {
    register: (req, res) => {
-      return res.render('register');
+      db.Adress.findAll().then(function (adress) {
+         return res.render('register', { adress: adress });
+      });
    },
 
    processRegister: (req, res) => {
@@ -55,7 +57,6 @@ const controller = {
          password: bcryptjs.hashSync(req.body.password, 10),
          phone: req.body.phone,
          adress_id: req.body.adress_id,
-         user_type_id: req.body.user_type_id,
          avatar: req.file.filename,
       };
       db.User.create(userToCreate);
@@ -76,7 +77,7 @@ const controller = {
             errors: resultValidation.mapped(),
          });
       }
-      db.User.findAll().then(function (users) {
+      db.User.findAll({ include: [{ association: 'adress' }] }).then(function (users) {
          let enteredMail = req.body.email;
          for (let i = 0; i < users.length; i++) {
             if (enteredMail == users[i].dataValues.email) {
@@ -115,7 +116,10 @@ const controller = {
 
    edit: (req, res) => {
       db.User.findByPk(req.session.userLogged.id).then(function (user) {
-         return res.render('userEdit', { user: user });
+         db.Adress.findAll().then(function (adress) {
+            req.session.adress = adress;
+            return res.render('userEdit', { user: user, adress: adress });
+         });
       });
    },
 
@@ -125,6 +129,7 @@ const controller = {
          return res.render('userEdit', {
             oldData: req.body,
             user: req.session.userLogged,
+            adress: req.session.adress,
             errors: resultValidation.mapped(),
          });
       }
@@ -138,10 +143,6 @@ const controller = {
             password: bcryptjs.hashSync(req.body.password, 10),
             phone: req.body.phone,
             adress_id: req.body.adress_id,
-
-            // eliminar cuando este creado superusuario
-            user_type_id: req.body.user_type_id,
-
             avatar: req.file.filename,
          },
          {
@@ -155,8 +156,8 @@ const controller = {
          req.session.userLogged.phone = req.body.phone;
          req.session.userLogged.adress_id = req.body.adress_id;
 
-         // eliminar cuando este creado superusuario
-         req.session.userLogged.user_type_id = req.body.user_type_id;
+         //traer el nombre de la direccion
+         /* req.session.userLogged.adress.street = req.body.street; */
 
          req.session.userLogged.avatar = req.file.filename;
          return res.redirect('/users/userDetail');

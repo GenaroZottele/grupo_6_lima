@@ -17,7 +17,8 @@
 
           <div class="containerRegister">
             <label class="pure-material-textfield-outlined">
-              <input type="text" id="full_name" name="full_name" value="<%= locals.oldData ? oldData.full_name : null %>" placeholder=" ">
+              <input type="text" id="full_name" name="full_name"
+                value="<%= locals.oldData ? oldData.full_name : null %>" placeholder=" ">
               <span>Nombre y Apellido</span>
             </label>
             <br>
@@ -33,7 +34,8 @@
 
           <div class="containerRegister">
             <label class="pure-material-textfield-outlined">
-              <input type="email" id="email" name="email" value="<%= locals.oldData ? oldData.email : null %>" placeholder=" ">
+              <input type="email" id="email" name="email" value="<%= locals.oldData ? oldData.email : null %>"
+                placeholder=" ">
               <span>E-mail</span>
             </label>
             <br>
@@ -49,7 +51,8 @@
 
           <div class="containerRegister">
             <label class="pure-material-textfield-outlined">
-              <input type="password" id="password" name="password" value="<%= locals.oldData ? oldData.password : null %>" placeholder=" ">
+              <input type="password" id="password" name="password"
+                value="<%= locals.oldData ? oldData.password : null %>" placeholder=" ">
               <span>Contraseña</span>
             </label>
             <br>
@@ -62,7 +65,7 @@
             <div id="passwordError" class="errors-front">
             </div>
           </div>
-          
+
           <div class="containerRegister">
             <label class="pure-material-textfield-outlined">
               <input type="number" name="phone" value="<%= locals.oldData ? oldData.phone : null %>" placeholder=" ">
@@ -76,16 +79,19 @@
             </div>
           </div>
 
-<!-- Qué hacer con los address y los user_type (el address debería poder ponerlo el usuario,
+          <!-- Qué hacer con los address y los user_type (el address debería poder ponerlo el usuario,
 y dependiendo del edificio que elijan se guarde el address_id correspondiente en la base de datos
 En cuanto al user_type_id debería ponerse automáticamente ya que todos son clientes, menos los administradores
 No se como manejar ésta situación -->
 
           <div class="containerRegister">
-            <label>adress_id:</label>
+            <label>Direccion:</label>
             <select name="adress_id" id="adress_id">
-              <option value="1">adressId1</option>
-              <option value="2">adressId2</option>
+              <% for (let i=0; i < adress.length; i++) { %>
+                <option value="<%= adress[i].dataValues.id %>">
+                  <%= adress[i].dataValues.street %>
+                </option>
+                <% } %>
             </select>
             <div class="errors">
               <% if(locals.errors && errors.adress_id) { %>
@@ -94,25 +100,12 @@ No se como manejar ésta situación -->
             </div>
           </div>
 
-          <div class="containerRegister">
-            <label>user_type_id:</label>
-            <select name="user_type_id" id="user_type_id">
-              <option value="1">userTypeRegular</option>
-              <option value="2">userTypeSuper</option>
-            </select>
-            <div class="errors">
-              <% if(locals.errors && errors.user_type_id) { %>
-                <%= errors.user_type_id.msg %>
-                  <% } %>
-            </div>
-          </div>
-
-<!-----hasta aquí   ----------------------------------->
+          <!-----hasta aquí   ----------------------------------->
 
           <div class="containerRegister">
             <label class="pure-material-textfield-outlined">
               <input type="file" id="avatar" placeholder=" " name="avatar"
-              value="<%= locals.oldData ? oldData.image : null %>">
+                value="<%= locals.oldData ? oldData.image : null %>">
               <span>Imagen</span>
             </label>
             <br>
