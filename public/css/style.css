@@ -31,13 +31,15 @@ Nosotros:
 /* ----------------------------HEADER-------------------------------------------------------------------------------------------------------------- */
 .navBar {
    display: flex;
+   position: fixed;
    height: 70px;
    font-family: 'Roboto', sans-serif;
    padding: 10px;
    width: 100%;
-   background: #FFEEEE;  /* fallback for old browsers */
-   background: -webkit-linear-gradient(to right, #DDEFBB, #FFEEEE);  /* Chrome 10-25, Safari 5.1-6 */
-   background: linear-gradient(to right, #DDEFBB, #FFEEEE); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+   background: black;  /* fallback for old browsers */
+   background: -webkit-linear-gradient(to right, black, rgba(0, 0, 0, 0.5));  /* Chrome 10-25, Safari 5.1-6 */
+   background: linear-gradient(to right, black, rgba(0, 0, 0, 0.5)); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+   z-index: 2;
 
 }
 .headerMenu {
@@ -50,13 +52,14 @@ Nosotros:
    text-decoration: none;
    color: #151716;
    font-family: 'Roboto', sans-serif;
-   font-size: 18px;
+   font-size: 16px;
+   font-weight: 350;
    border-radius: 5px;
-   padding: 5px;
+   padding: 8px;
    text-align: center;
    background: #4d8b5f;  /* fallback for old browsers */
-   background: -webkit-linear-gradient(to right, #56B4D3, #4d8b5f);  /* Chrome 10-25, Safari 5.1-6 */
-   background: linear-gradient(to right, #a4b5ba, #4d8b5f); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+   background: -webkit-linear-gradient(to right, rgba(6, 115, 107, 1), rgba(6, 115, 107, 1));  /* Chrome 10-25, Safari 5.1-6 */
+   background: linear-gradient(to right, rgba(6, 115, 107, 1), rgba(6, 115, 107, 1)); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
    
 }
 .headerMenu :hover {
@@ -117,8 +120,8 @@ Nosotros:
 .footer {
    width: 100%;
    background: #232526;  /* fallback for old browsers */
-   background: -webkit-linear-gradient(to right, #414345, #232526);  /* Chrome 10-25, Safari 5.1-6 */
-   background: linear-gradient(to right, #414345, #232526); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+   background: -webkit-linear-gradient(to right, black, black);  /* Chrome 10-25, Safari 5.1-6 */
+   background: linear-gradient(to right, black, black); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
    
 }
@@ -201,29 +204,24 @@ Nosotros:
    display: flex;
    flex-direction: column;
    width: 100%;
-   height: 70vh;
+   height: 80vh;
    background: url(../images/Pokes.JPG);
    background-position: center;
    background-repeat: no-repeat;
    background-size: cover;
    justify-content: flex-start;
-   align-items: flex-start;
-   border: solid 1px #357e53;
-   box-sizing: border-box;
-   
-   
-   
-   
+   align-items: flex-start;   
+   box-sizing: border-box;   
 }
 .ensaladaDelDia h2 {
    margin-left: 15px;
-   margin-top: 10px;
+   margin-top: 80px;
    font-weight: 500;
    padding: 5px;
    background: #348F50;  /* fallback for old browsers */
-   background: -webkit-linear-gradient(to right, #56B4D3, #348F50);  /* Chrome 10-25, Safari 5.1-6 */
-   background: linear-gradient(to right, #56B4D3, #348F50); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
+   background: -webkit-linear-gradient(to right, rgba(119, 194, 101, 0.9), rgba(6, 115, 107, 0.8));  /* Chrome 10-25, Safari 5.1-6 */
+   background: linear-gradient(to right, rgba(119, 194, 101, 0.9), rgba(6, 115, 107, 0.8)); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+   
    
 
 }
@@ -232,8 +230,8 @@ Nosotros:
    color: white;
    padding: 5px;
    background: #348F50;  /* fallback for old browsers */
-   background: -webkit-linear-gradient(to right, #56B4D3, #348F50);  /* Chrome 10-25, Safari 5.1-6 */
-   background: linear-gradient(to right, #56B4D3, #348F50); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+   background: -webkit-linear-gradient(to right, rgba(119, 194, 101, 0.8), rgba(6, 115, 107, 0.7));  /* Chrome 10-25, Safari 5.1-6 */
+   background: linear-gradient(to right, rgba(119, 194, 101, 0.8), rgba(6, 115, 107, 0.7)); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
    animation-name: mianimacion;
    animation-duration: 4s;
 }
@@ -1385,10 +1383,6 @@ color: black;
    color: green;
    border: 1px solid black;
    align-items: center;
-}
-
-#h234{
-   color:#4d8b5f;
 }
 
 /*------------------------------------------------------------------@keyframes------------------------------------------------------------------------ */

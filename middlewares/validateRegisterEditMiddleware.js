@@ -20,7 +20,6 @@ module.exports = [
    body('password').notEmpty().withMessage('Tienes que escribir una contraseña').isLength({ min: 8 }),
    body('phone').notEmpty().withMessage('Tienes que escribir un telefono'),
    body('adress_id').notEmpty().withMessage('Tienes que escribir una dirección'),
-   body('user_type_id').notEmpty().withMessage('Tienes que escribir un tipo de usuario'),
    body('avatar').custom((value, { req }) => {
       let file = req.file;
       let acceptedExtensions = ['.jpg', '.jpeg', '.png', '.gif'];
