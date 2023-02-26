@@ -28,7 +28,7 @@
             <a href="/contacto"><b>Contacto</b></a>
             <% if (locals.isLogged) { %>
                 <% if (locals.userLogged.email=='admin@admin.com' ) { %>
-                    <a href="/products/create" style="margin-left: 15px; ">Create</a>
+                    <a href="/products/create" style="margin-left: 15px; ">Agregar Ensalada</a>
                     <% } %>
                         <a href="/users/profile"><img src="/images/avatars/<%=locals.userLogged.avatar %>" width="40"
                                 height="35" style="border-radius: 100%"></a>
