@@ -93,7 +93,6 @@ fetch('http://localhost:3000/products/productsJson')
       });
 
       const agregarAlCarrito = (prodId) => {
-         carrito = JSON.parse(localStorage.getItem('carrito'));
          const existe = carrito.some((prod) => prod.id === prodId);
 
          if (existe) {
