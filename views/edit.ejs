@@ -8,14 +8,17 @@
         <%- include('./partials/header.ejs') %>
 
             <main class="mainPanel">
-                
-                <form action="/products/edit/<%=product.id%>?_method=PUT" method="POST" class="formPanel" enctype="multipart/form-data" id="formularioEdit">
-                    
+
+                <form action="/products/edit/<%=product.id%>?_method=PUT" method="POST" class="formPanel"
+                    enctype="multipart/form-data" id="formularioEdit">
+
                     <section class="newProduct">
                         <h2>MODIFICAR PRODUCTO</h2>
-                        
-                        <h2><%=product.name%></h2>
-                        
+
+                        <h2>
+                            <%=product.name%>
+                        </h2>
+
                         <div class="containerEdit">
                             <label class="pure-material-textfield-outlined">
                                 <input type="text" name="name" id="name" value="<%=product.name%>" placeholder=" ">
@@ -32,7 +35,8 @@
 
                         <div class="containerEdit">
                             <label class="pure-material-textfield-outlined">
-                                <input type="textarea" name="description" id="description" value="<%=product.description%>" placeholder=" ">
+                                <input type="textarea" name="description" id="description"
+                                    value="<%=product.description%>" placeholder=" ">
                                 <span>Descripción</span>
                             </label>
                             <div class="errors">
@@ -58,7 +62,10 @@
 
                         <div class="containerEdit">
                             <label class="pure-material-textfield-outlined">
-                                <input type="text" name="status" id="status" value="<%=product.status%>" placeholder=" ">
+                                <select name="status" id="status">
+                                    <option value="A">Regular</option>
+                                    <option value="I">Mas Vendidos</option>
+                                </select>
                                 <span>Estado</span>
                             </label>
                             <div class="errors">
@@ -67,7 +74,7 @@
                                         <% } %>
                             </div>
                         </div>
-                        
+
                         <div class="containerEdit">
                             <label class="pure-material-textfield-outlined">
                                 <input type="text" name="price" id="price" value="<%=product.price%>" placeholder=" ">
@@ -82,7 +89,8 @@
 
                         <div class="containerEdit">
                             <label class="pure-material-textfield-outlined">
-                                <input type="text" name="discount" id="discount" value="<%=product.discount%>" placeholder=" ">
+                                <input type="text" name="discount" id="discount" value="<%=product.discount%>"
+                                    placeholder=" ">
                                 <span>Descuento</span>
                             </label>
                             <div class="errors">
@@ -93,13 +101,14 @@
                         </div>
 
                         <div class="botonesPanel">
-                            <button type='submit' class="pure-material-button-contained">Enviar</button>
+                            <button type='submit' class="pure-material-button-contained">Modificar</button>
                             <button type='reset' class="pure-material-button-contained">Borrar</button>
                         </div>
                     </section>
                 </form>
-                
-                <form action="/products/delete/<%=product.id%>?_method=DELETE" method="POST" class="formPanel" id="Eliminar">
+
+                <form action="/products/delete/<%=product.id%>?_method=DELETE" method="POST" class="formPanel"
+                    id="Eliminar">
                     <div class="botonesPanel">
                         <button type='submit' class="pure-material-button-contained" id="Eliminar">Eliminar</button>
                     </div>
@@ -108,11 +117,11 @@
 
             <%- include('./partials/footer.ejs') %>
 
-            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+                <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
                     integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
                     crossorigin="anonymous">
-            </script>
-            <script src="/js/ValidateEditFrontend.js"></script>
+                    </script>
+                <script src="/js/ValidateEditFrontend.js"></script>
     </body>
 
 </html>
