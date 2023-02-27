@@ -96,9 +96,9 @@ const controller = {
                }
             }
          }
-         return res.render('register', {
-            errors: { email: { msg: 'El email ' + enteredMail + ' no está registrado' } },
-         });
+         //pasar console.log a mensaje en la ventana
+         console.log('El email ingresado no existe');
+         return res.redirect('/users/register');
       });
    },
 
