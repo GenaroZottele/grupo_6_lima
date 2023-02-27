@@ -13,8 +13,6 @@ Base: Mix de verdes.
 Aderezo: Caesar.
 Ingredientes: Pollo, croûtons, queso sardo rayado, tomates cherrys.
 
-## Crispy, (igual a la caesar pero con pollo rebozado con pan rallado y copos de maiz).
-
 ## Pastrón
 Base: Rúcula y fideos (penne).
 Aderezo: Reducción dulce de aceto balsámico.
@@ -25,16 +23,6 @@ Base: Rúcula.
 Aderezo: Vinagreta (Oliva, Aceto, Vinagre y Pimienta).
 Ingredientes: Pollo, queso azul, nueces, peras en almíbar.
 
-## Veggie
-Base: Mix de verdes.
-Aderezo: Vinagreta.
-Ingredientes: Quinoa, choclo en grano, zanahoria, brócoli, tomates cherrys, maní tostado sin sal.
-
-## Crudo
-Base: Rúcula y fideos (penne).
-Aderezo: Reducción dulce de aceto balsámico y pesto genovés.
-Ingredientes: Jamón crudo feteado, queso mozzarela en trozos, tomates secos.
-
 ## Brie
 Base: Mix de verdes.
 Aderezo: Mostaza y miel.
@@ -44,6 +32,18 @@ Ingredientes: Pollo, queso brie, tomates cherrys, croûtons, nueces.
 Base: Rúcula.
 Aderezo: Vinagreta. 
 Ingredientes: Atún de lata (en lomitos), brócoli, arroz yamani, tomates cherrys, cebolla morada.
+
+## Crispy, (igual a la caesar pero con pollo rebozado con pan rallado y copos de maiz).
+
+## Veggie
+Base: Mix de verdes.
+Aderezo: Vinagreta.
+Ingredientes: Quinoa, choclo en grano, zanahoria, brócoli, tomates cherrys, maní tostado sin sal.
+
+## Crudo
+Base: Rúcula y fideos (penne).
+Aderezo: Reducción dulce de aceto balsámico y pesto genovés.
+Ingredientes: Jamón crudo feteado, queso mozzarela en trozos, tomates secos.
 
 [
     {

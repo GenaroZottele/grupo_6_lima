@@ -42,6 +42,9 @@ Nosotros:
    z-index: 2;
 
 }
+.modal-backdrop{
+   z-index: 0;
+}
 .headerMenu {
    display: flex;
    justify-content: space-evenly;
@@ -317,6 +320,22 @@ p.priceIndex{
    border-radius: 5px;
    height: 100vw;
    width: 100%;
+} 
+.botonComprar{
+   text-decoration: none;
+   font-family: 'Roboto', sans-serif;
+   color: black;
+   background-color: white;
+   padding: 10px;
+   border:  #357e53;
+   text-align: center;
+   display: inline;
+   flex-direction: row;
+   justify-items: center;
+   align-items: center;
+   align-content: center;
+   border-radius: 5px;
+
 }
 p {
    font-size: 18px;
@@ -369,6 +388,11 @@ p {
 .boxRight h2 {
    padding: 0px;
    padding-top: 5px;
+}
+.boton-comprar{
+   text-decoration: none;
+   background-color: transparent;
+   border: none;
 }
 .agregarCarrito {
    text-decoration: none;

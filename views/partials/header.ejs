@@ -33,18 +33,47 @@
                         <a href="/users/profile"><img src="/images/avatars/<%=locals.userLogged.avatar %>" width="40"
                                 height="35" style="border-radius: 100%"></a>
 
-                        <div class="right">
-                            <li class="seccion"><a href="/users/logout">Cerrar sesión</a></li>
+                <div class="right">
+                    <li class="seccion"><a href="/users/logout">Cerrar sesión</a></li>
+                </div>
+            <% } else { %>
+                    <div class="right">
+                        <a href="/users/login"><b>Iniciar sesión</b></a>
+                    </div>
+                    <div class="right">
+                        <a href="/users/register"><b>Registrarse</b></a>
+                    </div>
+            <% } %>
+            <div>
+                <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    🛒
+                </button>
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Carrito de Compras</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <table id="tablaProductos" class="table table-striped table-hover">
+                                <thead>
+                                    <tr>
+                                        <td>Nombre</td>
+                                        <td>Cantidad</td>
+                                        <td>precio</td>
+                                    </tr>
+                                </th>
+                            </table>
+                        <div class="modal-body" id="carrito-contenedor">
                         </div>
-                        <% } else { %>
-                            <div class="right">
-                                <a href="/users/login"><b>Iniciar sesión</b></a>
-                            </div>
-                            <div class="right">
-                                <a href="/users/register"><b>Registrarse</b></a>
-                            </div>
-                            <% } %>
-
+                        <p class="precioProducto">Precio total: $<span id="precioTotal">0</span></p>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" id="carritoCerrar" data-bs-dismiss="modal">Cerrar</button>
+                            <button type="button" id="vaciar-carrito" class="btn btn-primary">Vaciar</button>
+                        </div>
+                    </div>
+                    </div>
+            </div>
         </div>
     </nav>
 </header>
