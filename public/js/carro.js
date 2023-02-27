@@ -2,7 +2,7 @@ const contenedorProductos = document.getElementById('contenedor-productos')
 const productosEnCarro = document.getElementById('carrito-contenedor')
 const precioTotal = document.getElementById('precioTotal')
 const botonVaciar = document.getElementById('vaciar-carrito')
-let carrito = JSON.parse(localStorage.getItem('carrito'));
+let carrito =[];
 
 
 
@@ -99,6 +99,7 @@ fetch('http://localhost:3000/products/productsJson')
          
 
         const agregarAlCarrito = (prodId) => {
+            // carrito = JSON.parse(localStorage.getItem('carrito'));
             const existe = carrito.some (prod => prod.id === prodId);
             
             if (existe) {
