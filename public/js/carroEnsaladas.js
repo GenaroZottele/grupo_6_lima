@@ -51,6 +51,7 @@ fetch('http://localhost:3000/products/productsJson')
         
             
                 data.forEach((producto) => {
+                    
                     if (producto.id <= 20 ) {
                         const div = document.createElement('div')
                         div.classList.add('producto')
@@ -75,6 +76,7 @@ fetch('http://localhost:3000/products/productsJson')
                                         <a href="/products/productDetail/${producto.id} " class="agregarCarrito">Detalles</a>
                                 </p>
                                 
+
                             </div>
                         </div>
                         </div>

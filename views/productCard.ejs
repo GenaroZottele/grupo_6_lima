@@ -7,18 +7,24 @@
         <%- include('./partials/header') %>
             <main>
                 <section class="detail">
+
                     <% for (let i=0; i < products.length; i++) { %>
                       <div id="contenedor-productos" >
-                        <p>
-                            <a href="./products/edit/<%=products[i].id %>" class="agregarCarrito">Modificar
-                                producto</a>
-                        </p>
+
                       </div>
                                 
                             </div>
                         </div>
                         </div>
                         </div>
+                        <% if (locals.isLogged) { %>
+                            <% if (locals.userLogged.email=='admin@admin.com' ) { %>
+                                    <p>
+                                        <a href="./products/edit/<%=products[i].id %>" class="agregarCarrito">Modificar
+                                            <%=products[i].name %></a>
+                                    </p>
+                                    <% } %>
+                                    <% } %>
                         <% } %>
                         
                 </section>
