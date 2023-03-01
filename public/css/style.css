@@ -42,6 +42,9 @@ Nosotros:
    z-index: 2;
 
 }
+.precioProducto{
+   color: black;
+}
 .modal-backdrop{
    z-index: 0;
 }
