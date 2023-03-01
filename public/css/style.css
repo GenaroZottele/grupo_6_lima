@@ -34,7 +34,7 @@ Nosotros:
    position: fixed;
    height: 70px;
    font-family: 'Roboto', sans-serif;
-   padding: 10px;
+   padding: 1vh 1vw 1vh 5vw;
    width: 100%;
    background: black;  /* fallback for old browsers */
    background: -webkit-linear-gradient(to right, black, rgba(0, 0, 0, 0.5));  /* Chrome 10-25, Safari 5.1-6 */
@@ -101,8 +101,8 @@ Nosotros:
    color: black;
 }
 #burger {
-   color: #86d66c;
-   background-color: #357e53;
+   color: rgba(119, 194, 101, 1);
+   background-color: rgba(6, 115, 107, 1);
 }
 .navegador li {
    list-style: none;
@@ -133,68 +133,79 @@ Nosotros:
 .right {
    display: flex;
    justify-content: right;
-   
-
 }
+
+@media (min-width: 1920px) {
+   .navBar {
+      padding: 1vh 12vw 1vh 12vw;
+   }
+}
+
+
 /* ---------------------------- Footer---------------------------------------------------------------------------------------------- */
 .footer {
    width: 100%;
-   background: #232526;  /* fallback for old browsers */
-   background: -webkit-linear-gradient(to right, black, black);  /* Chrome 10-25, Safari 5.1-6 */
-   background: linear-gradient(to right, black, black); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
-   
+   background: white;   
 }
-.footer .footerMain {
-   width: 100%;
-   max-width: 1200px;
+.footerMain {
+   background-color: black;
+   width: 100%;   
    margin: auto;
    display: grid;
    grid-template-columns: repeat(3, 1fr);
    grid-gap: 50px;
-   padding: 25px 0px;
+   padding: 4vh 0.1vw 1vh 0.1vw;
 }
-.footer .footerMain .box figure {
+.box {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+}
+.box figure {
    width: 100%;
    height: 100;
    display: flex;
    justify-content: center;
    align-items: center;
 }
-.footer .footerMain .box figure img {
+.box figure img {
    width: 250px;
 }
-.footer .footerMain .box h2 {
-   color: white;
-   margin-bottom: 25px;
+.box h2 {
+   height: 3vh;
+   text-align: center;
+   width: 100%;
+   color: white;   
    font-size: 20px;
-   font-family: 'Georgia';
+   font-family: 'Roboto', sans-serif;
 }
-.footer .footerMain .box p {
+.box p {
    color: #efefef;
-   margin-bottom: 10px;
+   margin-bottom: 10vh;
 }
-.footer .footerMain .redes-sociales a {
+.redes-sociales{
+   margin-bottom: 15vh;
+}
+.redes-sociales a {
    display: inline-block;
    text-decoration: none;
    width: 45px;
    height: 45px;
    line-height: 45px;
-   color: white;
-   margin-right: 10px;
-   background-color: #357e53;
+   color: white;   
+   background-color: rgba(6, 115, 107, 1);
    text-align: center;
    border-radius: 10%;
 }
-.footer .copyright {
+.copyright {
    text-align: center;
    padding: 15px 10px;
    color: #007200;
    background: #FFEEEE;  /* fallback for old browsers */
-   background: -webkit-linear-gradient(to right, #DDEFBB, #FFEEEE);  /* Chrome 10-25, Safari 5.1-6 */
-   background: linear-gradient(to right, #DDEFBB, #FFEEEE); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+   background: -webkit-linear-gradient(to right, rgba(119, 194, 101, 0.6), rgba(119, 194, 101, 0.4));  /* Chrome 10-25, Safari 5.1-6 */
+   background: linear-gradient(to right, rgba(119, 194, 101, 0.6), rgba(119, 194, 101, 0.4)); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
-.footer .copyright small {
+.copyright small {
    font-size: 15px;
 }
 @media screen and (max-width: 760px) {
@@ -210,11 +221,14 @@ Nosotros:
    }
    .detail {
       padding: 0px;
-   }
-
-   
-   
+   } 
 }
+@media (min-width: 1920px) {
+   .footerMain {
+      padding: 4vh 9vw 1vh 5vw;
+   }
+}
+
 /*------------------------- Banner Ensalada del Día-------------------------------------------------------------------------------------------- */
 .fotoLobby {
    width: 100%;
@@ -252,6 +266,16 @@ Nosotros:
    animation-name: mianimacion;
    animation-duration: 4s;
 }
+
+@media (min-width: 1920px) {
+   .ensaladaDelDia h2 {
+      margin-left: 12vw;
+   }
+   .ensaladaDelDia p {
+      margin-left: 12vw;
+   }
+}
+
 /* -------------------------Main Index ----------------------------------------------------------------------------------- */
 .cards h2 {
    display: flex;
@@ -264,11 +288,11 @@ Nosotros:
    padding: 15px;
    border-radius: 10px;
    background: #348F50;  /* fallback for old browsers */
-   background: -webkit-linear-gradient(to right, #56B4D3, #348F50);  /* Chrome 10-25, Safari 5.1-6 */
-   background: linear-gradient(to right, #56B4D3, #348F50); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+   background: -webkit-linear-gradient(to right, rgba(119, 194, 101, 0.8), rgba(6, 115, 107, 1));  /* Chrome 10-25, Safari 5.1-6 */
+   background: linear-gradient(to right, rgba(119, 194, 101, 0.8), rgba(6, 115, 107, 1)); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
    animation-name: animacioncards;
-   animation-duration: 8s;
-   animation-delay: 2s;
+   animation-duration: 1s;
+   animation-delay: 0s;
 }
 main section h2 {
    justify-content: space-around;
@@ -936,7 +960,7 @@ p {
 
 /* --------------------------------------------------register--------------------------------------------------------------- */
 .formregister {
-   /* position: relative; */
+   /* position: relative; */   
    justify-content: center;
    border: #007200 solid 1px;
    border-radius: 15px;
@@ -945,6 +969,8 @@ p {
    padding: 40px;
    background-color: black;
    opacity: 85%;
+   margin-top: 15vh;
+   margin-bottom: 15vh;   
 }
 .pure-material-textfield-outlined {
    display: flex;
@@ -981,7 +1007,7 @@ main form p label {
 }
 .mainregister {
    display: flex;
-   height: 800px;
+   min-height: 120vh; 
    justify-content: center;
    align-items: center;
    background-position: center;
@@ -1333,82 +1359,69 @@ color: black;
 /* @media screen and (max-width: 385px) { */
   
    .nosotres {
-      display: flex;
-      flex-direction: column;
+      display: flex;      
       justify-content: center;
-      background-position: inherit;
-      background-size: cover;
-      padding-top: 100px;
-      padding-right: 18%;
-      padding-left: 18%;
-      padding-bottom: 120px;
+      height: 100vh;               
       background: #4d8b5f;  /* fallback for old browsers */
-      background: -webkit-linear-gradient(to right, #56B4D3, #4d8b5f);  /* Chrome 10-25, Safari 5.1-6 */
-      background: linear-gradient(to right, #a4b5ba, #4d8b5f); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+      background: -webkit-linear-gradient(to right, rgba(119, 194, 101, 0.8), rgba(6, 115, 107, 0.2));  /* Chrome 10-25, Safari 5.1-6 */
+      background: linear-gradient(to right, rgba(119, 194, 101, 0.8), rgba(6, 115, 107, 0.2)); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
    }
    .nosotros {
-      justify-content: center;
+      display: flex; 
+      justify-content: center;      
       color: black;
       text-decoration: overline;
       font-weight: revert;
       background: #4d8b5f;  /* fallback for old browsers */
-      background: -webkit-linear-gradient(to right, #56B4D3, #4d8b5f);  /* Chrome 10-25, Safari 5.1-6 */
-      background: linear-gradient(to right, #a4b5ba, #4d8b5f); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-      display: flex;
-      flex-direction: column;
-   
-      
+      background: -webkit-linear-gradient(to right, rgba(119, 194, 101, 0.8), rgba(6, 115, 107, 0.2));  /* Chrome 10-25, Safari 5.1-6 */
+      background: linear-gradient(to right, rgba(119, 194, 101, 0.8), rgba(6, 115, 107, 0.2)); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+          
    }
    .arriba1{
       display: flex;
-      flex-direction: row;
-      justify-content: center;
-   }
-   .left-nos1{
-      width: 50%;
-      position: relative;
-      right: 20px;
-   }
-   .left-nos2{
-      width: 50%;
-   }
-   .right-nos1{
-      position: relative;
-      left: 19px;
-   }
+      flex-direction: column;       
+      justify-content: right;
+      width: 40vw;
+      margin-top: 15vh;  
+      padding-right: 5vw;    
+   } 
+   
    .abajo2{
-      display: flex;
-      flex: row;
-      justify-content: center;
+      display: flex;  
+      flex-direction: column;    
+      justify-content: right;
+      width: 20vw;
+      margin-top: 15.8vh;
+      
    }
-   .nosotros2 {
-      display: block;
+   .nosotros2 {  
+      font-size: 16px;    
       font-family: Georgia, 'Times New Roman', Times, serif;
       border-right: 4px solid;
       width: 90%;
-
       animation: typing 2s steps(12), blink .5s infinite step-end alternate;
-      overflow: hidden;
-      
-   }
+      overflow: hidden;      
+   }   
 
-   .h3 .nosotros {
-
+   .nosotros {
    margin-top: 10px;
+   font-size: 22px;
    font-weight: 500;
    padding: 5px;
-   background: #7F7FD5;  /* fallback for old browsers */
-   background: -webkit-linear-gradient(to right, #91EAE4, #86A8E7, #7F7FD5);  /* Chrome 10-25, Safari 5.1-6 */
-   background: linear-gradient(to right, #91EAE4, #86A8E7, #7F7FD5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+   background: rgb(6, 115, 107);  /* fallback for old browsers */
+   background: -webkit-linear-gradient(to right, rgba(119, 194, 101, 0.9), rgba(6, 115, 107, 0.8));  /* Chrome 10-25, Safari 5.1-6 */
+   background: linear-gradient(to right, rgba(119, 194, 101, 0.9), rgba(6, 115, 107, 0.8)); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
+   }  
+
+   #imgNOS2{
+   width: 100%;
    }
 
-#imgNOS2{
-   height: 320px;
-}
-#imgNOS{
-   height: 300px;
-}
+   #imgNOS{
+   width: 100%;
+   }
+
    /* .ulsucursales {
       color: black;
       text-align: left;
@@ -1439,8 +1452,7 @@ color: black;
    scroll-snap-align: center;
    align-content: center;
  }  */
-div.polaroid {
-   width: 100%;
+div.polaroid {   
    background-color: white;
    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
  }
@@ -1525,19 +1537,31 @@ div.container p{
    opacity: 85%;
 }
 
+/*------------------------------------------------------------------Cards------------------------------------------------------------------------ */
+
+.producto {
+   margin-top: 7vh;
+}
+
+.producto h2 {
+   color: black;
+   margin-left: 32vh;
+   padding: 1vh;
+}
+
 /*------------------------------------------------------------------@keyframes------------------------------------------------------------------------ */
 
 @keyframes mianimacion {
-   0% {background: #348F50}
-   50% {background: #2ab052}
-   100%{background: #1c9b42}
+   0% {background: rgba(119, 194, 101, 0.4)}
+   50% {background: rgb(119, 194, 101, 0.6)}
+   100%{background: rgba(6, 115, 107, 0.8)}
 }
 
 
 @keyframes animacioncards {
-   0% {background: #348F50}
-   50% {background: #2ab052}
-   100%{background: #1c9b42}
+   0% {background: rgba(119, 194, 101, 0.4)}
+   50% {background: rgb(119, 194, 101, 0.6)}
+   100%{background: rgba(6, 115, 107, 0.8)}
 }
 
 @keyframes typing {

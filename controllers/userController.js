@@ -160,7 +160,7 @@ const controller = {
          /* req.session.userLogged.adress.street = req.body.street; */
 
          req.session.userLogged.avatar = req.file.filename;
-         return res.redirect('/users/userDetail');
+         return res.redirect('/users/profile');
       });
    },
 
@@ -170,6 +170,8 @@ const controller = {
             id: req.session.userLogged.id,
          },
       });
+      res.clearCookie('userEmail');
+      req.session.destroy();
       res.redirect('/');
    },
 
