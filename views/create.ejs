@@ -46,33 +46,6 @@
 
                         <div class="containerCreate">
                             <label class="pure-material-textfield-outlined">
-                                <input type="file" accept=".jpg, .png, .jpeg" name="image" id="image" placeholder=" ">
-                                <span>Imagen</span>
-                            </label>
-                            <div class="errors">
-                                <% if(locals.errors && errors.image) { %>
-                                    <%= errors.image.msg %>
-                                        <% } %>
-                            </div>
-                        </div>
-
-                        <div class="containerCreate">
-                            <label class="pure-material-textfield-outlined">
-                                <select name="status" id="status">
-                                    <option value="A">Regular</option>
-                                    <option value="I">Mas Vendidos</option>
-                                </select>
-                                <span>Estado</span>
-                            </label>
-                            <div class="errors">
-                                <% if(locals.errors && errors.status) { %>
-                                    <%= errors.status.msg %>
-                                        <% } %>
-                            </div>
-                        </div>
-
-                        <div class="containerCreate">
-                            <label class="pure-material-textfield-outlined">
                                 <input type="text" name="price" id="price" value="<%=oldData.price%>" placeholder=" ">
                                 <span>Precio</span>
                             </label>
@@ -92,6 +65,32 @@
                             <div class="errors">
                                 <% if(locals.errors && errors.discount) { %>
                                     <%= errors.discount.msg %>
+                                        <% } %>
+                            </div>
+                        </div>
+
+                        <div class="containerCreate">
+                            <label class="pure-material-textfield-outlined">
+                                <input type="file" accept=".jpg, .png, .jpeg" name="image" id="image" placeholder=" ">
+                                <span>Imagen</span>
+                            </label>
+                            <div class="errors">
+                                <% if(locals.errors && errors.image) { %>
+                                    <%= errors.image.msg %>
+                                        <% } %>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="containerCreate">
+                            <label><h5 class="selectImagen">Estado: </h5></label>
+                                <select name="status" id="status">
+                                    <option value="A">Regular</option>
+                                    <option value="I">Mas Vendidos</option>
+                                </select>
+                            </label>
+                            <div class="errors">
+                                <% if(locals.errors && errors.status) { %>
+                                    <%= errors.status.msg %>
                                         <% } %>
                             </div>
                         </div>

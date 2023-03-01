@@ -7,93 +7,91 @@
 
         <%- include('./partials/header', {pageTitle: 'LIMA' }); %>
 
-            <main class="mainregister">
-
-                <div class="perfil">INFORMACIÓN DE USUARIO
-
-                    <form action="/users/edit?_method=PUT" method="POST" class="formPanel"
-                        enctype="multipart/form-data">
-
-                        <h2>MODIFICAR DATOS</h2>
-                        <h2>
-                            <%=user.full_name%>
-                        </h2>
-
-                        <p>
-                            <label class="formlabel">Nombre y apellido:</label>
-                            <input type="text" name="full_name"
-                                value="<%= locals.oldData ? oldData.full_name : user.full_name %>">
-                        <div class="errors">
-                            <% if(locals.errors && errors.full_name) { %>
-                                <%= errors.full_name.msg %>
-                                    <% } %>
+            <main class="mainUserEdit">
+                <form action="/users/edit?_method=PUT" method="POST" class="formEditUser"
+                    enctype="multipart/form-data">
+                    <div class="containerRegister">
+                            <h2 style="color:aliceblue;">MODIFICAR DATOS</h2>
+                            <h2 style="color:aliceblue;"><%=user.full_name%></h2>
+                            <label class="pure-material-textfield-outlined">
+                                <input type="text" id="full_name" name="full_name" 
+                                 value="<%= locals.oldData ? oldData.full_name :  user.full_name %>" 
+                                 placeholder="<%= user.full_name %>">
+                                <span>Nombre y Apellido</span>
+                                <div class="errors">
+                                    <% if(locals.errors && errors.full_name) { %>
+                                        <%= errors.full_name.msg %>
+                                            <% } %>
+                                </div>
+                            </label>
+                            <br>
+                            <label class="pure-material-textfield-outlined">
+                                <input type="email" id="email" name="email" 
+                                 value="<%= locals.oldData ? oldData.email : user.email %>"
+                                 placeholder="<%= user.email %>">
+                                <span>E-mail</span>
+                                <div class="errors">
+                                    <% if(locals.errors && errors.email) { %>
+                                        <%= errors.email.msg %>
+                                            <% } %>
+                                </div>
+                            </label>
+                            <br>
+                            <label class="pure-material-textfield-outlined">
+                                <input type="password" id="password" name="password">
+                                <span>Contraseña</span>
+                                <div class="errors">
+                                    <% if(locals.errors && errors.password) { %>
+                                        <%= errors.password.msg %>
+                                            <% } %>
+                                </div>
+                            </label>
+                            <br>
+                            <label class="pure-material-textfield-outlined">
+                                <input type="text" name="phone" 
+                                 value="<%= locals.oldData ? oldData.phone : user.phone %>"
+                                 placeholder="<%= user.phone %>">
+                                <span>Teléfono Celular</span>
+                                <div class="errors">
+                                    <% if(locals.errors && errors.phone) { %>
+                                      <%= errors.phone.msg %>
+                                        <% } %>
+                                </div>
+                            </label>
+                            <br>
+                            <div class="SelectEdit">
+                                <label><h5 class="selectImagen">Dirección de Entrega:</h5></label>
+                                <select class="select" name="adress_id" id="adress_id">
+                                    <% for (let i=0; i < adress.length; i++) { %>
+                                        <option class="option" value="<%= adress[i].id %>">
+                                            <%= adress[i].street %>
+                                        </option>
+                                        <% } %>
+                                </select>
+                                <div class="errors">
+                                    <% if(locals.errors && errors.adress_id) { %>
+                                        <%= errors.adress_id.msg %>
+                                            <% } %>
+                                </div>
+                            </div>
+                            
+                            <br>
+                            <br>
+                            <label class="pure-material-textfield-outlined">
+                                <input type="file" accept=".jpg, .png, .jpeg" name="image" id="image" placeholder=" ">
+                                <span>Imagen</span>
+                            </label>
+                            <div class="errors">
+                                <% if(locals.errors && errors.image) { %>
+                                    <%= errors.image.msg %>
+                                        <% } %>
+                            </div>
+                        <div class="botonesPanel">
+                            <button type='submit' class="pure-material-button-contained">MODIFICAR</button>
+                            <button type='reset' class="pure-material-button-contained">BORRAR</button>
                         </div>
-
-                        <p>
-                            <label class="formlabel">email:</label>
-                            <input type="email" name="email" value="<%= locals.oldData ? oldData.email : user.email %>">
-                        <div class="errors">
-                            <% if(locals.errors && errors.email) { %>
-                                <%= errors.email.msg %>
-                                    <% } %>
-                        </div>
-                        </p>
-
-                        <p>
-                            <label>Contraseña:</label>
-                            <input type="password" name="password">
-                        <div class="errors">
-                            <% if(locals.errors && errors.password) { %>
-                                <%= errors.password.msg %>
-                                    <% } %>
-                        </div>
-                        </p>
-
-                        <p>
-                            <label class="formlabel">Celular:</label>
-                            <input type="text" name="phone" value="<%= locals.oldData ? oldData.phone : user.phone %>">
-                        <div class="errors">
-                            <% if(locals.errors && errors.full_name) { %>
-                                <%= errors.full_name.msg %>
-                                    <% } %>
-                        </div>
-                        <p>
-
-                        <p>
-                            <label>Direccion:</label>
-                            <select name="adress_id" id="adress_id">
-
-                                <% for (let i=0; i < adress.length; i++) { %>
-                                    <option value="<%= adress[i].id %>">
-                                        <%= adress[i].street %>
-                                    </option>
-                                    <% } %>
-                            </select>
-                        <div class="errors">
-                            <% if(locals.errors && errors.adress_id) { %>
-                                <%= errors.adress_id.msg %>
-                                    <% } %>
-                        </div>
-                        </p>
-
-                        <p>
-                            <label class="formlabel" for="image">Imagen:</label>
-                            <input type="file" accept=".jpg, .png, .jpeg" name="image">
-                        <div class="errors">
-                            <% if(locals.errors && errors.image) { %>
-                                <%= errors.image.msg %>
-                                    <% } %>
-                        </div>
-                        </p>
-
-                        <p class="botonesPanel">
-                            <button type="reset" class="botonPanel">BORRAR</button>
-                            <button type="submit" class="botonPanel">MODIFICAR</button>
-                        </p>
-
-                    </form>
-                </div>
-
+                    </div>
+                </form>
             </main>
 
             <%- include('partials/footer') %>

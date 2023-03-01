@@ -28,13 +28,13 @@
             <a href="/contacto"><b>Contacto</b></a>
             <% if (locals.isLogged) { %>
                 <% if (locals.userLogged.email=='admin@admin.com' ) { %>
-                    <a href="/products/create" style="margin-left: 15px; ">Agregar Ensalada</a>
+                    <a href="/products/create" id="agregarEnsalada" style="margin-left: 15px;"><b>Agregar Ensalada</b></a>
                     <% } %>
                         <a href="/users/profile"><img src="/images/avatars/<%=locals.userLogged.avatar %>" width="40"
                                 height="35" style="border-radius: 100%"></a>
 
                 <div class="right">
-                    <li class="seccion"><a href="/users/logout">Cerrar sesión</a></li>
+                    <li class="seccion"><a href="/users/logout"><b>Cerrar sesión</b></a></li>
                 </div>
             <% } else { %>
                     <div class="right">
@@ -45,7 +45,7 @@
                     </div>
             <% } %>
             <div>
-                <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                <button class="carritoNavBar" type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#exampleModal">
                     🛒
                 </button>
                 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">

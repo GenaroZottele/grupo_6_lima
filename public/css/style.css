@@ -52,6 +52,8 @@ Nosotros:
    align-self: center;
 }
 .headerMenu a {
+   height: 48px;
+   align-content: center;
    text-decoration: none;
    color: #151716;
    font-family: 'Roboto', sans-serif;
@@ -64,6 +66,21 @@ Nosotros:
    background: -webkit-linear-gradient(to right, rgba(6, 115, 107, 1), rgba(6, 115, 107, 1));  /* Chrome 10-25, Safari 5.1-6 */
    background: linear-gradient(to right, rgba(6, 115, 107, 1), rgba(6, 115, 107, 1)); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
    
+}
+.headerMenu a b{
+   position: relative;
+   top: 5px;
+}
+.carritoNavBar{
+   align-self: center;
+   height: 48px;
+   border: transparent;
+   border-radius: 15%;
+   background: linear-gradient(to right, rgba(6, 115, 107, 1), rgba(6, 115, 107, 1));
+}
+#agregarEnsalada{
+   text-align: center;
+   font-weight: 900;
 }
 .headerMenu :hover {
    box-shadow: 0px 0px 15px #357e53;
@@ -224,9 +241,6 @@ Nosotros:
    background: #348F50;  /* fallback for old browsers */
    background: -webkit-linear-gradient(to right, rgba(119, 194, 101, 0.9), rgba(6, 115, 107, 0.8));  /* Chrome 10-25, Safari 5.1-6 */
    background: linear-gradient(to right, rgba(119, 194, 101, 0.9), rgba(6, 115, 107, 0.8)); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-   
-   
-
 }
 .ensaladaDelDia p {
    margin-left: 15px;
@@ -928,8 +942,7 @@ p {
    border-radius: 15px;
    width: 50%;
    text-align: center;
-   padding: 20px;
-   padding-left: 40px;
+   padding: 40px;
    background-color: black;
    opacity: 85%;
 }
@@ -1053,12 +1066,15 @@ main form p label {
    width: 40%;
    text-align: center;
    padding: 40px;
-   padding-left: 20px;
    background-color: black;
    opacity: 85%;
 }
 .formlabel{
    font-size: smaller;
+}
+#containerContacto{
+   display: flex;
+   justify-content: center;
 }
 .formPanel p{
    margin: 0px;
@@ -1317,19 +1333,18 @@ color: black;
 /* @media screen and (max-width: 385px) { */
   
    .nosotres {
-     
+      display: flex;
+      flex-direction: column;
       justify-content: center;
       background-position: inherit;
       background-size: cover;
-      padding: 20px;
-      padding-right: 180px;
-      margin-left: 15px;
+      padding-top: 100px;
+      padding-right: 18%;
+      padding-left: 18%;
+      padding-bottom: 120px;
       background: #4d8b5f;  /* fallback for old browsers */
       background: -webkit-linear-gradient(to right, #56B4D3, #4d8b5f);  /* Chrome 10-25, Safari 5.1-6 */
       background: linear-gradient(to right, #a4b5ba, #4d8b5f); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-   
-   
-      
    }
    .nosotros {
       justify-content: center;
@@ -1344,8 +1359,28 @@ color: black;
    
       
    }
-   
-
+   .arriba1{
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+   }
+   .left-nos1{
+      width: 50%;
+      position: relative;
+      right: 20px;
+   }
+   .left-nos2{
+      width: 50%;
+   }
+   .right-nos1{
+      position: relative;
+      left: 19px;
+   }
+   .abajo2{
+      display: flex;
+      flex: row;
+      justify-content: center;
+   }
    .nosotros2 {
       display: block;
       font-family: Georgia, 'Times New Roman', Times, serif;
@@ -1367,16 +1402,25 @@ color: black;
    background: linear-gradient(to right, #91EAE4, #86A8E7, #7F7FD5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
    }
-   .ulsucursales {
+
+#imgNOS2{
+   height: 320px;
+}
+#imgNOS{
+   height: 300px;
+}
+   /* .ulsucursales {
       color: black;
       text-align: left;
       padding-left: 100px;
+      align-self: center;
+      justify-content: space-around;
       
-   }
+   } */
 
 
    
-.carrousel {
+/* .carrousel {
    display: flex;
    width: 90%;
    overflow-x: scroll;
@@ -1387,26 +1431,98 @@ color: black;
       -webkit-transform-style: preserve-3d;
       transform: rotateY(180deg);
       transform-style: preserve-3d;}
-   
+     
 
-   
 .carrousel img {
    width: 50%;
    object-fit: cover;
    scroll-snap-align: center;
    align-content: center;
-   
- } 
+ }  */
+div.polaroid {
+   width: 100%;
+   background-color: white;
+   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+ }
+ div.container {
+   text-align: center;
+   padding: 10px 20px;
+ }
+div.container p{
+   color: #357e53;
+} 
 
 /*-------------------------------------------------------------------userProfile------------------------------------------------------------------------ */
 .perfil {
    display: flex;
    flex-direction: column;
    justify-content: center;
-   padding: 20px;
-   color: green;
-   border: 1px solid black;
+   background-color:#4d8b5f;
+   align-self: center;
+}
+.row{
+   justify-content: center;
+   padding: 50px;
+   background-color:#4d8b5f;
+}
+#títuloPerfil{
+   padding-top: 50px;
+   text-align: center;
+}
+.text-right{
+   display: flex;
+   margin-top: 50px;
+   margin-bottom: 30px;
+   font-size:xx-large;
+   justify-content: center;
+   color: black;
+   text-underline-position: below;
+}
+.rounded-circle{
+   height: 120px;
+   width: 120px;
+}
+.col-md-3{
+   padding: 0px;
+   border: solid 1px black;
+   border-radius: 5%;
+   margin-right: 15px;
+}
+.col-md-5{
+   padding: 0px;
+   border: solid 1px black;
+   border-radius: 5%;
+}
+#botonPerfil{
+   margin-bottom: 12px;
+   display: flex;
+   width: 138px;
    align-items: center;
+   align-self: center;
+   align-content: center;
+   text-align: center;
+   justify-content: center;
+}
+.mainUserEdit {
+   display: flex;
+   height: 1050px;
+   justify-content: center;
+   align-items: center;
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-image: url(../images/CrispyLobby.jpeg);
+}
+.formEditUser{
+   margin-top: 200px;
+   margin-bottom: 200px;
+   justify-content: center;
+   border: #007200 solid 1px;
+   border-radius: 15px;
+   text-align: center;
+   padding: 40px;
+   background-color: black;
+   opacity: 85%;
 }
 
 /*------------------------------------------------------------------@keyframes------------------------------------------------------------------------ */
@@ -1432,7 +1548,52 @@ color: black;
    50% {border-color: transparent;}
 }
 
+/* ------------------------------------------------ CSS Select intento --------------------------------------------------- */
+select {
+   /* Reset */
+   -webkit-appearance: none;
+      -moz-appearance: none;
+           appearance: none;
+   border: 0;
+   outline: 0;
+   font: inherit;
+   /* Personalize */
+   width: 20em;
+   height: 3em;
+   padding: 0 4em 0 1em;
+   background: url(https://upload.wikimedia.org/wikipedia/commons/9/9d/Caret_down_font_awesome_whitevariation.svg) no-repeat right 0.8em center/1.4em, linear-gradient(to left, rgba(255, 255, 255, 0.3) 3em, rgba(255, 255, 255, 0.2) 3em);
+   color: white;
+   border-radius: 0.25em;
+   box-shadow: 0 0 1em 0 rgba(0, 0, 0, 0.2);
+   cursor: pointer;
+   /* <option> colors */
+   /* Remove focus outline */
+   /* Remove IE arrow */
+ }
+ select option {
+   color: inherit;
+   background-color: #320a28;
+ }
+ select:focus {
+   outline: none;
+ }
+ select::-ms-expand {
+   display: none;
+ }
+
+#Eliminar{
+   display: flex;
+   justify-self: center;
+   align-self: center;
+   text-align: center;
+   margin-bottom: 30px;
+}
+.selectImagen{
+   color: white;
+}
+
 /* } */
+
 /* 
 @media screen and (min-width: 386px) { 
    .h1nosotros{
