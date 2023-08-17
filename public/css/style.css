@@ -80,6 +80,7 @@ Nosotros:
    border: transparent;
    border-radius: 15%;
    background: linear-gradient(to right, rgba(6, 115, 107, 1), rgba(6, 115, 107, 1));
+   margin-right: 8vw;
 }
 #agregarEnsalada{
    text-align: center;

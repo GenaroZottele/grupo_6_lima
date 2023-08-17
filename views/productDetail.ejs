@@ -16,12 +16,15 @@
             <div class="descriptionCart">
               <p><%=product.description%></p>
             </div>
-            <a href="../productCart/<%=product.id%>" class="agregarCarrito">Agregar al carrito <i class="fa-solid fa-cart-shopping"></i></a>
+            <!-- <a href="../productCart/<%=product.id%>" class="agregarCarrito">Agregar al carrito <i class="fa-solid fa-cart-shopping"></i></a> -->
+            <button id="comprar<%=product.id%>" class="boton-comprar botonComprar"><b> Comprar</b> <i class="fas fa-shopping-cart"></i></button>
           </div>
         </div>
       </main>
       <%- include('./partials/footer') %>
-      <script src="/js/carro.js"></script>
+      <script src="/js/carroDetail.js"></script>
+      <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+      <script src="/js/carroEnsaladas.js"></script>
   </body>
   <!-- JavaScript Bundle with Popper -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"

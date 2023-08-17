@@ -74,7 +74,7 @@ fetch('http://localhost:3000/products/productsJson')
                     </article>
                         
                         `;
-            contenedorProductos.appendChild(div);
+            // contenedorProductos.appendChild(div);
 
             const boton = document.getElementById(`comprar${producto.id}`);
 
